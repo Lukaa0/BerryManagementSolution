@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Operation_Service/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ProductReceive">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ProductReceive_ContainerBarCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductReceive_DateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ProductReceive_HarvesterBarCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductReceive_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="ProductReceive_ProcessIsComplite" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ProductReceive_Product_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="ProductReceive_User_PersonPost_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="ProductReceive_User_Point_Id" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProductReceive" nillable="true" type="tns:ProductReceive" />
+  <xs:complexType name="ContainerPack">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContainerPack_Container_BarCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContainerPack_DateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ContainerPack_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="ContainerPack_IsComplite" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ContainerPack_Parent_ContainerLocation_In_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="ContainerPack_Parent_Container_BarCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContainerPack_User_PersonPost_Id" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContainerPack" nillable="true" type="tns:ContainerPack" />
+  <xs:complexType name="ArrayOfTakeRow">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TakeRow" nillable="true" type="tns:TakeRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTakeRow" nillable="true" type="tns:ArrayOfTakeRow" />
+  <xs:complexType name="TakeRow">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TakeRow_Brigade_Id" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="TakeRow_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="TakeRow_In_DateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TakeRow_In_TUser_PersonPost_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="TakeRow_In_TakeRowInOut_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="TakeRow_Out_DateTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TakeRow_Out_TakeRowInOut_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="TakeRow_Out_User_PersonPost_Id" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="TakeRow_Row_Id" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TakeRow" nillable="true" type="tns:TakeRow" />
+  <xs:complexType name="ContainerMove">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContainerMove_Car_Point_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="ContainerMove_Container_BarCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContainerMove_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="ContainerMove_In_ContainerMoveInOut_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="ContainerMove_In_DateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ContainerMove_In_User_PersonPost_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="ContainerMove_In_User_Point_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="ContainerMove_Out_ContainerMoveInOut_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="ContainerMove_Out_DateTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ContainerMove_Out_User_PersonPost_Id" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="ContainerMove_Out_User_Point_Id" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="ContainerMove_TransportWaybill_Id" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContainerMove" nillable="true" type="tns:ContainerMove" />
+  <xs:complexType name="ArrayOfOperationSetting">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OperationSetting" nillable="true" type="tns:OperationSetting" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOperationSetting" nillable="true" type="tns:ArrayOfOperationSetting" />
+  <xs:complexType name="OperationSetting">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OperationSetting_Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OperationSetting_Key" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OperationSetting_Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationSetting" nillable="true" type="tns:OperationSetting" />
+  <xs:complexType name="ArrayOfProductPack">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductPack" nillable="true" type="tns:ProductPack" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductPack" nillable="true" type="tns:ArrayOfProductPack" />
+  <xs:complexType name="ProductPack">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ProductPack_Container_BarCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductPack_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="ProductPack_In_DateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ProductPack_In_ProductPackInOut_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="ProductPack_In_User_PersonPost_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="ProductPack_Out_DateTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ProductPack_Out_ProductPackInOut_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="ProductPack_Out_User_PersonPost_Id" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="ProductPack_Product_Id" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProductPack" nillable="true" type="tns:ProductPack" />
+  <xs:complexType name="ArrayOfHarvesterRowDistribution">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HarvesterRowDistribution" nillable="true" type="tns:HarvesterRowDistribution" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHarvesterRowDistribution" nillable="true" type="tns:ArrayOfHarvesterRowDistribution" />
+  <xs:complexType name="HarvesterRowDistribution">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="HarvesterRowDistribution_Harvester_PersonPost_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="HarvesterRowDistribution_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="HarvesterRowDistribution_In_DateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="HarvesterRowDistribution_In_HarvesterRowDistributionInOut_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="HarvesterRowDistribution_In_User_PersonPost_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="HarvesterRowDistribution_Out_DateTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="HarvesterRowDistribution_Out_HarvesterRowDistributionInOut_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="HarvesterRowDistribution_Out_User_PersonPost_Id" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="HarvesterRowDistribution_Row_Id" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HarvesterRowDistribution" nillable="true" type="tns:HarvesterRowDistribution" />
+  <xs:complexType name="ArrayOfContainerLocation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ContainerLocation" nillable="true" type="tns:ContainerLocation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContainerLocation" nillable="true" type="tns:ArrayOfContainerLocation" />
+  <xs:complexType name="ContainerLocation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContainerLocation_Container_BarCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContainerLocation_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="ContainerLocation_In_DateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ContainerLocation_In_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="ContainerLocation_In_User_PersonPost_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="ContainerLocation_Out_ContainerMoveInOut_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="ContainerLocation_Out_DateTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ContainerLocation_Out_User_PersonPost_Id" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="ContainerLocation_Point_Id" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContainerLocation" nillable="true" type="tns:ContainerLocation" />
+  <xs:complexType name="ArrayOfContainerWeight">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ContainerWeight" nillable="true" type="tns:ContainerWeight" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContainerWeight" nillable="true" type="tns:ArrayOfContainerWeight" />
+  <xs:complexType name="ContainerWeight">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContainerWeight_Container_BarCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContainerWeight_DateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ContainerWeight_Gross" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ContainerWeight_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="ContainerWeight_Net" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ContainerWeight_User_PersonPost_Id" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContainerWeight" nillable="true" type="tns:ContainerWeight" />
+</xs:schema>

@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BM_RS_Service" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IBM_RS_Service_GetTransportWaybills_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransportWaybills" />
+  </wsdl:message>
+  <wsdl:message name="IBM_RS_Service_GetTransportWaybills_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransportWaybillsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_RS_Service_InsertTransportWaybill_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertTransportWaybill" />
+  </wsdl:message>
+  <wsdl:message name="IBM_RS_Service_InsertTransportWaybill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertTransportWaybillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_RS_Service_InsertTransportWaybillDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertTransportWaybillDetail" />
+  </wsdl:message>
+  <wsdl:message name="IBM_RS_Service_InsertTransportWaybillDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertTransportWaybillDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_RS_Service_NonInsertTransportWaybill_InputMessage">
+    <wsdl:part name="parameters" element="tns:NonInsertTransportWaybill" />
+  </wsdl:message>
+  <wsdl:message name="IBM_RS_Service_NonInsertTransportWaybill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NonInsertTransportWaybillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_RS_Service_InsertNonTransportWaybillDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertNonTransportWaybillDetail" />
+  </wsdl:message>
+  <wsdl:message name="IBM_RS_Service_InsertNonTransportWaybillDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertNonTransportWaybillDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_RS_Service_InsertTransportWaybillCompanyMove_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertTransportWaybillCompanyMove" />
+  </wsdl:message>
+  <wsdl:message name="IBM_RS_Service_InsertTransportWaybillCompanyMove_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertTransportWaybillCompanyMoveResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IBM_RS_Service">
+    <wsdl:operation name="GetTransportWaybills">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_RS_Service/GetTransportWaybills" message="tns:IBM_RS_Service_GetTransportWaybills_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_RS_Service/GetTransportWaybillsResponse" message="tns:IBM_RS_Service_GetTransportWaybills_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertTransportWaybill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_RS_Service/InsertTransportWaybill" message="tns:IBM_RS_Service_InsertTransportWaybill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_RS_Service/InsertTransportWaybillResponse" message="tns:IBM_RS_Service_InsertTransportWaybill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertTransportWaybillDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_RS_Service/InsertTransportWaybillDetail" message="tns:IBM_RS_Service_InsertTransportWaybillDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_RS_Service/InsertTransportWaybillDetailResponse" message="tns:IBM_RS_Service_InsertTransportWaybillDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NonInsertTransportWaybill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_RS_Service/NonInsertTransportWaybill" message="tns:IBM_RS_Service_NonInsertTransportWaybill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_RS_Service/NonInsertTransportWaybillResponse" message="tns:IBM_RS_Service_NonInsertTransportWaybill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertNonTransportWaybillDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_RS_Service/InsertNonTransportWaybillDetail" message="tns:IBM_RS_Service_InsertNonTransportWaybillDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_RS_Service/InsertNonTransportWaybillDetailResponse" message="tns:IBM_RS_Service_InsertNonTransportWaybillDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertTransportWaybillCompanyMove">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_RS_Service/InsertTransportWaybillCompanyMove" message="tns:IBM_RS_Service_InsertTransportWaybillCompanyMove_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_RS_Service/InsertTransportWaybillCompanyMoveResponse" message="tns:IBM_RS_Service_InsertTransportWaybillCompanyMove_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IBM_RS_Service" type="tns:IBM_RS_Service">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetTransportWaybills">
+      <soap:operation soapAction="http://tempuri.org/IBM_RS_Service/GetTransportWaybills" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertTransportWaybill">
+      <soap:operation soapAction="http://tempuri.org/IBM_RS_Service/InsertTransportWaybill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertTransportWaybillDetail">
+      <soap:operation soapAction="http://tempuri.org/IBM_RS_Service/InsertTransportWaybillDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NonInsertTransportWaybill">
+      <soap:operation soapAction="http://tempuri.org/IBM_RS_Service/NonInsertTransportWaybill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertNonTransportWaybillDetail">
+      <soap:operation soapAction="http://tempuri.org/IBM_RS_Service/InsertNonTransportWaybillDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertTransportWaybillCompanyMove">
+      <soap:operation soapAction="http://tempuri.org/IBM_RS_Service/InsertTransportWaybillCompanyMove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BM_RS_Service">
+    <wsdl:port name="BasicHttpBinding_IBM_RS_Service" binding="tns:BasicHttpBinding_IBM_RS_Service">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_RS_Service/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

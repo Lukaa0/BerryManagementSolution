@@ -1,0 +1,1874 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D7874469-067D-4FC5-8E64-EC9C7F672C33}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BerryManagementApplication</RootNamespace>
+    <AssemblyName>BerryManagementApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>berry_192.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.9.1.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.9.1\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.4.5.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ThetaControlsLibrary">
+      <HintPath>..\..\ThetaSoft\ThetaControlsLibrary\bin\Release\ThetaControlsLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="zxing, Version=0.16.4.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.4\lib\net461\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.4.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.4\lib\net461\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\BarcodeToImage.cs" />
+    <Compile Include="Classes\EmployeeLabel.cs" />
+    <Compile Include="Classes\FindControl.cs" />
+    <Compile Include="Classes\GetByteArray.cs" />
+    <Compile Include="Classes\GlobalConstants.cs" />
+    <Compile Include="Classes\Num2Geo.cs" />
+    <Compile Include="Classes\PalleteLabel.cs" />
+    <Compile Include="Classes\PermissionManagement.cs" />
+    <Compile Include="Classes\Pivot.cs" />
+    <Compile Include="Classes\Security.cs" />
+    <Compile Include="Classes\WordReportMaker.cs" />
+    <Compile Include="Classes\ZebraRawPrinterHelper.cs" />
+    <Compile Include="Connected Services\BM_Employee_ServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\BM_Library_ServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\BM_Operation_ServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\BM_Produce_ServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\BM_RS_ServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\BM_Security_ServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\BM_Structure_ServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\BM_Template_ServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Enums\DataChangeTypeEnum.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Accounts\AccountsMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Accounts\AccountsMainForm.designer.cs">
+      <DependentUpon>AccountsMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Accounts\WaybillForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Accounts\WaybillForm.Designer.cs">
+      <DependentUpon>WaybillForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employee\PunishmentEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employee\PunishmentEditForm.Designer.cs">
+      <DependentUpon>PunishmentEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employee\EmployeeEditFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employee\EmployeeEditFrom.Designer.cs">
+      <DependentUpon>EmployeeEditFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employee\EmployeeMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employee\EmployeeMainForm.Designer.cs">
+      <DependentUpon>EmployeeMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employee\PersonDocumentEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employee\PersonDocumentEditForm.Designer.cs">
+      <DependentUpon>PersonDocumentEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employee\PersonPostEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employee\PersonPostEditForm.Designer.cs">
+      <DependentUpon>PersonPostEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employee\PunishmentPrintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employee\PunishmentPrintForm.Designer.cs">
+      <DependentUpon>PunishmentPrintForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employee\VerifyPersonalNumber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employee\VerifyPersonalNumber.Designer.cs">
+      <DependentUpon>VerifyPersonalNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Libraries\BankEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Libraries\BankEditForm.Designer.cs">
+      <DependentUpon>BankEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Libraries\BreedEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Libraries\BreedEditForm.Designer.cs">
+      <DependentUpon>BreedEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Libraries\CitizenshipEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Libraries\CitizenshipEditForm.Designer.cs">
+      <DependentUpon>CitizenshipEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Libraries\DocumentTypeEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Libraries\DocumentTypeEditForm.Designer.cs">
+      <DependentUpon>DocumentTypeEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Libraries\LegalFormEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Libraries\LegalFormEditForm.Designer.cs">
+      <DependentUpon>LegalFormEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Libraries\LibrariesMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Libraries\LibrariesMainForm.Designer.cs">
+      <DependentUpon>LibrariesMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Libraries\NationalityEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Libraries\NationalityEditForm.Designer.cs">
+      <DependentUpon>NationalityEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Libraries\PackedPalletesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Libraries\PackedPalletesForm.Designer.cs">
+      <DependentUpon>PackedPalletesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Main\BerryManagementMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main\BerryManagementMainForm.Designer.cs">
+      <DependentUpon>BerryManagementMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Operations\BrigadeRowEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Operations\BrigadeRowEditForm.Designer.cs">
+      <DependentUpon>BrigadeRowEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Operations\ClosedRows.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Operations\ClosedRows.Designer.cs">
+      <DependentUpon>ClosedRows.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Operations\HarvesterRowDistributionEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Operations\HarvesterRowDistributionEditForm.Designer.cs">
+      <DependentUpon>HarvesterRowDistributionEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Operations\OperationSettingEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Operations\OperationSettingEditForm.Designer.cs">
+      <DependentUpon>OperationSettingEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Operations\OperationsMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Operations\OperationsMainForm.designer.cs">
+      <DependentUpon>OperationsMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Operations\BerryProduceEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Operations\BerryProduceEditForm.Designer.cs">
+      <DependentUpon>BerryProduceEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Operations\BerryProducePrintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Operations\BerryProducePrintForm.Designer.cs">
+      <DependentUpon>BerryProducePrintForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\ReportsMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\ReportsMainForm.designer.cs">
+      <DependentUpon>ReportsMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Report\TemplatesViewerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Report\TemplatesViewerForm.designer.cs">
+      <DependentUpon>TemplatesViewerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Security\AddPostRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Security\AddPostRole.Designer.cs">
+      <DependentUpon>AddPostRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Security\AutentificationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Security\AutentificationForm.designer.cs">
+      <DependentUpon>AutentificationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Security\ChangePasswordFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Security\ChangePasswordFrom.Designer.cs">
+      <DependentUpon>ChangePasswordFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Security\EditPostRoles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Security\EditPostRoles.designer.cs">
+      <DependentUpon>EditPostRoles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Security\RoleEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Security\RoleEditForm.designer.cs">
+      <DependentUpon>RoleEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Security\SecurityMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Security\SecurityMainForm.designer.cs">
+      <DependentUpon>SecurityMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Structure\CarDriverEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Structure\CarDriverEditForm.Designer.cs">
+      <DependentUpon>CarDriverEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Structure\PointEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Structure\PointEditForm.Designer.cs">
+      <DependentUpon>PointEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Structure\PostEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Structure\PostEditForm.Designer.cs">
+      <DependentUpon>PostEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Structure\CompanyRowsEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Structure\CompanyRowsEditForm.Designer.cs">
+      <DependentUpon>CompanyRowsEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Structure\CompanyEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Structure\CompanyEditForm.Designer.cs">
+      <DependentUpon>CompanyEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Structure\CompanyCarEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Structure\CompanyCarEditForm.Designer.cs">
+      <DependentUpon>CompanyCarEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Structure\CarEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Structure\CarEditForm.Designer.cs">
+      <DependentUpon>CarEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Structure\BrigadeEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Structure\BrigadeEditForm.Designer.cs">
+      <DependentUpon>BrigadeEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Structure\RowBreedEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Structure\RowBreedEditForm.designer.cs">
+      <DependentUpon>RowBreedEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Structure\RowsEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Structure\RowsEditForm.designer.cs">
+      <DependentUpon>RowsEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Structure\StructureMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Structure\StructureMainForm.designer.cs">
+      <DependentUpon>StructureMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Template\DocumentTemplateEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Template\DocumentTemplateEditForm.designer.cs">
+      <DependentUpon>DocumentTemplateEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Template\TemplatesMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Template\TemplatesMainForm.designer.cs">
+      <DependentUpon>TemplatesMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Accounts\AccountsMainForm.resx">
+      <DependentUpon>AccountsMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Accounts\WaybillForm.resx">
+      <DependentUpon>WaybillForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Employee\PunishmentEditForm.resx">
+      <DependentUpon>PunishmentEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Employee\EmployeeEditFrom.resx">
+      <DependentUpon>EmployeeEditFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Employee\EmployeeMainForm.resx">
+      <DependentUpon>EmployeeMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Employee\PersonDocumentEditForm.resx">
+      <DependentUpon>PersonDocumentEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Employee\PersonPostEditForm.resx">
+      <DependentUpon>PersonPostEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Employee\PunishmentPrintForm.resx">
+      <DependentUpon>PunishmentPrintForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Employee\VerifyPersonalNumber.resx">
+      <DependentUpon>VerifyPersonalNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Libraries\BankEditForm.resx">
+      <DependentUpon>BankEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Libraries\BreedEditForm.resx">
+      <DependentUpon>BreedEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Libraries\CitizenshipEditForm.resx">
+      <DependentUpon>CitizenshipEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Libraries\DocumentTypeEditForm.resx">
+      <DependentUpon>DocumentTypeEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Libraries\LegalFormEditForm.resx">
+      <DependentUpon>LegalFormEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Libraries\LibrariesMainForm.resx">
+      <DependentUpon>LibrariesMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Libraries\NationalityEditForm.resx">
+      <DependentUpon>NationalityEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Libraries\PackedPalletesForm.resx">
+      <DependentUpon>PackedPalletesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main\BerryManagementMainForm.resx">
+      <DependentUpon>BerryManagementMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Operations\BrigadeRowEditForm.resx">
+      <DependentUpon>BrigadeRowEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Operations\ClosedRows.resx">
+      <DependentUpon>ClosedRows.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Operations\HarvesterRowDistributionEditForm.resx">
+      <DependentUpon>HarvesterRowDistributionEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Operations\OperationSettingEditForm.resx">
+      <DependentUpon>OperationSettingEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Operations\OperationsMainForm.resx">
+      <DependentUpon>OperationsMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Operations\BerryProduceEditForm.resx">
+      <DependentUpon>BerryProduceEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Operations\BerryProducePrintForm.resx">
+      <DependentUpon>BerryProducePrintForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\ReportsMainForm.resx">
+      <DependentUpon>ReportsMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Report\TemplatesViewerForm.resx">
+      <DependentUpon>TemplatesViewerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Security\AddPostRole.resx">
+      <DependentUpon>AddPostRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Security\AutentificationForm.resx">
+      <DependentUpon>AutentificationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Security\ChangePasswordFrom.resx">
+      <DependentUpon>ChangePasswordFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Security\EditPostRoles.resx">
+      <DependentUpon>EditPostRoles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Security\RoleEditForm.resx">
+      <DependentUpon>RoleEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Security\SecurityMainForm.resx">
+      <DependentUpon>SecurityMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Structure\CarDriverEditForm.resx">
+      <DependentUpon>CarDriverEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Structure\PointEditForm.resx">
+      <DependentUpon>PointEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Structure\PostEditForm.resx">
+      <DependentUpon>PostEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Structure\CompanyRowsEditForm.resx">
+      <DependentUpon>CompanyRowsEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Structure\CompanyEditForm.resx">
+      <DependentUpon>CompanyEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Structure\CompanyCarEditForm.resx">
+      <DependentUpon>CompanyCarEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Structure\CarEditForm.resx">
+      <DependentUpon>CarEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Structure\BrigadeEditForm.resx">
+      <DependentUpon>BrigadeEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Structure\RowBreedEditForm.resx">
+      <DependentUpon>RowBreedEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Structure\RowsEditForm.resx">
+      <DependentUpon>RowsEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Structure\StructureMainForm.resx">
+      <DependentUpon>StructureMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Template\DocumentTemplateEditForm.resx">
+      <DependentUpon>DocumentTemplateEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Template\TemplatesMainForm.resx">
+      <DependentUpon>TemplatesMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.DeletePersonDocumentResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.DeletePersonPostResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.DeletePersonResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.EmployeeLabel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.GeneralReportModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.GetBrigadeWeightResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.GetBrigadireReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.GetBrigadireReportWholeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.GetControliorReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.GetControliorReportWholeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.GetEmployeeCurrentNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.GetEmployeeDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.GetEmployeeLabelsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.GetEmployeeShortDataResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.GetGeneralReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.GetGivenPunishmentCountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.GetHarvByHarvRowDistrOutsByRowIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.GetHarvByHarvRowDistrOutsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.GetHarvesterByHarvesterRowDistributionForPunishmentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.GetHarvesterByHarvesterRowDistributionInOutsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.GetHarvesterByHRDForPunishmentResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.getHarvesterInRowPersonPostResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.GetHarvesterReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.GetHarvesterReportWholeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.GetNumberOfEmployeeSameIdentitiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.GetPackagerReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.GetPackagerReportWholeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.GetPersonDocumentsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.GetPersonPostByBarCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.GetPersonPostByPostIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.GetPersonPostDataResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.GetPersonPostModelForRowsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.GetPersonPostModelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.GetPersonPostsByBrigadeIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.GetPersonPostsForPunishmentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.GetPersonPostsIdByPersonIdResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.GetPostByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.GetPunishmentByDiteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.GetPunishmentCountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.GetPunishmentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.GetRecieverReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.GetRecieverReportWholeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.GetRecomPunishmentCountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.GetRS_ProductModelByContainersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.InsertEmployeeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.InsertPersonDocumentResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.InsertPersonPostResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.InsertPunishmentForAndroidResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.InsertPunishmentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.Person.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.PersonDocument1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.PersonDocumentModel1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.PersonPost1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.PersonPostModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.Post.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.PunishmentCountModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.PunishmentModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.RecPunishmentCountModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.ReportModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.RS_ProductModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.UpdateEmployeeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.UpdatePersonDocumentResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.UpdatePersonPostResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.UpdatePunishmentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BerryManagementApplication.BM_Employee_ServiceReference.WeightsModelcs.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\BM_Employee_Service.wsdl" />
+    <None Include="Connected Services\BM_Employee_ServiceReference\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\item31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\item4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\item5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.Bank.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.Breed.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.Citizenship.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.Container.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.ContainerModel1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.CreateContainerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.CreateContainersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.DocumentType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.GetAllPointsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.GetBalanceSheetTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.GetBreedsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.GetCitizenshipsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.GetContainerForQualityResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.GetContainersByProductPackResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.GetContainerTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.GetDocumentTypedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.GetEmployeeTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.GetGenderTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.GetLegalFormsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.GetLegalStatuseTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.GetMaritalStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.GetNationalitiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.GetPalleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.GetPalleteWeightResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.GetPointTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.GetProductQualityesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.GetPunishmentTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.GetRS_ProductModelByContainersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.GetSalaryTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.GetSideTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.InsertBankResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.InsertBreedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.InsertCitizenshipResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.InsertDocumentTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.InsertLegalFormResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.InsertNationalityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.InsertPunishmentTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.LegalForm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.Nationality.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.PalleteModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.PalleteWeight.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.Point1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.PunishmentType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.RS_ProductModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.SelectBanksResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.SelectContainersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.tf_ContainerTypes_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.tf_EmployeeTypes_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.tf_GenderTypes_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.tf_GetBalanceSheetTypes_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.tf_LegalStatuseTypes_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.tf_MaritalStatus_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.tf_PointTypes_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.tf_ProductQualityes_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.tf_PunishmentTypes_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.tf_SalaryTypes_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.tf_SideTypes_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.UpdateBankResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.UpdateBreedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.UpdateCitizenshipResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.UpdateDocumentTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.UpdateLegalFormResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.UpdateNationalityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryManagementApplication.BM_Library_ServiceReference.UpdatePunishmentTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BM_Library_Service.wsdl" />
+    <None Include="Connected Services\BM_Library_ServiceReference\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\item4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\item41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.CheckContainerLocationForPackagingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.CheckHarvesterInRowPersonPostResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.CheckTakeRowsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.CloseTransportWaybillResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.ContainerLocation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.ContainerLocationModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.ContainerModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.ContainerMoveInOut.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.ContainerPackModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.ContainerWeightModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.CorrectWaybillResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.CreateTransportWaybillResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.FixContainerMoveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.FixContainerPackResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.FixContainerSendBackResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.FixHarvesterContainerDistributionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.FixHarvesterRowDistributionInOutResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.FixProductQualityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.FixProductReceiveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.FixProductRepackAndWeightResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.FixPunishmentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.FixSaleContainerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.FixTakeRowInOutResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.GetClosedTakeRowsModelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.GetContainerForQualityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.GetContainerModelByPaletteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.GetContainerMoveInOutResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.GetContainerPackByPaletteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.GetContainerPackCountByCarIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.GetContainerPackModelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.GetContainersLocationssResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.GetContainerWeightsByCharsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.GetCountForContainerMoveResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.GetCountForContainerPackResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.GetHarvesterRowDistributionInOutsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.GetHarvesterRowDistributionInResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.GetHarvesterRowDistributionOutResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.GetHarvesterRowDistributionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.GetHarvRowDistribByPersonPostIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.GetLatestVersionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.GetOperationSettingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.GetRowsWithBrigadeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.GetTakeRowsByBrigadeIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.GetTakeRowsInByPersonPostIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.GetTakeRowsModelByBrigadeIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.GetTakeRowsModelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.GetTakeRowsOutByPersonPostIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.GetTakeRowsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.GetTakeRows_HarvestersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.GetWeightsForReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.HarvesterRowDistribution.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.HarvesterRowDistributionInOut.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.InsertContainerMoveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.InsertContainerPackResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.OperationSetting.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.PalleteModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.ProductPack.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.ProductRepackAndWeight.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.TakeRow.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.TakeRowInOut.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.TakeRowModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.TakeRows_Harvesters.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.UpdateOperationSettingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.UpdateTakeRowResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BerryManagementApplication.BM_Operation_ServiceReference.UpdateTakeRowWithResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\BM_Operation_Service.wsdl">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\item11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Operation_ServiceReference\item4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Produce_ServiceReference\BerryManagementApplication.BM_Produce_ServiceReference.BreedProperty.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Produce_ServiceReference\BerryManagementApplication.BM_Produce_ServiceReference.GetBreedPropertyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Produce_ServiceReference\BerryManagementApplication.BM_Produce_ServiceReference.GetProductModelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Produce_ServiceReference\BerryManagementApplication.BM_Produce_ServiceReference.InsertBreedPropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Produce_ServiceReference\BerryManagementApplication.BM_Produce_ServiceReference.ProductModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Produce_ServiceReference\BM_Produce_Service.wsdl" />
+    <None Include="Connected Services\BM_Produce_ServiceReference\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Produce_ServiceReference\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Produce_ServiceReference\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Produce_ServiceReference\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_RS_ServiceReference\BerryManagementApplication.BM_RS_ServiceReference.GetNonTransportWaybillDetailsProductResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_RS_ServiceReference\BerryManagementApplication.BM_RS_ServiceReference.GetNonTransportWaybillModelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_RS_ServiceReference\BerryManagementApplication.BM_RS_ServiceReference.GetTransportWaybillDetailsProductResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_RS_ServiceReference\BerryManagementApplication.BM_RS_ServiceReference.GetTransportWaybillGoodsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_RS_ServiceReference\BerryManagementApplication.BM_RS_ServiceReference.GetTransportWaybillModelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_RS_ServiceReference\BerryManagementApplication.BM_RS_ServiceReference.GetTransportWaybillsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_RS_ServiceReference\BerryManagementApplication.BM_RS_ServiceReference.GetTransportWaybillWeightResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_RS_ServiceReference\BerryManagementApplication.BM_RS_ServiceReference.InsertNonTransportWaybillDetailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_RS_ServiceReference\BerryManagementApplication.BM_RS_ServiceReference.InsertNonTransportWaybillResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_RS_ServiceReference\BerryManagementApplication.BM_RS_ServiceReference.InsertTransportWaybillCompanyMoveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_RS_ServiceReference\BerryManagementApplication.BM_RS_ServiceReference.InsertTransportWaybillDetailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_RS_ServiceReference\BerryManagementApplication.BM_RS_ServiceReference.InsertTransportWaybillResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_RS_ServiceReference\BerryManagementApplication.BM_RS_ServiceReference.NonInsertTransportWaybillResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_RS_ServiceReference\BerryManagementApplication.BM_RS_ServiceReference.NonTransportWaybillModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_RS_ServiceReference\BerryManagementApplication.BM_RS_ServiceReference.RS_ProductModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_RS_ServiceReference\BerryManagementApplication.BM_RS_ServiceReference.TransportWaybill.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_RS_ServiceReference\BerryManagementApplication.BM_RS_ServiceReference.TransportWaybillModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_RS_ServiceReference\BerryManagementApplication.BM_RS_ServiceReference.WaybillContainerWAYBILLGOODS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_RS_ServiceReference\BM_RS_Service.wsdl" />
+    <None Include="Connected Services\BM_RS_ServiceReference\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_RS_ServiceReference\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_RS_ServiceReference\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_RS_ServiceReference\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_RS_ServiceReference\item4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryManagementApplication.BM_Security_ServiceReference.AutorizeUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryManagementApplication.BM_Security_ServiceReference.CheckPostRoleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryManagementApplication.BM_Security_ServiceReference.CheckUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryManagementApplication.BM_Security_ServiceReference.DeletePostRoleByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryManagementApplication.BM_Security_ServiceReference.DeleteRoleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryManagementApplication.BM_Security_ServiceReference.DeleteRolesPermissionByRoleIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryManagementApplication.BM_Security_ServiceReference.GetAllPostResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryManagementApplication.BM_Security_ServiceReference.GetAllRolesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryManagementApplication.BM_Security_ServiceReference.GetPermissionsForRoleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryManagementApplication.BM_Security_ServiceReference.GetPermissionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryManagementApplication.BM_Security_ServiceReference.GetPostRolesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryManagementApplication.BM_Security_ServiceReference.GetPost_Post_IdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryManagementApplication.BM_Security_ServiceReference.GetRolePermissionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryManagementApplication.BM_Security_ServiceReference.GetRolesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryManagementApplication.BM_Security_ServiceReference.GetUserPermissionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryManagementApplication.BM_Security_ServiceReference.GetUsersModelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryManagementApplication.BM_Security_ServiceReference.GetUsersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryManagementApplication.BM_Security_ServiceReference.InsertPostRoleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryManagementApplication.BM_Security_ServiceReference.InsertRoleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryManagementApplication.BM_Security_ServiceReference.InsertRolesPermissionsListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryManagementApplication.BM_Security_ServiceReference.InsertUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryManagementApplication.BM_Security_ServiceReference.Permission.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryManagementApplication.BM_Security_ServiceReference.PermissionsForRole.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryManagementApplication.BM_Security_ServiceReference.Post.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryManagementApplication.BM_Security_ServiceReference.PostRoleName.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryManagementApplication.BM_Security_ServiceReference.Role.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryManagementApplication.BM_Security_ServiceReference.RolePermission.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryManagementApplication.BM_Security_ServiceReference.UpdatePostRoleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryManagementApplication.BM_Security_ServiceReference.UpdateRolePostResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryManagementApplication.BM_Security_ServiceReference.UpdateRoleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryManagementApplication.BM_Security_ServiceReference.UpdateUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryManagementApplication.BM_Security_ServiceReference.UserModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryManagementApplication.BM_Security_ServiceReference.UserPermissions.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BM_Security_Service.wsdl" />
+    <None Include="Connected Services\BM_Security_ServiceReference\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\item4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.Brigade.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.CarDriversModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.CarModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.CheckGetRowResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.CompanyCarModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.CompanyeModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.CompanyRowsModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.Container.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.DeleteBrigadeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.DeleteCarDriverResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.DeleteCarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.DeleteCompanyCarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.DeleteCompanyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.DeleteCompanyRowsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.DeletePointResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.DeletePostResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.DeleteRowBreedsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.DeleteRowResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.GetBrigadeRowDistributionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.GetBrigadesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.GetCarDriversResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.GetCarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.GetCarsPointModelForContainerMoveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.GetCarsPointModelForSaleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.GetCarsPointModelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.GetCompanyCarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.GetCompanyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.GetCompanyRowResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.GetContainerForProductRecieveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.GetContainersForContainerLocationsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.GetContainersForContainerMoveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.GetContainersForContainerPackResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.GetContainersForSaleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.GetHarvesterInAllRowsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.GetHarvesterInDistributionModelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.GetHarvesterPostIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.GetPaletForContainerPackResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.GetPointResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.GetPointsForSendBackResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.GetPointsForWaybillInResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.GetPointsForWaybillResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.GetPostModelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.GetPostsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.GetRowBreedsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.GetRowsByHarvesterRowInDistributionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.GetRowsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.GetRowsWithDateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.GetTakeRowInRowResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.InserBrigadesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.InsertCarDriverResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.InsertCarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.InsertCompanyCarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.InsertCompanyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.InsertCompanyRowResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.InsertPersonPostResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.InsertPointResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.InsertPostResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.InsertRowBreedContainerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.InsertRowBreedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.InsertRowResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.PointsModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.Post.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.PostModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.ProductPack.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.Row.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.RowBreedsModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.RowModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.RowWithDateModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.SalePointsModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.UpdateBrigadeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.UpdateCarDriverResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.UpdateCarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.UpdateCompanyCarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.UpdateCompanyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.UpdateCompanyRowResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.UpdatePointResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.UpdatePostResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.UpdateRowBreedContainerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.UpdateRowBreedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BerryManagementApplication.BM_Structure_ServiceReference.UpdateRowResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BM_Structure_Service.wsdl" />
+    <None Include="Connected Services\BM_Structure_ServiceReference\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\item4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Template_ServiceReference\BerryManagementApplication.BM_Template_ServiceReference.DeleteDocumentTemplateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Template_ServiceReference\BerryManagementApplication.BM_Template_ServiceReference.DocumentTemplate.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Template_ServiceReference\BerryManagementApplication.BM_Template_ServiceReference.DocumentTemplateTitle.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Template_ServiceReference\BerryManagementApplication.BM_Template_ServiceReference.GetDocumentTemplateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Template_ServiceReference\BerryManagementApplication.BM_Template_ServiceReference.GetDocumentTemplateTitlesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Template_ServiceReference\BerryManagementApplication.BM_Template_ServiceReference.InsertDocumentTemplateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Template_ServiceReference\BerryManagementApplication.BM_Template_ServiceReference.UpdateDocumentTemplateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Template_ServiceReference\BM_Template_Service.wsdl" />
+    <None Include="Connected Services\BM_Template_ServiceReference\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Template_ServiceReference\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Template_ServiceReference\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\BM_Employee_ServiceReference\" />
+    <WCFMetadataStorage Include="Connected Services\BM_Library_ServiceReference\" />
+    <WCFMetadataStorage Include="Connected Services\BM_Operation_ServiceReference\" />
+    <WCFMetadataStorage Include="Connected Services\BM_Produce_ServiceReference\" />
+    <WCFMetadataStorage Include="Connected Services\BM_RS_ServiceReference\" />
+    <WCFMetadataStorage Include="Connected Services\BM_Security_ServiceReference\" />
+    <WCFMetadataStorage Include="Connected Services\BM_Structure_ServiceReference\" />
+    <WCFMetadataStorage Include="Connected Services\BM_Template_ServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Security_ServiceReference\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Security_ServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Security_ServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Security_ServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Library_ServiceReference\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Library_ServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Library_ServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Library_ServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Employee_ServiceReference\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Employee_ServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Employee_ServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Employee_ServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Template_ServiceReference\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Template_ServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Template_ServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Template_ServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Operation_ServiceReference\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Operation_ServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Operation_ServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Operation_ServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_RS_ServiceReference\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_RS_ServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_RS_ServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_RS_ServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Produce_ServiceReference\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Produce_ServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Produce_ServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Produce_ServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Structure_ServiceReference\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Structure_ServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Structure_ServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Structure_ServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="berry_192.ico" />
+    <Content Include="Icons\berry_128.ico" />
+    <Content Include="Icons\berry_16.ico" />
+    <Content Include="Icons\berry_192.ico" />
+    <Content Include="Icons\berry_24.ico" />
+    <Content Include="Icons\berry_32.ico" />
+    <Content Include="Icons\berry_48.ico" />
+    <Content Include="Icons\berry_64.ico" />
+    <Content Include="Icons\berry_96.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,69 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="BerryPackagingApplication.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Setting" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=D:\Projects\BerryManagementSolution.v1.0\BerryPackagingApplication\bin\Debug\ContainersDB.sdf&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlServerCe.4.0&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=D:\Projects\BerryManagementSolution.v1.0\BerryPackagingApplication\bin\Debug\ContainersDB.sdf</Value>
+    </Setting>
+    <Setting Name="DataBaseName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ContainersDB.sdf</Value>
+    </Setting>
+    <Setting Name="UseByDays" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">20</Value>
+    </Setting>
+    <Setting Name="DefaultPrinterName" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ZPL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">
+                  ^XA
+                  ^FX LEFT SIDE
+                  ^FT10,24,0^A0N,22,22
+                  ^FDFRESH BLUEBERRY - Variety ^FS
+                  ^FT10,43,0^A0N,20,25
+                  ^FDWeight Net ^FS
+                  ^FT10,62,0^A0N,20,25
+                  ^FDWeight Gross ^FS
+                  ^FT10,81,0^A0N,20,25
+                  ^FDHarvest^FS
+                  ^FT10,100,0^A0N,20,25
+                  ^FDPacking^FS
+                  ^FT10,119,0^A0N,20,25
+                  ^FDUse by^FS
+                  ^FT10,137,0^A0N,20,25
+                  ^FDStorage conditions: store in a cool,  ^FS
+                  ^FT10,158,0^A0N,22,25
+                  ^FDhygienic and dry place^FS
+                  ^FT10,179,0^A0N,20,25
+                  ^FDCountry of origin^FS
+                  ^FX RIGHT SIDE
+                  ^FT440,24,1^A0N,20,25
+                  ^FDPholder5 ^FS
+                  ^FT440,43,1^A0N,20,25
+                  ^FDPholder3 kgs ^FS
+                  ^FT435,62,1^A0N,20,25
+                  ^FDPholder4 kgs^FS
+                  ^FT435,81,1^A0N,20,25
+                  ^FDPholder1^FS
+                  ^FT435,100,1^A0N,20,25
+                  ^FDPholder2^FS
+                  ^FT435,119,1^A0N,20,25
+                  ^FDPholder6^FS
+                  ^FT355,179,0^A0N,20,25
+                  ^FDGeorgia^FS
+                  ^FX Third section with barcode.
+                  ^BY 2,60,45,
+                  ^FO35,185^BC^FDBarcode^FS
+                  ^XZ
+                </Value>
+    </Setting>
+    <Setting Name="PalleteZpl" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>

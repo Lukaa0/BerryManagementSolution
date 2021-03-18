@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Security_Service/?xsd=xsd1" filename="item.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Security_Service/?xsd=xsd3" filename="item0.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Security_Service/?xsd=xsd4" filename="item1.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Security_Service/?disco" filename="item.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Security_Service/?xsd=xsd0" filename="item2.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Security_Service/?xsd=xsd2" filename="item3.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Security_Service/?wsdl" filename="BM_Security_Service.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

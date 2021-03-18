@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">		
+	<RelativeLayout
+	android:layout_height="match_parent"
+	android:animateLayoutChanges="true"
+	
+	android:id="@+id/harv_dist_container"
+	android:layout_width="match_parent">
+			
+	<Button
+			android:layout_height="wrap_content"
+			android:text="@string/scan_code"
+			android:id="@+id/harvdist_scan_code_btn"
+			android:layout_alignParentTop="true"
+			android:background="@android:color/holo_red_light"
+			style="@style/Widget.AppCompat.Button.Colored"
+			android:layout_width="match_parent"/>
+		<EditText
+			android:layout_height="2dp"
+			android:layout_width="match_parent"
+			android:id="@+id/harvdist_scan_edittext"
+			android:hint="@string/enter_code"
+				/>
+	<Spinner
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:layout_below="@id/harvdist_scan_code_btn"
+			android:id="@+id/harvDist_harvester_spinner"/>
+		<Spinner
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:layout_below="@id/harvDist_harvester_spinner"
+			android:id="@+id/harvDist_row_spinner"/>
+
+			<Button
+			android:layout_height="wrap_content"
+			android:id="@+id/harvester_row_confirm_button"
+			android:background="@android:color/holo_green_light"
+			style="@style/Widget.AppCompat.Button.Colored"
+				android:layout_below="@id/harvDist_row_spinner"
+			android:layout_width="match_parent"/>
+			<RelativeLayout
+				android:layout_height="match_parent"
+				android:layout_width="match_parent"
+					android:layout_below="@id/harvester_row_confirm_button">
+	<android.support.v7.widget.RecyclerView
+		android:layout_height="match_parent"
+		android:layout_marginTop="7dp"
+		android:layout_width="match_parent"
+		android:id="@+id/harvdist_recyclerview"/>
+			<ProgressBar
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:layout_centerInParent="true"
+				android:id="@+id/harvdist_progressBar"/>
+		</RelativeLayout>
+	</RelativeLayout>
+	
+		</LinearLayout>

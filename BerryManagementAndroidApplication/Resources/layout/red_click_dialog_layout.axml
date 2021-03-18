@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<TextView
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:id="@+id/dialog_error_text"
+		android:text="dsaiodjaiowjdioawjd"
+		android:textSize="13sp"/>
+	<Button
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:layout_marginTop="5dp"
+		android:layout_below="@id/dialog_error_text"
+		android:background="@android:color/holo_blue_light"
+		android:id="@+id/dialog_send_again_btn"
+		android:layout_alignParentRight="true"
+		android:text="@string/send_again"/>
+	<Button
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:layout_below="@id/dialog_error_text"
+		android:background="@android:color/holo_red_light"
+		android:id="@+id/dialog_delete_btn"
+		android:layout_marginTop="5dp"
+
+		android:text="@string/delete"/>
+</RelativeLayout>

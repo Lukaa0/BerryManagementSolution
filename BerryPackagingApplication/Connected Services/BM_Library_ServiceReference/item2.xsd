@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.RS.XClasses" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.RS.XClasses" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfRS_ProductModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RS_ProductModel" nillable="true" type="tns:RS_ProductModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRS_ProductModel" nillable="true" type="tns:ArrayOfRS_ProductModel" />
+  <xs:complexType name="RS_ProductModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Product_Breed_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Product_ContainerCount" type="xs:int" />
+      <xs:element minOccurs="0" name="Product_Ovner_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="Product_WeightsSum" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RS_ProductModel" nillable="true" type="tns:RS_ProductModel" />
+</xs:schema>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Employees.XClasses" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Employees.XClasses" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Employee_Service/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfPersonPostModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PersonPostModel" nillable="true" type="tns:PersonPostModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPersonPostModel" nillable="true" type="tns:ArrayOfPersonPostModel" />
+  <xs:complexType name="PersonPostModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PersonPost_BalanceSheetType_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="PersonPost_BalanceSheetType_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PersonPost_Brigade_Id" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="PersonPost_Brigade_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PersonPost_Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PersonPost_Direction" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PersonPost_DismissalOrder" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PersonPost_EmployeeBarCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PersonPost_EmployeeType_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="PersonPost_EmployeeType_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PersonPost_EndDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PersonPost_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="PersonPost_Person_FullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PersonPost_Person_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="PersonPost_Post_BarCodePrefix" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PersonPost_Post_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="PersonPost_Post_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PersonPost_StartDate" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PersonPostModel" nillable="true" type="tns:PersonPostModel" />
+  <xs:complexType name="ArrayOfPersonDocumentModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PersonDocumentModel" nillable="true" type="tns:PersonDocumentModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPersonDocumentModel" nillable="true" type="tns:ArrayOfPersonDocumentModel" />
+  <xs:complexType name="PersonDocumentModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Citizenship_Citizenship_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Citizenship_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="PersonDocument_Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PersonDocument_DocumentType_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="PersonDocument_DocumentType_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PersonDocument_Employee_FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PersonDocument_Employee_FullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PersonDocument_Employee_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="PersonDocument_Employee_LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PersonDocument_EndDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PersonDocument_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="PersonDocument_Isuer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PersonDocument_Number" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PersonDocument_StartDate" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PersonDocumentModel" nillable="true" type="tns:PersonDocumentModel" />
+  <xs:complexType name="ArrayOfEmployeeLabel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EmployeeLabel" nillable="true" type="tns:EmployeeLabel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEmployeeLabel" nillable="true" type="tns:ArrayOfEmployeeLabel" />
+  <xs:complexType name="EmployeeLabel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Barcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BrigadeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EmployeeLabel" nillable="true" type="tns:EmployeeLabel" />
+  <xs:complexType name="ArrayOfPunishmentModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PunishmentModel" nillable="true" type="tns:PunishmentModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPunishmentModel" nillable="true" type="tns:ArrayOfPunishmentModel" />
+  <xs:complexType name="PunishmentModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Error" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsComplete" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Post_Id" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="Post_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PunishmentType_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Punishment_DateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Punishment_Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Punishment_Harvester_FullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Punishment_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Punishment_PersonPost_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="Punishment_PunishmentType_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="Punishment_User_FullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Punishment_User_PersonPost_Id" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PunishmentModel" nillable="true" type="tns:PunishmentModel" />
+</xs:schema>

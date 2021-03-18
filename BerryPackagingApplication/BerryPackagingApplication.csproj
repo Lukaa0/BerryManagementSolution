@@ -1,0 +1,716 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DAE43872-6199-4B75-BA4B-040EE84EF79A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BerryPackagingApplication</RootNamespace>
+    <AssemblyName>BerryPackagingApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SQL Server Compact Edition\v4.0\Desktop\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\BM_Library_ServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\BM_Operarion_ServiceRefernce\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\BM_Security_ServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ScaleControler.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ScaleControler.designer.cs">
+      <DependentUpon>ScaleControler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DbServices\LocalDatabase.cs" />
+    <Compile Include="DbServices\Services.cs" />
+    <Compile Include="Forms\AutentificationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AutentificationForm.designer.cs">
+      <DependentUpon>AutentificationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ChangePasswordFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChangePasswordFrom.Designer.cs">
+      <DependentUpon>ChangePasswordFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalKeyboardHook.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Message.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Message.Designer.cs">
+      <DependentUpon>Message.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StaticClasses\Security.cs" />
+    <Compile Include="StaticClasses\ZebraRawPrinterHelper.cs" />
+    <EmbeddedResource Include="Controls\ScaleControler.resx">
+      <DependentUpon>ScaleControler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AutentificationForm.resx">
+      <DependentUpon>AutentificationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ChangePasswordFrom.resx">
+      <DependentUpon>ChangePasswordFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Message.resx">
+      <DependentUpon>Message.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.Bank.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.Breed.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.Citizenship.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.Container.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.ContainerModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.CreateContainerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.CreateContainersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.DocumentType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.GetAllPointsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.GetBalanceSheetTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.GetBreedsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.GetCitizenshipsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.GetContainerForQualityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.GetContainersByProductPackResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.GetContainerTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.GetDocumentTypedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.GetEmployeeTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.GetGenderTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.GetLegalFormsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.GetLegalStatuseTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.GetMaritalStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.GetNationalitiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.GetPalleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.GetPalleteWeightResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.GetPointTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.GetProductQualityesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.GetPunishmentTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.GetRS_ProductModelByContainersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.GetSalaryTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.GetSideTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.InsertBankResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.InsertBreedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.InsertCitizenshipResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.InsertDocumentTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.InsertLegalFormResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.InsertNationalityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.LegalForm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.Nationality.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.PalleteModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.PalleteWeight.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.Point.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.RS_ProductModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.SelectBanksResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.SelectContainersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.tf_ContainerTypes_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.tf_EmployeeTypes_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.tf_GenderTypes_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.tf_GetBalanceSheetTypes_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.tf_LegalStatuseTypes_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.tf_MaritalStatus_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.tf_PointTypes_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.tf_ProductQualityes_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.tf_PunishmentTypes_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.tf_SalaryTypes_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.tf_SideTypes_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.UpdateBankResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.UpdateBreedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.UpdateCitizenshipResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.UpdateDocumentTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.UpdateLegalFormResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BerryPackagingApplication.BM_Library_ServiceReference.UpdateNationalityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BM_Library_Service.wsdl" />
+    <None Include="Connected Services\BM_Library_ServiceReference\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\item4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\item5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.CheckContainerLocationForPackagingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.CheckHarvesterInRowPersonPostResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.CheckTakeRowsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.CloseTransportWaybillResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.ContainerLocation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.ContainerLocationModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.ContainerModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.ContainerMoveInOut.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.ContainerPackModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.ContainerWeightModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.CorrectWaybillResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.CreateTransportWaybillResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.FixContainerMoveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.FixContainerPackResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.FixContainerSendBackResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.FixHarvesterContainerDistributionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.FixHarvesterRowDistributionInOutResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.FixProductQualityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.FixProductReceiveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.FixProductRepackAndWeightResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.FixPunishmentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.FixSaleContainerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.FixTakeRowInOutResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.GetClosedTakeRowsModelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.GetContainerForQualityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.GetContainerModelByPaletteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.GetContainerMoveInOutResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.GetContainerPackByPaletteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.GetContainerPackCountByCarIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.GetContainerPackModelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.GetContainersLocationssResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.GetContainerWeightsByCharsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.GetCountForContainerMoveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.GetCountForContainerPackResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.GetHarvesterRowDistributionInOutsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.GetHarvesterRowDistributionInResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.GetHarvesterRowDistributionOutResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.GetHarvesterRowDistributionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.GetHarvRowDistribByPersonPostIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.GetLatestVersionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.GetOperationSettingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.GetRowsWithBrigadeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.GetTakeRowsByBrigadeIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.GetTakeRowsInByPersonPostIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.GetTakeRowsModelByBrigadeIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.GetTakeRowsModelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.GetTakeRowsOutByPersonPostIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.GetTakeRowsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.GetTakeRows_HarvestersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.GetWeightsForReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.HarvesterRowDistribution.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.HarvesterRowDistributionInOut.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.InsertContainerMoveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.InsertContainerPackResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.OperationSetting.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.PalleteModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.ProductPack.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.ProductRepackAndWeight.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.TakeRow.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.TakeRowInOut.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.TakeRowModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.TakeRows_Harvesters.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.UpdateOperationSettingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.UpdateTakeRowResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BerryPackagingApplication.BM_Operarion_ServiceRefernce.UpdateTakeRowWithResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\BM_Operation_Service.wsdl" />
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryPackagingApplication.BM_Security_ServiceReference.AutorizeUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryPackagingApplication.BM_Security_ServiceReference.CheckPostRoleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryPackagingApplication.BM_Security_ServiceReference.CheckUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryPackagingApplication.BM_Security_ServiceReference.DeletePostRoleByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryPackagingApplication.BM_Security_ServiceReference.DeleteRoleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryPackagingApplication.BM_Security_ServiceReference.DeleteRolesPermissionByRoleIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryPackagingApplication.BM_Security_ServiceReference.GetAllPostResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryPackagingApplication.BM_Security_ServiceReference.GetAllRolesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryPackagingApplication.BM_Security_ServiceReference.GetPermissionsForRoleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryPackagingApplication.BM_Security_ServiceReference.GetPermissionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryPackagingApplication.BM_Security_ServiceReference.GetPostRolesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryPackagingApplication.BM_Security_ServiceReference.GetPost_Post_IdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryPackagingApplication.BM_Security_ServiceReference.GetRolePermissionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryPackagingApplication.BM_Security_ServiceReference.GetRolesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryPackagingApplication.BM_Security_ServiceReference.GetUserPermissionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryPackagingApplication.BM_Security_ServiceReference.GetUsersModelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryPackagingApplication.BM_Security_ServiceReference.GetUsersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryPackagingApplication.BM_Security_ServiceReference.InsertPostRoleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryPackagingApplication.BM_Security_ServiceReference.InsertRoleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryPackagingApplication.BM_Security_ServiceReference.InsertRolesPermissionsListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryPackagingApplication.BM_Security_ServiceReference.InsertUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryPackagingApplication.BM_Security_ServiceReference.Permission.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryPackagingApplication.BM_Security_ServiceReference.PermissionsForRole.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryPackagingApplication.BM_Security_ServiceReference.Post.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryPackagingApplication.BM_Security_ServiceReference.PostRoleName.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryPackagingApplication.BM_Security_ServiceReference.Role.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryPackagingApplication.BM_Security_ServiceReference.RolePermission.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryPackagingApplication.BM_Security_ServiceReference.UpdatePostRoleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryPackagingApplication.BM_Security_ServiceReference.UpdateRolePostResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryPackagingApplication.BM_Security_ServiceReference.UpdateRoleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryPackagingApplication.BM_Security_ServiceReference.UpdateUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryPackagingApplication.BM_Security_ServiceReference.UserModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BerryPackagingApplication.BM_Security_ServiceReference.UserPermissions.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\BM_Security_Service.wsdl" />
+    <None Include="Connected Services\BM_Security_ServiceReference\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Security_ServiceReference\item4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\BM_Library_ServiceReference\" />
+    <WCFMetadataStorage Include="Connected Services\BM_Operarion_ServiceRefernce\" />
+    <WCFMetadataStorage Include="Connected Services\BM_Security_ServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Operarion_ServiceRefernce\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="System\Configuration\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Library_ServiceReference\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Library_ServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Library_ServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Library_ServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Security_ServiceReference\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Security_ServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Security_ServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Security_ServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

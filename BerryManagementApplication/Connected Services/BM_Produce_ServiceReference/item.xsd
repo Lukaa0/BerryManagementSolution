@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Produce.XClasses" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Produce.XClasses" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Produce_Service/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfProductModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductModel" nillable="true" type="tns:ProductModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductModel" nillable="true" type="tns:ArrayOfProductModel" />
+  <xs:complexType name="ProductModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Product_Breed_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="Product_Breed_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Product_DateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Product_Error" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Product_Harvester_Barkode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Product_Harvester_FullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Product_Harvester_PersonPost_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="Product_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Product_IsComplete" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Product_ParentProduct_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Product_Row_Barkode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Product_Row_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="Product_User_Barkode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Product_User_FullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Product_User_PersonPost_Id" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProductModel" nillable="true" type="tns:ProductModel" />
+</xs:schema>

@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+
+<resources>
+
+  <string name="app_name">მეურნე</string>
+
+  <string name="navigation_drawer_open">Open navigation drawer</string>
+
+  <string name="navigation_drawer_close">Close navigation drawer</string>
+
+  <string name="see_rows">რიგების ნახვა</string>
+
+  <string name="distribute">გადანაწილება</string>
+
+  <string name="recieve">მიღება</string>
+  <string name="container">ყუთი : </string>
+  <string name="harvester">მკრეფავი : </string>
+  <string name="enter_code">შეიყვანეთ კოდი</string>
+  <string name="next">შემდეგი</string>
+
+  <string name="transport">ტრანსპორტი</string>
+  <string name="save_text">შენახვა</string>
+  <string name="row">რიგი : </string>
+  <string name="login">შესვლა</string>
+  <string name="name">აიდი/ბარკოდი</string>
+  <string name="send_again">ახლიდან გაგზავნა</string>
+  <string name="delete">გაგზავნის გაუქმება</string>
+  <string name="help_text"><![CDATA[რიგის გახსნა-> კრეფის ხელმზღვანელის მიერ დასაკრეფი რიგების იდენტიპიცირება
+  
+რიგებში გადანაწილება -> მკრეფავების გადანაწილება რიგებში]]>
+  
+  </string>
+
+
+  <string name="password">კოდი</string>
+
+
+  <string name="choose_loc">აირჩიეთ ლოკაცია</string>
+
+  <string name="scan_code">დაასკანერე კოდი</string>
+  <string name="scan_by_hand">ან შეიყვანე ხელით</string>
+
+
+
+  <string name="give_boxes">ყუთის გადაცემა</string>
+
+  <string name="action_settings">Settings</string>
+
+</resources>

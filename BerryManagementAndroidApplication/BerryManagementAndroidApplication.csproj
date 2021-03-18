@@ -1,0 +1,1072 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{07272096-7498-4F50-B9FC-AA5202BDA99D}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{d0238942-4dcf-4d08-b23a-81159ca3b345}</TemplateGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BerryManagementAndroidApplication</RootNamespace>
+    <AssemblyName>BerryManagementAndroidApplication</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
+    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <AndroidKeyStore>false</AndroidKeyStore>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>true</AndroidUseSharedRuntime>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <BundleAssemblies>false</BundleAssemblies>
+    <EnableProguard>false</EnableProguard>
+    <MandroidI18n />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>PdbOnly</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+    <AndroidManagedSymbols>true</AndroidManagedSymbols>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <BundleAssemblies>false</BundleAssemblies>
+    <EnableProguard>false</EnableProguard>
+    <AndroidCreatePackagePerAbi>false</AndroidCreatePackagePerAbi>
+    <AndroidSupportedAbis />
+    <JavaMaximumHeapSize>2G</JavaMaximumHeapSize>
+    <AndroidEnableMultiDex>false</AndroidEnableMultiDex>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Java.Interop" />
+    <Reference Include="Mono.Android.Export" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Activities\LoginActivity.cs" />
+    <Compile Include="Activities\ProductManagerActivity.cs" />
+    <Compile Include="Activities\SplashActivity.cs" />
+    <Compile Include="Adapters\ContainerPackRecyclerViewAdapter.cs" />
+    <Compile Include="Adapters\SaleRecyclerViewAdapter.cs" />
+    <Compile Include="Adapters\PalleteAndContainerRecyclerViewAdapter.cs" />
+    <Compile Include="Adapters\HarvesterContainerDistributionRecyclerViewAdapter.cs" />
+    <Compile Include="Adapters\HarvesterRecyclerViewAdapter.cs" />
+    <Compile Include="Adapters\HarvesterRowDistributionRecyclerViewAdapter.cs" />
+    <Compile Include="Adapters\LocationRecyclerViewAdapter.cs" />
+    <Compile Include="Adapters\ProductReceiveListAdapter.cs" />
+    <Compile Include="Adapters\HarvesteContainerDistributionListAdapter.cs" />
+    <Compile Include="Adapters\DividingListAdapter.cs" />
+    <Compile Include="Adapters\ProductRecyclerView.cs" />
+    <Compile Include="Adapters\CarOpenCloseRecyclerViewAdapter.cs" />
+    <Compile Include="Adapters\PunishmentRecyclerView.cs" />
+    <Compile Include="Adapters\TakeRowRecyclerViewAdapter.cs" />
+    <Compile Include="Adapters\RowsAndHarvestersRecyclerViewAdapter.cs" />
+    <Compile Include="AllTask.cs" />
+    <Compile Include="API\Alerter.cs" />
+    <Compile Include="API\ApplicationUpdateManager.cs" />
+    <Compile Include="API\LocalDbService.cs" />
+    <Compile Include="API\Sounder.cs" />
+    <Compile Include="API\SQLiteClient.cs" />
+    <Compile Include="App.cs" />
+    <Compile Include="Exceptions\EmptyParameterException.cs" />
+    <Compile Include="Exceptions\InvalidCodeException.cs" />
+    <Compile Include="Fragments\CarOpenCloseFragment.cs" />
+    <Compile Include="Fragments\Dialogs\TransportPaletInputDialogFragment.cs" />
+    <Compile Include="Fragments\ContainerPackFragment.cs" />
+    <Compile Include="Fragments\SaleContainerFragment.cs" />
+    <Compile Include="Fragments\ContainerInOutFragment.cs" />
+    <Compile Include="Fragments\Dialogs\RedItemDialog.cs" />
+    <Compile Include="Fragments\Dialogs\TransportSaleInputDialogFragment.cs" />
+    <Compile Include="Fragments\Dialogs\TransportInputDialogFragment.cs" />
+    <Compile Include="Fragments\HarvesterContainerDistributionFragment.cs" />
+    <Compile Include="Fragments\HarvesterRowDistributionFragment.cs" />
+    <Compile Include="Fragments\HarvestersFragment.cs" />
+    <Compile Include="Fragments\HelpFragment.cs" />
+    <Compile Include="Fragments\LocationFragment.cs" />
+    <Compile Include="Fragments\PaletteFragment.cs" />
+    <Compile Include="Fragments\ProductFragment.cs" />
+    <Compile Include="Fragments\ProductReceiveFragment.cs" />
+    <Compile Include="Fragments\DividingListFragment.cs" />
+    <Compile Include="Fragments\DividingFragment.cs" />
+    <Compile Include="Fragments\PunishmentFragment.cs" />
+    <Compile Include="Fragments\StartPageFragment.cs" />
+    <Compile Include="Fragments\PaletContainerPackFragment.cs" />
+    <Compile Include="Fragments\ProductQualityFragment.cs" />
+    <Compile Include="Fragments\TakeRowFragment.cs" />
+    <Compile Include="GlobalVariables.cs" />
+    <Compile Include="Model\FragmentInflater.cs" />
+    <Compile Include="Model\GridFitLayoutManager.cs" />
+    <Compile Include="Model\HarvesterContainerDistributionInOutLocal.cs" />
+    <Compile Include="Model\HarvesterDistributionFactory.cs" />
+    <Compile Include="Model\InputValidationUtility.cs" />
+    <Compile Include="Model\LocalDataModels\ContainerPackLocalModel.cs" />
+    <Compile Include="Model\LocalDataModels\SaleContainerModel.cs" />
+    <Compile Include="Model\LocalDataModels\ContainerInOutContainerModel.cs" />
+    <Compile Include="Model\LocalDataModels\ContainerInOutLocal.cs" />
+    <Compile Include="Model\LocalDataModels\ContainersForPalette.cs" />
+    <Compile Include="Model\LocalDataModels\ErrorTableReference.cs" />
+    <Compile Include="Model\LocalDataModels\HarvesterRowDistributionInOutLocal.cs" />
+    <Compile Include="Model\LocalDataModels\HarvesterRowDistributionRowModel.cs" />
+    <Compile Include="Model\LocalDataModels\PaletteModel.cs" />
+    <Compile Include="Model\LocalDataModels\PersonPostModelLocal.cs" />
+    <Compile Include="Model\LocalDataModels\ProductReceiveLocal.cs" />
+    <Compile Include="Model\LocalDataModels\SaleCarModelLocal.cs" />
+    <Compile Include="Model\LocalDataModels\TakeRowInOutLocal.cs" />
+    <Compile Include="Model\LocalDataModels\UserPermissionsModel.cs" />
+    <Compile Include="Model\Location.cs" />
+    <Compile Include="Model\LocationAuthorizationState.cs" />
+    <Compile Include="Model\ProductQuality.cs" />
+    <Compile Include="Model\HarvesterContainerDistribution.cs" />
+    <Compile Include="Model\ListItems.cs" />
+    <Compile Include="Activities\MainActivity.cs" />
+    <Compile Include="Fragments\RowsFragment.cs" />
+    <Compile Include="Model\Security.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\AlarmReceiver.cs" />
+    <Compile Include="Service\BerryJobCreator.cs" />
+    <Compile Include="Service\BerrySyncJob.cs" />
+    <Compile Include="Service\BootBroadcast.cs" />
+    <Compile Include="Service\PeriodicBackgroundService.cs" />
+    <Compile Include="Service\PeriodicWebCall.cs" />
+    <Compile Include="Web References\EmployeeService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\LibraryService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\OperationService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ProduceService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\RsService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SecurityService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\StructureService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="Web References\EmployeeService\BM_Employee_Service.wsdl" />
+    <None Include="Web References\EmployeeService\EmployeeLabel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EmployeeService\GeneralReportModel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EmployeeService\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\EmployeeService\item0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\EmployeeService\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\EmployeeService\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\EmployeeService\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\EmployeeService\item4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\EmployeeService\item5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\EmployeeService\Person.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EmployeeService\PersonDocument.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EmployeeService\PersonDocumentModel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EmployeeService\PersonPost.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EmployeeService\PersonPostModel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EmployeeService\Post.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EmployeeService\PunishmentCountModel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EmployeeService\PunishmentModel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EmployeeService\RecPunishmentCountModel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EmployeeService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\EmployeeService\ReportModel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EmployeeService\RS_ProductModel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EmployeeService\WeightsModelcs.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\LibraryService\Bank.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\LibraryService\BM_Library_Service.wsdl" />
+    <None Include="Web References\LibraryService\Breed.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\LibraryService\Citizenship.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\LibraryService\Container.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\LibraryService\ContainerModel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\LibraryService\DocumentType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\LibraryService\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\LibraryService\item0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\LibraryService\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\LibraryService\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\LibraryService\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\LibraryService\item4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\LibraryService\LegalForm.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\LibraryService\Nationality.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\LibraryService\PalleteModel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\LibraryService\PalleteWeight.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\LibraryService\Point.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\LibraryService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\LibraryService\RS_ProductModel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\LibraryService\tf_ContainerTypes_Result.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\LibraryService\tf_EmployeeTypes_Result.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\LibraryService\tf_GenderTypes_Result.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\LibraryService\tf_GetBalanceSheetTypes_Result.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\LibraryService\tf_LegalStatuseTypes_Result.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\LibraryService\tf_MaritalStatus_Result.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\LibraryService\tf_PointTypes_Result.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\LibraryService\tf_ProductQualityes_Result.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\LibraryService\tf_PunishmentTypes_Result.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\LibraryService\tf_SalaryTypes_Result.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\LibraryService\tf_SideTypes_Result.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\OperationService\BM_Operation_Service.wsdl" />
+    <None Include="Web References\OperationService\ContainerLocation.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\OperationService\ContainerLocationModel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\OperationService\ContainerModel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\OperationService\ContainerMoveInOut.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\OperationService\ContainerPackModel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\OperationService\ContainerWeightModel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\OperationService\HarvesterRowDistribution.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\OperationService\HarvesterRowDistributionInOut.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\OperationService\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\OperationService\item0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\OperationService\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\OperationService\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\OperationService\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\OperationService\item4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\OperationService\OperationSetting.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\OperationService\PalleteModel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\OperationService\ProductPack.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\OperationService\ProductRepackAndWeight.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\OperationService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\OperationService\TakeRow.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\OperationService\TakeRowInOut.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\OperationService\TakeRowModel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\OperationService\TakeRows_Harvesters.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ProduceService\BM_Produce_Service.wsdl" />
+    <None Include="Web References\ProduceService\BreedProperty.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ProduceService\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\ProduceService\item0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\ProduceService\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\ProduceService\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\ProduceService\ProductModel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ProduceService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\RsService\BM_RS_Service.wsdl" />
+    <None Include="Web References\RsService\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\RsService\item0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\RsService\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\RsService\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\RsService\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\RsService\NonTransportWaybillModel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\RsService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\RsService\RS_ProductModel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\RsService\TransportWaybill.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\RsService\TransportWaybillModel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\RsService\WaybillContainerWAYBILLGOODS.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SecurityService\BM_Security_Service.wsdl" />
+    <None Include="Web References\SecurityService\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\SecurityService\item0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\SecurityService\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\SecurityService\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\SecurityService\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\SecurityService\Permission.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SecurityService\PermissionsForRole.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SecurityService\Post.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SecurityService\PostRoleName.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SecurityService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SecurityService\Role.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SecurityService\RolePermission.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SecurityService\UserModel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SecurityService\UserPermissions.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\StructureService\BM_Structure_Service.wsdl" />
+    <None Include="Web References\StructureService\Brigade.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\StructureService\CarDriversModel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\StructureService\CarModel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\StructureService\CompanyCarModel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\StructureService\CompanyeModel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\StructureService\CompanyRowsModel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\StructureService\Container.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\StructureService\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\StructureService\item0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\StructureService\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\StructureService\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\StructureService\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\StructureService\PointsModel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\StructureService\Post.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\StructureService\PostModel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\StructureService\ProductPack.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\StructureService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\StructureService\Row.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\StructureService\RowBreedsModel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\StructureService\RowModel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\StructureService\RowWithDateModel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\StructureService\SalePointsModel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_main.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\app_bar_main.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\content_main.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\nav_header_main.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\values\dimens.xml" />
+    <AndroidResource Include="Resources\values\drawables.xml" />
+    <AndroidResource Include="Resources\values\ic_launcher_background.xml" />
+    <AndroidResource Include="Resources\values\strings.xml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\values-v21\styles.xml" />
+    <AndroidResource Include="Resources\drawable\side_nav_bar.xml" />
+    <AndroidResource Include="Resources\drawable-v21\ic_menu_camera.xml" />
+    <AndroidResource Include="Resources\drawable-v21\ic_menu_gallery.xml" />
+    <AndroidResource Include="Resources\drawable-v21\ic_menu_manage.xml" />
+    <AndroidResource Include="Resources\drawable-v21\ic_menu_send.xml" />
+    <AndroidResource Include="Resources\drawable-v21\ic_menu_share.xml" />
+    <AndroidResource Include="Resources\drawable-v21\ic_menu_slideshow.xml" />
+    <AndroidResource Include="Resources\menu\activity_main_drawer.xml" />
+    <AndroidResource Include="Resources\menu\menu_main.xml" />
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\ic_launcher.xml" />
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\ic_launcher_round.xml" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher_round.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher_round.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher_round.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher_round.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_round.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Karamunting.Android.Evernote.AndroidJob">
+      <Version>1.2.6</Version>
+    </PackageReference>
+    <PackageReference Include="Matcha.BackgroundService">
+      <Version>1.0.5478</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="sqlite-net-pcl">
+      <Version>1.5.231</Version>
+    </PackageReference>
+    <PackageReference Include="SQLitePCL.raw">
+      <Version>0.9.2</Version>
+    </PackageReference>
+    <PackageReference Include="Square.Picasso">
+      <Version>2.5.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Compat">
+      <Version>28.0.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.v4">
+      <Version>28.0.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.v7.CardView">
+      <Version>28.0.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.v7.RecyclerView">
+      <Version>28.0.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms">
+      <Version>3.6.0.344457</Version>
+    </PackageReference>
+    <PackageReference Include="ZXing.Net.Mobile">
+      <Version>2.4.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\dividing_Fragment.axml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\dividingList_Fragment.axml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\row.axml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\containerDistribution_Fragment.axml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\HarvesterContainerDistributionRow.axml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\BerryManagement_D.db" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\ScannPoint_Fragment.axml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\productReceive_Fragment.axml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\ProductReceiveRow.axml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Raw\beep.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\start_page_layout.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\recieve_product_layout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\scanner_image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\header_image_vector.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\locations_item_layout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\location_main_layout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Employee_Service/">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\EmployeeService\</RelPath>
+      <UpdateFromURL>http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Employee_Service/</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Library_Service/">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\LibraryService\</RelPath>
+      <UpdateFromURL>http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Library_Service/</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Operation_Service/">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\OperationService\</RelPath>
+      <UpdateFromURL>http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Operation_Service/</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Produce_Service/">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ProduceService\</RelPath>
+      <UpdateFromURL>http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Produce_Service/</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_RS_Service/">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\RsService\</RelPath>
+      <UpdateFromURL>http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_RS_Service/</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Security_Service/">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SecurityService\</RelPath>
+      <UpdateFromURL>http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Security_Service/</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Structure_Service/">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\StructureService\</RelPath>
+      <UpdateFromURL>http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Structure_Service/</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\product_item_layout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\product_main_layout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\ic_delete_forever_red_dark_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\ic_edit_yellow_dark_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\ic_delete_forever_red_dark_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_delete_forever_red_dark_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_delete_forever_red_dark_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_delete_forever_red_dark_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\ic_edit_yellow_dark_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_edit_yellow_dark_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_edit_yellow_dark_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_edit_yellow_dark_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\takerowInOut_layout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\containerinout_main_layout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\harvester_row_distribution_main.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\row_item.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\harvester_row_dist_inout_layout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\rows_main.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\harvester_item_layout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\transport_input_dialog.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\ic_refresh_white_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\ic_refresh_white_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_refresh_white_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_refresh_white_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_refresh_white_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\harvester_distribution_layout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\login_layout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\red_click_dialog_layout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\splash_drawable.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\berry_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\punishment_layout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\punishment_list_item.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\EmployeeService\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\OperationService\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\StructureService\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\ProduceService\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\SecurityService\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\RsService\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\LibraryService\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\car_open_close_layout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Raw\error_sound.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\car_open_close_list_item.axml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\palette_main_layout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\help_layout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\containerpack_main_layout.axml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\productQuality_layout.axml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Raw\Notification.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\xml\provider_paths.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\sale_main_layout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+    Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+  -->
+</Project>

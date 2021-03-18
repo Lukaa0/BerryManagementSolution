@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<RelativeLayout
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content">
+		<EditText
+			android:layout_height="2dp"
+			android:layout_width="2dp"
+			android:id="@+id/carOpenClose_editText"/>
+	<Button
+			android:layout_height="wrap_content"
+			android:text="@string/scan_code"
+			android:id="@+id/carOpenClose_scan_btn"
+			android:background="@android:color/holo_red_light"
+			style="@style/Widget.AppCompat.Button.Colored"
+			android:layout_width="match_parent"/>
+		</RelativeLayout>
+		<Spinner
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:id="@+id/spinner_carOpenClose_type"
+		/>
+	<NumberPicker
+    android:id="@+id/numberPicker"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_gravity="center" />
+		<Button
+			android:layout_height="wrap_content"
+			android:id="@+id/carOpenClose_confirm_btn"
+			android:background="@android:color/holo_green_light"
+			style="@style/Widget.AppCompat.Button.Colored"
+			android:layout_width="match_parent"/>
+	<TextView
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:id="@+id/carOpenClose_TextView"/>
+		<android.support.v7.widget.RecyclerView
+			android:layout_height="match_parent"
+			android:id="@+id/carOpenClose_recyler"
+			android:layout_width="match_parent"
+			android:layout_marginTop="10dp"/>
+</LinearLayout>

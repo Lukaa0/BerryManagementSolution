@@ -1,0 +1,682 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SSDTUnitTestPath Condition="'$(SSDTUnitTestPath)' == ''">$(VsInstallRoot)\Common7\IDE\Extensions\Microsoft\SQLDB</SSDTUnitTestPath>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SSDTPath Condition="'$(SSDTPath)' == ''">$(VsInstallRoot)\Common7\IDE\Extensions\Microsoft\SQLDB\DAC\130</SSDTPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B27C3E75-104E-41E8-80B3-9BC0430D3ECD}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>BerryManagementWindowsService</RootNamespace>
+    <AssemblyName>BerryManagementWindowsService</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BerryManagementInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BerryManagementInstaller.Designer.cs">
+      <DependentUpon>BerryManagementInstaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BerryManagementService.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BerryManagementService.Designer.cs">
+      <DependentUpon>BerryManagementService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\EntityAutoMultipleSorter.cs" />
+    <Compile Include="Classes\GlobalParams.cs" />
+    <Compile Include="Classes\HarvesterRowViewModel.cs" />
+    <Compile Include="Classes\Pivot.cs" />
+    <Compile Include="Classes\Serializers.cs" />
+    <Compile Include="Connected Services\WayBillServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Bank.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BerryManagementModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BerryManagementModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BerryManagementModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BerryManagementModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BerryManagementModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Breed.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BreedProperty.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Brigade.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Car.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CarDriver.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Citizenship.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CompanyCar.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Companye.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CompanyRow.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Container.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ContainerLocation.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ContainerMove.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ContainerPack.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ContainerWeight.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DocumentTemplate.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DocumentTemplateTitle.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DocumentType.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Employees\Delete.cs" />
+    <Compile Include="Data\Employees\Insert.cs" />
+    <Compile Include="Data\Employees\SelectL.cs" />
+    <Compile Include="Data\Employees\SelectQ.cs" />
+    <Compile Include="Data\Employees\Update.cs" />
+    <Compile Include="Data\Employees\XClasses\EmployeeLabel.cs" />
+    <Compile Include="Data\Employees\XClasses\Person.cs" />
+    <Compile Include="Data\Employees\XClasses\PersonDocumentModel.cs" />
+    <Compile Include="Data\Employees\XClasses\PersonEverything.cs" />
+    <Compile Include="Data\Employees\XClasses\PersonPostModel.cs" />
+    <Compile Include="Data\Employees\XClasses\PunishmentModel.cs" />
+    <Compile Include="Data\Employees\XClasses\ReportModel\GeneralReportModel.cs" />
+    <Compile Include="Data\Employees\XClasses\ReportModel\PunishmentCountModel.cs" />
+    <Compile Include="Data\Employees\XClasses\ReportModel\ReportModel.cs" />
+    <Compile Include="Data\Employees\XClasses\ReportModel\RecPunishmentCountModel.cs" />
+    <Compile Include="Data\Employees\XClasses\ReportModel\WeightsModelcs.cs" />
+    <Compile Include="Data\HarvesterContainerDistribution.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\HarvesterRowDistribution.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\LegalForm.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Library\Delete.cs" />
+    <Compile Include="Data\Library\Insert.cs" />
+    <Compile Include="Data\Library\SelectL.cs" />
+    <Compile Include="Data\Library\SelectQ.cs" />
+    <Compile Include="Data\Library\Update.cs" />
+    <Compile Include="Data\Library\XClass\ContainerBarCodeGenerator.cs" />
+    <Compile Include="Data\Library\XClass\ContainerModel.cs" />
+    <Compile Include="Data\Library\XClass\PalleteModel.cs" />
+    <Compile Include="Data\Library\XClass\PalleteWeight.cs" />
+    <Compile Include="Data\Nationality.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\NonTransportWaybill.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\NonTransportWaybillDetail.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\OperationSetting.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Operation\Fixator.cs" />
+    <Compile Include="Data\Operation\Insert.cs" />
+    <Compile Include="Data\Operation\SelectL.cs" />
+    <Compile Include="Data\Operation\SelectQ.cs" />
+    <Compile Include="Data\Operation\Update.cs" />
+    <Compile Include="Data\Operation\XClasses\BrigadeModel.cs" />
+    <Compile Include="Data\Operation\XClasses\ContainerInOut.cs" />
+    <Compile Include="Data\Operation\XClasses\ContainerLocationModel.cs" />
+    <Compile Include="Data\Operation\XClasses\ContainerPackModel.cs" />
+    <Compile Include="Data\Operation\XClasses\ContainerWeightModel.cs" />
+    <Compile Include="Data\Operation\XClasses\PalleteWeight.cs" />
+    <Compile Include="Data\Operation\XClasses\Pallete\BoxCountModel.cs" />
+    <Compile Include="Data\Operation\XClasses\Pallete\ContainerModel.cs" />
+    <Compile Include="Data\Operation\XClasses\Pallete\PalleteModel.cs" />
+    <Compile Include="Data\Operation\XClasses\SaleContainer.cs" />
+    <Compile Include="Data\Operation\XClasses\ContainerMoveInOut.cs" />
+    <Compile Include="Data\Operation\XClasses\HarvesterContainerDistributionInOut.cs" />
+    <Compile Include="Data\Operation\XClasses\HarvesterRowDistributionInOut.cs" />
+    <Compile Include="Data\Operation\XClasses\ProductRepackAndWeight.cs" />
+    <Compile Include="Data\Operation\XClasses\PunishmentIn.cs" />
+    <Compile Include="Data\Operation\XClasses\TakeRowInOut.cs" />
+    <Compile Include="Data\Operation\XClasses\TakeRowModel.cs" />
+    <Compile Include="Data\Operation\XClasses\TakeRows_Harvesters.cs" />
+    <Compile Include="Data\Permission.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Person.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PersonDocument.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PersonPost.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PersonPostAgreement.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Point.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Post.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PostRole.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Produce\Insert.cs" />
+    <Compile Include="Data\Produce\SelectL.cs" />
+    <Compile Include="Data\Produce\SelectQ.cs" />
+    <Compile Include="Data\Produce\Update.cs" />
+    <Compile Include="Data\Produce\XClasses\BreedProperty.cs" />
+    <Compile Include="Data\Produce\XClasses\ProductModel.cs" />
+    <Compile Include="Data\Product.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ProductOwner.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ProductPack.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ProductQuality.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ProductReceive.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Punishment.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Role.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\RolePermission.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Row.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\RowBreed.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\RS\Delete.cs" />
+    <Compile Include="Data\RS\Insert.cs" />
+    <Compile Include="Data\RS\Model\NonTransportWaybillModel.cs" />
+    <Compile Include="Data\RS\Model\TransportWaybillModel.cs" />
+    <Compile Include="Data\RS\SelectL.cs" />
+    <Compile Include="Data\RS\SelectQ.cs" />
+    <Compile Include="Data\RS\Update.cs" />
+    <Compile Include="Data\RS\XClasses\CompanyIdentifiersRS.cs" />
+    <Compile Include="Data\RS\XClasses\NonTransportWaybillCreator.cs" />
+    <Compile Include="Data\RS\XClasses\RS_ProductModel.cs" />
+    <Compile Include="Data\RS\XClasses\StaticMethods.cs" />
+    <Compile Include="Data\RS\XClasses\TransportWaybillCreator.cs" />
+    <Compile Include="Data\RS\XClasses\WaybillContainer.cs" />
+    <Compile Include="Data\RS\XClasses\WaybillCorrectPackageCreator.cs" />
+    <Compile Include="Data\RS\XClasses\WaybillPackageCreator.cs" />
+    <Compile Include="Data\RS\XClasses\WaybillPackageUploader.cs" />
+    <Compile Include="Data\RS\XClasses\WaybillProxyMethods.cs" />
+    <Compile Include="Data\Sale.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Security\DataClasses\PermissionsForRole.cs" />
+    <Compile Include="Data\Security\DataClasses\PostRoleName.cs" />
+    <Compile Include="Data\Security\DataClasses\UserModel.cs" />
+    <Compile Include="Data\Security\DataClasses\UserPermissions.cs" />
+    <Compile Include="Data\Security\Delete.cs" />
+    <Compile Include="Data\Security\Insert.cs" />
+    <Compile Include="Data\Security\SelectL.cs" />
+    <Compile Include="Data\Security\SelectQ.cs" />
+    <Compile Include="Data\Security\Update.cs" />
+    <Compile Include="Data\Structure\Delete.cs" />
+    <Compile Include="Data\Structure\insert.cs" />
+    <Compile Include="Data\Structure\SelectL.cs" />
+    <Compile Include="Data\Structure\SelectQ.cs" />
+    <Compile Include="Data\Structure\Update.cs" />
+    <Compile Include="Data\Structure\XClasses\CarDriversModel.cs" />
+    <Compile Include="Data\Structure\XClasses\CarModel.cs" />
+    <Compile Include="Data\Structure\XClasses\CompanyCarModel.cs" />
+    <Compile Include="Data\Structure\XClasses\CompanyeModel.cs" />
+    <Compile Include="Data\Structure\XClasses\CompanyRowsModel.cs" />
+    <Compile Include="Data\Structure\XClasses\SalePointsModel.cs" />
+    <Compile Include="Data\Structure\XClasses\PointsModel.cs" />
+    <Compile Include="Data\Structure\XClasses\PostModel.cs" />
+    <Compile Include="Data\Structure\XClasses\RowBreedsModel.cs" />
+    <Compile Include="Data\Structure\XClasses\RowModel.cs" />
+    <Compile Include="Data\Structure\XClasses\RowWithDateModel.cs" />
+    <Compile Include="Data\TakeRow.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Template\Delete.cs" />
+    <Compile Include="Data\Template\Insert.cs" />
+    <Compile Include="Data\Template\SelectL.cs" />
+    <Compile Include="Data\Template\SelectQ.cs" />
+    <Compile Include="Data\Template\Update.cs" />
+    <Compile Include="Data\tf_ContainerTypes_Result.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\tf_EmployeeTypes_Result.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\tf_GenderTypes_Result.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\tf_GetBalanceSheetTypes_Result.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\tf_HistoryOperationTypes_Result.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\tf_LegalStatuseTypes_Result.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\tf_MaritalStatus_Result.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\tf_OperationTypes_Result.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\tf_PointTypes_Result.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\tf_ProductQualityes_Result.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\tf_PunishmentTypes_Result.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\tf_SalaryTypes_Result.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\tf_SideTypes_Result.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\tf_UnitTypes_Result.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\tf_WaybillStates_Result.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TransportWaybill.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TransportWaybillDetail.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\User.cs">
+      <DependentUpon>BerryManagementModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="WCF\BM_Employee_Service.cs" />
+    <Compile Include="WCF\BM_Library_Service.cs" />
+    <Compile Include="WCF\BM_Operation_Service.cs" />
+    <Compile Include="WCF\BM_Produce_Service.cs" />
+    <Compile Include="WCF\BM_RS_Service.cs" />
+    <Compile Include="WCF\BM_Security_Service.cs" />
+    <Compile Include="WCF\BM_Structure_Service.cs" />
+    <Compile Include="WCF\BM_Template_Service.cs" />
+    <Compile Include="WCF\IBM_Employee_Service.cs" />
+    <Compile Include="WCF\IBM_Library_Service.cs" />
+    <Compile Include="WCF\IBM_Operation_Service.cs" />
+    <Compile Include="WCF\IBM_Produce_Service.cs" />
+    <Compile Include="WCF\IBM_RS_Service.cs" />
+    <Compile Include="WCF\IBM_Security_Service.cs" />
+    <Compile Include="WCF\IBM_Structure_Service.cs" />
+    <Compile Include="WCF\IBM_Template_Service.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.chek_service_userResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.close_waybillResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.close_waybill_transporterResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.close_waybill_vdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.confirm_waybillResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.create_service_userResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.delete_bar_codeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.delete_car_numbersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.delete_waybill_tamplateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.del_waybillResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.get_adjusted_waybillResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.get_adjusted_waybillsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.get_akciz_codesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.get_bar_codesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.get_buyer_waybilll_goods_listResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.get_buyer_waybillsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.get_buyer_waybills_exResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.get_car_numbersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.get_c_waybillResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.get_error_codesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.get_name_from_tinResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.get_payer_type_from_un_idResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.get_print_pdfResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.get_server_timeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.get_service_usersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.get_tin_from_un_idResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.get_transporter_waybillsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.get_trans_typesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.get_waybillResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.get_waybillsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.get_waybills_exResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.get_waybill_by_numberResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.get_waybill_goods_listResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.get_waybill_tamplateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.get_waybill_tamplatesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.get_waybill_typesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.get_waybill_unitsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.get_wood_typesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.is_vat_payerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.is_vat_payer_tinResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.ref_waybillResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.ref_waybill_vdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.reject_waybillResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.save_bar_codeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.save_car_numbersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.save_invoiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.save_waybillResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.save_waybill_tamplateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.save_waybill_transporterResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.send_waybillResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.send_waybill_transporterResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.send_waybil_vdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.update_service_userResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\BerryManagementWindowsService.WayBillServiceReference.what_is_my_ipResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\WayBillService.wsdl" />
+    <EntityDeploy Include="Data\BerryManagementModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BerryManagementModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Data\BerryManagementModel.edmx.diagram">
+      <DependentUpon>BerryManagementModel.edmx</DependentUpon>
+    </None>
+    <None Include="NewVersion\BerryApp.apk" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\System.Xml.Linq.XElement.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\Security\XClasses\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BerryManagementInstaller.resx">
+      <DependentUpon>BerryManagementInstaller.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\WayBillServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\WayBillServiceReference\configuration.svcinfo" />
+    <None Include="Connected Services\WayBillServiceReference\configuration91.svcinfo" />
+    <None Include="Connected Services\WayBillServiceReference\WayBillService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\WayBillServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\BerryManagementModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BerryManagementModel.edmx</DependentUpon>
+      <LastGenOutput>BerryManagementModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\BerryManagementModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BerryManagementModel.edmx</DependentUpon>
+      <LastGenOutput>BerryManagementModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <SsdtUnitTestVersion>3.1</SsdtUnitTestVersion>
+  </PropertyGroup>
+  <Import Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="$(VisualStudioVersion) != '15.0' And '$(SQLDBExtensionsRefPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="$(VisualStudioVersion) != '15.0' And '$(SQLDBExtensionsRefPath)' == ''" />
+</Project>

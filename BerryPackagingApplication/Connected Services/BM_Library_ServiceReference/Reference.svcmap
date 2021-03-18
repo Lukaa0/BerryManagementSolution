@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="de42cfa4-c0f4-4b2f-ac09-f8d0988efd63" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Library_Service/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BM_Library_Service.wsdl" MetadataType="Wsdl" ID="3d844626-d91d-406a-affb-dfd338b1763a" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Library_Service/?wsdl" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="bbf94db7-2d1f-4b1b-b554-803040667018" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Library_Service/?disco" />
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="a887a5a8-a9f7-4ebe-8058-45306cd65ecd" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Library_Service/?xsd=xsd0" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="6a392fa4-db0c-445d-b490-31d58a87cc87" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Library_Service/?xsd=xsd1" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="e34f8cc1-2c58-4814-bfb7-f82c8278a7ff" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Library_Service/?xsd=xsd2" />
+    <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="cc2687d3-ab2f-4e18-93a1-c3471f0a77c2" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Library_Service/?xsd=xsd3" />
+    <MetadataFile FileName="item4.xsd" MetadataType="Schema" ID="8ab6a434-da90-44fe-9df9-8f0754da7a77" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Library_Service/?xsd=xsd4" />
+    <MetadataFile FileName="item5.xsd" MetadataType="Schema" ID="0c2b012f-30b5-4a5c-92fb-0464758dc713" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Library_Service/?xsd=xsd5" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

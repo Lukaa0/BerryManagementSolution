@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BM_Employee_Service" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Employee_Service/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Employee_Service/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Employee_Service/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Employees.XClasses" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Employee_Service/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Employee_Service/?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IBM_Employee_Service_GetNumberOfEmployeeSameIdentities_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumberOfEmployeeSameIdentities" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_GetNumberOfEmployeeSameIdentities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumberOfEmployeeSameIdentitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_GetHarvByHarvRowDistrOuts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHarvByHarvRowDistrOuts" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_GetHarvByHarvRowDistrOuts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHarvByHarvRowDistrOutsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_GetHarvesterByHRDForPunishment_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHarvesterByHRDForPunishment" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_GetHarvesterByHRDForPunishment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHarvesterByHRDForPunishmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_DeletePerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePerson" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_DeletePerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_GetEmployeeCurrentName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeCurrentName" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_GetEmployeeCurrentName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeCurrentNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_UpdateEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEmployee" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_UpdateEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_InsertEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertEmployee" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_InsertEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_GetPersonPostsIdByPersonId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonPostsIdByPersonId" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_GetPersonPostsIdByPersonId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonPostsIdByPersonIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_GetEmployeeShortData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeShortData" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_GetEmployeeShortData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeShortDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_GetPersonDocuments_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonDocuments" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_GetPersonDocuments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_UpdatePersonDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePersonDocument" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_UpdatePersonDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePersonDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_DeletePersonDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePersonDocument" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_DeletePersonDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePersonDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_InsertPersonDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPersonDocument" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_InsertPersonDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPersonDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_GetPersonPostData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonPostData" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_GetPersonPostData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonPostDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_InsertPersonPost_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPersonPost" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_InsertPersonPost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPersonPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_DeletePersonPost_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePersonPost" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_DeletePersonPost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePersonPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_UpdatePersonPost_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePersonPost" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_UpdatePersonPost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePersonPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_GetPersonPostModel_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonPostModel" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_GetPersonPostModel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonPostModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_GetPersonPostModelForRows_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonPostModelForRows" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_GetPersonPostModelForRows_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonPostModelForRowsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_GetPersonPostsByBrigadeId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonPostsByBrigadeId" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_GetPersonPostsByBrigadeId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonPostsByBrigadeIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_GetPersonPostsForPunishment_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonPostsForPunishment" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_GetPersonPostsForPunishment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonPostsForPunishmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_GetEmployeeData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeData" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_GetEmployeeData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_GetEmployeeLabels_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeLabels" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_GetEmployeeLabels_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeLabelsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_GetPostById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPostById" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_GetPostById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPostByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_GetPersonPostByBarCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonPostByBarCode" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_GetPersonPostByBarCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonPostByBarCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_GetHarvByHarvRowDistrOutsByRowId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHarvByHarvRowDistrOutsByRowId" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_GetHarvByHarvRowDistrOutsByRowId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHarvByHarvRowDistrOutsByRowIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_GetPunishment_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPunishment" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_GetPunishment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPunishmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_GetPunishmentByDite_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPunishmentByDite" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_GetPunishmentByDite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPunishmentByDiteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_UpdatePunishment_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePunishment" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_UpdatePunishment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePunishmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_InsertPunishment_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPunishment" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_InsertPunishment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPunishmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_InsertPunishmentForAndroid_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPunishmentForAndroid" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Employee_Service_InsertPunishmentForAndroid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPunishmentForAndroidResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IBM_Employee_Service">
+    <wsdl:operation name="GetNumberOfEmployeeSameIdentities">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Employee_Service/GetNumberOfEmployeeSameIdentities" message="tns:IBM_Employee_Service_GetNumberOfEmployeeSameIdentities_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Employee_Service/GetNumberOfEmployeeSameIdentitiesResponse" message="tns:IBM_Employee_Service_GetNumberOfEmployeeSameIdentities_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHarvByHarvRowDistrOuts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Employee_Service/GetHarvByHarvRowDistrOuts" message="tns:IBM_Employee_Service_GetHarvByHarvRowDistrOuts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Employee_Service/GetHarvByHarvRowDistrOutsResponse" message="tns:IBM_Employee_Service_GetHarvByHarvRowDistrOuts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHarvesterByHRDForPunishment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Employee_Service/GetHarvesterByHRDForPunishment" message="tns:IBM_Employee_Service_GetHarvesterByHRDForPunishment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Employee_Service/GetHarvesterByHRDForPunishmentResponse" message="tns:IBM_Employee_Service_GetHarvesterByHRDForPunishment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Employee_Service/DeletePerson" message="tns:IBM_Employee_Service_DeletePerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Employee_Service/DeletePersonResponse" message="tns:IBM_Employee_Service_DeletePerson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeCurrentName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Employee_Service/GetEmployeeCurrentName" message="tns:IBM_Employee_Service_GetEmployeeCurrentName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Employee_Service/GetEmployeeCurrentNameResponse" message="tns:IBM_Employee_Service_GetEmployeeCurrentName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmployee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Employee_Service/UpdateEmployee" message="tns:IBM_Employee_Service_UpdateEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Employee_Service/UpdateEmployeeResponse" message="tns:IBM_Employee_Service_UpdateEmployee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertEmployee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Employee_Service/InsertEmployee" message="tns:IBM_Employee_Service_InsertEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Employee_Service/InsertEmployeeResponse" message="tns:IBM_Employee_Service_InsertEmployee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonPostsIdByPersonId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Employee_Service/GetPersonPostsIdByPersonId" message="tns:IBM_Employee_Service_GetPersonPostsIdByPersonId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Employee_Service/GetPersonPostsIdByPersonIdResponse" message="tns:IBM_Employee_Service_GetPersonPostsIdByPersonId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeShortData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Employee_Service/GetEmployeeShortData" message="tns:IBM_Employee_Service_GetEmployeeShortData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Employee_Service/GetEmployeeShortDataResponse" message="tns:IBM_Employee_Service_GetEmployeeShortData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonDocuments">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Employee_Service/GetPersonDocuments" message="tns:IBM_Employee_Service_GetPersonDocuments_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Employee_Service/GetPersonDocumentsResponse" message="tns:IBM_Employee_Service_GetPersonDocuments_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePersonDocument">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Employee_Service/UpdatePersonDocument" message="tns:IBM_Employee_Service_UpdatePersonDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Employee_Service/UpdatePersonDocumentResponse" message="tns:IBM_Employee_Service_UpdatePersonDocument_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePersonDocument">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Employee_Service/DeletePersonDocument" message="tns:IBM_Employee_Service_DeletePersonDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Employee_Service/DeletePersonDocumentResponse" message="tns:IBM_Employee_Service_DeletePersonDocument_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertPersonDocument">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Employee_Service/InsertPersonDocument" message="tns:IBM_Employee_Service_InsertPersonDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Employee_Service/InsertPersonDocumentResponse" message="tns:IBM_Employee_Service_InsertPersonDocument_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonPostData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Employee_Service/GetPersonPostData" message="tns:IBM_Employee_Service_GetPersonPostData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Employee_Service/GetPersonPostDataResponse" message="tns:IBM_Employee_Service_GetPersonPostData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertPersonPost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Employee_Service/InsertPersonPost" message="tns:IBM_Employee_Service_InsertPersonPost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Employee_Service/InsertPersonPostResponse" message="tns:IBM_Employee_Service_InsertPersonPost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePersonPost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Employee_Service/DeletePersonPost" message="tns:IBM_Employee_Service_DeletePersonPost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Employee_Service/DeletePersonPostResponse" message="tns:IBM_Employee_Service_DeletePersonPost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePersonPost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Employee_Service/UpdatePersonPost" message="tns:IBM_Employee_Service_UpdatePersonPost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Employee_Service/UpdatePersonPostResponse" message="tns:IBM_Employee_Service_UpdatePersonPost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonPostModel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Employee_Service/GetPersonPostModel" message="tns:IBM_Employee_Service_GetPersonPostModel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Employee_Service/GetPersonPostModelResponse" message="tns:IBM_Employee_Service_GetPersonPostModel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonPostModelForRows">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Employee_Service/GetPersonPostModelForRows" message="tns:IBM_Employee_Service_GetPersonPostModelForRows_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Employee_Service/GetPersonPostModelForRowsResponse" message="tns:IBM_Employee_Service_GetPersonPostModelForRows_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonPostsByBrigadeId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Employee_Service/GetPersonPostsByBrigadeId" message="tns:IBM_Employee_Service_GetPersonPostsByBrigadeId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Employee_Service/GetPersonPostsByBrigadeIdResponse" message="tns:IBM_Employee_Service_GetPersonPostsByBrigadeId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonPostsForPunishment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Employee_Service/GetPersonPostsForPunishment" message="tns:IBM_Employee_Service_GetPersonPostsForPunishment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Employee_Service/GetPersonPostsForPunishmentResponse" message="tns:IBM_Employee_Service_GetPersonPostsForPunishment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Employee_Service/GetEmployeeData" message="tns:IBM_Employee_Service_GetEmployeeData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Employee_Service/GetEmployeeDataResponse" message="tns:IBM_Employee_Service_GetEmployeeData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeLabels">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Employee_Service/GetEmployeeLabels" message="tns:IBM_Employee_Service_GetEmployeeLabels_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Employee_Service/GetEmployeeLabelsResponse" message="tns:IBM_Employee_Service_GetEmployeeLabels_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPostById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Employee_Service/GetPostById" message="tns:IBM_Employee_Service_GetPostById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Employee_Service/GetPostByIdResponse" message="tns:IBM_Employee_Service_GetPostById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonPostByBarCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Employee_Service/GetPersonPostByBarCode" message="tns:IBM_Employee_Service_GetPersonPostByBarCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Employee_Service/GetPersonPostByBarCodeResponse" message="tns:IBM_Employee_Service_GetPersonPostByBarCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHarvByHarvRowDistrOutsByRowId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Employee_Service/GetHarvByHarvRowDistrOutsByRowId" message="tns:IBM_Employee_Service_GetHarvByHarvRowDistrOutsByRowId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Employee_Service/GetHarvByHarvRowDistrOutsByRowIdResponse" message="tns:IBM_Employee_Service_GetHarvByHarvRowDistrOutsByRowId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPunishment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Employee_Service/GetPunishment" message="tns:IBM_Employee_Service_GetPunishment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Employee_Service/GetPunishmentResponse" message="tns:IBM_Employee_Service_GetPunishment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPunishmentByDite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Employee_Service/GetPunishmentByDite" message="tns:IBM_Employee_Service_GetPunishmentByDite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Employee_Service/GetPunishmentByDiteResponse" message="tns:IBM_Employee_Service_GetPunishmentByDite_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePunishment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Employee_Service/UpdatePunishment" message="tns:IBM_Employee_Service_UpdatePunishment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Employee_Service/UpdatePunishmentResponse" message="tns:IBM_Employee_Service_UpdatePunishment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertPunishment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Employee_Service/InsertPunishment" message="tns:IBM_Employee_Service_InsertPunishment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Employee_Service/InsertPunishmentResponse" message="tns:IBM_Employee_Service_InsertPunishment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertPunishmentForAndroid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Employee_Service/InsertPunishmentForAndroid" message="tns:IBM_Employee_Service_InsertPunishmentForAndroid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Employee_Service/InsertPunishmentForAndroidResponse" message="tns:IBM_Employee_Service_InsertPunishmentForAndroid_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IBM_Employee_Service" type="tns:IBM_Employee_Service">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetNumberOfEmployeeSameIdentities">
+      <soap:operation soapAction="http://tempuri.org/IBM_Employee_Service/GetNumberOfEmployeeSameIdentities" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHarvByHarvRowDistrOuts">
+      <soap:operation soapAction="http://tempuri.org/IBM_Employee_Service/GetHarvByHarvRowDistrOuts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHarvesterByHRDForPunishment">
+      <soap:operation soapAction="http://tempuri.org/IBM_Employee_Service/GetHarvesterByHRDForPunishment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePerson">
+      <soap:operation soapAction="http://tempuri.org/IBM_Employee_Service/DeletePerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeCurrentName">
+      <soap:operation soapAction="http://tempuri.org/IBM_Employee_Service/GetEmployeeCurrentName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmployee">
+      <soap:operation soapAction="http://tempuri.org/IBM_Employee_Service/UpdateEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertEmployee">
+      <soap:operation soapAction="http://tempuri.org/IBM_Employee_Service/InsertEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonPostsIdByPersonId">
+      <soap:operation soapAction="http://tempuri.org/IBM_Employee_Service/GetPersonPostsIdByPersonId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeShortData">
+      <soap:operation soapAction="http://tempuri.org/IBM_Employee_Service/GetEmployeeShortData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonDocuments">
+      <soap:operation soapAction="http://tempuri.org/IBM_Employee_Service/GetPersonDocuments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePersonDocument">
+      <soap:operation soapAction="http://tempuri.org/IBM_Employee_Service/UpdatePersonDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePersonDocument">
+      <soap:operation soapAction="http://tempuri.org/IBM_Employee_Service/DeletePersonDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPersonDocument">
+      <soap:operation soapAction="http://tempuri.org/IBM_Employee_Service/InsertPersonDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonPostData">
+      <soap:operation soapAction="http://tempuri.org/IBM_Employee_Service/GetPersonPostData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPersonPost">
+      <soap:operation soapAction="http://tempuri.org/IBM_Employee_Service/InsertPersonPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePersonPost">
+      <soap:operation soapAction="http://tempuri.org/IBM_Employee_Service/DeletePersonPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePersonPost">
+      <soap:operation soapAction="http://tempuri.org/IBM_Employee_Service/UpdatePersonPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonPostModel">
+      <soap:operation soapAction="http://tempuri.org/IBM_Employee_Service/GetPersonPostModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonPostModelForRows">
+      <soap:operation soapAction="http://tempuri.org/IBM_Employee_Service/GetPersonPostModelForRows" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonPostsByBrigadeId">
+      <soap:operation soapAction="http://tempuri.org/IBM_Employee_Service/GetPersonPostsByBrigadeId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonPostsForPunishment">
+      <soap:operation soapAction="http://tempuri.org/IBM_Employee_Service/GetPersonPostsForPunishment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeData">
+      <soap:operation soapAction="http://tempuri.org/IBM_Employee_Service/GetEmployeeData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeLabels">
+      <soap:operation soapAction="http://tempuri.org/IBM_Employee_Service/GetEmployeeLabels" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPostById">
+      <soap:operation soapAction="http://tempuri.org/IBM_Employee_Service/GetPostById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonPostByBarCode">
+      <soap:operation soapAction="http://tempuri.org/IBM_Employee_Service/GetPersonPostByBarCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHarvByHarvRowDistrOutsByRowId">
+      <soap:operation soapAction="http://tempuri.org/IBM_Employee_Service/GetHarvByHarvRowDistrOutsByRowId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPunishment">
+      <soap:operation soapAction="http://tempuri.org/IBM_Employee_Service/GetPunishment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPunishmentByDite">
+      <soap:operation soapAction="http://tempuri.org/IBM_Employee_Service/GetPunishmentByDite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePunishment">
+      <soap:operation soapAction="http://tempuri.org/IBM_Employee_Service/UpdatePunishment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPunishment">
+      <soap:operation soapAction="http://tempuri.org/IBM_Employee_Service/InsertPunishment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPunishmentForAndroid">
+      <soap:operation soapAction="http://tempuri.org/IBM_Employee_Service/InsertPunishmentForAndroid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BM_Employee_Service">
+    <wsdl:port name="BasicHttpBinding_IBM_Employee_Service" binding="tns:BasicHttpBinding_IBM_Employee_Service">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Employee_Service/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

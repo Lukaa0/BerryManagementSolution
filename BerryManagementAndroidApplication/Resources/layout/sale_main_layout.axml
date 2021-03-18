@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView 
+	
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<RelativeLayout
+	android:layout_height="match_parent"
+	android:layout_width="match_parent"
+	>
+		
+		<ProgressBar
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:layout_centerInParent="true"
+		android:id="@+id/sale_main_progressbar"
+		/>
+	<RelativeLayout
+	android:layout_height="match_parent"
+	android:visibility="visible"
+	android:animateLayoutChanges="true"
+	android:id="@+id/sale_receive_header_container"
+	android:layout_width="match_parent">
+			
+			<Button
+			android:layout_height="wrap_content"
+			android:text="@string/scan_code"
+			android:background="@android:color/holo_red_light"
+			android:id="@+id/sale_scan_code_btn"
+			style="@style/Widget.AppCompat.Button.Colored"
+			android:layout_width="match_parent"/>
+	<EditText
+				
+				android:layout_height="2dp"
+				android:layout_width="match_parent"
+				android:id="@+id/sale_scan_edittext"
+				android:hint="@string/enter_code"
+				/>
+			<LinearLayout
+				android:layout_height="wrap_content"
+				android:id="@+id/sale_linear_container"
+				android:layout_below="@id/sale_scan_code_btn"
+				android:layout_width="match_parent">
+	
+	<Spinner
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:layout_width="match_parent"
+				android:id="@+id/sale_spinner"
+				/>
+			<Button
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+
+				android:layout_toRightOf="@id/sale_spinner"
+				android:id="@+id/sale_spinner_confirm"
+				style="@style/Widget.AppCompat.Button.Colored"
+				/>
+			</LinearLayout>
+			
+			<Button
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"	
+				android:layout_marginTop="5dp"
+				android:layout_below="@id/sale_linear_container"
+				android:id="@+id/sale_operation_confirm"
+				android:background="@android:color/holo_green_light"
+				style="@style/Widget.AppCompat.Button.Colored"
+				/>
+			
+	</RelativeLayout>
+	
+		
+	<android.support.v7.widget.RecyclerView
+		android:layout_height="match_parent"
+		android:layout_marginTop="10dp"
+		android:layout_width="match_parent"
+		android:layout_below="@id/sale_receive_header_container"
+		android:id="@+id/sale_recycler_view"/>
+
+		
+
+		</RelativeLayout>
+
+	
+	
+</android.support.v4.widget.NestedScrollView>

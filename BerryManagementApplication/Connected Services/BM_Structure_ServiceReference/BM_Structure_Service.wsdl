@@ -1,0 +1,1238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BM_Structure_Service" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Structure_Service/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Structure_Service/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Structure_Service/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Structure_Service/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Structure.XClasses" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Structure_Service/?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IBM_Structure_Service_InsertPersonPost_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPersonPost" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_InsertPersonPost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPersonPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_InserBrigades_InputMessage">
+    <wsdl:part name="parameters" element="tns:InserBrigades" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_InserBrigades_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InserBrigadesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_InsertCarDriver_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCarDriver" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_InsertCarDriver_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCarDriverResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_InsertCar_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCar" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_InsertCar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_InsertCompanyCar_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCompanyCar" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_InsertCompanyCar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCompanyCarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_InsertCompany_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCompany" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_InsertCompany_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_InsertCompanyRow_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCompanyRow" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_InsertCompanyRow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCompanyRowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_InsertPoint_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPoint" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_InsertPoint_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPointResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_InsertPost_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPost" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_InsertPost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_InsertRowBreed_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRowBreed" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_InsertRowBreed_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRowBreedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_InsertRow_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRow" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_InsertRow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_InsertRowBreedContainer_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRowBreedContainer" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_InsertRowBreedContainer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRowBreedContainerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetRows_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRows" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetRows_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRowsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetContainersForSale_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainersForSale" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetContainersForSale_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainersForSaleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetRowsWithDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRowsWithDate" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetRowsWithDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRowsWithDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetBrigadeRowDistribution_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBrigadeRowDistribution" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetBrigadeRowDistribution_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBrigadeRowDistributionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetPointsForSendBack_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPointsForSendBack" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetPointsForSendBack_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPointsForSendBackResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetHarvesterInDistributionModel_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHarvesterInDistributionModel" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetHarvesterInDistributionModel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHarvesterInDistributionModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetHarvesterInAllRows_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHarvesterInAllRows" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetHarvesterInAllRows_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHarvesterInAllRowsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_CheckGetRow_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckGetRow" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_CheckGetRow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckGetRowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetRowsByHarvesterRowInDistribution_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRowsByHarvesterRowInDistribution" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetRowsByHarvesterRowInDistribution_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRowsByHarvesterRowInDistributionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetCarsPointModelForContainerMove_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCarsPointModelForContainerMove" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetCarsPointModelForContainerMove_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCarsPointModelForContainerMoveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetPointsForWaybillIn_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPointsForWaybillIn" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetPointsForWaybillIn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPointsForWaybillInResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetContainersForContainerPack_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainersForContainerPack" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetContainersForContainerPack_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainersForContainerPackResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetContainerForProductRecieve_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainerForProductRecieve" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetContainerForProductRecieve_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainerForProductRecieveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetContainersForContainerMove_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainersForContainerMove" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetContainersForContainerMove_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainersForContainerMoveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetContainersForContainerLocations_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainersForContainerLocations" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetContainersForContainerLocations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainersForContainerLocationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetCarsPointModel_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCarsPointModel" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetCarsPointModel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCarsPointModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetCarsPointModelForSale_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCarsPointModelForSale" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetCarsPointModelForSale_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCarsPointModelForSaleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetPaletForContainerPack_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaletForContainerPack" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetPaletForContainerPack_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaletForContainerPackResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetTakeRowInRow_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTakeRowInRow" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetTakeRowInRow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTakeRowInRowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetPointsForWaybill_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPointsForWaybill" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetPointsForWaybill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPointsForWaybillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetPostModel_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPostModel" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetPostModel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPostModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetPosts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPosts" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetPosts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPostsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetBrigades_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBrigades" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetBrigades_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBrigadesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetCarDrivers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCarDrivers" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetCarDrivers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCarDriversResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetCar_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCar" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetCar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetCompanyCar_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyCar" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetCompanyCar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyCarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetCompany_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompany" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetCompany_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetCompanyRow_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyRow" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetCompanyRow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyRowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetPoint_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPoint" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetPoint_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPointResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetRowBreeds_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRowBreeds" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetRowBreeds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRowBreedsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetHarvesterPostId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHarvesterPostId" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_GetHarvesterPostId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHarvesterPostIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_DeleteBrigade_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBrigade" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_DeleteBrigade_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBrigadeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_DeleteCarDriver_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCarDriver" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_DeleteCarDriver_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCarDriverResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_DeleteCar_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCar" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_DeleteCar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_DeleteCompanyCar_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCompanyCar" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_DeleteCompanyCar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCompanyCarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_DeleteCompany_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCompany" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_DeleteCompany_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_DeleteCompanyRows_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCompanyRows" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_DeleteCompanyRows_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCompanyRowsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_DeletePoint_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePoint" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_DeletePoint_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePointResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_DeleteRowBreeds_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRowBreeds" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_DeleteRowBreeds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRowBreedsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_DeleteRow_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRow" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_DeleteRow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_DeletePost_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePost" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_DeletePost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_UpdateRowBreedContainer_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRowBreedContainer" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_UpdateRowBreedContainer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRowBreedContainerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_UpdateBrigade_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBrigade" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_UpdateBrigade_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBrigadeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_UpdateCarDriver_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCarDriver" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_UpdateCarDriver_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCarDriverResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_UpdateCar_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCar" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_UpdateCar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_UpdateCompanyCar_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCompanyCar" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_UpdateCompanyCar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCompanyCarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_UpdateCompany_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCompany" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_UpdateCompany_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_UpdateCompanyRow_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCompanyRow" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_UpdateCompanyRow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCompanyRowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_UpdatePoint_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePoint" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_UpdatePoint_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePointResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_UpdatePost_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePost" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_UpdatePost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_UpdateRowBreed_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRowBreed" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_UpdateRowBreed_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRowBreedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_UpdateRow_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRow" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Structure_Service_UpdateRow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRowResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IBM_Structure_Service">
+    <wsdl:operation name="InsertPersonPost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/InsertPersonPost" message="tns:IBM_Structure_Service_InsertPersonPost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/InsertPersonPostResponse" message="tns:IBM_Structure_Service_InsertPersonPost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InserBrigades">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/InserBrigades" message="tns:IBM_Structure_Service_InserBrigades_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/InserBrigadesResponse" message="tns:IBM_Structure_Service_InserBrigades_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCarDriver">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/InsertCarDriver" message="tns:IBM_Structure_Service_InsertCarDriver_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/InsertCarDriverResponse" message="tns:IBM_Structure_Service_InsertCarDriver_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/InsertCar" message="tns:IBM_Structure_Service_InsertCar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/InsertCarResponse" message="tns:IBM_Structure_Service_InsertCar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCompanyCar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/InsertCompanyCar" message="tns:IBM_Structure_Service_InsertCompanyCar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/InsertCompanyCarResponse" message="tns:IBM_Structure_Service_InsertCompanyCar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCompany">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/InsertCompany" message="tns:IBM_Structure_Service_InsertCompany_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/InsertCompanyResponse" message="tns:IBM_Structure_Service_InsertCompany_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCompanyRow">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/InsertCompanyRow" message="tns:IBM_Structure_Service_InsertCompanyRow_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/InsertCompanyRowResponse" message="tns:IBM_Structure_Service_InsertCompanyRow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertPoint">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/InsertPoint" message="tns:IBM_Structure_Service_InsertPoint_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/InsertPointResponse" message="tns:IBM_Structure_Service_InsertPoint_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertPost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/InsertPost" message="tns:IBM_Structure_Service_InsertPost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/InsertPostResponse" message="tns:IBM_Structure_Service_InsertPost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertRowBreed">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/InsertRowBreed" message="tns:IBM_Structure_Service_InsertRowBreed_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/InsertRowBreedResponse" message="tns:IBM_Structure_Service_InsertRowBreed_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertRow">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/InsertRow" message="tns:IBM_Structure_Service_InsertRow_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/InsertRowResponse" message="tns:IBM_Structure_Service_InsertRow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertRowBreedContainer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/InsertRowBreedContainer" message="tns:IBM_Structure_Service_InsertRowBreedContainer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/InsertRowBreedContainerResponse" message="tns:IBM_Structure_Service_InsertRowBreedContainer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRows">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetRows" message="tns:IBM_Structure_Service_GetRows_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetRowsResponse" message="tns:IBM_Structure_Service_GetRows_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContainersForSale">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetContainersForSale" message="tns:IBM_Structure_Service_GetContainersForSale_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetContainersForSaleResponse" message="tns:IBM_Structure_Service_GetContainersForSale_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRowsWithDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetRowsWithDate" message="tns:IBM_Structure_Service_GetRowsWithDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetRowsWithDateResponse" message="tns:IBM_Structure_Service_GetRowsWithDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBrigadeRowDistribution">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetBrigadeRowDistribution" message="tns:IBM_Structure_Service_GetBrigadeRowDistribution_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetBrigadeRowDistributionResponse" message="tns:IBM_Structure_Service_GetBrigadeRowDistribution_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPointsForSendBack">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetPointsForSendBack" message="tns:IBM_Structure_Service_GetPointsForSendBack_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetPointsForSendBackResponse" message="tns:IBM_Structure_Service_GetPointsForSendBack_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHarvesterInDistributionModel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetHarvesterInDistributionModel" message="tns:IBM_Structure_Service_GetHarvesterInDistributionModel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetHarvesterInDistributionModelResponse" message="tns:IBM_Structure_Service_GetHarvesterInDistributionModel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHarvesterInAllRows">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetHarvesterInAllRows" message="tns:IBM_Structure_Service_GetHarvesterInAllRows_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetHarvesterInAllRowsResponse" message="tns:IBM_Structure_Service_GetHarvesterInAllRows_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckGetRow">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/CheckGetRow" message="tns:IBM_Structure_Service_CheckGetRow_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/CheckGetRowResponse" message="tns:IBM_Structure_Service_CheckGetRow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRowsByHarvesterRowInDistribution">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetRowsByHarvesterRowInDistribution" message="tns:IBM_Structure_Service_GetRowsByHarvesterRowInDistribution_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetRowsByHarvesterRowInDistributionResponse" message="tns:IBM_Structure_Service_GetRowsByHarvesterRowInDistribution_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCarsPointModelForContainerMove">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetCarsPointModelForContainerMove" message="tns:IBM_Structure_Service_GetCarsPointModelForContainerMove_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetCarsPointModelForContainerMoveResponse" message="tns:IBM_Structure_Service_GetCarsPointModelForContainerMove_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPointsForWaybillIn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetPointsForWaybillIn" message="tns:IBM_Structure_Service_GetPointsForWaybillIn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetPointsForWaybillInResponse" message="tns:IBM_Structure_Service_GetPointsForWaybillIn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContainersForContainerPack">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetContainersForContainerPack" message="tns:IBM_Structure_Service_GetContainersForContainerPack_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetContainersForContainerPackResponse" message="tns:IBM_Structure_Service_GetContainersForContainerPack_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContainerForProductRecieve">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetContainerForProductRecieve" message="tns:IBM_Structure_Service_GetContainerForProductRecieve_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetContainerForProductRecieveResponse" message="tns:IBM_Structure_Service_GetContainerForProductRecieve_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContainersForContainerMove">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetContainersForContainerMove" message="tns:IBM_Structure_Service_GetContainersForContainerMove_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetContainersForContainerMoveResponse" message="tns:IBM_Structure_Service_GetContainersForContainerMove_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContainersForContainerLocations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetContainersForContainerLocations" message="tns:IBM_Structure_Service_GetContainersForContainerLocations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetContainersForContainerLocationsResponse" message="tns:IBM_Structure_Service_GetContainersForContainerLocations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCarsPointModel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetCarsPointModel" message="tns:IBM_Structure_Service_GetCarsPointModel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetCarsPointModelResponse" message="tns:IBM_Structure_Service_GetCarsPointModel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCarsPointModelForSale">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetCarsPointModelForSale" message="tns:IBM_Structure_Service_GetCarsPointModelForSale_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetCarsPointModelForSaleResponse" message="tns:IBM_Structure_Service_GetCarsPointModelForSale_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPaletForContainerPack">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetPaletForContainerPack" message="tns:IBM_Structure_Service_GetPaletForContainerPack_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetPaletForContainerPackResponse" message="tns:IBM_Structure_Service_GetPaletForContainerPack_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTakeRowInRow">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetTakeRowInRow" message="tns:IBM_Structure_Service_GetTakeRowInRow_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetTakeRowInRowResponse" message="tns:IBM_Structure_Service_GetTakeRowInRow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPointsForWaybill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetPointsForWaybill" message="tns:IBM_Structure_Service_GetPointsForWaybill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetPointsForWaybillResponse" message="tns:IBM_Structure_Service_GetPointsForWaybill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPostModel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetPostModel" message="tns:IBM_Structure_Service_GetPostModel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetPostModelResponse" message="tns:IBM_Structure_Service_GetPostModel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPosts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetPosts" message="tns:IBM_Structure_Service_GetPosts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetPostsResponse" message="tns:IBM_Structure_Service_GetPosts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBrigades">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetBrigades" message="tns:IBM_Structure_Service_GetBrigades_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetBrigadesResponse" message="tns:IBM_Structure_Service_GetBrigades_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCarDrivers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetCarDrivers" message="tns:IBM_Structure_Service_GetCarDrivers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetCarDriversResponse" message="tns:IBM_Structure_Service_GetCarDrivers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetCar" message="tns:IBM_Structure_Service_GetCar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetCarResponse" message="tns:IBM_Structure_Service_GetCar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyCar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetCompanyCar" message="tns:IBM_Structure_Service_GetCompanyCar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetCompanyCarResponse" message="tns:IBM_Structure_Service_GetCompanyCar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompany">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetCompany" message="tns:IBM_Structure_Service_GetCompany_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetCompanyResponse" message="tns:IBM_Structure_Service_GetCompany_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyRow">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetCompanyRow" message="tns:IBM_Structure_Service_GetCompanyRow_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetCompanyRowResponse" message="tns:IBM_Structure_Service_GetCompanyRow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPoint">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetPoint" message="tns:IBM_Structure_Service_GetPoint_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetPointResponse" message="tns:IBM_Structure_Service_GetPoint_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRowBreeds">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetRowBreeds" message="tns:IBM_Structure_Service_GetRowBreeds_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetRowBreedsResponse" message="tns:IBM_Structure_Service_GetRowBreeds_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHarvesterPostId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetHarvesterPostId" message="tns:IBM_Structure_Service_GetHarvesterPostId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/GetHarvesterPostIdResponse" message="tns:IBM_Structure_Service_GetHarvesterPostId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBrigade">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/DeleteBrigade" message="tns:IBM_Structure_Service_DeleteBrigade_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/DeleteBrigadeResponse" message="tns:IBM_Structure_Service_DeleteBrigade_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCarDriver">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/DeleteCarDriver" message="tns:IBM_Structure_Service_DeleteCarDriver_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/DeleteCarDriverResponse" message="tns:IBM_Structure_Service_DeleteCarDriver_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/DeleteCar" message="tns:IBM_Structure_Service_DeleteCar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/DeleteCarResponse" message="tns:IBM_Structure_Service_DeleteCar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCompanyCar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/DeleteCompanyCar" message="tns:IBM_Structure_Service_DeleteCompanyCar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/DeleteCompanyCarResponse" message="tns:IBM_Structure_Service_DeleteCompanyCar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCompany">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/DeleteCompany" message="tns:IBM_Structure_Service_DeleteCompany_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/DeleteCompanyResponse" message="tns:IBM_Structure_Service_DeleteCompany_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCompanyRows">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/DeleteCompanyRows" message="tns:IBM_Structure_Service_DeleteCompanyRows_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/DeleteCompanyRowsResponse" message="tns:IBM_Structure_Service_DeleteCompanyRows_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePoint">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/DeletePoint" message="tns:IBM_Structure_Service_DeletePoint_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/DeletePointResponse" message="tns:IBM_Structure_Service_DeletePoint_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRowBreeds">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/DeleteRowBreeds" message="tns:IBM_Structure_Service_DeleteRowBreeds_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/DeleteRowBreedsResponse" message="tns:IBM_Structure_Service_DeleteRowBreeds_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRow">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/DeleteRow" message="tns:IBM_Structure_Service_DeleteRow_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/DeleteRowResponse" message="tns:IBM_Structure_Service_DeleteRow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/DeletePost" message="tns:IBM_Structure_Service_DeletePost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/DeletePostResponse" message="tns:IBM_Structure_Service_DeletePost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRowBreedContainer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/UpdateRowBreedContainer" message="tns:IBM_Structure_Service_UpdateRowBreedContainer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/UpdateRowBreedContainerResponse" message="tns:IBM_Structure_Service_UpdateRowBreedContainer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBrigade">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/UpdateBrigade" message="tns:IBM_Structure_Service_UpdateBrigade_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/UpdateBrigadeResponse" message="tns:IBM_Structure_Service_UpdateBrigade_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCarDriver">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/UpdateCarDriver" message="tns:IBM_Structure_Service_UpdateCarDriver_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/UpdateCarDriverResponse" message="tns:IBM_Structure_Service_UpdateCarDriver_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/UpdateCar" message="tns:IBM_Structure_Service_UpdateCar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/UpdateCarResponse" message="tns:IBM_Structure_Service_UpdateCar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCompanyCar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/UpdateCompanyCar" message="tns:IBM_Structure_Service_UpdateCompanyCar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/UpdateCompanyCarResponse" message="tns:IBM_Structure_Service_UpdateCompanyCar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCompany">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/UpdateCompany" message="tns:IBM_Structure_Service_UpdateCompany_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/UpdateCompanyResponse" message="tns:IBM_Structure_Service_UpdateCompany_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCompanyRow">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/UpdateCompanyRow" message="tns:IBM_Structure_Service_UpdateCompanyRow_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/UpdateCompanyRowResponse" message="tns:IBM_Structure_Service_UpdateCompanyRow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePoint">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/UpdatePoint" message="tns:IBM_Structure_Service_UpdatePoint_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/UpdatePointResponse" message="tns:IBM_Structure_Service_UpdatePoint_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/UpdatePost" message="tns:IBM_Structure_Service_UpdatePost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/UpdatePostResponse" message="tns:IBM_Structure_Service_UpdatePost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRowBreed">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/UpdateRowBreed" message="tns:IBM_Structure_Service_UpdateRowBreed_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/UpdateRowBreedResponse" message="tns:IBM_Structure_Service_UpdateRowBreed_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRow">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Structure_Service/UpdateRow" message="tns:IBM_Structure_Service_UpdateRow_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Structure_Service/UpdateRowResponse" message="tns:IBM_Structure_Service_UpdateRow_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IBM_Structure_Service" type="tns:IBM_Structure_Service">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertPersonPost">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/InsertPersonPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InserBrigades">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/InserBrigades" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCarDriver">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/InsertCarDriver" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCar">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/InsertCar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCompanyCar">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/InsertCompanyCar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCompany">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/InsertCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCompanyRow">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/InsertCompanyRow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPoint">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/InsertPoint" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPost">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/InsertPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertRowBreed">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/InsertRowBreed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertRow">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/InsertRow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertRowBreedContainer">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/InsertRowBreedContainer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRows">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/GetRows" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContainersForSale">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/GetContainersForSale" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRowsWithDate">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/GetRowsWithDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBrigadeRowDistribution">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/GetBrigadeRowDistribution" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPointsForSendBack">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/GetPointsForSendBack" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHarvesterInDistributionModel">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/GetHarvesterInDistributionModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHarvesterInAllRows">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/GetHarvesterInAllRows" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckGetRow">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/CheckGetRow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRowsByHarvesterRowInDistribution">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/GetRowsByHarvesterRowInDistribution" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCarsPointModelForContainerMove">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/GetCarsPointModelForContainerMove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPointsForWaybillIn">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/GetPointsForWaybillIn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContainersForContainerPack">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/GetContainersForContainerPack" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContainerForProductRecieve">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/GetContainerForProductRecieve" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContainersForContainerMove">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/GetContainersForContainerMove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContainersForContainerLocations">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/GetContainersForContainerLocations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCarsPointModel">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/GetCarsPointModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCarsPointModelForSale">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/GetCarsPointModelForSale" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaletForContainerPack">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/GetPaletForContainerPack" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTakeRowInRow">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/GetTakeRowInRow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPointsForWaybill">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/GetPointsForWaybill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPostModel">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/GetPostModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPosts">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/GetPosts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBrigades">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/GetBrigades" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCarDrivers">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/GetCarDrivers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCar">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/GetCar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyCar">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/GetCompanyCar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompany">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/GetCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyRow">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/GetCompanyRow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPoint">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/GetPoint" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRowBreeds">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/GetRowBreeds" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHarvesterPostId">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/GetHarvesterPostId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBrigade">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/DeleteBrigade" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCarDriver">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/DeleteCarDriver" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCar">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/DeleteCar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCompanyCar">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/DeleteCompanyCar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCompany">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/DeleteCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCompanyRows">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/DeleteCompanyRows" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePoint">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/DeletePoint" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRowBreeds">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/DeleteRowBreeds" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRow">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/DeleteRow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePost">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/DeletePost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRowBreedContainer">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/UpdateRowBreedContainer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBrigade">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/UpdateBrigade" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCarDriver">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/UpdateCarDriver" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCar">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/UpdateCar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCompanyCar">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/UpdateCompanyCar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCompany">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/UpdateCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCompanyRow">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/UpdateCompanyRow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePoint">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/UpdatePoint" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePost">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/UpdatePost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRowBreed">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/UpdateRowBreed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRow">
+      <soap:operation soapAction="http://tempuri.org/IBM_Structure_Service/UpdateRow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BM_Structure_Service">
+    <wsdl:port name="BasicHttpBinding_IBM_Structure_Service" binding="tns:BasicHttpBinding_IBM_Structure_Service">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Structure_Service/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

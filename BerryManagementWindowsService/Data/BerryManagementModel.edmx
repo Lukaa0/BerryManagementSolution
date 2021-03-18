@@ -1,0 +1,2194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="BerryManagementModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="PersonDocuments">
+          <Key>
+            <PropertyRef Name="PersonDocument_Id" />
+          </Key>
+          <Property Name="PersonDocument_Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PersonDocument_Person_Id" Type="bigint" Nullable="false" />
+          <Property Name="PersonDocument_DocumentType_Id" Type="bigint" Nullable="false" />
+          <Property Name="PersonDocument_FirstName" Type="nvarchar" MaxLength="250" />
+          <Property Name="PersonDocument_LastName" Type="nvarchar" MaxLength="250" />
+          <Property Name="PersonDocument_StartDate" Type="date" Nullable="false" />
+          <Property Name="PersonDocument_EndDate" Type="date" />
+          <Property Name="PersonDocument_Number" Type="nvarchar" MaxLength="250" />
+          <Property Name="PersonDocument_Isuer" Type="nvarchar" MaxLength="250" />
+          <Property Name="PersonDocument_Citizenship_Id" Type="bigint" Nullable="false" />
+          <Property Name="PersonDocument_Description" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="PersonPostAgreements">
+          <Key>
+            <PropertyRef Name="PersonPostAgreement_Id" />
+          </Key>
+          <Property Name="PersonPostAgreement_Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PersonPostAgreement_PersonPost_Id" Type="bigint" Nullable="false" />
+          <Property Name="PersonPostAgreement_StartDate" Type="date" Nullable="false" />
+          <Property Name="PersonPostAgreement_EndDate" Type="date" />
+          <Property Name="PersonPostAgreement_Description" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="PersonPosts">
+          <Key>
+            <PropertyRef Name="PersonPost_Id" />
+          </Key>
+          <Property Name="PersonPost_Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PersonPost_EmployeeBarCode" Type="varchar" MaxLength="14" StoreGeneratedPattern="Computed" />
+          <Property Name="PersonPost_BalanceSheetType_Id" Type="bigint" Nullable="false" />
+          <Property Name="PersonPost_EmployeeType_Id" Type="bigint" Nullable="false" />
+          <Property Name="PersonPost_Person_Id" Type="bigint" Nullable="false" />
+          <Property Name="PersonPost_Post_Id" Type="bigint" Nullable="false" />
+          <Property Name="PersonPost_Post_BarCodePrefix" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="PersonPost_Brigade_Id" Type="bigint" />
+          <Property Name="PersonPost_StartDate" Type="date" Nullable="false" />
+          <Property Name="PersonPost_EndDate" Type="date" />
+          <Property Name="PersonPost_DismissalOrder" Type="nvarchar" MaxLength="250" />
+          <Property Name="PersonPost_Description" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Persons">
+          <Key>
+            <PropertyRef Name="Person_Id" />
+          </Key>
+          <Property Name="Person_Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Person_SideType_Id" Type="int" Nullable="false" />
+          <Property Name="Person_Code" Type="bigint" />
+          <Property Name="Person_FirstName" Type="nvarchar" MaxLength="250" />
+          <Property Name="Person_LastName" Type="nvarchar" MaxLength="250" />
+          <Property Name="Person_Identity" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Person_LegalStatuseType_Id" Type="bigint" />
+          <Property Name="Person_LegalForm_Id" Type="bigint" />
+          <Property Name="Person_IsResident" Type="bit" Nullable="false" />
+          <Property Name="Person_GenderType_Id" Type="bit" Nullable="false" />
+          <Property Name="Person_BirthDate" Type="date" Nullable="false" />
+          <Property Name="Person_Address1" Type="nvarchar" MaxLength="250" />
+          <Property Name="Person_Address2" Type="nvarchar" MaxLength="250" />
+          <Property Name="Person_Phone1" Type="nvarchar" MaxLength="250" />
+          <Property Name="Person_Phone2" Type="nvarchar" MaxLength="250" />
+          <Property Name="Person_Bank_Id" Type="bigint" />
+          <Property Name="Person_BankAccount" Type="char" MaxLength="22" />
+          <Property Name="Person_BankClientName" Type="nvarchar" MaxLength="250" />
+          <Property Name="Person_MailAddress" Type="varchar" MaxLength="250" />
+          <Property Name="Person_MaritalStatus_Id" Type="bigint" />
+          <Property Name="Person_DrivingLicense" Type="nvarchar" MaxLength="250" />
+          <Property Name="Person_Nationality_Id" Type="bigint" />
+          <Property Name="Person_Citizenship_Id" Type="bigint" />
+          <Property Name="Person_Description" Type="nvarchar" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="Punishments">
+          <Key>
+            <PropertyRef Name="Punishment_Id" />
+          </Key>
+          <Property Name="Punishment_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Punishment_PunishmentType_Id" Type="bigint" Nullable="false" />
+          <Property Name="Punishment_PersonPost_Id" Type="bigint" Nullable="false" />
+          <Property Name="Punishment_DateTime" Type="datetime" Nullable="false" />
+          <Property Name="Punishment_User_PersonPost_Id" Type="bigint" Nullable="false" />
+          <Property Name="Punishment_RecomenderUser_PersonPost_Id" Type="bigint" />
+          <Property Name="Punishment_Description" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Banks">
+          <Key>
+            <PropertyRef Name="Bank_Id" />
+          </Key>
+          <Property Name="Bank_Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Bank_Name" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Bank_Kode" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Breeds">
+          <Key>
+            <PropertyRef Name="Breed_Id" />
+          </Key>
+          <Property Name="Breed_Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Breed_Name" Type="nvarchar" MaxLength="250" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Citizenships">
+          <Key>
+            <PropertyRef Name="Citizenship_Id" />
+          </Key>
+          <Property Name="Citizenship_Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Citizenship_Name" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Citizenship_NameEn" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Containers">
+          <Key>
+            <PropertyRef Name="Container_BarCode" />
+          </Key>
+          <Property Name="Container_BarCode" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Container_ContainerType_Id" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="Container_IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DocumentTypes">
+          <Key>
+            <PropertyRef Name="DocumentType_Id" />
+          </Key>
+          <Property Name="DocumentType_Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DocumentType_Name" Type="nvarchar" MaxLength="250" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LegalForms">
+          <Key>
+            <PropertyRef Name="LegalForm_Id" />
+          </Key>
+          <Property Name="LegalForm_Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LegalForm_Name" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="LegalForm_NameEn" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Nationalities">
+          <Key>
+            <PropertyRef Name="Nationality_Id" />
+          </Key>
+          <Property Name="Nationality_Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nationality_Name" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Nationality_NameEn" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="ContainerMoves">
+          <Key>
+            <PropertyRef Name="ContainerMove_Id" />
+          </Key>
+          <Property Name="ContainerMove_Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ContainerMove_TransportWaybill_Id" Type="bigint" Nullable="false" />
+          <Property Name="ContainerMove_Container_BarCode" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ContainerMove_Car_Point_Id" Type="bigint" Nullable="false" />
+          <Property Name="ContainerMove_In_ContainerMoveInOut_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ContainerMove_In_User_PersonPost_Id" Type="bigint" Nullable="false" />
+          <Property Name="ContainerMove_In_User_Point_Id" Type="bigint" Nullable="false" />
+          <Property Name="ContainerMove_In_DateTime" Type="datetime" Nullable="false" />
+          <Property Name="ContainerMove_Out_ContainerMoveInOut_Id" Type="uniqueidentifier" />
+          <Property Name="ContainerMove_Out_User_PersonPost_Id" Type="bigint" />
+          <Property Name="ContainerMove_Out_User_Point_Id" Type="bigint" />
+          <Property Name="ContainerMove_Out_DateTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="ContainerPacks">
+          <Key>
+            <PropertyRef Name="ContainerPack_Id" />
+          </Key>
+          <Property Name="ContainerPack_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ContainerPack_Container_BarCode" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ContainerPack_Parent_Container_BarCode" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ContainerPack_DateTime" Type="datetime" Nullable="false" />
+          <Property Name="ContainerPack_User_PersonPost_Id" Type="bigint" Nullable="false" />
+          <Property Name="ContainerPack_Parent_ContainerLocation_In_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ContainerPack_IsComplite" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ContainerWeights">
+          <Key>
+            <PropertyRef Name="ContainerWeight_Id" />
+          </Key>
+          <Property Name="ContainerWeight_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ContainerWeight_Container_BarCode" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ContainerWeight_Net" Type="decimal" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="ContainerWeight_Gross" Type="decimal" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="ContainerWeight_DateTime" Type="datetime" Nullable="false" />
+          <Property Name="ContainerWeight_User_PersonPost_Id" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HarvesterContainerDistributions">
+          <Key>
+            <PropertyRef Name="HarvesterContainerDistribution_Id" />
+          </Key>
+          <Property Name="HarvesterContainerDistribution_Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HarvesterContainerDistribution_Container_BarCode" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="HarvesterContainerDistribution_Harvester_PersonPost_Id" Type="bigint" Nullable="false" />
+          <Property Name="HarvesterContainerDistribution_In_HarvesterContainerDistributionInOut_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="HarvesterContainerDistribution_In_User_PersonPost_Id" Type="bigint" Nullable="false" />
+          <Property Name="HarvesterContainerDistribution_IN_DateTime" Type="datetime" Nullable="false" />
+          <Property Name="HarvesterContainerDistribution_Out_HarvesterContainerDistributionInOut_Id" Type="uniqueidentifier" />
+          <Property Name="HarvesterContainerDistribution_Out_User_PersonPost_Id" Type="bigint" />
+          <Property Name="HarvesterContainerDistribution_Out_DateTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="HarvesterRowDistributions">
+          <Key>
+            <PropertyRef Name="HarvesterRowDistribution_Id" />
+          </Key>
+          <Property Name="HarvesterRowDistribution_Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HarvesterRowDistribution_Row_Id" Type="bigint" Nullable="false" />
+          <Property Name="HarvesterRowDistribution_Harvester_PersonPost_Id" Type="bigint" Nullable="false" />
+          <Property Name="HarvesterRowDistribution_In_HarvesterRowDistributionInOut_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="HarvesterRowDistribution_In_User_PersonPost_Id" Type="bigint" Nullable="false" />
+          <Property Name="HarvesterRowDistribution_In_DateTime" Type="datetime" Nullable="false" />
+          <Property Name="HarvesterRowDistribution_Out_HarvesterRowDistributionInOut_Id" Type="uniqueidentifier" />
+          <Property Name="HarvesterRowDistribution_Out_User_PersonPost_Id" Type="bigint" />
+          <Property Name="HarvesterRowDistribution_Out_DateTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="OperationSettings">
+          <Key>
+            <PropertyRef Name="OperationSetting_Key" />
+          </Key>
+          <Property Name="OperationSetting_Key" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="OperationSetting_Value" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="OperationSetting_Description" Type="nvarchar" MaxLength="250" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProductOwners">
+          <Key>
+            <PropertyRef Name="ProductOwner_Id" />
+          </Key>
+          <Property Name="ProductOwner_Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProductOwner_Product_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ProductOwner_CompanyId" Type="bigint" Nullable="false" />
+          <Property Name="ProducOwnert_DateTime" Type="datetime" Nullable="false" />
+          <Property Name="ProductOwner_User_PersonPost_Id" Type="bigint" Nullable="false" />
+          <Property Name="ProductOwner_Status" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProductPacks">
+          <Key>
+            <PropertyRef Name="ProductPack_Id" />
+          </Key>
+          <Property Name="ProductPack_Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProductPack_Product_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ProductPack_Container_BarCode" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ProductPack_In_ProductPackInOut_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ProductPack_In_User_PersonPost_Id" Type="bigint" Nullable="false" />
+          <Property Name="ProductPack_In_DateTime" Type="datetime" Nullable="false" />
+          <Property Name="ProductPack_Out_ProductPackInOut_Id" Type="uniqueidentifier" />
+          <Property Name="ProductPack_Out_User_PersonPost_Id" Type="bigint" />
+          <Property Name="ProductPack_Out_DateTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="ProductQualities">
+          <Key>
+            <PropertyRef Name="ProductQuality_Id" />
+          </Key>
+          <Property Name="ProductQuality_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ProductQuality_Product_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ProductQuality_Quality_Id" Type="bigint" Nullable="false" />
+          <Property Name="ProductQuality_DateTime" Type="datetime" Nullable="false" />
+          <Property Name="ProductQuality_User_PersonPost_Id" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProductReceives">
+          <Key>
+            <PropertyRef Name="ProductReceive_Id" />
+          </Key>
+          <Property Name="ProductReceive_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ProductReceive_Product_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ProductReceive_HarvesterBarCode" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ProductReceive_ContainerBarCode" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ProductReceive_User_Point_Id" Type="bigint" Nullable="false" />
+          <Property Name="ProductReceive_User_PersonPost_Id" Type="bigint" Nullable="false" />
+          <Property Name="ProductReceive_DateTime" Type="datetime" Nullable="false" />
+          <Property Name="ProductReceive_ProcessIsComplite" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sales">
+          <Key>
+            <PropertyRef Name="Sale_Id" />
+          </Key>
+          <Property Name="Sale_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Sale_Container_BarCode" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Sale_DateTime" Type="datetime" Nullable="false" />
+          <Property Name="Sale_User_PersonPost_Id" Type="bigint" Nullable="false" />
+          <Property Name="Sale_Company_Id" Type="bigint" Nullable="false" />
+          <Property Name="Sale_Identifier" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Sale_IsComplite" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TakeRows">
+          <Key>
+            <PropertyRef Name="TakeRow_Id" />
+          </Key>
+          <Property Name="TakeRow_Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TakeRow_Row_Id" Type="bigint" Nullable="false" />
+          <Property Name="TakeRow_Brigade_Id" Type="bigint" />
+          <Property Name="TakeRow_In_TakeRowInOut_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TakeRow_In_TUser_PersonPost_Id" Type="bigint" Nullable="false" />
+          <Property Name="TakeRow_In_DateTime" Type="datetime" Nullable="false" />
+          <Property Name="TakeRow_Out_TakeRowInOut_Id" Type="uniqueidentifier" />
+          <Property Name="TakeRow_Out_User_PersonPost_Id" Type="bigint" />
+          <Property Name="TakeRow_Out_DateTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="BreedProperties">
+          <Key>
+            <PropertyRef Name="BreedProperty_Id" />
+          </Key>
+          <Property Name="BreedProperty_Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BreedProperty_DateTime" Type="datetime" Nullable="false" />
+          <Property Name="BreedProperty_Breed_Id" Type="bigint" />
+          <Property Name="BreedProperty_Sugar" Type="decimal" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="BreedProperty_Density" Type="decimal" Precision="18" Scale="3" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ContainerLocations">
+          <Key>
+            <PropertyRef Name="ContainerLocation_Id" />
+          </Key>
+          <Property Name="ContainerLocation_Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ContainerLocation_Container_BarCode" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ContainerLocation_Point_Id" Type="bigint" Nullable="false" />
+          <Property Name="ContainerLocation_In_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ContainerLocation_In_User_PersonPost_Id" Type="bigint" Nullable="false" />
+          <Property Name="ContainerLocation_In_DateTime" Type="datetime" Nullable="false" />
+          <Property Name="ContainerLocation_Out_ContainerMoveInOut_Id" Type="uniqueidentifier" />
+          <Property Name="ContainerLocation_Out_User_PersonPost_Id" Type="bigint" />
+          <Property Name="ContainerLocation_Out_DateTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Products">
+          <Key>
+            <PropertyRef Name="Product_Id" />
+          </Key>
+          <Property Name="Product_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Product_ParentProduct_Id" Type="uniqueidentifier" />
+          <Property Name="Product_Row_Id" Type="bigint" Nullable="false" />
+          <Property Name="Product_Harvester_PersonPost_Id" Type="bigint" Nullable="false" />
+          <Property Name="Product_User_PersonPost_Id" Type="bigint" Nullable="false" />
+          <Property Name="Product_DateTime" Type="datetime" Nullable="false" />
+          <Property Name="Product_Breed_Id" Type="bigint" Nullable="false" />
+          <Property Name="product_IsGood" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="NonTransportWaybillDetails">
+          <Key>
+            <PropertyRef Name="NonTransportWaybillDetail_NonTransportWaybill_Id" />
+          </Key>
+          <Property Name="NonTransportWaybillDetail_NonTransportWaybill_Id" Type="bigint" Nullable="false" />
+          <Property Name="NonTransportWaybillDetail_Waybill" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="NonTransportWaybillDetail_WaybillStatus" Type="int" Nullable="false" />
+          <Property Name="NonTransportWaybillDetail_Error" Type="nvarchar(max)" />
+          <Property Name="NonTransportWaybillDetail_DateTime" Type="datetime" />
+          <Property Name="NonTransportWaybillDetail_State" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="NonTransportWaybills">
+          <Key>
+            <PropertyRef Name="NonTransportWaybill_Id" />
+          </Key>
+          <Property Name="NonTransportWaybill_Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NonTransportWaybill_Type_Id" Type="int" Nullable="false" />
+          <Property Name="NonTransportWaybill_TransportWaybill_Id" Type="bigint" Nullable="false" />
+          <Property Name="NonTransportWaybill_CompanySeler_Id" Type="bigint" Nullable="false" />
+          <Property Name="NonTransportWaybill_CompanyBuyer_Id" Type="bigint" Nullable="false" />
+          <Property Name="NonTransportWaybill_RS_Id" Type="bigint" />
+          <Property Name="NonTransportWaybill_RS_Number" Type="nvarchar" MaxLength="50" />
+          <Property Name="NonTransportWaybill_Start_DateTime" Type="datetime" />
+          <Property Name="NonTransportWaybill_End_DateTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="TransportWaybillDetails">
+          <Key>
+            <PropertyRef Name="TransportWaybillDetail_TransportWaybill_Id" />
+          </Key>
+          <Property Name="TransportWaybillDetail_TransportWaybill_Id" Type="bigint" Nullable="false" />
+          <Property Name="TransportWaybillDetail_Waybill" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="TransportWaybillDetail_WaybillStatus" Type="int" Nullable="false" />
+          <Property Name="TransportWaybillDetail_Error" Type="nvarchar(max)" />
+          <Property Name="TransportWaybillDetail_DateTime" Type="datetime" />
+          <Property Name="TransportWaybillDetail_State" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TransportWaybills">
+          <Key>
+            <PropertyRef Name="TransportWaybill_Id" />
+          </Key>
+          <Property Name="TransportWaybill_Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TransportWaybill_Type_Id" Type="int" Nullable="false" />
+          <Property Name="TransportWaybill_Car_Point_Id" Type="bigint" Nullable="false" />
+          <Property Name="TransportWaybill_Car_Id" Type="bigint" Nullable="false" />
+          <Property Name="TransportWaybill_Company_Id" Type="bigint" Nullable="false" />
+          <Property Name="TransportWaybill_Start_Point_Id" Type="bigint" />
+          <Property Name="TransportWaybill_Destination_Point_Id" Type="bigint" />
+          <Property Name="TransportWaybill_RS_Id" Type="bigint" />
+          <Property Name="TransportWaybill_RS_Number" Type="nvarchar" MaxLength="50" />
+          <Property Name="TransportWaybill_Start_DateTime" Type="datetime" />
+          <Property Name="TransportWaybill_End_DateTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Permissions">
+          <Key>
+            <PropertyRef Name="Permission_Id" />
+          </Key>
+          <Property Name="Permission_Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Permission_ParentId" Type="bigint" Nullable="false" />
+          <Property Name="Permission_Name" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Permission_Description" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="PostRoles">
+          <Key>
+            <PropertyRef Name="PostRole_Id" />
+          </Key>
+          <Property Name="PostRole_Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PostRole_Post_Id" Type="bigint" Nullable="false" />
+          <Property Name="PostRole_Role_Id" Type="bigint" Nullable="false" />
+          <Property Name="PostRole_StartDate" Type="date" Nullable="false" />
+          <Property Name="PostRole_EndDate" Type="date" />
+        </EntityType>
+        <EntityType Name="RolePermissions">
+          <Key>
+            <PropertyRef Name="RolePermission_Id" />
+          </Key>
+          <Property Name="RolePermission_Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RolePermission_Role_Id" Type="bigint" Nullable="false" />
+          <Property Name="RolePermission_Permission_Id" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="Role_Id" />
+          </Key>
+          <Property Name="Role_Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Role_Name" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="Role_Description" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="User_Person_Id" />
+          </Key>
+          <Property Name="User_Person_Id" Type="bigint" Nullable="false" />
+          <Property Name="User_Password" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="User_PasswordIsReset" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Brigades">
+          <Key>
+            <PropertyRef Name="Brigade_Id" />
+          </Key>
+          <Property Name="Brigade_Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Brigade_Name" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Brigade_Description" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="CarDrivers">
+          <Key>
+            <PropertyRef Name="CarDriver_Id" />
+          </Key>
+          <Property Name="CarDriver_Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CarDriver_Car_Id" Type="bigint" Nullable="false" />
+          <Property Name="CarDriver_Person_Id" Type="bigint" Nullable="false" />
+          <Property Name="CarDriver_PersonPost_Id" Type="bigint" />
+          <Property Name="CarDriver_StartDate" Type="date" Nullable="false" />
+          <Property Name="CarDriver_EndDate" Type="date" />
+        </EntityType>
+        <EntityType Name="Cars">
+          <Key>
+            <PropertyRef Name="Car_Id" />
+          </Key>
+          <Property Name="Car_Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Car_Number" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Car_Model" Type="nvarchar" MaxLength="50" />
+          <Property Name="Car_SideType_Id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CompanyCars">
+          <Key>
+            <PropertyRef Name="CompanyCar_Id" />
+          </Key>
+          <Property Name="CompanyCar_Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CompanyCar_Company_Id" Type="bigint" Nullable="false" />
+          <Property Name="CompanyCar_Car_Id" Type="bigint" Nullable="false" />
+          <Property Name="CompanyCar_StartDate" Type="date" Nullable="false" />
+          <Property Name="CompanyCar_EndDate" Type="date" />
+        </EntityType>
+        <EntityType Name="Companyes">
+          <Key>
+            <PropertyRef Name="Company_Id" />
+          </Key>
+          <Property Name="Company_Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Company_Name" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Company_Identity" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Company_SideType_Id" Type="int" Nullable="false" />
+          <Property Name="Company_CitizenshipId" Type="bigint" Nullable="false" />
+          <Property Name="Company_Address1" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Company_Address2" Type="nvarchar" MaxLength="250" />
+          <Property Name="Company_Phone1" Type="nvarchar" MaxLength="250" />
+          <Property Name="Company_Phone2" Type="nvarchar" MaxLength="250" />
+          <Property Name="Company_IBAN" Type="char" MaxLength="22" />
+          <Property Name="Company_RS_UserId" Type="nvarchar" MaxLength="50" />
+          <Property Name="Company_RS_Password" Type="nvarchar" MaxLength="50" />
+          <Property Name="Company_IsResident" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CompanyRows">
+          <Key>
+            <PropertyRef Name="CompanyRow_Id" />
+          </Key>
+          <Property Name="CompanyRow_Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CompanyRow_Company_Id" Type="bigint" Nullable="false" />
+          <Property Name="CompanyRow_Row_Id" Type="bigint" Nullable="false" />
+          <Property Name="CompanyRow_StartDate" Type="date" Nullable="false" />
+          <Property Name="CompanyRow_EndDate" Type="date" />
+        </EntityType>
+        <EntityType Name="Points">
+          <Key>
+            <PropertyRef Name="Point_Id" />
+          </Key>
+          <Property Name="Point_Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Point_Name" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Point_IsActive" Type="bit" Nullable="false" />
+          <Property Name="Point_PointType_Id" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="Point_BarCode" Type="varchar" MaxLength="14" StoreGeneratedPattern="Computed" />
+          <Property Name="Point_Car_Id" Type="bigint" />
+          <Property Name="Point_Address" Type="nvarchar" MaxLength="250" />
+          <Property Name="Point_Description" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Posts">
+          <Key>
+            <PropertyRef Name="Post_Id" />
+          </Key>
+          <Property Name="Post_Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Post_Name" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Post_Description" Type="nvarchar" MaxLength="250" />
+          <Property Name="Post_BarCodePrefix" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="Post_BalanceSheetType_Id" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RowBreeds">
+          <Key>
+            <PropertyRef Name="RowBreed_Id" />
+          </Key>
+          <Property Name="RowBreed_Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RowBreed_Row_Id" Type="bigint" Nullable="false" />
+          <Property Name="RowBreed_Breed_Id" Type="bigint" Nullable="false" />
+          <Property Name="RowBreed_TreeCount" Type="int" Nullable="false" />
+          <Property Name="RowBreed_PlantYear" Type="int" Nullable="false" />
+          <Property Name="RowBreed_StartDate" Type="date" Nullable="false" />
+          <Property Name="RowBreed_EndDate" Type="date" />
+        </EntityType>
+        <EntityType Name="Rows">
+          <Key>
+            <PropertyRef Name="Row_Id" />
+          </Key>
+          <Property Name="Row_Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Sector_Number" Type="int" Nullable="false" />
+          <Property Name="Row_Number" Type="int" Nullable="false" />
+          <Property Name="Row_Subrow_Number" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="Row_Barkode" Type="varchar" MaxLength="14" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="DocumentTemplates">
+          <Key>
+            <PropertyRef Name="DocumentTemplateId" />
+          </Key>
+          <Property Name="DocumentTemplateId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DocumentTemplateData" Type="varbinary(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DocumentTemplateTitles">
+          <Key>
+            <PropertyRef Name="DocumentTemplateTitleDocumentTemplateId" />
+          </Key>
+          <Property Name="DocumentTemplateTitleDocumentTemplateId" Type="bigint" Nullable="false" />
+          <Property Name="DocumentTemplateTitleExtension" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DocumentTemplateTitleDescription" Type="nvarchar" MaxLength="250" Nullable="false" />
+        </EntityType>
+        <Function Name="sf_GetCalculatedAge" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="Library" ReturnType="int">
+          <Parameter Name="birthDate" Type="date" Mode="In" />
+        </Function>
+        <Function Name="tf_ContainerTypes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="Library">
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="ContainerType_Id" Type="char" MaxLength="2" />
+                <Property Name="ContainerType_Name" Type="nvarchar" MaxLength="250" />
+                <Property Name="ContainerType_Level" Type="int" />
+                <Property Name="ContainerType_IsActive" Type="bit" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="tf_EmployeeTypes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="Library">
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="EmployeeType_Id" Type="bigint" />
+                <Property Name="EmployeeType_Name" Type="nvarchar" MaxLength="250" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="tf_GenderTypes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="Library">
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="GenderType_Id" Type="bit" />
+                <Property Name="GenderType_Name" Type="nvarchar" MaxLength="250" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="tf_GetBalanceSheetTypes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="Library">
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="BalanceSheetType_Id" Type="bigint" />
+                <Property Name="BalanceSheetType_Name" Type="nvarchar" MaxLength="200" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="tf_HistoryOperationTypes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="Library">
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="HistoryOperationType_Id" Type="bigint" />
+                <Property Name="HistoryOperationType_Name" Type="varchar" MaxLength="50" />
+                <Property Name="HistoryOperationType_Description" Type="nvarchar" MaxLength="100" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="tf_LegalStatuseTypes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="Library">
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="LegalStatuseType_Id" Type="bigint" />
+                <Property Name="LegalStatuseType_Name" Type="nvarchar" MaxLength="250" />
+                <Property Name="LegalStatuseType_NameEn" Type="nvarchar" MaxLength="250" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="tf_MaritalStatus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="Library">
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="MaritalStatus_Id" Type="bigint" />
+                <Property Name="MaritalStatus_Name" Type="nvarchar" MaxLength="200" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="tf_OperationTypes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="Library">
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="OperationType_Id" Type="bigint" />
+                <Property Name="OperationType_Name" Type="nvarchar" MaxLength="250" />
+                <Property Name="OperationType_IsActive" Type="bit" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="tf_PointTypes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="Library">
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="PointType_Id" Type="char" MaxLength="2" />
+                <Property Name="PointType_Name" Type="nvarchar" MaxLength="250" />
+                <Property Name="PointType_IsActive" Type="bit" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="tf_ProductQualityes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="Library">
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="ProductQuality_Id" Type="bigint" />
+                <Property Name="ProductQuality_Name" Type="nvarchar" MaxLength="250" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="tf_PunishmentTypes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="Library">
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="PunishmentType_Id" Type="bigint" />
+                <Property Name="PunishmentType_Name" Type="nvarchar" MaxLength="250" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="tf_SalaryTypes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="Library">
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="SalaryType_Id" Type="bigint" />
+                <Property Name="SalaryType_Name" Type="nvarchar" MaxLength="200" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="tf_SideTypes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="Library">
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="SideType_Id" Type="bigint" />
+                <Property Name="SideType_Name" Type="nvarchar" MaxLength="200" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="tf_UnitTypes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="Library">
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="UnitType_Id" Type="int" />
+                <Property Name="UnitType_Name" Type="nvarchar" MaxLength="250" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="tf_WaybillStates" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="Library">
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="WaybillState_Id" Type="int" />
+                <Property Name="WaybillState_Name" Type="nvarchar" MaxLength="200" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <EntityContainer Name="BerryManagementModelStoreContainer">
+          <EntitySet Name="PersonDocuments" EntityType="Self.PersonDocuments" Schema="Employee" store:Type="Tables" />
+          <EntitySet Name="PersonPostAgreements" EntityType="Self.PersonPostAgreements" Schema="Employee" store:Type="Tables" />
+          <EntitySet Name="PersonPosts" EntityType="Self.PersonPosts" Schema="Employee" store:Type="Tables" />
+          <EntitySet Name="Persons" EntityType="Self.Persons" Schema="Employee" store:Type="Tables" />
+          <EntitySet Name="Punishments" EntityType="Self.Punishments" Schema="Employee" store:Type="Tables" />
+          <EntitySet Name="Banks" EntityType="Self.Banks" Schema="Library" store:Type="Tables" />
+          <EntitySet Name="Breeds" EntityType="Self.Breeds" Schema="Library" store:Type="Tables" />
+          <EntitySet Name="Citizenships" EntityType="Self.Citizenships" Schema="Library" store:Type="Tables" />
+          <EntitySet Name="Containers" EntityType="Self.Containers" Schema="Library" store:Type="Tables" />
+          <EntitySet Name="DocumentTypes" EntityType="Self.DocumentTypes" Schema="Library" store:Type="Tables" />
+          <EntitySet Name="LegalForms" EntityType="Self.LegalForms" Schema="Library" store:Type="Tables" />
+          <EntitySet Name="Nationalities" EntityType="Self.Nationalities" Schema="Library" store:Type="Tables" />
+          <EntitySet Name="ContainerMoves" EntityType="Self.ContainerMoves" Schema="Operation" store:Type="Tables" />
+          <EntitySet Name="ContainerPacks" EntityType="Self.ContainerPacks" Schema="Operation" store:Type="Tables" />
+          <EntitySet Name="ContainerWeights" EntityType="Self.ContainerWeights" Schema="Operation" store:Type="Tables" />
+          <EntitySet Name="HarvesterContainerDistributions" EntityType="Self.HarvesterContainerDistributions" Schema="Operation" store:Type="Tables" />
+          <EntitySet Name="HarvesterRowDistributions" EntityType="Self.HarvesterRowDistributions" Schema="Operation" store:Type="Tables" />
+          <EntitySet Name="OperationSettings" EntityType="Self.OperationSettings" Schema="Operation" store:Type="Tables" />
+          <EntitySet Name="ProductOwners" EntityType="Self.ProductOwners" Schema="Operation" store:Type="Tables" />
+          <EntitySet Name="ProductPacks" EntityType="Self.ProductPacks" Schema="Operation" store:Type="Tables" />
+          <EntitySet Name="ProductQualities" EntityType="Self.ProductQualities" Schema="Operation" store:Type="Tables" />
+          <EntitySet Name="ProductReceives" EntityType="Self.ProductReceives" Schema="Operation" store:Type="Tables" />
+          <EntitySet Name="Sales" EntityType="Self.Sales" Schema="Operation" store:Type="Tables" />
+          <EntitySet Name="TakeRows" EntityType="Self.TakeRows" Schema="Operation" store:Type="Tables" />
+          <EntitySet Name="BreedProperties" EntityType="Self.BreedProperties" Schema="Produce" store:Type="Tables" />
+          <EntitySet Name="ContainerLocations" EntityType="Self.ContainerLocations" Schema="Produce" store:Type="Tables" />
+          <EntitySet Name="Products" EntityType="Self.Products" Schema="Produce" store:Type="Tables" />
+          <EntitySet Name="NonTransportWaybillDetails" EntityType="Self.NonTransportWaybillDetails" Schema="RS" store:Type="Tables" />
+          <EntitySet Name="NonTransportWaybills" EntityType="Self.NonTransportWaybills" Schema="RS" store:Type="Tables" />
+          <EntitySet Name="TransportWaybillDetails" EntityType="Self.TransportWaybillDetails" Schema="RS" store:Type="Tables" />
+          <EntitySet Name="TransportWaybills" EntityType="Self.TransportWaybills" Schema="RS" store:Type="Tables" />
+          <EntitySet Name="Permissions" EntityType="Self.Permissions" Schema="Security" store:Type="Tables" />
+          <EntitySet Name="PostRoles" EntityType="Self.PostRoles" Schema="Security" store:Type="Tables" />
+          <EntitySet Name="RolePermissions" EntityType="Self.RolePermissions" Schema="Security" store:Type="Tables" />
+          <EntitySet Name="Roles" EntityType="Self.Roles" Schema="Security" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="Security" store:Type="Tables" />
+          <EntitySet Name="Brigades" EntityType="Self.Brigades" Schema="Structure" store:Type="Tables" />
+          <EntitySet Name="CarDrivers" EntityType="Self.CarDrivers" Schema="Structure" store:Type="Tables" />
+          <EntitySet Name="Cars" EntityType="Self.Cars" Schema="Structure" store:Type="Tables" />
+          <EntitySet Name="CompanyCars" EntityType="Self.CompanyCars" Schema="Structure" store:Type="Tables" />
+          <EntitySet Name="Companyes" EntityType="Self.Companyes" Schema="Structure" store:Type="Tables" />
+          <EntitySet Name="CompanyRows" EntityType="Self.CompanyRows" Schema="Structure" store:Type="Tables" />
+          <EntitySet Name="Points" EntityType="Self.Points" Schema="Structure" store:Type="Tables" />
+          <EntitySet Name="Posts" EntityType="Self.Posts" Schema="Structure" store:Type="Tables" />
+          <EntitySet Name="RowBreeds" EntityType="Self.RowBreeds" Schema="Structure" store:Type="Tables" />
+          <EntitySet Name="Rows" EntityType="Self.Rows" Schema="Structure" store:Type="Tables" />
+          <EntitySet Name="DocumentTemplates" EntityType="Self.DocumentTemplates" Schema="Template" store:Type="Tables" />
+          <EntitySet Name="DocumentTemplateTitles" EntityType="Self.DocumentTemplateTitles" Schema="Template" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BerryManagementModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <ComplexType Name="tf_ContainerTypes_Result">
+          <Property Name="ContainerType_Id" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="ContainerType_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ContainerType_Level" Type="Int32" />
+          <Property Name="ContainerType_IsActive" Type="Boolean" />
+        </ComplexType>
+        <ComplexType Name="tf_EmployeeTypes_Result">
+          <Property Name="EmployeeType_Id" Type="Int64" />
+          <Property Name="EmployeeType_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </ComplexType>
+        <ComplexType Name="tf_GenderTypes_Result">
+          <Property Name="GenderType_Id" Type="Boolean" />
+          <Property Name="GenderType_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </ComplexType>
+        <ComplexType Name="tf_GetBalanceSheetTypes_Result">
+          <Property Name="BalanceSheetType_Id" Type="Int64" />
+          <Property Name="BalanceSheetType_Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </ComplexType>
+        <ComplexType Name="tf_HistoryOperationTypes_Result">
+          <Property Name="HistoryOperationType_Id" Type="Int64" />
+          <Property Name="HistoryOperationType_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="HistoryOperationType_Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </ComplexType>
+        <ComplexType Name="tf_LegalStatuseTypes_Result">
+          <Property Name="LegalStatuseType_Id" Type="Int64" />
+          <Property Name="LegalStatuseType_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="LegalStatuseType_NameEn" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </ComplexType>
+        <ComplexType Name="tf_MaritalStatus_Result">
+          <Property Name="MaritalStatus_Id" Type="Int64" />
+          <Property Name="MaritalStatus_Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </ComplexType>
+        <ComplexType Name="tf_OperationTypes_Result">
+          <Property Name="OperationType_Id" Type="Int64" />
+          <Property Name="OperationType_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="OperationType_IsActive" Type="Boolean" />
+        </ComplexType>
+        <ComplexType Name="tf_PointTypes_Result">
+          <Property Name="PointType_Id" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="PointType_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="PointType_IsActive" Type="Boolean" />
+        </ComplexType>
+        <ComplexType Name="tf_ProductQualityes_Result">
+          <Property Name="ProductQuality_Id" Type="Int64" />
+          <Property Name="ProductQuality_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </ComplexType>
+        <ComplexType Name="tf_PunishmentTypes_Result">
+          <Property Name="PunishmentType_Id" Type="Int64" />
+          <Property Name="PunishmentType_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </ComplexType>
+        <ComplexType Name="tf_SalaryTypes_Result">
+          <Property Name="SalaryType_Id" Type="Int64" />
+          <Property Name="SalaryType_Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </ComplexType>
+        <ComplexType Name="tf_SideTypes_Result">
+          <Property Name="SideType_Id" Type="Int64" />
+          <Property Name="SideType_Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </ComplexType>
+        <ComplexType Name="tf_UnitTypes_Result">
+          <Property Name="UnitType_Id" Type="Int32" />
+          <Property Name="UnitType_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </ComplexType>
+        <ComplexType Name="tf_WaybillStates_Result">
+          <Property Name="WaybillState_Id" Type="Int32" />
+          <Property Name="WaybillState_Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </ComplexType>
+        <EntityType Name="PersonDocument">
+          <Key>
+            <PropertyRef Name="PersonDocument_Id" />
+          </Key>
+          <Property Name="PersonDocument_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PersonDocument_Person_Id" Type="Int64" Nullable="false" />
+          <Property Name="PersonDocument_DocumentType_Id" Type="Int64" Nullable="false" />
+          <Property Name="PersonDocument_FirstName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="PersonDocument_LastName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="PersonDocument_StartDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="PersonDocument_EndDate" Type="DateTime" Precision="0" />
+          <Property Name="PersonDocument_Number" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="PersonDocument_Isuer" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="PersonDocument_Citizenship_Id" Type="Int64" Nullable="false" />
+          <Property Name="PersonDocument_Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="PersonPostAgreement">
+          <Key>
+            <PropertyRef Name="PersonPostAgreement_Id" />
+          </Key>
+          <Property Name="PersonPostAgreement_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PersonPostAgreement_PersonPost_Id" Type="Int64" Nullable="false" />
+          <Property Name="PersonPostAgreement_StartDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="PersonPostAgreement_EndDate" Type="DateTime" Precision="0" />
+          <Property Name="PersonPostAgreement_Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="PersonPost">
+          <Key>
+            <PropertyRef Name="PersonPost_Id" />
+          </Key>
+          <Property Name="PersonPost_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PersonPost_EmployeeBarCode" Type="String" MaxLength="14" FixedLength="false" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="PersonPost_BalanceSheetType_Id" Type="Int64" Nullable="false" />
+          <Property Name="PersonPost_EmployeeType_Id" Type="Int64" Nullable="false" />
+          <Property Name="PersonPost_Person_Id" Type="Int64" Nullable="false" />
+          <Property Name="PersonPost_Post_Id" Type="Int64" Nullable="false" />
+          <Property Name="PersonPost_Post_BarCodePrefix" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="PersonPost_Brigade_Id" Type="Int64" />
+          <Property Name="PersonPost_StartDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="PersonPost_EndDate" Type="DateTime" Precision="0" />
+          <Property Name="PersonPost_DismissalOrder" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="PersonPost_Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Person">
+          <Key>
+            <PropertyRef Name="Person_Id" />
+          </Key>
+          <Property Name="Person_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Person_SideType_Id" Type="Int32" Nullable="false" />
+          <Property Name="Person_Code" Type="Int64" />
+          <Property Name="Person_FirstName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Person_LastName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Person_Identity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Person_LegalStatuseType_Id" Type="Int64" />
+          <Property Name="Person_LegalForm_Id" Type="Int64" />
+          <Property Name="Person_IsResident" Type="Boolean" Nullable="false" />
+          <Property Name="Person_GenderType_Id" Type="Boolean" Nullable="false" />
+          <Property Name="Person_BirthDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Person_Address1" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Person_Address2" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Person_Phone1" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Person_Phone2" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Person_Bank_Id" Type="Int64" />
+          <Property Name="Person_BankAccount" Type="String" MaxLength="22" FixedLength="true" Unicode="false" />
+          <Property Name="Person_BankClientName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Person_MailAddress" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Person_MaritalStatus_Id" Type="Int64" />
+          <Property Name="Person_DrivingLicense" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Person_Nationality_Id" Type="Int64" />
+          <Property Name="Person_Citizenship_Id" Type="Int64" />
+          <Property Name="Person_Description" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Punishment">
+          <Key>
+            <PropertyRef Name="Punishment_Id" />
+          </Key>
+          <Property Name="Punishment_Id" Type="Guid" Nullable="false" />
+          <Property Name="Punishment_PunishmentType_Id" Type="Int64" Nullable="false" />
+          <Property Name="Punishment_PersonPost_Id" Type="Int64" Nullable="false" />
+          <Property Name="Punishment_DateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Punishment_User_PersonPost_Id" Type="Int64" Nullable="false" />
+          <Property Name="Punishment_RecomenderUser_PersonPost_Id" Type="Int64" />
+          <Property Name="Punishment_Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Bank">
+          <Key>
+            <PropertyRef Name="Bank_Id" />
+          </Key>
+          <Property Name="Bank_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Bank_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Bank_Kode" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Breed">
+          <Key>
+            <PropertyRef Name="Breed_Id" />
+          </Key>
+          <Property Name="Breed_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Breed_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Citizenship">
+          <Key>
+            <PropertyRef Name="Citizenship_Id" />
+          </Key>
+          <Property Name="Citizenship_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Citizenship_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Citizenship_NameEn" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Container">
+          <Key>
+            <PropertyRef Name="Container_BarCode" />
+          </Key>
+          <Property Name="Container_BarCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Container_ContainerType_Id" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Container_IsActive" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DocumentType">
+          <Key>
+            <PropertyRef Name="DocumentType_Id" />
+          </Key>
+          <Property Name="DocumentType_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DocumentType_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LegalForm">
+          <Key>
+            <PropertyRef Name="LegalForm_Id" />
+          </Key>
+          <Property Name="LegalForm_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LegalForm_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LegalForm_NameEn" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Nationality">
+          <Key>
+            <PropertyRef Name="Nationality_Id" />
+          </Key>
+          <Property Name="Nationality_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nationality_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Nationality_NameEn" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ContainerMove">
+          <Key>
+            <PropertyRef Name="ContainerMove_Id" />
+          </Key>
+          <Property Name="ContainerMove_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ContainerMove_TransportWaybill_Id" Type="Int64" Nullable="false" />
+          <Property Name="ContainerMove_Container_BarCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ContainerMove_Car_Point_Id" Type="Int64" Nullable="false" />
+          <Property Name="ContainerMove_In_ContainerMoveInOut_Id" Type="Guid" Nullable="false" />
+          <Property Name="ContainerMove_In_User_PersonPost_Id" Type="Int64" Nullable="false" />
+          <Property Name="ContainerMove_In_User_Point_Id" Type="Int64" Nullable="false" />
+          <Property Name="ContainerMove_In_DateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ContainerMove_Out_ContainerMoveInOut_Id" Type="Guid" />
+          <Property Name="ContainerMove_Out_User_PersonPost_Id" Type="Int64" />
+          <Property Name="ContainerMove_Out_User_Point_Id" Type="Int64" />
+          <Property Name="ContainerMove_Out_DateTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="ContainerPack">
+          <Key>
+            <PropertyRef Name="ContainerPack_Id" />
+          </Key>
+          <Property Name="ContainerPack_Id" Type="Guid" Nullable="false" />
+          <Property Name="ContainerPack_Container_BarCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ContainerPack_Parent_Container_BarCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ContainerPack_DateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ContainerPack_User_PersonPost_Id" Type="Int64" Nullable="false" />
+          <Property Name="ContainerPack_Parent_ContainerLocation_In_Id" Type="Guid" Nullable="false" />
+          <Property Name="ContainerPack_IsComplite" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ContainerWeight">
+          <Key>
+            <PropertyRef Name="ContainerWeight_Id" />
+          </Key>
+          <Property Name="ContainerWeight_Id" Type="Guid" Nullable="false" />
+          <Property Name="ContainerWeight_Container_BarCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ContainerWeight_Net" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="ContainerWeight_Gross" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="ContainerWeight_DateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ContainerWeight_User_PersonPost_Id" Type="Int64" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HarvesterContainerDistribution">
+          <Key>
+            <PropertyRef Name="HarvesterContainerDistribution_Id" />
+          </Key>
+          <Property Name="HarvesterContainerDistribution_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HarvesterContainerDistribution_Container_BarCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HarvesterContainerDistribution_Harvester_PersonPost_Id" Type="Int64" Nullable="false" />
+          <Property Name="HarvesterContainerDistribution_In_HarvesterContainerDistributionInOut_Id" Type="Guid" Nullable="false" />
+          <Property Name="HarvesterContainerDistribution_In_User_PersonPost_Id" Type="Int64" Nullable="false" />
+          <Property Name="HarvesterContainerDistribution_IN_DateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="HarvesterContainerDistribution_Out_HarvesterContainerDistributionInOut_Id" Type="Guid" />
+          <Property Name="HarvesterContainerDistribution_Out_User_PersonPost_Id" Type="Int64" />
+          <Property Name="HarvesterContainerDistribution_Out_DateTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="HarvesterRowDistribution">
+          <Key>
+            <PropertyRef Name="HarvesterRowDistribution_Id" />
+          </Key>
+          <Property Name="HarvesterRowDistribution_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HarvesterRowDistribution_Row_Id" Type="Int64" Nullable="false" />
+          <Property Name="HarvesterRowDistribution_Harvester_PersonPost_Id" Type="Int64" Nullable="false" />
+          <Property Name="HarvesterRowDistribution_In_HarvesterRowDistributionInOut_Id" Type="Guid" Nullable="false" />
+          <Property Name="HarvesterRowDistribution_In_User_PersonPost_Id" Type="Int64" Nullable="false" />
+          <Property Name="HarvesterRowDistribution_In_DateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="HarvesterRowDistribution_Out_HarvesterRowDistributionInOut_Id" Type="Guid" />
+          <Property Name="HarvesterRowDistribution_Out_User_PersonPost_Id" Type="Int64" />
+          <Property Name="HarvesterRowDistribution_Out_DateTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="OperationSetting">
+          <Key>
+            <PropertyRef Name="OperationSetting_Key" />
+          </Key>
+          <Property Name="OperationSetting_Key" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="OperationSetting_Value" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="OperationSetting_Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProductOwner">
+          <Key>
+            <PropertyRef Name="ProductOwner_Id" />
+          </Key>
+          <Property Name="ProductOwner_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductOwner_Product_Id" Type="Guid" Nullable="false" />
+          <Property Name="ProductOwner_CompanyId" Type="Int64" Nullable="false" />
+          <Property Name="ProducOwnert_DateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ProductOwner_User_PersonPost_Id" Type="Int64" Nullable="false" />
+          <Property Name="ProductOwner_Status" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProductPack">
+          <Key>
+            <PropertyRef Name="ProductPack_Id" />
+          </Key>
+          <Property Name="ProductPack_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductPack_Product_Id" Type="Guid" Nullable="false" />
+          <Property Name="ProductPack_Container_BarCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ProductPack_In_ProductPackInOut_Id" Type="Guid" Nullable="false" />
+          <Property Name="ProductPack_In_User_PersonPost_Id" Type="Int64" Nullable="false" />
+          <Property Name="ProductPack_In_DateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ProductPack_Out_ProductPackInOut_Id" Type="Guid" />
+          <Property Name="ProductPack_Out_User_PersonPost_Id" Type="Int64" />
+          <Property Name="ProductPack_Out_DateTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="ProductQuality">
+          <Key>
+            <PropertyRef Name="ProductQuality_Id" />
+          </Key>
+          <Property Name="ProductQuality_Id" Type="Guid" Nullable="false" />
+          <Property Name="ProductQuality_Product_Id" Type="Guid" Nullable="false" />
+          <Property Name="ProductQuality_Quality_Id" Type="Int64" Nullable="false" />
+          <Property Name="ProductQuality_DateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ProductQuality_User_PersonPost_Id" Type="Int64" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProductReceive">
+          <Key>
+            <PropertyRef Name="ProductReceive_Id" />
+          </Key>
+          <Property Name="ProductReceive_Id" Type="Guid" Nullable="false" />
+          <Property Name="ProductReceive_Product_Id" Type="Guid" Nullable="false" />
+          <Property Name="ProductReceive_HarvesterBarCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ProductReceive_ContainerBarCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ProductReceive_User_Point_Id" Type="Int64" Nullable="false" />
+          <Property Name="ProductReceive_User_PersonPost_Id" Type="Int64" Nullable="false" />
+          <Property Name="ProductReceive_DateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ProductReceive_ProcessIsComplite" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sale">
+          <Key>
+            <PropertyRef Name="Sale_Id" />
+          </Key>
+          <Property Name="Sale_Id" Type="Guid" Nullable="false" />
+          <Property Name="Sale_Container_BarCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Sale_DateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Sale_User_PersonPost_Id" Type="Int64" Nullable="false" />
+          <Property Name="Sale_Company_Id" Type="Int64" Nullable="false" />
+          <Property Name="Sale_Identifier" Type="Guid" Nullable="false" />
+          <Property Name="Sale_IsComplite" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TakeRow">
+          <Key>
+            <PropertyRef Name="TakeRow_Id" />
+          </Key>
+          <Property Name="TakeRow_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TakeRow_Row_Id" Type="Int64" Nullable="false" />
+          <Property Name="TakeRow_Brigade_Id" Type="Int64" />
+          <Property Name="TakeRow_In_TakeRowInOut_Id" Type="Guid" Nullable="false" />
+          <Property Name="TakeRow_In_TUser_PersonPost_Id" Type="Int64" Nullable="false" />
+          <Property Name="TakeRow_In_DateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TakeRow_Out_TakeRowInOut_Id" Type="Guid" />
+          <Property Name="TakeRow_Out_User_PersonPost_Id" Type="Int64" />
+          <Property Name="TakeRow_Out_DateTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="BreedProperty">
+          <Key>
+            <PropertyRef Name="BreedProperty_Id" />
+          </Key>
+          <Property Name="BreedProperty_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BreedProperty_DateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="BreedProperty_Breed_Id" Type="Int64" />
+          <Property Name="BreedProperty_Sugar" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="BreedProperty_Density" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ContainerLocation">
+          <Key>
+            <PropertyRef Name="ContainerLocation_Id" />
+          </Key>
+          <Property Name="ContainerLocation_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ContainerLocation_Container_BarCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ContainerLocation_Point_Id" Type="Int64" Nullable="false" />
+          <Property Name="ContainerLocation_In_Id" Type="Guid" Nullable="false" />
+          <Property Name="ContainerLocation_In_User_PersonPost_Id" Type="Int64" Nullable="false" />
+          <Property Name="ContainerLocation_In_DateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ContainerLocation_Out_ContainerMoveInOut_Id" Type="Guid" />
+          <Property Name="ContainerLocation_Out_User_PersonPost_Id" Type="Int64" />
+          <Property Name="ContainerLocation_Out_DateTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="Product_Id" />
+          </Key>
+          <Property Name="Product_Id" Type="Guid" Nullable="false" />
+          <Property Name="Product_ParentProduct_Id" Type="Guid" />
+          <Property Name="Product_Row_Id" Type="Int64" Nullable="false" />
+          <Property Name="Product_Harvester_PersonPost_Id" Type="Int64" Nullable="false" />
+          <Property Name="Product_User_PersonPost_Id" Type="Int64" Nullable="false" />
+          <Property Name="Product_DateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Product_Breed_Id" Type="Int64" Nullable="false" />
+          <Property Name="product_IsGood" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="NonTransportWaybillDetail">
+          <Key>
+            <PropertyRef Name="NonTransportWaybillDetail_NonTransportWaybill_Id" />
+          </Key>
+          <Property Name="NonTransportWaybillDetail_NonTransportWaybill_Id" Type="Int64" Nullable="false" />
+          <Property Name="NonTransportWaybillDetail_Waybill" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NonTransportWaybillDetail_WaybillStatus" Type="Int32" Nullable="false" />
+          <Property Name="NonTransportWaybillDetail_Error" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NonTransportWaybillDetail_DateTime" Type="DateTime" Precision="3" />
+          <Property Name="NonTransportWaybillDetail_State" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="NonTransportWaybill">
+          <Key>
+            <PropertyRef Name="NonTransportWaybill_Id" />
+          </Key>
+          <Property Name="NonTransportWaybill_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NonTransportWaybill_Type_Id" Type="Int32" Nullable="false" />
+          <Property Name="NonTransportWaybill_TransportWaybill_Id" Type="Int64" Nullable="false" />
+          <Property Name="NonTransportWaybill_CompanySeler_Id" Type="Int64" Nullable="false" />
+          <Property Name="NonTransportWaybill_CompanyBuyer_Id" Type="Int64" Nullable="false" />
+          <Property Name="NonTransportWaybill_RS_Id" Type="Int64" />
+          <Property Name="NonTransportWaybill_RS_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NonTransportWaybill_Start_DateTime" Type="DateTime" Precision="3" />
+          <Property Name="NonTransportWaybill_End_DateTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="TransportWaybillDetail">
+          <Key>
+            <PropertyRef Name="TransportWaybillDetail_TransportWaybill_Id" />
+          </Key>
+          <Property Name="TransportWaybillDetail_TransportWaybill_Id" Type="Int64" Nullable="false" />
+          <Property Name="TransportWaybillDetail_Waybill" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TransportWaybillDetail_WaybillStatus" Type="Int32" Nullable="false" />
+          <Property Name="TransportWaybillDetail_Error" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TransportWaybillDetail_DateTime" Type="DateTime" Precision="3" />
+          <Property Name="TransportWaybillDetail_State" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TransportWaybill">
+          <Key>
+            <PropertyRef Name="TransportWaybill_Id" />
+          </Key>
+          <Property Name="TransportWaybill_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TransportWaybill_Type_Id" Type="Int32" Nullable="false" />
+          <Property Name="TransportWaybill_Car_Point_Id" Type="Int64" Nullable="false" />
+          <Property Name="TransportWaybill_Car_Id" Type="Int64" Nullable="false" />
+          <Property Name="TransportWaybill_Company_Id" Type="Int64" Nullable="false" />
+          <Property Name="TransportWaybill_Start_Point_Id" Type="Int64" />
+          <Property Name="TransportWaybill_Destination_Point_Id" Type="Int64" />
+          <Property Name="TransportWaybill_RS_Id" Type="Int64" />
+          <Property Name="TransportWaybill_RS_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TransportWaybill_Start_DateTime" Type="DateTime" Precision="3" />
+          <Property Name="TransportWaybill_End_DateTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Permission">
+          <Key>
+            <PropertyRef Name="Permission_Id" />
+          </Key>
+          <Property Name="Permission_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Permission_ParentId" Type="Int64" Nullable="false" />
+          <Property Name="Permission_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Permission_Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="PostRole">
+          <Key>
+            <PropertyRef Name="PostRole_Id" />
+          </Key>
+          <Property Name="PostRole_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PostRole_Post_Id" Type="Int64" Nullable="false" />
+          <Property Name="PostRole_Role_Id" Type="Int64" Nullable="false" />
+          <Property Name="PostRole_StartDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="PostRole_EndDate" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="RolePermission">
+          <Key>
+            <PropertyRef Name="RolePermission_Id" />
+          </Key>
+          <Property Name="RolePermission_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RolePermission_Role_Id" Type="Int64" Nullable="false" />
+          <Property Name="RolePermission_Permission_Id" Type="Int64" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="Role_Id" />
+          </Key>
+          <Property Name="Role_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Role_Name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Role_Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="User_Person_Id" />
+          </Key>
+          <Property Name="User_Person_Id" Type="Int64" Nullable="false" />
+          <Property Name="User_Password" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="User_PasswordIsReset" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Brigade">
+          <Key>
+            <PropertyRef Name="Brigade_Id" />
+          </Key>
+          <Property Name="Brigade_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Brigade_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Brigade_Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="CarDriver">
+          <Key>
+            <PropertyRef Name="CarDriver_Id" />
+          </Key>
+          <Property Name="CarDriver_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CarDriver_Car_Id" Type="Int64" Nullable="false" />
+          <Property Name="CarDriver_Person_Id" Type="Int64" Nullable="false" />
+          <Property Name="CarDriver_PersonPost_Id" Type="Int64" />
+          <Property Name="CarDriver_StartDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="CarDriver_EndDate" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="Car">
+          <Key>
+            <PropertyRef Name="Car_Id" />
+          </Key>
+          <Property Name="Car_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Car_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Car_Model" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Car_SideType_Id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CompanyCar">
+          <Key>
+            <PropertyRef Name="CompanyCar_Id" />
+          </Key>
+          <Property Name="CompanyCar_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CompanyCar_Company_Id" Type="Int64" Nullable="false" />
+          <Property Name="CompanyCar_Car_Id" Type="Int64" Nullable="false" />
+          <Property Name="CompanyCar_StartDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="CompanyCar_EndDate" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="Companye">
+          <Key>
+            <PropertyRef Name="Company_Id" />
+          </Key>
+          <Property Name="Company_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Company_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Company_Identity" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Company_SideType_Id" Type="Int32" Nullable="false" />
+          <Property Name="Company_CitizenshipId" Type="Int64" Nullable="false" />
+          <Property Name="Company_Address1" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Company_Address2" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Company_Phone1" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Company_Phone2" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Company_IBAN" Type="String" MaxLength="22" FixedLength="true" Unicode="false" />
+          <Property Name="Company_RS_UserId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Company_RS_Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Company_IsResident" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CompanyRow">
+          <Key>
+            <PropertyRef Name="CompanyRow_Id" />
+          </Key>
+          <Property Name="CompanyRow_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CompanyRow_Company_Id" Type="Int64" Nullable="false" />
+          <Property Name="CompanyRow_Row_Id" Type="Int64" Nullable="false" />
+          <Property Name="CompanyRow_StartDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="CompanyRow_EndDate" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="Point">
+          <Key>
+            <PropertyRef Name="Point_Id" />
+          </Key>
+          <Property Name="Point_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Point_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Point_IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="Point_PointType_Id" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Point_BarCode" Type="String" MaxLength="14" FixedLength="false" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="Point_Car_Id" Type="Int64" />
+          <Property Name="Point_Address" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Point_Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Post">
+          <Key>
+            <PropertyRef Name="Post_Id" />
+          </Key>
+          <Property Name="Post_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Post_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Post_Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Post_BarCodePrefix" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Post_BalanceSheetType_Id" Type="Int64" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RowBreed">
+          <Key>
+            <PropertyRef Name="RowBreed_Id" />
+          </Key>
+          <Property Name="RowBreed_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RowBreed_Row_Id" Type="Int64" Nullable="false" />
+          <Property Name="RowBreed_Breed_Id" Type="Int64" Nullable="false" />
+          <Property Name="RowBreed_TreeCount" Type="Int32" Nullable="false" />
+          <Property Name="RowBreed_PlantYear" Type="Int32" Nullable="false" />
+          <Property Name="RowBreed_StartDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="RowBreed_EndDate" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="Row">
+          <Key>
+            <PropertyRef Name="Row_Id" />
+          </Key>
+          <Property Name="Row_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Sector_Number" Type="Int32" Nullable="false" />
+          <Property Name="Row_Number" Type="Int32" Nullable="false" />
+          <Property Name="Row_Subrow_Number" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Row_Barkode" Type="String" MaxLength="14" FixedLength="false" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="DocumentTemplate">
+          <Key>
+            <PropertyRef Name="DocumentTemplateId" />
+          </Key>
+          <Property Name="DocumentTemplateId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DocumentTemplateData" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DocumentTemplateTitle">
+          <Key>
+            <PropertyRef Name="DocumentTemplateTitleDocumentTemplateId" />
+          </Key>
+          <Property Name="DocumentTemplateTitleDocumentTemplateId" Type="Int64" Nullable="false" />
+          <Property Name="DocumentTemplateTitleExtension" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DocumentTemplateTitleDescription" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="BerryManagementEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="PersonDocuments" EntityType="Self.PersonDocument" />
+          <EntitySet Name="PersonPostAgreements" EntityType="Self.PersonPostAgreement" />
+          <EntitySet Name="PersonPosts" EntityType="Self.PersonPost" />
+          <EntitySet Name="Persons" EntityType="Self.Person" />
+          <EntitySet Name="Punishments" EntityType="Self.Punishment" />
+          <EntitySet Name="Banks" EntityType="Self.Bank" />
+          <EntitySet Name="Breeds" EntityType="Self.Breed" />
+          <EntitySet Name="Citizenships" EntityType="Self.Citizenship" />
+          <EntitySet Name="Containers" EntityType="Self.Container" />
+          <EntitySet Name="DocumentTypes" EntityType="Self.DocumentType" />
+          <EntitySet Name="LegalForms" EntityType="Self.LegalForm" />
+          <EntitySet Name="Nationalities" EntityType="Self.Nationality" />
+          <EntitySet Name="ContainerMoves" EntityType="Self.ContainerMove" />
+          <EntitySet Name="ContainerPacks" EntityType="Self.ContainerPack" />
+          <EntitySet Name="ContainerWeights" EntityType="Self.ContainerWeight" />
+          <EntitySet Name="HarvesterContainerDistributions" EntityType="Self.HarvesterContainerDistribution" />
+          <EntitySet Name="HarvesterRowDistributions" EntityType="Self.HarvesterRowDistribution" />
+          <EntitySet Name="OperationSettings" EntityType="Self.OperationSetting" />
+          <EntitySet Name="ProductOwners" EntityType="Self.ProductOwner" />
+          <EntitySet Name="ProductPacks" EntityType="Self.ProductPack" />
+          <EntitySet Name="ProductQualities" EntityType="Self.ProductQuality" />
+          <EntitySet Name="ProductReceives" EntityType="Self.ProductReceive" />
+          <EntitySet Name="Sales" EntityType="Self.Sale" />
+          <EntitySet Name="TakeRows" EntityType="Self.TakeRow" />
+          <EntitySet Name="BreedProperties" EntityType="Self.BreedProperty" />
+          <EntitySet Name="ContainerLocations" EntityType="Self.ContainerLocation" />
+          <EntitySet Name="Products" EntityType="Self.Product" />
+          <EntitySet Name="NonTransportWaybillDetails" EntityType="Self.NonTransportWaybillDetail" />
+          <EntitySet Name="NonTransportWaybills" EntityType="Self.NonTransportWaybill" />
+          <EntitySet Name="TransportWaybillDetails" EntityType="Self.TransportWaybillDetail" />
+          <EntitySet Name="TransportWaybills" EntityType="Self.TransportWaybill" />
+          <EntitySet Name="Permissions" EntityType="Self.Permission" />
+          <EntitySet Name="PostRoles" EntityType="Self.PostRole" />
+          <EntitySet Name="RolePermissions" EntityType="Self.RolePermission" />
+          <EntitySet Name="Roles" EntityType="Self.Role" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <EntitySet Name="Brigades" EntityType="Self.Brigade" />
+          <EntitySet Name="CarDrivers" EntityType="Self.CarDriver" />
+          <EntitySet Name="Cars" EntityType="Self.Car" />
+          <EntitySet Name="CompanyCars" EntityType="Self.CompanyCar" />
+          <EntitySet Name="Companyes" EntityType="Self.Companye" />
+          <EntitySet Name="CompanyRows" EntityType="Self.CompanyRow" />
+          <EntitySet Name="Points" EntityType="Self.Point" />
+          <EntitySet Name="Posts" EntityType="Self.Post" />
+          <EntitySet Name="RowBreeds" EntityType="Self.RowBreed" />
+          <EntitySet Name="Rows" EntityType="Self.Row" />
+          <EntitySet Name="DocumentTemplates" EntityType="Self.DocumentTemplate" />
+          <EntitySet Name="DocumentTemplateTitles" EntityType="Self.DocumentTemplateTitle" />
+          <FunctionImport Name="tf_ContainerTypes" IsComposable="true" ReturnType="Collection(BerryManagementModel.tf_ContainerTypes_Result)" />
+          <FunctionImport Name="tf_EmployeeTypes" IsComposable="true" ReturnType="Collection(BerryManagementModel.tf_EmployeeTypes_Result)" />
+          <FunctionImport Name="tf_GenderTypes" IsComposable="true" ReturnType="Collection(BerryManagementModel.tf_GenderTypes_Result)" />
+          <FunctionImport Name="tf_GetBalanceSheetTypes" IsComposable="true" ReturnType="Collection(BerryManagementModel.tf_GetBalanceSheetTypes_Result)" />
+          <FunctionImport Name="tf_HistoryOperationTypes" IsComposable="true" ReturnType="Collection(BerryManagementModel.tf_HistoryOperationTypes_Result)" />
+          <FunctionImport Name="tf_LegalStatuseTypes" IsComposable="true" ReturnType="Collection(BerryManagementModel.tf_LegalStatuseTypes_Result)" />
+          <FunctionImport Name="tf_MaritalStatus" IsComposable="true" ReturnType="Collection(BerryManagementModel.tf_MaritalStatus_Result)" />
+          <FunctionImport Name="tf_OperationTypes" IsComposable="true" ReturnType="Collection(BerryManagementModel.tf_OperationTypes_Result)" />
+          <FunctionImport Name="tf_PointTypes" IsComposable="true" ReturnType="Collection(BerryManagementModel.tf_PointTypes_Result)" />
+          <FunctionImport Name="tf_ProductQualityes" IsComposable="true" ReturnType="Collection(BerryManagementModel.tf_ProductQualityes_Result)" />
+          <FunctionImport Name="tf_PunishmentTypes" IsComposable="true" ReturnType="Collection(BerryManagementModel.tf_PunishmentTypes_Result)" />
+          <FunctionImport Name="tf_SalaryTypes" IsComposable="true" ReturnType="Collection(BerryManagementModel.tf_SalaryTypes_Result)" />
+          <FunctionImport Name="tf_SideTypes" IsComposable="true" ReturnType="Collection(BerryManagementModel.tf_SideTypes_Result)" />
+          <FunctionImport Name="tf_UnitTypes" IsComposable="true" ReturnType="Collection(BerryManagementModel.tf_UnitTypes_Result)" />
+          <FunctionImport Name="tf_WaybillStates" IsComposable="true" ReturnType="Collection(BerryManagementModel.tf_WaybillStates_Result)" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BerryManagementModelStoreContainer" CdmEntityContainer="BerryManagementEntities">
+          <EntitySetMapping Name="PersonDocuments">
+            <EntityTypeMapping TypeName="BerryManagementModel.PersonDocument">
+              <MappingFragment StoreEntitySet="PersonDocuments">
+                <ScalarProperty Name="PersonDocument_Id" ColumnName="PersonDocument_Id" />
+                <ScalarProperty Name="PersonDocument_Person_Id" ColumnName="PersonDocument_Person_Id" />
+                <ScalarProperty Name="PersonDocument_DocumentType_Id" ColumnName="PersonDocument_DocumentType_Id" />
+                <ScalarProperty Name="PersonDocument_FirstName" ColumnName="PersonDocument_FirstName" />
+                <ScalarProperty Name="PersonDocument_LastName" ColumnName="PersonDocument_LastName" />
+                <ScalarProperty Name="PersonDocument_StartDate" ColumnName="PersonDocument_StartDate" />
+                <ScalarProperty Name="PersonDocument_EndDate" ColumnName="PersonDocument_EndDate" />
+                <ScalarProperty Name="PersonDocument_Number" ColumnName="PersonDocument_Number" />
+                <ScalarProperty Name="PersonDocument_Isuer" ColumnName="PersonDocument_Isuer" />
+                <ScalarProperty Name="PersonDocument_Citizenship_Id" ColumnName="PersonDocument_Citizenship_Id" />
+                <ScalarProperty Name="PersonDocument_Description" ColumnName="PersonDocument_Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PersonPostAgreements">
+            <EntityTypeMapping TypeName="BerryManagementModel.PersonPostAgreement">
+              <MappingFragment StoreEntitySet="PersonPostAgreements">
+                <ScalarProperty Name="PersonPostAgreement_Id" ColumnName="PersonPostAgreement_Id" />
+                <ScalarProperty Name="PersonPostAgreement_PersonPost_Id" ColumnName="PersonPostAgreement_PersonPost_Id" />
+                <ScalarProperty Name="PersonPostAgreement_StartDate" ColumnName="PersonPostAgreement_StartDate" />
+                <ScalarProperty Name="PersonPostAgreement_EndDate" ColumnName="PersonPostAgreement_EndDate" />
+                <ScalarProperty Name="PersonPostAgreement_Description" ColumnName="PersonPostAgreement_Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PersonPosts">
+            <EntityTypeMapping TypeName="BerryManagementModel.PersonPost">
+              <MappingFragment StoreEntitySet="PersonPosts">
+                <ScalarProperty Name="PersonPost_Id" ColumnName="PersonPost_Id" />
+                <ScalarProperty Name="PersonPost_EmployeeBarCode" ColumnName="PersonPost_EmployeeBarCode" />
+                <ScalarProperty Name="PersonPost_BalanceSheetType_Id" ColumnName="PersonPost_BalanceSheetType_Id" />
+                <ScalarProperty Name="PersonPost_EmployeeType_Id" ColumnName="PersonPost_EmployeeType_Id" />
+                <ScalarProperty Name="PersonPost_Person_Id" ColumnName="PersonPost_Person_Id" />
+                <ScalarProperty Name="PersonPost_Post_Id" ColumnName="PersonPost_Post_Id" />
+                <ScalarProperty Name="PersonPost_Post_BarCodePrefix" ColumnName="PersonPost_Post_BarCodePrefix" />
+                <ScalarProperty Name="PersonPost_Brigade_Id" ColumnName="PersonPost_Brigade_Id" />
+                <ScalarProperty Name="PersonPost_StartDate" ColumnName="PersonPost_StartDate" />
+                <ScalarProperty Name="PersonPost_EndDate" ColumnName="PersonPost_EndDate" />
+                <ScalarProperty Name="PersonPost_DismissalOrder" ColumnName="PersonPost_DismissalOrder" />
+                <ScalarProperty Name="PersonPost_Description" ColumnName="PersonPost_Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Persons">
+            <EntityTypeMapping TypeName="BerryManagementModel.Person">
+              <MappingFragment StoreEntitySet="Persons">
+                <ScalarProperty Name="Person_Id" ColumnName="Person_Id" />
+                <ScalarProperty Name="Person_SideType_Id" ColumnName="Person_SideType_Id" />
+                <ScalarProperty Name="Person_Code" ColumnName="Person_Code" />
+                <ScalarProperty Name="Person_FirstName" ColumnName="Person_FirstName" />
+                <ScalarProperty Name="Person_LastName" ColumnName="Person_LastName" />
+                <ScalarProperty Name="Person_Identity" ColumnName="Person_Identity" />
+                <ScalarProperty Name="Person_LegalStatuseType_Id" ColumnName="Person_LegalStatuseType_Id" />
+                <ScalarProperty Name="Person_LegalForm_Id" ColumnName="Person_LegalForm_Id" />
+                <ScalarProperty Name="Person_IsResident" ColumnName="Person_IsResident" />
+                <ScalarProperty Name="Person_GenderType_Id" ColumnName="Person_GenderType_Id" />
+                <ScalarProperty Name="Person_BirthDate" ColumnName="Person_BirthDate" />
+                <ScalarProperty Name="Person_Address1" ColumnName="Person_Address1" />
+                <ScalarProperty Name="Person_Address2" ColumnName="Person_Address2" />
+                <ScalarProperty Name="Person_Phone1" ColumnName="Person_Phone1" />
+                <ScalarProperty Name="Person_Phone2" ColumnName="Person_Phone2" />
+                <ScalarProperty Name="Person_Bank_Id" ColumnName="Person_Bank_Id" />
+                <ScalarProperty Name="Person_BankAccount" ColumnName="Person_BankAccount" />
+                <ScalarProperty Name="Person_BankClientName" ColumnName="Person_BankClientName" />
+                <ScalarProperty Name="Person_MailAddress" ColumnName="Person_MailAddress" />
+                <ScalarProperty Name="Person_MaritalStatus_Id" ColumnName="Person_MaritalStatus_Id" />
+                <ScalarProperty Name="Person_DrivingLicense" ColumnName="Person_DrivingLicense" />
+                <ScalarProperty Name="Person_Nationality_Id" ColumnName="Person_Nationality_Id" />
+                <ScalarProperty Name="Person_Citizenship_Id" ColumnName="Person_Citizenship_Id" />
+                <ScalarProperty Name="Person_Description" ColumnName="Person_Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Punishments">
+            <EntityTypeMapping TypeName="BerryManagementModel.Punishment">
+              <MappingFragment StoreEntitySet="Punishments">
+                <ScalarProperty Name="Punishment_Id" ColumnName="Punishment_Id" />
+                <ScalarProperty Name="Punishment_PunishmentType_Id" ColumnName="Punishment_PunishmentType_Id" />
+                <ScalarProperty Name="Punishment_PersonPost_Id" ColumnName="Punishment_PersonPost_Id" />
+                <ScalarProperty Name="Punishment_DateTime" ColumnName="Punishment_DateTime" />
+                <ScalarProperty Name="Punishment_User_PersonPost_Id" ColumnName="Punishment_User_PersonPost_Id" />
+                <ScalarProperty Name="Punishment_RecomenderUser_PersonPost_Id" ColumnName="Punishment_RecomenderUser_PersonPost_Id" />
+                <ScalarProperty Name="Punishment_Description" ColumnName="Punishment_Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Banks">
+            <EntityTypeMapping TypeName="BerryManagementModel.Bank">
+              <MappingFragment StoreEntitySet="Banks">
+                <ScalarProperty Name="Bank_Id" ColumnName="Bank_Id" />
+                <ScalarProperty Name="Bank_Name" ColumnName="Bank_Name" />
+                <ScalarProperty Name="Bank_Kode" ColumnName="Bank_Kode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Breeds">
+            <EntityTypeMapping TypeName="BerryManagementModel.Breed">
+              <MappingFragment StoreEntitySet="Breeds">
+                <ScalarProperty Name="Breed_Id" ColumnName="Breed_Id" />
+                <ScalarProperty Name="Breed_Name" ColumnName="Breed_Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Citizenships">
+            <EntityTypeMapping TypeName="BerryManagementModel.Citizenship">
+              <MappingFragment StoreEntitySet="Citizenships">
+                <ScalarProperty Name="Citizenship_Id" ColumnName="Citizenship_Id" />
+                <ScalarProperty Name="Citizenship_Name" ColumnName="Citizenship_Name" />
+                <ScalarProperty Name="Citizenship_NameEn" ColumnName="Citizenship_NameEn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Containers">
+            <EntityTypeMapping TypeName="BerryManagementModel.Container">
+              <MappingFragment StoreEntitySet="Containers">
+                <ScalarProperty Name="Container_BarCode" ColumnName="Container_BarCode" />
+                <ScalarProperty Name="Container_ContainerType_Id" ColumnName="Container_ContainerType_Id" />
+                <ScalarProperty Name="Container_IsActive" ColumnName="Container_IsActive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DocumentTypes">
+            <EntityTypeMapping TypeName="BerryManagementModel.DocumentType">
+              <MappingFragment StoreEntitySet="DocumentTypes">
+                <ScalarProperty Name="DocumentType_Id" ColumnName="DocumentType_Id" />
+                <ScalarProperty Name="DocumentType_Name" ColumnName="DocumentType_Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LegalForms">
+            <EntityTypeMapping TypeName="BerryManagementModel.LegalForm">
+              <MappingFragment StoreEntitySet="LegalForms">
+                <ScalarProperty Name="LegalForm_Id" ColumnName="LegalForm_Id" />
+                <ScalarProperty Name="LegalForm_Name" ColumnName="LegalForm_Name" />
+                <ScalarProperty Name="LegalForm_NameEn" ColumnName="LegalForm_NameEn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Nationalities">
+            <EntityTypeMapping TypeName="BerryManagementModel.Nationality">
+              <MappingFragment StoreEntitySet="Nationalities">
+                <ScalarProperty Name="Nationality_Id" ColumnName="Nationality_Id" />
+                <ScalarProperty Name="Nationality_Name" ColumnName="Nationality_Name" />
+                <ScalarProperty Name="Nationality_NameEn" ColumnName="Nationality_NameEn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ContainerMoves">
+            <EntityTypeMapping TypeName="BerryManagementModel.ContainerMove">
+              <MappingFragment StoreEntitySet="ContainerMoves">
+                <ScalarProperty Name="ContainerMove_Id" ColumnName="ContainerMove_Id" />
+                <ScalarProperty Name="ContainerMove_TransportWaybill_Id" ColumnName="ContainerMove_TransportWaybill_Id" />
+                <ScalarProperty Name="ContainerMove_Container_BarCode" ColumnName="ContainerMove_Container_BarCode" />
+                <ScalarProperty Name="ContainerMove_Car_Point_Id" ColumnName="ContainerMove_Car_Point_Id" />
+                <ScalarProperty Name="ContainerMove_In_ContainerMoveInOut_Id" ColumnName="ContainerMove_In_ContainerMoveInOut_Id" />
+                <ScalarProperty Name="ContainerMove_In_User_PersonPost_Id" ColumnName="ContainerMove_In_User_PersonPost_Id" />
+                <ScalarProperty Name="ContainerMove_In_User_Point_Id" ColumnName="ContainerMove_In_User_Point_Id" />
+                <ScalarProperty Name="ContainerMove_In_DateTime" ColumnName="ContainerMove_In_DateTime" />
+                <ScalarProperty Name="ContainerMove_Out_ContainerMoveInOut_Id" ColumnName="ContainerMove_Out_ContainerMoveInOut_Id" />
+                <ScalarProperty Name="ContainerMove_Out_User_PersonPost_Id" ColumnName="ContainerMove_Out_User_PersonPost_Id" />
+                <ScalarProperty Name="ContainerMove_Out_User_Point_Id" ColumnName="ContainerMove_Out_User_Point_Id" />
+                <ScalarProperty Name="ContainerMove_Out_DateTime" ColumnName="ContainerMove_Out_DateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ContainerPacks">
+            <EntityTypeMapping TypeName="BerryManagementModel.ContainerPack">
+              <MappingFragment StoreEntitySet="ContainerPacks">
+                <ScalarProperty Name="ContainerPack_Id" ColumnName="ContainerPack_Id" />
+                <ScalarProperty Name="ContainerPack_Container_BarCode" ColumnName="ContainerPack_Container_BarCode" />
+                <ScalarProperty Name="ContainerPack_Parent_Container_BarCode" ColumnName="ContainerPack_Parent_Container_BarCode" />
+                <ScalarProperty Name="ContainerPack_DateTime" ColumnName="ContainerPack_DateTime" />
+                <ScalarProperty Name="ContainerPack_User_PersonPost_Id" ColumnName="ContainerPack_User_PersonPost_Id" />
+                <ScalarProperty Name="ContainerPack_Parent_ContainerLocation_In_Id" ColumnName="ContainerPack_Parent_ContainerLocation_In_Id" />
+                <ScalarProperty Name="ContainerPack_IsComplite" ColumnName="ContainerPack_IsComplite" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ContainerWeights">
+            <EntityTypeMapping TypeName="BerryManagementModel.ContainerWeight">
+              <MappingFragment StoreEntitySet="ContainerWeights">
+                <ScalarProperty Name="ContainerWeight_Id" ColumnName="ContainerWeight_Id" />
+                <ScalarProperty Name="ContainerWeight_Container_BarCode" ColumnName="ContainerWeight_Container_BarCode" />
+                <ScalarProperty Name="ContainerWeight_Net" ColumnName="ContainerWeight_Net" />
+                <ScalarProperty Name="ContainerWeight_Gross" ColumnName="ContainerWeight_Gross" />
+                <ScalarProperty Name="ContainerWeight_DateTime" ColumnName="ContainerWeight_DateTime" />
+                <ScalarProperty Name="ContainerWeight_User_PersonPost_Id" ColumnName="ContainerWeight_User_PersonPost_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HarvesterContainerDistributions">
+            <EntityTypeMapping TypeName="BerryManagementModel.HarvesterContainerDistribution">
+              <MappingFragment StoreEntitySet="HarvesterContainerDistributions">
+                <ScalarProperty Name="HarvesterContainerDistribution_Id" ColumnName="HarvesterContainerDistribution_Id" />
+                <ScalarProperty Name="HarvesterContainerDistribution_Container_BarCode" ColumnName="HarvesterContainerDistribution_Container_BarCode" />
+                <ScalarProperty Name="HarvesterContainerDistribution_Harvester_PersonPost_Id" ColumnName="HarvesterContainerDistribution_Harvester_PersonPost_Id" />
+                <ScalarProperty Name="HarvesterContainerDistribution_In_HarvesterContainerDistributionInOut_Id" ColumnName="HarvesterContainerDistribution_In_HarvesterContainerDistributionInOut_Id" />
+                <ScalarProperty Name="HarvesterContainerDistribution_In_User_PersonPost_Id" ColumnName="HarvesterContainerDistribution_In_User_PersonPost_Id" />
+                <ScalarProperty Name="HarvesterContainerDistribution_IN_DateTime" ColumnName="HarvesterContainerDistribution_IN_DateTime" />
+                <ScalarProperty Name="HarvesterContainerDistribution_Out_HarvesterContainerDistributionInOut_Id" ColumnName="HarvesterContainerDistribution_Out_HarvesterContainerDistributionInOut_Id" />
+                <ScalarProperty Name="HarvesterContainerDistribution_Out_User_PersonPost_Id" ColumnName="HarvesterContainerDistribution_Out_User_PersonPost_Id" />
+                <ScalarProperty Name="HarvesterContainerDistribution_Out_DateTime" ColumnName="HarvesterContainerDistribution_Out_DateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HarvesterRowDistributions">
+            <EntityTypeMapping TypeName="BerryManagementModel.HarvesterRowDistribution">
+              <MappingFragment StoreEntitySet="HarvesterRowDistributions">
+                <ScalarProperty Name="HarvesterRowDistribution_Id" ColumnName="HarvesterRowDistribution_Id" />
+                <ScalarProperty Name="HarvesterRowDistribution_Row_Id" ColumnName="HarvesterRowDistribution_Row_Id" />
+                <ScalarProperty Name="HarvesterRowDistribution_Harvester_PersonPost_Id" ColumnName="HarvesterRowDistribution_Harvester_PersonPost_Id" />
+                <ScalarProperty Name="HarvesterRowDistribution_In_HarvesterRowDistributionInOut_Id" ColumnName="HarvesterRowDistribution_In_HarvesterRowDistributionInOut_Id" />
+                <ScalarProperty Name="HarvesterRowDistribution_In_User_PersonPost_Id" ColumnName="HarvesterRowDistribution_In_User_PersonPost_Id" />
+                <ScalarProperty Name="HarvesterRowDistribution_In_DateTime" ColumnName="HarvesterRowDistribution_In_DateTime" />
+                <ScalarProperty Name="HarvesterRowDistribution_Out_HarvesterRowDistributionInOut_Id" ColumnName="HarvesterRowDistribution_Out_HarvesterRowDistributionInOut_Id" />
+                <ScalarProperty Name="HarvesterRowDistribution_Out_User_PersonPost_Id" ColumnName="HarvesterRowDistribution_Out_User_PersonPost_Id" />
+                <ScalarProperty Name="HarvesterRowDistribution_Out_DateTime" ColumnName="HarvesterRowDistribution_Out_DateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OperationSettings">
+            <EntityTypeMapping TypeName="BerryManagementModel.OperationSetting">
+              <MappingFragment StoreEntitySet="OperationSettings">
+                <ScalarProperty Name="OperationSetting_Key" ColumnName="OperationSetting_Key" />
+                <ScalarProperty Name="OperationSetting_Value" ColumnName="OperationSetting_Value" />
+                <ScalarProperty Name="OperationSetting_Description" ColumnName="OperationSetting_Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductOwners">
+            <EntityTypeMapping TypeName="BerryManagementModel.ProductOwner">
+              <MappingFragment StoreEntitySet="ProductOwners">
+                <ScalarProperty Name="ProductOwner_Id" ColumnName="ProductOwner_Id" />
+                <ScalarProperty Name="ProductOwner_Product_Id" ColumnName="ProductOwner_Product_Id" />
+                <ScalarProperty Name="ProductOwner_CompanyId" ColumnName="ProductOwner_CompanyId" />
+                <ScalarProperty Name="ProducOwnert_DateTime" ColumnName="ProducOwnert_DateTime" />
+                <ScalarProperty Name="ProductOwner_User_PersonPost_Id" ColumnName="ProductOwner_User_PersonPost_Id" />
+                <ScalarProperty Name="ProductOwner_Status" ColumnName="ProductOwner_Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductPacks">
+            <EntityTypeMapping TypeName="BerryManagementModel.ProductPack">
+              <MappingFragment StoreEntitySet="ProductPacks">
+                <ScalarProperty Name="ProductPack_Id" ColumnName="ProductPack_Id" />
+                <ScalarProperty Name="ProductPack_Product_Id" ColumnName="ProductPack_Product_Id" />
+                <ScalarProperty Name="ProductPack_Container_BarCode" ColumnName="ProductPack_Container_BarCode" />
+                <ScalarProperty Name="ProductPack_In_ProductPackInOut_Id" ColumnName="ProductPack_In_ProductPackInOut_Id" />
+                <ScalarProperty Name="ProductPack_In_User_PersonPost_Id" ColumnName="ProductPack_In_User_PersonPost_Id" />
+                <ScalarProperty Name="ProductPack_In_DateTime" ColumnName="ProductPack_In_DateTime" />
+                <ScalarProperty Name="ProductPack_Out_ProductPackInOut_Id" ColumnName="ProductPack_Out_ProductPackInOut_Id" />
+                <ScalarProperty Name="ProductPack_Out_User_PersonPost_Id" ColumnName="ProductPack_Out_User_PersonPost_Id" />
+                <ScalarProperty Name="ProductPack_Out_DateTime" ColumnName="ProductPack_Out_DateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductQualities">
+            <EntityTypeMapping TypeName="BerryManagementModel.ProductQuality">
+              <MappingFragment StoreEntitySet="ProductQualities">
+                <ScalarProperty Name="ProductQuality_Id" ColumnName="ProductQuality_Id" />
+                <ScalarProperty Name="ProductQuality_Product_Id" ColumnName="ProductQuality_Product_Id" />
+                <ScalarProperty Name="ProductQuality_Quality_Id" ColumnName="ProductQuality_Quality_Id" />
+                <ScalarProperty Name="ProductQuality_DateTime" ColumnName="ProductQuality_DateTime" />
+                <ScalarProperty Name="ProductQuality_User_PersonPost_Id" ColumnName="ProductQuality_User_PersonPost_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductReceives">
+            <EntityTypeMapping TypeName="BerryManagementModel.ProductReceive">
+              <MappingFragment StoreEntitySet="ProductReceives">
+                <ScalarProperty Name="ProductReceive_Id" ColumnName="ProductReceive_Id" />
+                <ScalarProperty Name="ProductReceive_Product_Id" ColumnName="ProductReceive_Product_Id" />
+                <ScalarProperty Name="ProductReceive_HarvesterBarCode" ColumnName="ProductReceive_HarvesterBarCode" />
+                <ScalarProperty Name="ProductReceive_ContainerBarCode" ColumnName="ProductReceive_ContainerBarCode" />
+                <ScalarProperty Name="ProductReceive_User_Point_Id" ColumnName="ProductReceive_User_Point_Id" />
+                <ScalarProperty Name="ProductReceive_User_PersonPost_Id" ColumnName="ProductReceive_User_PersonPost_Id" />
+                <ScalarProperty Name="ProductReceive_DateTime" ColumnName="ProductReceive_DateTime" />
+                <ScalarProperty Name="ProductReceive_ProcessIsComplite" ColumnName="ProductReceive_ProcessIsComplite" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sales">
+            <EntityTypeMapping TypeName="BerryManagementModel.Sale">
+              <MappingFragment StoreEntitySet="Sales">
+                <ScalarProperty Name="Sale_Id" ColumnName="Sale_Id" />
+                <ScalarProperty Name="Sale_Container_BarCode" ColumnName="Sale_Container_BarCode" />
+                <ScalarProperty Name="Sale_DateTime" ColumnName="Sale_DateTime" />
+                <ScalarProperty Name="Sale_User_PersonPost_Id" ColumnName="Sale_User_PersonPost_Id" />
+                <ScalarProperty Name="Sale_Company_Id" ColumnName="Sale_Company_Id" />
+                <ScalarProperty Name="Sale_Identifier" ColumnName="Sale_Identifier" />
+                <ScalarProperty Name="Sale_IsComplite" ColumnName="Sale_IsComplite" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TakeRows">
+            <EntityTypeMapping TypeName="BerryManagementModel.TakeRow">
+              <MappingFragment StoreEntitySet="TakeRows">
+                <ScalarProperty Name="TakeRow_Id" ColumnName="TakeRow_Id" />
+                <ScalarProperty Name="TakeRow_Row_Id" ColumnName="TakeRow_Row_Id" />
+                <ScalarProperty Name="TakeRow_Brigade_Id" ColumnName="TakeRow_Brigade_Id" />
+                <ScalarProperty Name="TakeRow_In_TakeRowInOut_Id" ColumnName="TakeRow_In_TakeRowInOut_Id" />
+                <ScalarProperty Name="TakeRow_In_TUser_PersonPost_Id" ColumnName="TakeRow_In_TUser_PersonPost_Id" />
+                <ScalarProperty Name="TakeRow_In_DateTime" ColumnName="TakeRow_In_DateTime" />
+                <ScalarProperty Name="TakeRow_Out_TakeRowInOut_Id" ColumnName="TakeRow_Out_TakeRowInOut_Id" />
+                <ScalarProperty Name="TakeRow_Out_User_PersonPost_Id" ColumnName="TakeRow_Out_User_PersonPost_Id" />
+                <ScalarProperty Name="TakeRow_Out_DateTime" ColumnName="TakeRow_Out_DateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BreedProperties">
+            <EntityTypeMapping TypeName="BerryManagementModel.BreedProperty">
+              <MappingFragment StoreEntitySet="BreedProperties">
+                <ScalarProperty Name="BreedProperty_Id" ColumnName="BreedProperty_Id" />
+                <ScalarProperty Name="BreedProperty_DateTime" ColumnName="BreedProperty_DateTime" />
+                <ScalarProperty Name="BreedProperty_Breed_Id" ColumnName="BreedProperty_Breed_Id" />
+                <ScalarProperty Name="BreedProperty_Sugar" ColumnName="BreedProperty_Sugar" />
+                <ScalarProperty Name="BreedProperty_Density" ColumnName="BreedProperty_Density" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ContainerLocations">
+            <EntityTypeMapping TypeName="BerryManagementModel.ContainerLocation">
+              <MappingFragment StoreEntitySet="ContainerLocations">
+                <ScalarProperty Name="ContainerLocation_Id" ColumnName="ContainerLocation_Id" />
+                <ScalarProperty Name="ContainerLocation_Container_BarCode" ColumnName="ContainerLocation_Container_BarCode" />
+                <ScalarProperty Name="ContainerLocation_Point_Id" ColumnName="ContainerLocation_Point_Id" />
+                <ScalarProperty Name="ContainerLocation_In_Id" ColumnName="ContainerLocation_In_Id" />
+                <ScalarProperty Name="ContainerLocation_In_User_PersonPost_Id" ColumnName="ContainerLocation_In_User_PersonPost_Id" />
+                <ScalarProperty Name="ContainerLocation_In_DateTime" ColumnName="ContainerLocation_In_DateTime" />
+                <ScalarProperty Name="ContainerLocation_Out_ContainerMoveInOut_Id" ColumnName="ContainerLocation_Out_ContainerMoveInOut_Id" />
+                <ScalarProperty Name="ContainerLocation_Out_User_PersonPost_Id" ColumnName="ContainerLocation_Out_User_PersonPost_Id" />
+                <ScalarProperty Name="ContainerLocation_Out_DateTime" ColumnName="ContainerLocation_Out_DateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="BerryManagementModel.Product">
+              <MappingFragment StoreEntitySet="Products">
+                <ScalarProperty Name="Product_Id" ColumnName="Product_Id" />
+                <ScalarProperty Name="Product_ParentProduct_Id" ColumnName="Product_ParentProduct_Id" />
+                <ScalarProperty Name="Product_Row_Id" ColumnName="Product_Row_Id" />
+                <ScalarProperty Name="Product_Harvester_PersonPost_Id" ColumnName="Product_Harvester_PersonPost_Id" />
+                <ScalarProperty Name="Product_User_PersonPost_Id" ColumnName="Product_User_PersonPost_Id" />
+                <ScalarProperty Name="Product_DateTime" ColumnName="Product_DateTime" />
+                <ScalarProperty Name="Product_Breed_Id" ColumnName="Product_Breed_Id" />
+                <ScalarProperty Name="product_IsGood" ColumnName="product_IsGood" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NonTransportWaybillDetails">
+            <EntityTypeMapping TypeName="BerryManagementModel.NonTransportWaybillDetail">
+              <MappingFragment StoreEntitySet="NonTransportWaybillDetails">
+                <ScalarProperty Name="NonTransportWaybillDetail_NonTransportWaybill_Id" ColumnName="NonTransportWaybillDetail_NonTransportWaybill_Id" />
+                <ScalarProperty Name="NonTransportWaybillDetail_Waybill" ColumnName="NonTransportWaybillDetail_Waybill" />
+                <ScalarProperty Name="NonTransportWaybillDetail_WaybillStatus" ColumnName="NonTransportWaybillDetail_WaybillStatus" />
+                <ScalarProperty Name="NonTransportWaybillDetail_Error" ColumnName="NonTransportWaybillDetail_Error" />
+                <ScalarProperty Name="NonTransportWaybillDetail_DateTime" ColumnName="NonTransportWaybillDetail_DateTime" />
+                <ScalarProperty Name="NonTransportWaybillDetail_State" ColumnName="NonTransportWaybillDetail_State" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NonTransportWaybills">
+            <EntityTypeMapping TypeName="BerryManagementModel.NonTransportWaybill">
+              <MappingFragment StoreEntitySet="NonTransportWaybills">
+                <ScalarProperty Name="NonTransportWaybill_Id" ColumnName="NonTransportWaybill_Id" />
+                <ScalarProperty Name="NonTransportWaybill_Type_Id" ColumnName="NonTransportWaybill_Type_Id" />
+                <ScalarProperty Name="NonTransportWaybill_TransportWaybill_Id" ColumnName="NonTransportWaybill_TransportWaybill_Id" />
+                <ScalarProperty Name="NonTransportWaybill_CompanySeler_Id" ColumnName="NonTransportWaybill_CompanySeler_Id" />
+                <ScalarProperty Name="NonTransportWaybill_CompanyBuyer_Id" ColumnName="NonTransportWaybill_CompanyBuyer_Id" />
+                <ScalarProperty Name="NonTransportWaybill_RS_Id" ColumnName="NonTransportWaybill_RS_Id" />
+                <ScalarProperty Name="NonTransportWaybill_RS_Number" ColumnName="NonTransportWaybill_RS_Number" />
+                <ScalarProperty Name="NonTransportWaybill_Start_DateTime" ColumnName="NonTransportWaybill_Start_DateTime" />
+                <ScalarProperty Name="NonTransportWaybill_End_DateTime" ColumnName="NonTransportWaybill_End_DateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TransportWaybillDetails">
+            <EntityTypeMapping TypeName="BerryManagementModel.TransportWaybillDetail">
+              <MappingFragment StoreEntitySet="TransportWaybillDetails">
+                <ScalarProperty Name="TransportWaybillDetail_TransportWaybill_Id" ColumnName="TransportWaybillDetail_TransportWaybill_Id" />
+                <ScalarProperty Name="TransportWaybillDetail_Waybill" ColumnName="TransportWaybillDetail_Waybill" />
+                <ScalarProperty Name="TransportWaybillDetail_WaybillStatus" ColumnName="TransportWaybillDetail_WaybillStatus" />
+                <ScalarProperty Name="TransportWaybillDetail_Error" ColumnName="TransportWaybillDetail_Error" />
+                <ScalarProperty Name="TransportWaybillDetail_DateTime" ColumnName="TransportWaybillDetail_DateTime" />
+                <ScalarProperty Name="TransportWaybillDetail_State" ColumnName="TransportWaybillDetail_State" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TransportWaybills">
+            <EntityTypeMapping TypeName="BerryManagementModel.TransportWaybill">
+              <MappingFragment StoreEntitySet="TransportWaybills">
+                <ScalarProperty Name="TransportWaybill_Id" ColumnName="TransportWaybill_Id" />
+                <ScalarProperty Name="TransportWaybill_Type_Id" ColumnName="TransportWaybill_Type_Id" />
+                <ScalarProperty Name="TransportWaybill_Car_Point_Id" ColumnName="TransportWaybill_Car_Point_Id" />
+                <ScalarProperty Name="TransportWaybill_Car_Id" ColumnName="TransportWaybill_Car_Id" />
+                <ScalarProperty Name="TransportWaybill_Company_Id" ColumnName="TransportWaybill_Company_Id" />
+                <ScalarProperty Name="TransportWaybill_Start_Point_Id" ColumnName="TransportWaybill_Start_Point_Id" />
+                <ScalarProperty Name="TransportWaybill_Destination_Point_Id" ColumnName="TransportWaybill_Destination_Point_Id" />
+                <ScalarProperty Name="TransportWaybill_RS_Id" ColumnName="TransportWaybill_RS_Id" />
+                <ScalarProperty Name="TransportWaybill_RS_Number" ColumnName="TransportWaybill_RS_Number" />
+                <ScalarProperty Name="TransportWaybill_Start_DateTime" ColumnName="TransportWaybill_Start_DateTime" />
+                <ScalarProperty Name="TransportWaybill_End_DateTime" ColumnName="TransportWaybill_End_DateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Permissions">
+            <EntityTypeMapping TypeName="BerryManagementModel.Permission">
+              <MappingFragment StoreEntitySet="Permissions">
+                <ScalarProperty Name="Permission_Id" ColumnName="Permission_Id" />
+                <ScalarProperty Name="Permission_ParentId" ColumnName="Permission_ParentId" />
+                <ScalarProperty Name="Permission_Name" ColumnName="Permission_Name" />
+                <ScalarProperty Name="Permission_Description" ColumnName="Permission_Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PostRoles">
+            <EntityTypeMapping TypeName="BerryManagementModel.PostRole">
+              <MappingFragment StoreEntitySet="PostRoles">
+                <ScalarProperty Name="PostRole_Id" ColumnName="PostRole_Id" />
+                <ScalarProperty Name="PostRole_Post_Id" ColumnName="PostRole_Post_Id" />
+                <ScalarProperty Name="PostRole_Role_Id" ColumnName="PostRole_Role_Id" />
+                <ScalarProperty Name="PostRole_StartDate" ColumnName="PostRole_StartDate" />
+                <ScalarProperty Name="PostRole_EndDate" ColumnName="PostRole_EndDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RolePermissions">
+            <EntityTypeMapping TypeName="BerryManagementModel.RolePermission">
+              <MappingFragment StoreEntitySet="RolePermissions">
+                <ScalarProperty Name="RolePermission_Id" ColumnName="RolePermission_Id" />
+                <ScalarProperty Name="RolePermission_Role_Id" ColumnName="RolePermission_Role_Id" />
+                <ScalarProperty Name="RolePermission_Permission_Id" ColumnName="RolePermission_Permission_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="BerryManagementModel.Role">
+              <MappingFragment StoreEntitySet="Roles">
+                <ScalarProperty Name="Role_Id" ColumnName="Role_Id" />
+                <ScalarProperty Name="Role_Name" ColumnName="Role_Name" />
+                <ScalarProperty Name="Role_Description" ColumnName="Role_Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="BerryManagementModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="User_Person_Id" ColumnName="User_Person_Id" />
+                <ScalarProperty Name="User_Password" ColumnName="User_Password" />
+                <ScalarProperty Name="User_PasswordIsReset" ColumnName="User_PasswordIsReset" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Brigades">
+            <EntityTypeMapping TypeName="BerryManagementModel.Brigade">
+              <MappingFragment StoreEntitySet="Brigades">
+                <ScalarProperty Name="Brigade_Id" ColumnName="Brigade_Id" />
+                <ScalarProperty Name="Brigade_Name" ColumnName="Brigade_Name" />
+                <ScalarProperty Name="Brigade_Description" ColumnName="Brigade_Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CarDrivers">
+            <EntityTypeMapping TypeName="BerryManagementModel.CarDriver">
+              <MappingFragment StoreEntitySet="CarDrivers">
+                <ScalarProperty Name="CarDriver_Id" ColumnName="CarDriver_Id" />
+                <ScalarProperty Name="CarDriver_Car_Id" ColumnName="CarDriver_Car_Id" />
+                <ScalarProperty Name="CarDriver_Person_Id" ColumnName="CarDriver_Person_Id" />
+                <ScalarProperty Name="CarDriver_PersonPost_Id" ColumnName="CarDriver_PersonPost_Id" />
+                <ScalarProperty Name="CarDriver_StartDate" ColumnName="CarDriver_StartDate" />
+                <ScalarProperty Name="CarDriver_EndDate" ColumnName="CarDriver_EndDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cars">
+            <EntityTypeMapping TypeName="BerryManagementModel.Car">
+              <MappingFragment StoreEntitySet="Cars">
+                <ScalarProperty Name="Car_Id" ColumnName="Car_Id" />
+                <ScalarProperty Name="Car_Number" ColumnName="Car_Number" />
+                <ScalarProperty Name="Car_Model" ColumnName="Car_Model" />
+                <ScalarProperty Name="Car_SideType_Id" ColumnName="Car_SideType_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CompanyCars">
+            <EntityTypeMapping TypeName="BerryManagementModel.CompanyCar">
+              <MappingFragment StoreEntitySet="CompanyCars">
+                <ScalarProperty Name="CompanyCar_Id" ColumnName="CompanyCar_Id" />
+                <ScalarProperty Name="CompanyCar_Company_Id" ColumnName="CompanyCar_Company_Id" />
+                <ScalarProperty Name="CompanyCar_Car_Id" ColumnName="CompanyCar_Car_Id" />
+                <ScalarProperty Name="CompanyCar_StartDate" ColumnName="CompanyCar_StartDate" />
+                <ScalarProperty Name="CompanyCar_EndDate" ColumnName="CompanyCar_EndDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Companyes">
+            <EntityTypeMapping TypeName="BerryManagementModel.Companye">
+              <MappingFragment StoreEntitySet="Companyes">
+                <ScalarProperty Name="Company_Id" ColumnName="Company_Id" />
+                <ScalarProperty Name="Company_Name" ColumnName="Company_Name" />
+                <ScalarProperty Name="Company_Identity" ColumnName="Company_Identity" />
+                <ScalarProperty Name="Company_SideType_Id" ColumnName="Company_SideType_Id" />
+                <ScalarProperty Name="Company_CitizenshipId" ColumnName="Company_CitizenshipId" />
+                <ScalarProperty Name="Company_Address1" ColumnName="Company_Address1" />
+                <ScalarProperty Name="Company_Address2" ColumnName="Company_Address2" />
+                <ScalarProperty Name="Company_Phone1" ColumnName="Company_Phone1" />
+                <ScalarProperty Name="Company_Phone2" ColumnName="Company_Phone2" />
+                <ScalarProperty Name="Company_IBAN" ColumnName="Company_IBAN" />
+                <ScalarProperty Name="Company_RS_UserId" ColumnName="Company_RS_UserId" />
+                <ScalarProperty Name="Company_RS_Password" ColumnName="Company_RS_Password" />
+                <ScalarProperty Name="Company_IsResident" ColumnName="Company_IsResident" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CompanyRows">
+            <EntityTypeMapping TypeName="BerryManagementModel.CompanyRow">
+              <MappingFragment StoreEntitySet="CompanyRows">
+                <ScalarProperty Name="CompanyRow_Id" ColumnName="CompanyRow_Id" />
+                <ScalarProperty Name="CompanyRow_Company_Id" ColumnName="CompanyRow_Company_Id" />
+                <ScalarProperty Name="CompanyRow_Row_Id" ColumnName="CompanyRow_Row_Id" />
+                <ScalarProperty Name="CompanyRow_StartDate" ColumnName="CompanyRow_StartDate" />
+                <ScalarProperty Name="CompanyRow_EndDate" ColumnName="CompanyRow_EndDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Points">
+            <EntityTypeMapping TypeName="BerryManagementModel.Point">
+              <MappingFragment StoreEntitySet="Points">
+                <ScalarProperty Name="Point_Id" ColumnName="Point_Id" />
+                <ScalarProperty Name="Point_Name" ColumnName="Point_Name" />
+                <ScalarProperty Name="Point_IsActive" ColumnName="Point_IsActive" />
+                <ScalarProperty Name="Point_PointType_Id" ColumnName="Point_PointType_Id" />
+                <ScalarProperty Name="Point_BarCode" ColumnName="Point_BarCode" />
+                <ScalarProperty Name="Point_Car_Id" ColumnName="Point_Car_Id" />
+                <ScalarProperty Name="Point_Address" ColumnName="Point_Address" />
+                <ScalarProperty Name="Point_Description" ColumnName="Point_Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Posts">
+            <EntityTypeMapping TypeName="BerryManagementModel.Post">
+              <MappingFragment StoreEntitySet="Posts">
+                <ScalarProperty Name="Post_Id" ColumnName="Post_Id" />
+                <ScalarProperty Name="Post_Name" ColumnName="Post_Name" />
+                <ScalarProperty Name="Post_Description" ColumnName="Post_Description" />
+                <ScalarProperty Name="Post_BarCodePrefix" ColumnName="Post_BarCodePrefix" />
+                <ScalarProperty Name="Post_BalanceSheetType_Id" ColumnName="Post_BalanceSheetType_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RowBreeds">
+            <EntityTypeMapping TypeName="BerryManagementModel.RowBreed">
+              <MappingFragment StoreEntitySet="RowBreeds">
+                <ScalarProperty Name="RowBreed_Id" ColumnName="RowBreed_Id" />
+                <ScalarProperty Name="RowBreed_Row_Id" ColumnName="RowBreed_Row_Id" />
+                <ScalarProperty Name="RowBreed_Breed_Id" ColumnName="RowBreed_Breed_Id" />
+                <ScalarProperty Name="RowBreed_TreeCount" ColumnName="RowBreed_TreeCount" />
+                <ScalarProperty Name="RowBreed_PlantYear" ColumnName="RowBreed_PlantYear" />
+                <ScalarProperty Name="RowBreed_StartDate" ColumnName="RowBreed_StartDate" />
+                <ScalarProperty Name="RowBreed_EndDate" ColumnName="RowBreed_EndDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Rows">
+            <EntityTypeMapping TypeName="BerryManagementModel.Row">
+              <MappingFragment StoreEntitySet="Rows">
+                <ScalarProperty Name="Row_Id" ColumnName="Row_Id" />
+                <ScalarProperty Name="Sector_Number" ColumnName="Sector_Number" />
+                <ScalarProperty Name="Row_Number" ColumnName="Row_Number" />
+                <ScalarProperty Name="Row_Subrow_Number" ColumnName="Row_Subrow_Number" />
+                <ScalarProperty Name="Row_Barkode" ColumnName="Row_Barkode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DocumentTemplates">
+            <EntityTypeMapping TypeName="BerryManagementModel.DocumentTemplate">
+              <MappingFragment StoreEntitySet="DocumentTemplates">
+                <ScalarProperty Name="DocumentTemplateId" ColumnName="DocumentTemplateId" />
+                <ScalarProperty Name="DocumentTemplateData" ColumnName="DocumentTemplateData" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DocumentTemplateTitles">
+            <EntityTypeMapping TypeName="BerryManagementModel.DocumentTemplateTitle">
+              <MappingFragment StoreEntitySet="DocumentTemplateTitles">
+                <ScalarProperty Name="DocumentTemplateTitleDocumentTemplateId" ColumnName="DocumentTemplateTitleDocumentTemplateId" />
+                <ScalarProperty Name="DocumentTemplateTitleExtension" ColumnName="DocumentTemplateTitleExtension" />
+                <ScalarProperty Name="DocumentTemplateTitleDescription" ColumnName="DocumentTemplateTitleDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionName="BerryManagementModel.Store.tf_ContainerTypes" FunctionImportName="tf_ContainerTypes">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BerryManagementModel.tf_ContainerTypes_Result">
+                <ScalarProperty Name="ContainerType_Id" ColumnName="ContainerType_Id" />
+                <ScalarProperty Name="ContainerType_Name" ColumnName="ContainerType_Name" />
+                <ScalarProperty Name="ContainerType_Level" ColumnName="ContainerType_Level" />
+                <ScalarProperty Name="ContainerType_IsActive" ColumnName="ContainerType_IsActive" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionName="BerryManagementModel.Store.tf_EmployeeTypes" FunctionImportName="tf_EmployeeTypes">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BerryManagementModel.tf_EmployeeTypes_Result">
+                <ScalarProperty Name="EmployeeType_Id" ColumnName="EmployeeType_Id" />
+                <ScalarProperty Name="EmployeeType_Name" ColumnName="EmployeeType_Name" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionName="BerryManagementModel.Store.tf_GenderTypes" FunctionImportName="tf_GenderTypes">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BerryManagementModel.tf_GenderTypes_Result">
+                <ScalarProperty Name="GenderType_Id" ColumnName="GenderType_Id" />
+                <ScalarProperty Name="GenderType_Name" ColumnName="GenderType_Name" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionName="BerryManagementModel.Store.tf_GetBalanceSheetTypes" FunctionImportName="tf_GetBalanceSheetTypes">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BerryManagementModel.tf_GetBalanceSheetTypes_Result">
+                <ScalarProperty Name="BalanceSheetType_Id" ColumnName="BalanceSheetType_Id" />
+                <ScalarProperty Name="BalanceSheetType_Name" ColumnName="BalanceSheetType_Name" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionName="BerryManagementModel.Store.tf_HistoryOperationTypes" FunctionImportName="tf_HistoryOperationTypes">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BerryManagementModel.tf_HistoryOperationTypes_Result">
+                <ScalarProperty Name="HistoryOperationType_Id" ColumnName="HistoryOperationType_Id" />
+                <ScalarProperty Name="HistoryOperationType_Name" ColumnName="HistoryOperationType_Name" />
+                <ScalarProperty Name="HistoryOperationType_Description" ColumnName="HistoryOperationType_Description" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionName="BerryManagementModel.Store.tf_LegalStatuseTypes" FunctionImportName="tf_LegalStatuseTypes">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BerryManagementModel.tf_LegalStatuseTypes_Result">
+                <ScalarProperty Name="LegalStatuseType_Id" ColumnName="LegalStatuseType_Id" />
+                <ScalarProperty Name="LegalStatuseType_Name" ColumnName="LegalStatuseType_Name" />
+                <ScalarProperty Name="LegalStatuseType_NameEn" ColumnName="LegalStatuseType_NameEn" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionName="BerryManagementModel.Store.tf_MaritalStatus" FunctionImportName="tf_MaritalStatus">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BerryManagementModel.tf_MaritalStatus_Result">
+                <ScalarProperty Name="MaritalStatus_Id" ColumnName="MaritalStatus_Id" />
+                <ScalarProperty Name="MaritalStatus_Name" ColumnName="MaritalStatus_Name" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionName="BerryManagementModel.Store.tf_OperationTypes" FunctionImportName="tf_OperationTypes">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BerryManagementModel.tf_OperationTypes_Result">
+                <ScalarProperty Name="OperationType_Id" ColumnName="OperationType_Id" />
+                <ScalarProperty Name="OperationType_Name" ColumnName="OperationType_Name" />
+                <ScalarProperty Name="OperationType_IsActive" ColumnName="OperationType_IsActive" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionName="BerryManagementModel.Store.tf_PointTypes" FunctionImportName="tf_PointTypes">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BerryManagementModel.tf_PointTypes_Result">
+                <ScalarProperty Name="PointType_Id" ColumnName="PointType_Id" />
+                <ScalarProperty Name="PointType_Name" ColumnName="PointType_Name" />
+                <ScalarProperty Name="PointType_IsActive" ColumnName="PointType_IsActive" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionName="BerryManagementModel.Store.tf_ProductQualityes" FunctionImportName="tf_ProductQualityes">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BerryManagementModel.tf_ProductQualityes_Result">
+                <ScalarProperty Name="ProductQuality_Id" ColumnName="ProductQuality_Id" />
+                <ScalarProperty Name="ProductQuality_Name" ColumnName="ProductQuality_Name" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionName="BerryManagementModel.Store.tf_PunishmentTypes" FunctionImportName="tf_PunishmentTypes">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BerryManagementModel.tf_PunishmentTypes_Result">
+                <ScalarProperty Name="PunishmentType_Id" ColumnName="PunishmentType_Id" />
+                <ScalarProperty Name="PunishmentType_Name" ColumnName="PunishmentType_Name" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionName="BerryManagementModel.Store.tf_SalaryTypes" FunctionImportName="tf_SalaryTypes">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BerryManagementModel.tf_SalaryTypes_Result">
+                <ScalarProperty Name="SalaryType_Id" ColumnName="SalaryType_Id" />
+                <ScalarProperty Name="SalaryType_Name" ColumnName="SalaryType_Name" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionName="BerryManagementModel.Store.tf_SideTypes" FunctionImportName="tf_SideTypes">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BerryManagementModel.tf_SideTypes_Result">
+                <ScalarProperty Name="SideType_Id" ColumnName="SideType_Id" />
+                <ScalarProperty Name="SideType_Name" ColumnName="SideType_Name" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionName="BerryManagementModel.Store.tf_UnitTypes" FunctionImportName="tf_UnitTypes">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BerryManagementModel.tf_UnitTypes_Result">
+                <ScalarProperty Name="UnitType_Id" ColumnName="UnitType_Id" />
+                <ScalarProperty Name="UnitType_Name" ColumnName="UnitType_Name" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionName="BerryManagementModel.Store.tf_WaybillStates" FunctionImportName="tf_WaybillStates">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BerryManagementModel.tf_WaybillStates_Result">
+                <ScalarProperty Name="WaybillState_Id" ColumnName="WaybillState_Id" />
+                <ScalarProperty Name="WaybillState_Name" ColumnName="WaybillState_Name" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

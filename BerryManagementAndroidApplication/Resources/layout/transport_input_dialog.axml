@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+	android:padding="15dp"
+    android:layout_height="match_parent">
+	
+	<Button
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:layout_centerHorizontal="true"
+		android:text="@string/scan_code"
+		android:id="@+id/scan_dialog_button"
+		android:background="@android:color/holo_red_light"/>
+	
+	
+	<EditText
+		android:layout_height="2dp"
+		android:layout_width="match_parent"
+		android:id="@+id/dialog_transport_code_edittext"/>
+	<Spinner
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:layout_marginTop="10dp"
+		android:layout_below="@id/scan_dialog_button"
+		android:id="@+id/transport_dialog_spinner"/>
+		<Button
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:layout_below="@id/transport_dialog_spinner"
+		android:id="@+id/transport_confirm_btn"
+		android:background="@android:color/holo_green_light"/>
+	<TextView
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:id="@+id/carOpenClose_TextView"/>
+
+
+</RelativeLayout>

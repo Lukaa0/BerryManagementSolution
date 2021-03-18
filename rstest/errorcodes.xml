@@ -1,0 +1,637 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ERROR_CODES xmlns="">
+  <ERROR_CODE>
+    <ID>-1001</ID>
+    <TEXT>ზედნადების ტიპი არასწორია</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1028</ID>
+    <TEXT>წაშლილ ზედნადებში ვერ დაარედაქტირებთ და ვერც წაშლით</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1002</ID>
+    <TEXT>ტრანსპორტირების ტიპი არასწორია</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1014</ID>
+    <TEXT>მძღოლის პირადი ნომერი არასწორია;</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1015</ID>
+    <TEXT>reception_info დიდია</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1016</ID>
+    <TEXT>receiver_info დიდია</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1017</ID>
+    <TEXT>მიწოდების თარიღი მეტია მინდინარე თარიღზე</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1003</ID>
+    <TEXT>მყიდველის სახელი აუცილებელია როცა მყიდველი უცხო ქვეყნის მოქალაქეა</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1018</ID>
+    <TEXT>მიწოდების თარიღი ნაკლებია ტრანსპორტირების დაწყების თარიღზე</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1004</ID>
+    <TEXT>მყიდველი აუცილებელია ყოველთვის გარდა შიდაგადაზიდვისას</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1019</ID>
+    <TEXT>სტატუსი არასწორია</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1020</ID>
+    <TEXT>შეუნახავს ვერ წაშლი</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1021</ID>
+    <TEXT>შეუნახავს ვერ გააუქმებ</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1022</ID>
+    <TEXT>გამყიდველი ლიკვიდირებულია</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1005</ID>
+    <TEXT>მყიდვევლი არ მოიძებნა (საქართველო)</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1006</ID>
+    <TEXT>მყიდვევლი ლიკვიდირებულია ან კოდი გაუქმებულია</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1007</ID>
+    <TEXT>ტრანსპორტირების დაწყების ადგილი(მისამართი) დიდია</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1023</ID>
+    <TEXT>ქვეზედნადებისთვის მშობელი აუცილებელია</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1008</ID>
+    <TEXT>მძღოლის პირადი ნომერი დიდია</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1027</ID>
+    <TEXT>დასრულებულის რედაქტირებას ვერ გააკეთებთ</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1009</ID>
+    <TEXT>ტრანსპორტირების დაწყების ადგილი(მისამართი) აუცილებელია</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1010</ID>
+    <TEXT>ტრანსპორტირების დასრულების ადგილი(მისამართი) დიდია</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1029</ID>
+    <TEXT>გაუქმებულს ზედნადებში ვერ დაარედაქტირებთ და ვერც წაშლით</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1030</ID>
+    <TEXT>მშობელ ზედნადებს ვე გააუქმებთ თუ ქვე ზედნადები აქვს</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1011</ID>
+    <TEXT>ტრანსპორტირების დასრულების ადგილი(მისამართი) აუცილებელია</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1024</ID>
+    <TEXT>მშობელი არ მოიძებნა ან მშობელი აქტივირებული არ არის</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1025</ID>
+    <TEXT>ქვე ზედნადები მარტო დისტრიბუციაზე იწერება</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1026</ID>
+    <TEXT>მანქანის ნომერი არასწორია</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1012</ID>
+    <TEXT>მძღოლი აუცილებელია ტრანსპორტირების ტიპის ყველა ზედნადებზე</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1013</ID>
+    <TEXT>მძღოლის სახელი აუცილებელია  როდესაც მძღოლი უცხო ქვეყნის მოქალაქეა</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-2003</ID>
+    <TEXT>unit_id არასწორია</TEXT>
+    <TYPE>2</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-2004</ID>
+    <TEXT>unit_txt აუცილებელია როცა unit_id = 99</TEXT>
+    <TYPE>2</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-2005</ID>
+    <TEXT>რაოდენობა 0-ზე მედი უნდა</TEXT>
+    <TYPE>2</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-2006</ID>
+    <TEXT>ქონების სტატუსი არასწორია</TEXT>
+    <TYPE>2</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-2007</ID>
+    <TEXT>price არის აუცილებელი გარდა შიდაგადაზიდვის </TEXT>
+    <TYPE>2</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-2008</ID>
+    <TEXT>აქციზის ID არასწორია</TEXT>
+    <TYPE>2</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-2002</ID>
+    <TEXT>vat_type არასწორია</TEXT>
+    <TYPE>2</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-2001</ID>
+    <TEXT>პროდუქტის დასახელება დიდია</TEXT>
+    <TYPE>2</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-3006</ID>
+    <TEXT>ანგარიშფაქტურა და ზედნადები სხვადასხვა გადამხდელზეა გამოწერილი</TEXT>
+    <TYPE>3</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-3004</ID>
+    <TEXT>გამყიდველი არ არის დღგს გადამხდელი</TEXT>
+    <TYPE>3</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-3005</ID>
+    <TEXT>მყიდველი გაუქმებულია/მყიდველი არ არის გადამხელი ან რეგისრირებული არ არის დეკლარირებაში</TEXT>
+    <TYPE>3</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-3003</ID>
+    <TEXT>ზედნადები არ არის აქტივირებული</TEXT>
+    <TYPE>3</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-3002</ID>
+    <TEXT>გამყიდველი არ არის დეცლარირებაში რეგისტრირებული</TEXT>
+    <TYPE>3</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-3001</ID>
+    <TEXT>ზედნადები არ მოიძებნა</TEXT>
+    <TYPE>3</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1034</ID>
+    <TEXT>აქტივაციის თარიღი  ნაკლებია შექმნის თარიღზე</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-2</ID>
+    <TEXT>ზოგადი შეცდომა (არამთელი რიცხვებს გამყოფად წერტილი უნდა ქონდეთ)</TEXT>
+    <TYPE>2</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1036</ID>
+    <TEXT>ტრანსპორტირების გარეშე  შემთხვევაში დაწყების და დარულების ადგილი უნდა ემთხვეოდეს</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1038</ID>
+    <TEXT>გადავადების (აქტივაციის) თარიღი არ უნდა აღემატებოდეს 3 დღეს</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-3017</ID>
+    <TEXT>გადამხდელი არ არის რეგისტრირებული ელ-დეკლარირებაში</TEXT>
+    <TYPE>3</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1041</ID>
+    <TEXT>მყიდველის სერვისის მომხმარებლის ID არასწორია</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-3018</ID>
+    <TEXT>მომხმარებელი არ არის დღგ-ს გადამხდელი</TEXT>
+    <TYPE>3</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1042</ID>
+    <TEXT>ფაქტურაზე მიბმულ ზედნადებს ვერ დაარედაქტირებ</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1043</ID>
+    <TEXT>თანხა აღემატება 1000000000-ს</TEXT>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-20021</ID>
+    <TEXT>ხანდაზმულობის ვადის გასვლის გამო (საქართველოს საგადასახადო კოდექსი, მუხლი 4) ამ პერიოდის დეკლარაციის წაედგენა შეუძლებელია</TEXT>
+    <TYPE>4</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1048</ID>
+    <TEXT>გადამზიდავის ს/ნ არასწორია</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1049</ID>
+    <TEXT>გადამზიდავის ს/ნ მნიშვნელობის მინიჭება, შეცვლა ან წაშლა შეგიძლიათ მხოლოდ "გადამზიდავთან გადაგზავნილი" სტატუსის ზედნადებზე</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1050</ID>
+    <TEXT>გადამზიდავის ს/ნ აუცილებელია</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1053</ID>
+    <TEXT>მძღოლის მონაცემებს და ტრანსპორტირების ტიპის ავსებს გადამზიდავი</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1061</ID>
+    <TEXT>თქვენ გაქვთ წაუკითხავი აუცილებელი შეტყობინება (გაეცანით შეტყობინებას და შემდეგ შეგეძლებათ ზედნადების გამოწერა)</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1062</ID>
+    <TEXT>გადამზიდი შეგიძლიათ გამოიყენოთ მხოლოდ ტრანსპორტირებით ან შიდაგადაზიდვის ტიპი ზედნადებებზე</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-2013</ID>
+    <TEXT>DOC_DESC  აუცილებელია</TEXT>
+    <TYPE>2</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1067</ID>
+    <TEXT>ხეტყის ზედნადების დისტრიბუციას ვერ გამოწერთ</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1068</ID>
+    <TEXT>აღნიშნულ პირზე ქვეზედნადების შექმნა შეუძლებელია! დაუკავშირდით ქოლცენტრს!</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1069</ID>
+    <TEXT>ხე-ტყის ფაქტურების პროტოკოლი შეიცვალა 2016 წლის 1 აგვისტოდან</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-2014</ID>
+    <TEXT>ხეტყის ფაქტურის საქონლის რეესტრში ფინიშის ნომერი აუცილებელია</TEXT>
+    <TYPE>2</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-2015</ID>
+    <TEXT>ხეტყის ტიპის id არასწორია</TEXT>
+    <TYPE>2</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-2016</ID>
+    <TEXT>ფინიშის ნომერი სიგრძე უნდა იყოს 10 ნიშნა</TEXT>
+    <TYPE>2</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1031</ID>
+    <TEXT>გადაგზავნილს ვერ წაშლით</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1032</ID>
+    <TEXT>ქვე ზედდებულს ძირითადად ვერ გახდი</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1033</ID>
+    <TEXT>გამოწერილ ზედნადებს ქვე ზედნადებად ვერ გადააკეთებ</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1035</ID>
+    <TEXT>შიდაგადაზიდვის დროს მყიდველის საიდენტიფიკაციო კოდი ცარიელი ან გამყიდველის კოდი უნდა იყოს მითითებული</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1039</ID>
+    <TEXT>მყიდველი უნდა განსხვავდებოდეს გამყიდველისგან თუ შიდა გადაზიდვა არ არის</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-3007</ID>
+    <TEXT>ფაქტურაში საქონლის ჩამონათვალში მოხდა შეცდომა</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-3008</ID>
+    <TEXT>ფაქტურეის შენახვისას მოხდა შედომა</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1</ID>
+    <TEXT>გაურკვეველი შეცდომა (გადაამოწმეთ თარიღების ფორმატი)</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-100</ID>
+    <TEXT>სერვისის მომხმარებელი ან პაროლი არასწორია</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-101</ID>
+    <TEXT>გამომწერის un_id განსხვავდება XML-ში მითითებული seler_un_id -ის გან </TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-3009</ID>
+    <TEXT>ფაქტურაში ზედნადებების ჩამონათვალში მოხდა შეცდომა</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1040</ID>
+    <TEXT>მანქანის ნომერი აუცილებელია</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-2011</ID>
+    <TEXT>DOC_N  აუცილებელია</TEXT>
+    <TYPE>2</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-3024</ID>
+    <TEXT>თქვენი ორგანიზაცია ლიკვიდირებული/გაუქმებულია . </TEXT>
+    <TYPE>3</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1051</ID>
+    <TEXT>"გადამზიდავთან გადაგზავნილი" სტატუსის ზედნადებზე მძღლის მონაცემებს და ტრანსპორტირების ტიპს ვერ შეცვლით</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1052</ID>
+    <TEXT>"გადამზიდავთან გადაგზავნილი" სტატუსის ზედნადებს თქვენ ვერ დაასრულებთ(ასრულებს გადამზიდავი კომპანია)</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1059</ID>
+    <TEXT>დასრულებულ ზედნადებზე ქვეზედნადებს ვერ გამოწერთ</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1065</ID>
+    <TEXT>უცხოქვეყნის მოქალაქის პირადი ნომერი არასწორია(მძღოლის)</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1066</ID>
+    <TEXT>უცხოქვეყნის მოქალაქის პირადი ნომერი არასწორია(მყიდველის)</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-2012</ID>
+    <TEXT>DOC_DATE აუცილებელია</TEXT>
+    <TYPE>2</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1037</ID>
+    <TEXT>თუ ტრანსპორტირების ტიპი არის სხვა მიუთითეთ TRANS_TXT</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-4001</ID>
+    <TEXT>შეცდომა მოხდა სასაქონლო მატერიალული ფასეულობების სიაში</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-3016</ID>
+    <TEXT>ანგარიშ-ფაქტურის შექმნა ვერ მოხერხდა რადგან ერთ-ერთ ზედნადებზე უკვე გამოწერილია ანგარიშ-ფაქტურა ან მოცემული ზედნადები გაუქმებულია</TEXT>
+    <TYPE>3</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-3019</ID>
+    <TEXT>დიპლომატის შემთხვევაში დაბეგვრის ტიპი უნდა იყოს ნულოვანი</TEXT>
+    <TYPE>3</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-3021</ID>
+    <TEXT>თქვენი მომხმარებელი გაუქმებულია. არ გაქვთ გადაგზავნის უფლება</TEXT>
+    <TYPE>3</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-20012</ID>
+    <TEXT>მოცემულ პერიოდში დეკლარირება არ გეკუთვნით</TEXT>
+    <TYPE>4</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-3026</ID>
+    <TEXT>პროდუქცია ცარიელი ვერ იქნება</TEXT>
+    <TYPE>3</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1060</ID>
+    <TEXT>ზედნადების კატეგორია არასწორია</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1055</ID>
+    <TEXT>ხე/ტყის დოკუმენტი აუცილებელია</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1056</ID>
+    <TEXT>ხე/ტყის დოკუმენტის ნომერი აუცილებელია</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1057</ID>
+    <TEXT>ხე/ტყის დოკუმენტის თარიღი აუცილებელია</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1058</ID>
+    <TEXT>ზედნადების კატეგორიას შეცვლა შეიძლება მხოლოდ შენახულ ზედნადებზე</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-2010</ID>
+    <TEXT>საქონლის აქციზური კოდი ამ პერიოდს არ ეკუთვნის</TEXT>
+    <TYPE>2</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-4003</ID>
+    <TEXT>შეცდომა მოხდა ხეტყის ფინიშის ნომრებში</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-3010</ID>
+    <TEXT>ანგარიშ-ფაქტურის შენახვა ვერ მოხერხდა</TEXT>
+    <TYPE>3</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-2009</ID>
+    <TEXT>მშობელ ზედნადებში არ არის შესაბამისი საქონელი, საქონლის ერთეული ან შტრიხკოდი</TEXT>
+    <TYPE>2</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-102</ID>
+    <TEXT>შეცდომა მოხდა XML-ის პარსირებისას ან SELER_UN_ID ტეგი არ გაქვთ</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-3011</ID>
+    <TEXT>ანგარიშ-ფაქტურის კორექტირება ვერ მოხერხდა</TEXT>
+    <TYPE>3</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-3012</ID>
+    <TEXT>ანგარიშ-ფაქტურის პროდუქციის შენახვა ვერ მოხერხდა</TEXT>
+    <TYPE>3</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-3013</ID>
+    <TEXT>ანგარიშ-ფაქტურის ზედნადებზე მიბმა ვერ განხორციელდა</TEXT>
+    <TYPE>3</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-3014</ID>
+    <TEXT>ანგარიშ-ფაქტურის სტატუსის შეცვლა ვერ მოხერხდა</TEXT>
+    <TYPE>3</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-3015</ID>
+    <TEXT>ანგარიშ-ფაქტურის დადასტურება ვერ მოხერხდა</TEXT>
+    <TYPE>3</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-4002</ID>
+    <TEXT>სატესტო კოდებიდან მხოლოდ სატესტოზე გამოწერეთ : სატესტო კოდებია :206322102,12345678910</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-3020</ID>
+    <TEXT>ოპერაციის თარიღი არ უნდა აღემატებოდეს მიმდინარე თარიღს</TEXT>
+    <TYPE>3</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-3022</ID>
+    <TEXT>ეს ფუნქცია დროებით გათიშულია</TEXT>
+    <TYPE>3</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-3023</ID>
+    <TEXT>ამ პერიოდში დღგ-ს გადამხდელად არ იყავით რეგისტრირებული</TEXT>
+    <TYPE>3</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-3025</ID>
+    <TEXT>მყიდველის ორგანიზაცია ლიკვიდირებული/გაუქმებულია . </TEXT>
+    <TYPE>3</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1045</ID>
+    <TEXT>ცარიელ ზედნადებს ვერ გააქტიურებ</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1046</ID>
+    <TEXT>აქტიურ ზედნადებზე ზედნადების ტიპს ვერ შეცვლით</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1047</ID>
+    <TEXT>გამყიდველი და მყიდველი მხოლოდ შიდა გადაზიდვის დროს შეიძლება იყოს ერთი და იგივე</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-501</ID>
+    <TEXT>ეს ავტომოანქანა უკვე გაფორმებულია</TEXT>
+    <TYPE>5</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-502</ID>
+    <TEXT>ამ ავტომანქანაზე მფლობელის შეცვლის უფლება არ გაქვთ</TEXT>
+    <TYPE>5</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-503</ID>
+    <TEXT>არასწორი შასის ნომერი</TEXT>
+    <TYPE>5</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-504</ID>
+    <TEXT>ახალი მფლობელის არასწორი კოდი</TEXT>
+    <TYPE>5</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-505</ID>
+    <TEXT>ამ ავტომანქანის წითელში გადაყვანის უფლება არ გაქვთ</TEXT>
+    <TYPE>5</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-506</ID>
+    <TEXT>ამ ავტომანქანის მწვანეში გადაყვანის უფლება არ გაქვთ</TEXT>
+    <TYPE>5</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-103</ID>
+    <TEXT>ზედნადების id არასწორია</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1054</ID>
+    <TEXT>თქვენ არ ხართ ამ ზედნადების გადამზიდი</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1063</ID>
+    <TEXT>კორექტირება შეუძლებელია, ვინაიდან დადასტურებულია საბაჟოს მიერ</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+  <ERROR_CODE>
+    <ID>-1064</ID>
+    <TEXT>შექმნის თარიღის იაპაზონის მითითება აუცილებელია და არ უნდა აღემატებოდეს 72 საათს</TEXT>
+    <TYPE>1</TYPE>
+  </ERROR_CODE>
+</ERROR_CODES>

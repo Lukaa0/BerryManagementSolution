@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation = "vertical" 
+	>
+	<Button
+		android:layout_width="fill_parent"
+		android:layout_height = "wrap_content"
+		android:id="@+id/ScannPointButton"
+		android:text="კოდის სკანირება"
+	/>
+	<EditText	
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/PointBarCodeEditText"
+		android:layout_columnWeight="1"
+		android:layout_gravity="fill_horizontal"
+		android:gravity="center"/>
+	<TextView	
+		android:text=" ადგილისი კოდი - "
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/PointBarCodeTextView"
+		android:layout_columnWeight="1"
+		android:layout_gravity="fill_horizontal"
+		android:gravity="center"/>
+	<Button
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/SavePointBarCodeButton"
+		android:text="შენახვა"/>
+</LinearLayout>

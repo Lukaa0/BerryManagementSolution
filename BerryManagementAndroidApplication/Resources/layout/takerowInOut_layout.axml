@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<RelativeLayout
+	android:layout_height="wrap_content"
+	android:animateLayoutChanges="true"
+	android:layout_width="wrap_content">
+		
+	<Button
+			android:layout_height="wrap_content"
+			android:text="@string/scan_code"
+			android:id="@+id/row_scan_code_btn"
+			android:background="@android:color/holo_red_light"
+			style="@style/Widget.AppCompat.Button.Colored"
+			android:layout_width="match_parent"/>
+			
+	<EditText
+				
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:id="@+id/row_scan_edittext"
+				/>
+
+
+		<Spinner
+			android:layout_height="wrap_content"
+			android:layout_below="@id/row_scan_edittext"
+			android:layout_width="match_parent"
+			android:id="@+id/takerow_spinner"/>
+		<Button
+			android:layout_height="wrap_content"
+			android:id="@+id/row_confirm_btn"
+			android:background="@android:color/holo_green_light"
+			style="@style/Widget.AppCompat.Button.Colored"
+				android:layout_below="@id/takerow_spinner"
+			android:layout_width="match_parent"/>
+
+		<android.support.v7.widget.RecyclerView
+			android:layout_height="match_parent"
+			android:id="@+id/row_check_in_recycler"
+			android:layout_width="match_parent"
+			android:layout_marginTop="10dp"
+			android:layout_below="@id/row_confirm_btn"/>
+	</RelativeLayout>
+</LinearLayout>

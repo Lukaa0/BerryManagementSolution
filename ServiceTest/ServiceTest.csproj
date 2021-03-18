@@ -1,0 +1,963 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1071C006-5D88-45C1-B246-7AB4094939B4}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ServiceTest</RootNamespace>
+    <AssemblyName>ServiceTest</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\BM_Employee_ServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\BM_Library_ServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\BM_Produce_ServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\BM_RS_ServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\BM_Structure_ServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\OperationService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Connected Services\BM_Employee_ServiceReference\BM_Employee_Service.wsdl" />
+    <None Include="Connected Services\BM_Employee_ServiceReference\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\item4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\ServiceTest.BM_Employee_ServiceReference.DeletePersonDocumentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\ServiceTest.BM_Employee_ServiceReference.DeletePersonPostResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\ServiceTest.BM_Employee_ServiceReference.DeletePersonResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\ServiceTest.BM_Employee_ServiceReference.EmployeeLabel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\ServiceTest.BM_Employee_ServiceReference.GetEmployeeCurrentNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\ServiceTest.BM_Employee_ServiceReference.GetEmployeeDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\ServiceTest.BM_Employee_ServiceReference.GetEmployeeLabelsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\ServiceTest.BM_Employee_ServiceReference.GetEmployeeShortDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\ServiceTest.BM_Employee_ServiceReference.GetHarvByHarvRowDistrOutsByRowIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\ServiceTest.BM_Employee_ServiceReference.GetHarvByHarvRowDistrOutsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\ServiceTest.BM_Employee_ServiceReference.GetHarvesterByHRDForPunishmentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\ServiceTest.BM_Employee_ServiceReference.GetNumberOfEmployeeSameIdentitiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\ServiceTest.BM_Employee_ServiceReference.GetPersonDocumentsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\ServiceTest.BM_Employee_ServiceReference.GetPersonPostByBarCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\ServiceTest.BM_Employee_ServiceReference.GetPersonPostDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\ServiceTest.BM_Employee_ServiceReference.GetPersonPostModelForRowsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\ServiceTest.BM_Employee_ServiceReference.GetPersonPostModelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\ServiceTest.BM_Employee_ServiceReference.GetPersonPostsByBrigadeIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\ServiceTest.BM_Employee_ServiceReference.GetPersonPostsForPunishmentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\ServiceTest.BM_Employee_ServiceReference.GetPersonPostsIdByPersonIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\ServiceTest.BM_Employee_ServiceReference.GetPostByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\ServiceTest.BM_Employee_ServiceReference.GetPunishmentByDiteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\ServiceTest.BM_Employee_ServiceReference.GetPunishmentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\ServiceTest.BM_Employee_ServiceReference.InsertEmployeeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\ServiceTest.BM_Employee_ServiceReference.InsertPersonDocumentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\ServiceTest.BM_Employee_ServiceReference.InsertPersonPostResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\ServiceTest.BM_Employee_ServiceReference.InsertPunishmentForAndroidResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\ServiceTest.BM_Employee_ServiceReference.InsertPunishmentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\ServiceTest.BM_Employee_ServiceReference.Person.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\ServiceTest.BM_Employee_ServiceReference.PersonDocument.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\ServiceTest.BM_Employee_ServiceReference.PersonDocumentModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\ServiceTest.BM_Employee_ServiceReference.PersonPost.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\ServiceTest.BM_Employee_ServiceReference.PersonPostModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\ServiceTest.BM_Employee_ServiceReference.Post.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\ServiceTest.BM_Employee_ServiceReference.PunishmentModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\ServiceTest.BM_Employee_ServiceReference.UpdateEmployeeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\ServiceTest.BM_Employee_ServiceReference.UpdatePersonDocumentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\ServiceTest.BM_Employee_ServiceReference.UpdatePersonPostResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Employee_ServiceReference\ServiceTest.BM_Employee_ServiceReference.UpdatePunishmentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\BM_Library_Service.wsdl" />
+    <None Include="Connected Services\BM_Library_ServiceReference\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\item4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.Bank.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.Breed.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.Citizenship.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.Container.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.ContainerModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.CreateContainerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.CreateContainersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.DocumentType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.GetAllPointsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.GetBalanceSheetTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.GetBreedsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.GetCitizenshipsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.GetContainersByProductPackResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.GetContainerTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.GetDocumentTypedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.GetEmployeeTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.GetGenderTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.GetLegalFormsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.GetLegalStatuseTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.GetMaritalStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.GetNationalitiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.GetPointTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.GetProductQualityesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.GetPunishmentTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.GetSalaryTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.GetSideTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.InsertBankResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.InsertBreedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.InsertCitizenshipResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.InsertDocumentTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.InsertLegalFormResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.InsertNationalityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.LegalForm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.Nationality.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.Point.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.SelectBanksResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.SelectContainersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.tf_ContainerTypes_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.tf_EmployeeTypes_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.tf_GenderTypes_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.tf_GetBalanceSheetTypes_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.tf_LegalStatuseTypes_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.tf_MaritalStatus_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.tf_PointTypes_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.tf_ProductQualityes_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.tf_PunishmentTypes_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.tf_SalaryTypes_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.tf_SideTypes_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.UpdateBankResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.UpdateBreedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.UpdateCitizenshipResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.UpdateDocumentTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.UpdateLegalFormResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Library_ServiceReference\ServiceTest.BM_Library_ServiceReference.UpdateNationalityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Produce_ServiceReference\BM_Produce_Service.wsdl" />
+    <None Include="Connected Services\BM_Produce_ServiceReference\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Produce_ServiceReference\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Produce_ServiceReference\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Produce_ServiceReference\ServiceTest.BM_Produce_ServiceReference.GetProductModelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Produce_ServiceReference\ServiceTest.BM_Produce_ServiceReference.ProductModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_RS_ServiceReference\BerryManagementWindowsService.Data.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_RS_ServiceReference\service.wsdl" />
+    <None Include="Connected Services\BM_RS_ServiceReference\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_RS_ServiceReference\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_RS_ServiceReference\ServiceTest.BM_RS_ServiceReference.GetTransportWaybillsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_RS_ServiceReference\ServiceTest.BM_RS_ServiceReference.InsertNonTransportWaybillDetailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_RS_ServiceReference\ServiceTest.BM_RS_ServiceReference.InsertTransportWaybillCompanyMoveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_RS_ServiceReference\ServiceTest.BM_RS_ServiceReference.InsertTransportWaybillDetailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_RS_ServiceReference\ServiceTest.BM_RS_ServiceReference.InsertTransportWaybillResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_RS_ServiceReference\ServiceTest.BM_RS_ServiceReference.NonInsertTransportWaybillResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_RS_ServiceReference\ServiceTest.BM_RS_ServiceReference.TransportWaybill.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\BM_Structure_Service.wsdl" />
+    <None Include="Connected Services\BM_Structure_ServiceReference\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.Brigade.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.CarDriversModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.CarModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.CheckGetRowResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.CompanyCarModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.CompanyeModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.CompanyRowsModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.Container.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.DeleteBrigadeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.DeleteCarDriverResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.DeleteCarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.DeleteCompanyCarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.DeleteCompanyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.DeleteCompanyRowsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.DeletePointResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.DeletePostResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.DeleteRowBreedsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.DeleteRowResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.GetBrigadeRowDistributionResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.GetBrigadesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.GetCarDriversResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.GetCarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.GetCarsPointModelForContainerMoveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.GetCarsPointModelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.GetCompanyCarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.GetCompanyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.GetCompanyRowResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.GetContainerForProductRecieveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.GetContainersForContainerMoveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.GetHarvesterInAllRowsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.GetHarvesterInDistributionModelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.GetHarvesterPostIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.GetPaletForContainerPackResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.GetPointResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.GetPointsForWaybillResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.GetPostModelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.GetPostsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.GetRowBreedsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.GetRowsByHarvesterRowInDistributionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.GetRowsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.GetRowsWithDateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.GetTakeRowInRowResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.InserBrigadesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.InsertCarDriverResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.InsertCarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.InsertCompanyCarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.InsertCompanyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.InsertCompanyRowResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.InsertPersonPostResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.InsertPointResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.InsertPostResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.InsertRowBreedContainerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.InsertRowBreedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.InsertRowResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.PointsModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.Post.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.PostModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.Row.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.RowBreedsModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.RowModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.RowWithDateModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.UpdateBrigadeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.UpdateCarDriverResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.UpdateCarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.UpdateCompanyCarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.UpdateCompanyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.UpdateCompanyRowResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.UpdatePointResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.UpdatePostResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.UpdateRowBreedContainerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.UpdateRowBreedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BM_Structure_ServiceReference\ServiceTest.BM_Structure_ServiceReference.UpdateRowResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\BM_Operation_Service.wsdl" />
+    <None Include="Connected Services\OperationService\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\OperationService\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\OperationService\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\OperationService\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\OperationService\item4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.CheckContainerLocationForPackagingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.CheckHarvesterInRowPersonPostResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.CheckTakeRowsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.CloseTransportWaybillResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.ContainerLocation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.ContainerMoveInOut.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.ContainerPackModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.ContainerWeight.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.ContainerWeightModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.CreateTransportWaybillResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.FixContainerMoveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.FixContainerPackResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.FixContainerSendBackResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.FixHarvesterContainerDistributionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.FixHarvesterRowDistributionInOutResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.FixProductQualityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.FixProductReceiveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.FixProductRepackAndWeightResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.FixPunishmentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.FixSaleContainerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.FixTakeRowInOutResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.GetClosedTakeRowsModelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.GetContainerForQualityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.GetContainerMoveInOutResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.GetContainerPackModelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.GetContainerWeightsByCharsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.GetCountForContainerMoveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.GetCountForContainerPackResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.GetHarvesterRowDistributionInOutsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.GetHarvesterRowDistributionInResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.GetHarvesterRowDistributionOutResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.GetHarvesterRowDistributionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.GetHarvRowDistribByPersonPostIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.GetLatestVersionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.GetOperationSettingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.GetRowsWithBrigadeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.GetSaleContainerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.GetTakeRowsByBrigadeIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.GetTakeRowsInByPersonPostIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.GetTakeRowsModelByBrigadeIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.GetTakeRowsModelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.GetTakeRowsOutByPersonPostIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.GetTakeRowsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.GetWeightsForReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.HarvesterRowDistribution.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.HarvesterRowDistributionInOut.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.InsertContainerMoveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.InsertContainerPackResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.OperationSetting.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.ProductPack.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.ProductRepackAndWeight.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.SaleContainer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.TakeRow.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.TakeRowInOut.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.TakeRowModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.UpdateOperationSettingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.UpdateTakeRowResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OperationService\ServiceTest.OperationService.UpdateTakeRowWithResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\BM_Employee_ServiceReference\" />
+    <WCFMetadataStorage Include="Connected Services\BM_Library_ServiceReference\" />
+    <WCFMetadataStorage Include="Connected Services\BM_Produce_ServiceReference\" />
+    <WCFMetadataStorage Include="Connected Services\BM_RS_ServiceReference\" />
+    <WCFMetadataStorage Include="Connected Services\BM_Structure_ServiceReference\" />
+    <WCFMetadataStorage Include="Connected Services\OperationService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\OperationService\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\OperationService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\OperationService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\OperationService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Library_ServiceReference\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Library_ServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Library_ServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Library_ServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Employee_ServiceReference\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Employee_ServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Employee_ServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Employee_ServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Structure_ServiceReference\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Structure_ServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Structure_ServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Structure_ServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Produce_ServiceReference\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Produce_ServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Produce_ServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_Produce_ServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_RS_ServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_RS_ServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BM_RS_ServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

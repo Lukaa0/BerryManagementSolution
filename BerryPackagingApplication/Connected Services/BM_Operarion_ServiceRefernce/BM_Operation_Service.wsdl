@@ -1,0 +1,2261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BM_Operation_Service" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Operation.XClasses" />
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data" />
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Operation.XClasses.Pallete" />
+      <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xs:import namespace="http://schemas.microsoft.com/Message" />
+      <xs:element name="FixTakeRowInOut">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Operation.XClasses" minOccurs="0" name="takeRowInOut" nillable="true" type="q1:TakeRowInOut" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FixTakeRowInOutResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FixProductReceive">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data" minOccurs="0" name="productReceive" nillable="true" type="q2:ProductReceive" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FixProductReceiveResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FixContainerPack">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data" minOccurs="0" name="containerPack" nillable="true" type="q3:ContainerPack" />
+            <xs:element minOccurs="0" name="insert" type="xs:boolean" />
+            <xs:element minOccurs="0" name="paletbarCode" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="closePalet" type="xs:boolean" />
+            <xs:element minOccurs="0" name="userPointId" nillable="true" type="xs:long" />
+            <xs:element minOccurs="0" name="userPersonPostId" nillable="true" type="xs:long" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FixContainerPackResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FixSaleContainer">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Operation.XClasses" minOccurs="0" name="saleContainer" nillable="true" type="q4:SaleContainer" />
+            <xs:element minOccurs="0" name="isComplite" type="xs:boolean" />
+            <xs:element minOccurs="0" name="companyId" nillable="true" type="xs:long" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FixSaleContainerResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FixProductQuality">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="containerBarcode" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FixProductQualityResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FixContainerSendBack">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="containerCount" type="xs:int" />
+            <xs:element minOccurs="0" name="carId" type="xs:long" />
+            <xs:element minOccurs="0" name="startPointId" type="xs:long" />
+            <xs:element minOccurs="0" name="destinationPointId" type="xs:long" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FixContainerSendBackResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="FixContainerSendBackResult" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetTakeRowsByBrigadeId">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetTakeRowsByBrigadeIdResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data" minOccurs="0" name="GetTakeRowsByBrigadeIdResult" nillable="true" type="q5:ArrayOfTakeRow" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FixHarvesterRowDistributionInOut">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Operation.XClasses" minOccurs="0" name="harvDist" nillable="true" type="q6:HarvesterRowDistributionInOut" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FixHarvesterRowDistributionInOutResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FixContainerMove">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data" minOccurs="0" name="container" nillable="true" type="q7:ContainerMove" />
+            <xs:element minOccurs="0" name="direction" type="xs:boolean" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FixContainerMoveResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="FixContainerMoveResult" type="xs:int" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FixHarvesterContainerDistribution">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Operation.XClasses" minOccurs="0" name="container" nillable="true" type="q8:HarvesterContainerDistributionInOut" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FixHarvesterContainerDistributionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FixPunishment">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Operation.XClasses" minOccurs="0" name="punishmentIn" nillable="true" type="q9:PunishmentIn" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FixPunishmentResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetHarvesterRowDistributionInOuts">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="Direction" type="xs:boolean" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetHarvesterRowDistributionInOutsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Operation.XClasses" minOccurs="0" name="GetHarvesterRowDistributionInOutsResult" nillable="true" type="q10:ArrayOfHarvesterRowDistributionInOut" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FixProductRepackAndWeight">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Operation.XClasses" minOccurs="0" name="productRepackAndWeight" nillable="true" type="q11:ProductRepackAndWeight" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FixProductRepackAndWeightResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Operation.XClasses" minOccurs="0" name="FixProductRepackAndWeightResult" nillable="true" type="q12:ProductRepackAndWeight" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetContainerPackModel">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="direction" type="xs:boolean" />
+            <xs:element minOccurs="0" name="parentContainerBarCode" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetContainerPackModelResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Operation.XClasses" minOccurs="0" name="GetContainerPackModelResult" nillable="true" type="q13:ArrayOfContainerPackModel" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CreateTransportWaybill">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="carId" type="xs:long" />
+            <xs:element minOccurs="0" name="startPointId" type="xs:long" />
+            <xs:element minOccurs="0" name="destinationPointId" type="xs:long" />
+            <xs:element minOccurs="0" name="personPostId" type="xs:long" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CreateTransportWaybillResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="CreateTransportWaybillResult" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CloseTransportWaybill">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="carId" type="xs:long" />
+            <xs:element minOccurs="0" name="destinationPointId" type="xs:long" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CloseTransportWaybillResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="CloseTransportWaybillResult" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InsertContainerPack">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data" minOccurs="0" name="containerPack" nillable="true" type="q14:ContainerPack" />
+            <xs:element minOccurs="0" name="userPointId" type="xs:long" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InsertContainerPackResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="InsertContainerPackResult" type="xs:boolean" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CorrectWaybill">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="transportWaybillId" type="xs:long" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CorrectWaybillResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetOperationSettings">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="key" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetOperationSettingsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data" minOccurs="0" name="GetOperationSettingsResult" nillable="true" type="q15:ArrayOfOperationSetting" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetCountForContainerMove">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="transportWaybillId" type="xs:long" />
+            <xs:element minOccurs="0" name="direction" type="xs:boolean" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetCountForContainerMoveResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetCountForContainerMoveResult" type="xs:int" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetContainerModelByPalette">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="containerBarcode" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetContainerModelByPaletteResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Operation.XClasses.Pallete" minOccurs="0" name="GetContainerModelByPaletteResult" nillable="true" type="q16:ArrayOfContainerModel" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetContainerPackByPalette">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="containerBarcode" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetContainerPackByPaletteResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetContainerPackByPaletteResult" type="xs:long" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetContainerPackCountByCarId">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="carId" type="xs:long" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetContainerPackCountByCarIdResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetContainerPackCountByCarIdResult" type="xs:long" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetContainerForQuality">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetContainerForQualityResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data" minOccurs="0" name="GetContainerForQualityResult" nillable="true" type="q17:ArrayOfProductPack" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetContainerMoveInOut">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="direction" type="xs:boolean" />
+            <xs:element minOccurs="0" name="carPointId" type="xs:long" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetContainerMoveInOutResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Operation.XClasses" minOccurs="0" name="GetContainerMoveInOutResult" nillable="true" type="q18:ArrayOfContainerMoveInOut" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetHarvesterRowDistribution">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="id" nillable="true" type="xs:long" />
+            <xs:element minOccurs="0" name="Row_Id" nillable="true" type="xs:long" />
+            <xs:element minOccurs="0" name="Harvester_PersonPost_Id" nillable="true" type="xs:long" />
+            <xs:element xmlns:q19="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="inId" nillable="true" type="q19:guid" />
+            <xs:element xmlns:q20="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="outId" nillable="true" type="q20:guid" />
+            <xs:element minOccurs="0" name="outIdFiltered" type="xs:boolean" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetHarvesterRowDistributionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data" minOccurs="0" name="GetHarvesterRowDistributionResult" nillable="true" type="q21:ArrayOfHarvesterRowDistribution" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CheckHarvesterInRowPersonPost">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="personpostID" type="xs:long" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CheckHarvesterInRowPersonPostResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="CheckHarvesterInRowPersonPostResult" type="xs:boolean" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CheckTakeRows">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="brgID" type="xs:long" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CheckTakeRowsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="CheckTakeRowsResult" type="xs:boolean" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetTakeRowsModel">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="brigadeId" nillable="true" type="xs:long" />
+            <xs:element xmlns:q22="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="outId" nillable="true" type="q22:guid" />
+            <xs:element minOccurs="0" name="outIdFiltered" type="xs:boolean" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetTakeRowsModelResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Operation.XClasses" minOccurs="0" name="GetTakeRowsModelResult" nillable="true" type="q23:ArrayOfTakeRowModel" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetTakeRowsModelByBrigadeId">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetTakeRowsModelByBrigadeIdResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Operation.XClasses" minOccurs="0" name="GetTakeRowsModelByBrigadeIdResult" nillable="true" type="q24:ArrayOfTakeRowModel" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRowsWithBrigade">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRowsWithBrigadeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Operation.XClasses" minOccurs="0" name="GetRowsWithBrigadeResult" nillable="true" type="q25:ArrayOfTakeRowModel" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetClosedTakeRowsModel">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="closedTime" nillable="true" type="xs:dateTime" />
+            <xs:element minOccurs="0" name="closedTimeTwo" nillable="true" type="xs:dateTime" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetClosedTakeRowsModelResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Operation.XClasses" minOccurs="0" name="GetClosedTakeRowsModelResult" nillable="true" type="q26:ArrayOfTakeRowModel" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetTakeRows">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="id" nillable="true" type="xs:long" />
+            <xs:element minOccurs="0" name="rowId" nillable="true" type="xs:long" />
+            <xs:element minOccurs="0" name="brigadeId" nillable="true" type="xs:long" />
+            <xs:element xmlns:q27="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="inId" nillable="true" type="q27:guid" />
+            <xs:element xmlns:q28="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="outId" nillable="true" type="q28:guid" />
+            <xs:element minOccurs="0" name="outIdFiltered" type="xs:boolean" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetTakeRowsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data" minOccurs="0" name="GetTakeRowsResult" nillable="true" type="q29:ArrayOfTakeRow" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetTakeRowsOutByPersonPostID">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="id" nillable="true" type="xs:long" />
+            <xs:element minOccurs="0" name="rowId" nillable="true" type="xs:long" />
+            <xs:element minOccurs="0" name="brigadeId" nillable="true" type="xs:long" />
+            <xs:element xmlns:q30="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="inId" nillable="true" type="q30:guid" />
+            <xs:element xmlns:q31="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="outId" nillable="true" type="q31:guid" />
+            <xs:element minOccurs="0" name="outIdFiltered" type="xs:boolean" />
+            <xs:element minOccurs="0" name="userPersonPostId" type="xs:long" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetTakeRowsOutByPersonPostIDResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Operation.XClasses" minOccurs="0" name="GetTakeRowsOutByPersonPostIDResult" nillable="true" type="q32:ArrayOfTakeRowInOut" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetTakeRowsInByPersonPostID">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="id" nillable="true" type="xs:long" />
+            <xs:element minOccurs="0" name="rowId" nillable="true" type="xs:long" />
+            <xs:element minOccurs="0" name="brigadeId" nillable="true" type="xs:long" />
+            <xs:element xmlns:q33="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="inId" nillable="true" type="q33:guid" />
+            <xs:element xmlns:q34="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="outId" nillable="true" type="q34:guid" />
+            <xs:element minOccurs="0" name="outIdFiltered" type="xs:boolean" />
+            <xs:element minOccurs="0" name="userPersonPostId" type="xs:long" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetTakeRowsInByPersonPostIDResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Operation.XClasses" minOccurs="0" name="GetTakeRowsInByPersonPostIDResult" nillable="true" type="q35:ArrayOfTakeRowInOut" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetHarvesterRowDistributionOut">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="userPersonPostId" type="xs:long" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetHarvesterRowDistributionOutResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Operation.XClasses" minOccurs="0" name="GetHarvesterRowDistributionOutResult" nillable="true" type="q36:ArrayOfHarvesterRowDistributionInOut" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetHarvesterRowDistributionIn">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="userPersonPostId" type="xs:long" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetHarvesterRowDistributionInResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Operation.XClasses" minOccurs="0" name="GetHarvesterRowDistributionInResult" nillable="true" type="q37:ArrayOfHarvesterRowDistributionInOut" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetHarvRowDistribByPersonPostId">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="personPostId" type="xs:long" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetHarvRowDistribByPersonPostIdResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data" minOccurs="0" name="GetHarvRowDistribByPersonPostIdResult" nillable="true" type="q38:ArrayOfHarvesterRowDistribution" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CheckContainerLocationForPackaging">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="containerBarcode" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CheckContainerLocationForPackagingResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data" minOccurs="0" name="CheckContainerLocationForPackagingResult" nillable="true" type="q39:ArrayOfContainerLocation" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetWeightsForReport">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="PersonPostId" nillable="true" type="xs:long" />
+            <xs:element minOccurs="0" name="RecieverPostId" nillable="true" type="xs:long" />
+            <xs:element minOccurs="0" name="Time" type="xs:dateTime" />
+            <xs:element minOccurs="0" name="Timeplusone" type="xs:dateTime" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetWeightsForReportResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Operation.XClasses" minOccurs="0" name="GetWeightsForReportResult" nillable="true" type="q40:ArrayOfContainerWeightModel" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetTakeRows_Harvesters">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="brigadeId" nillable="true" type="xs:long" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetTakeRows_HarvestersResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Operation.XClasses" minOccurs="0" name="GetTakeRows_HarvestersResult" nillable="true" type="q41:ArrayOfTakeRows_Harvesters" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetContainersLocationss">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="PointId" nillable="true" type="xs:long" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetContainersLocationssResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Operation.XClasses" minOccurs="0" name="GetContainersLocationssResult" nillable="true" type="q42:ArrayOfContainerLocationModel" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateOperationSetting">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data" minOccurs="0" name="operationSetting" nillable="true" type="q43:OperationSetting" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateOperationSettingResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetCountForContainerPack">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="parentBarcode" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="direction" type="xs:boolean" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetCountForContainerPackResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetCountForContainerPackResult" type="xs:int" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetLatestVersion">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetLatestVersionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetLatestVersionResult" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateTakeRowWith">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data" minOccurs="0" name="takeRow" nillable="true" type="q44:TakeRow" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateTakeRowWithResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateTakeRow">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data" minOccurs="0" name="takeRow" nillable="true" type="q45:TakeRow" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateTakeRowResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InsertContainerMove">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data" minOccurs="0" name="containerMove" nillable="true" type="q46:ContainerMove" />
+            <xs:element minOccurs="0" name="direction" type="xs:boolean" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InsertContainerMoveResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="InsertContainerMoveResult" type="xs:boolean" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DownloadNewVersion">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DownloadNewVersionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q47="http://schemas.microsoft.com/Message" name="DownloadNewVersionResult" type="q47:StreamBody" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetContainerWeightsByChars">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="barcodeType" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="start" nillable="true" type="xs:dateTime" />
+            <xs:element minOccurs="0" name="end" nillable="true" type="xs:dateTime" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetContainerWeightsByCharsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Operation.XClasses.Pallete" minOccurs="0" name="GetContainerWeightsByCharsResult" nillable="true" type="q48:ArrayOfPalleteModel" />
+            <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="anyType" nillable="true" type="xs:anyType" />
+      <xs:element name="anyURI" nillable="true" type="xs:anyURI" />
+      <xs:element name="base64Binary" nillable="true" type="xs:base64Binary" />
+      <xs:element name="boolean" nillable="true" type="xs:boolean" />
+      <xs:element name="byte" nillable="true" type="xs:byte" />
+      <xs:element name="dateTime" nillable="true" type="xs:dateTime" />
+      <xs:element name="decimal" nillable="true" type="xs:decimal" />
+      <xs:element name="double" nillable="true" type="xs:double" />
+      <xs:element name="float" nillable="true" type="xs:float" />
+      <xs:element name="int" nillable="true" type="xs:int" />
+      <xs:element name="long" nillable="true" type="xs:long" />
+      <xs:element name="QName" nillable="true" type="xs:QName" />
+      <xs:element name="short" nillable="true" type="xs:short" />
+      <xs:element name="string" nillable="true" type="xs:string" />
+      <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte" />
+      <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt" />
+      <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong" />
+      <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort" />
+      <xs:element name="char" nillable="true" type="tns:char" />
+      <xs:simpleType name="char">
+        <xs:restriction base="xs:int" />
+      </xs:simpleType>
+      <xs:element name="duration" nillable="true" type="tns:duration" />
+      <xs:simpleType name="duration">
+        <xs:restriction base="xs:duration">
+          <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?" />
+          <xs:minInclusive value="-P10675199DT2H48M5.4775808S" />
+          <xs:maxInclusive value="P10675199DT2H48M5.4775807S" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="guid" nillable="true" type="tns:guid" />
+      <xs:simpleType name="guid">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:attribute name="FactoryType" type="xs:QName" />
+      <xs:attribute name="Id" type="xs:ID" />
+      <xs:attribute name="Ref" type="xs:IDREF" />
+    </xs:schema>
+    <xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Operation.XClasses" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Operation.XClasses" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xs:complexType name="TakeRowInOut">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BrigadeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Direction" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Error" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" type="ser:guid" />
+          <xs:element minOccurs="0" name="IsComplete" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PersonPostId" type="xs:long" />
+          <xs:element minOccurs="0" name="RowBarCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RowId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Time" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TakeRowInOut" nillable="true" type="tns:TakeRowInOut" />
+      <xs:complexType name="SaleContainer">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Company_Id" type="xs:long" />
+          <xs:element minOccurs="0" name="ContainerBarCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Direction" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Error" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" type="ser:guid" />
+          <xs:element minOccurs="0" name="Identifier" type="ser:guid" />
+          <xs:element minOccurs="0" name="IsComplete" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PersonPostId" type="xs:long" />
+          <xs:element minOccurs="0" name="SaleUserFullName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Time" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="SaleContainer" nillable="true" type="tns:SaleContainer" />
+      <xs:complexType name="HarvesterRowDistributionInOut">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Direction" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Error" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HarvesterBarCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HarvesterName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HarvesterPersonPostId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" type="ser:guid" />
+          <xs:element minOccurs="0" name="IsComplete" type="xs:boolean" />
+          <xs:element minOccurs="0" name="RowBarCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RowId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Time" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserPersonPostId" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="HarvesterRowDistributionInOut" nillable="true" type="tns:HarvesterRowDistributionInOut" />
+      <xs:complexType name="HarvesterContainerDistributionInOut">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CarId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ContaierBarcode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Direction" type="xs:boolean" />
+          <xs:element minOccurs="0" name="HarvesterBarCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HarvesterName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HarvesterPersonPostId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" type="ser:guid" />
+          <xs:element minOccurs="0" name="IsComplite" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PointId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Time" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UserPersonPostId" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="HarvesterContainerDistributionInOut" nillable="true" type="tns:HarvesterContainerDistributionInOut" />
+      <xs:complexType name="PunishmentIn">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ContainerBarcode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HardvesterBarcode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HardvesterPostId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" type="ser:guid" />
+          <xs:element minOccurs="0" name="IsComplite" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PunishmentTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PunishmentTypeName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="QualityTypeId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="QualityTypeName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Time" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UserPersonPostId" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="PunishmentIn" nillable="true" type="tns:PunishmentIn" />
+      <xs:complexType name="ArrayOfHarvesterRowDistributionInOut">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="HarvesterRowDistributionInOut" nillable="true" type="tns:HarvesterRowDistributionInOut" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfHarvesterRowDistributionInOut" nillable="true" type="tns:ArrayOfHarvesterRowDistributionInOut" />
+      <xs:complexType name="ProductRepackAndWeight">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BreedName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContainerBarCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Gross" type="xs:decimal" />
+          <xs:element minOccurs="0" name="HarvestDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Id" type="ser:guid" />
+          <xs:element minOccurs="0" name="IsComplite" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Net" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="OldContainerBarCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductId" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="Time" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UserPersonPostId" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ProductRepackAndWeight" nillable="true" type="tns:ProductRepackAndWeight" />
+      <xs:complexType name="ArrayOfContainerPackModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="ContainerPackModel" nillable="true" type="tns:ContainerPackModel" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfContainerPackModel" nillable="true" type="tns:ArrayOfContainerPackModel" />
+      <xs:complexType name="ContainerPackModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ContainerBarCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Direction" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Error" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" type="ser:guid" />
+          <xs:element minOccurs="0" name="IsComplete" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Pack_User_FullName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Parent_ContainerBarCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PersonPostId" type="xs:long" />
+          <xs:element minOccurs="0" name="Time" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UnpackIsComplete" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ContainerPackModel" nillable="true" type="tns:ContainerPackModel" />
+      <xs:complexType name="ArrayOfContainerMoveInOut">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="ContainerMoveInOut" nillable="true" type="tns:ContainerMoveInOut" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfContainerMoveInOut" nillable="true" type="tns:ArrayOfContainerMoveInOut" />
+      <xs:complexType name="ContainerMoveInOut">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ContainerBarCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContainerMoveInOut_Car_Model" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContainerMoveInOut_Car_Number" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContainerMoveInOut_Id" type="ser:guid" />
+          <xs:element minOccurs="0" name="ContainerMoveInOut_TransportWaybill_Id" type="xs:long" />
+          <xs:element minOccurs="0" name="ContainerMoveInOut_User_FullName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContainerMoveInOut_User_Point_BarCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContainerMoveInOut_User_Point_Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Direction" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Error" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" type="xs:long" />
+          <xs:element minOccurs="0" name="IsComplete" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PersonPostId" type="xs:long" />
+          <xs:element minOccurs="0" name="PointBarcode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Point_Car_Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Point_Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Time" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ContainerMoveInOut" nillable="true" type="tns:ContainerMoveInOut" />
+      <xs:complexType name="ArrayOfTakeRowModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TakeRowModel" nillable="true" type="tns:TakeRowModel" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfTakeRowModel" nillable="true" type="tns:ArrayOfTakeRowModel" />
+      <xs:complexType name="TakeRowModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Brigade_Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Row_Barcode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TakeRow_Brigade_Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="TakeRow_Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="TakeRow_In_DateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TakeRow_In_TUser_PersonPost_Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="TakeRow_In_TakeRowInOut_Id" type="ser:guid" />
+          <xs:element minOccurs="0" name="TakeRow_Out_DateTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TakeRow_Out_TakeRowInOut_Id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="TakeRow_Out_User_PersonPost_Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="TakeRow_Row_Id" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TakeRowModel" nillable="true" type="tns:TakeRowModel" />
+      <xs:complexType name="ArrayOfTakeRowInOut">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TakeRowInOut" nillable="true" type="tns:TakeRowInOut" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfTakeRowInOut" nillable="true" type="tns:ArrayOfTakeRowInOut" />
+      <xs:complexType name="ArrayOfContainerWeightModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="ContainerWeightModel" nillable="true" type="tns:ContainerWeightModel" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfContainerWeightModel" nillable="true" type="tns:ArrayOfContainerWeightModel" />
+      <xs:complexType name="ContainerWeightModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ContainerWeight_Container_BarCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContainerWeight_DateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ContainerWeight_Gross" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ContainerWeight_Id" type="ser:guid" />
+          <xs:element minOccurs="0" name="ContainerWeight_Net" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ContainerWeight_User_PersonPost_Id" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ContainerWeightModel" nillable="true" type="tns:ContainerWeightModel" />
+      <xs:complexType name="ArrayOfTakeRows_Harvesters">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TakeRows_Harvesters" nillable="true" type="tns:TakeRows_Harvesters" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfTakeRows_Harvesters" nillable="true" type="tns:ArrayOfTakeRows_Harvesters" />
+      <xs:complexType name="TakeRows_Harvesters">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BrigadeId" type="xs:long" />
+          <xs:element minOccurs="0" name="BrigadeName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HarvesterBarCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HarvesterName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RowBarCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TakeRows_Harvesters" nillable="true" type="tns:TakeRows_Harvesters" />
+      <xs:complexType name="ArrayOfContainerLocationModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="ContainerLocationModel" nillable="true" type="tns:ContainerLocationModel" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfContainerLocationModel" nillable="true" type="tns:ArrayOfContainerLocationModel" />
+      <xs:complexType name="ContainerLocationModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ContainerBarCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContainerLocationId" type="xs:long" />
+          <xs:element minOccurs="0" name="PointId" type="xs:long" />
+          <xs:element minOccurs="0" name="PointName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PointStartDaeTime" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ContainerLocationModel" nillable="true" type="tns:ContainerLocationModel" />
+    </xs:schema>
+    <xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xs:complexType name="ProductReceive">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ProductReceive_ContainerBarCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductReceive_DateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ProductReceive_HarvesterBarCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductReceive_Id" type="ser:guid" />
+          <xs:element minOccurs="0" name="ProductReceive_ProcessIsComplite" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ProductReceive_Product_Id" type="ser:guid" />
+          <xs:element minOccurs="0" name="ProductReceive_User_PersonPost_Id" type="xs:long" />
+          <xs:element minOccurs="0" name="ProductReceive_User_Point_Id" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ProductReceive" nillable="true" type="tns:ProductReceive" />
+      <xs:complexType name="ContainerPack">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ContainerPack_Container_BarCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContainerPack_DateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ContainerPack_Id" type="ser:guid" />
+          <xs:element minOccurs="0" name="ContainerPack_IsComplite" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ContainerPack_Parent_ContainerLocation_In_Id" type="ser:guid" />
+          <xs:element minOccurs="0" name="ContainerPack_Parent_Container_BarCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContainerPack_User_PersonPost_Id" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ContainerPack" nillable="true" type="tns:ContainerPack" />
+      <xs:complexType name="ArrayOfTakeRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TakeRow" nillable="true" type="tns:TakeRow" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfTakeRow" nillable="true" type="tns:ArrayOfTakeRow" />
+      <xs:complexType name="TakeRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="TakeRow_Brigade_Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="TakeRow_Id" type="xs:long" />
+          <xs:element minOccurs="0" name="TakeRow_In_DateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TakeRow_In_TUser_PersonPost_Id" type="xs:long" />
+          <xs:element minOccurs="0" name="TakeRow_In_TakeRowInOut_Id" type="ser:guid" />
+          <xs:element minOccurs="0" name="TakeRow_Out_DateTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TakeRow_Out_TakeRowInOut_Id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="TakeRow_Out_User_PersonPost_Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="TakeRow_Row_Id" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TakeRow" nillable="true" type="tns:TakeRow" />
+      <xs:complexType name="ContainerMove">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ContainerMove_Car_Point_Id" type="xs:long" />
+          <xs:element minOccurs="0" name="ContainerMove_Container_BarCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContainerMove_Id" type="xs:long" />
+          <xs:element minOccurs="0" name="ContainerMove_In_ContainerMoveInOut_Id" type="ser:guid" />
+          <xs:element minOccurs="0" name="ContainerMove_In_DateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ContainerMove_In_User_PersonPost_Id" type="xs:long" />
+          <xs:element minOccurs="0" name="ContainerMove_In_User_Point_Id" type="xs:long" />
+          <xs:element minOccurs="0" name="ContainerMove_Out_ContainerMoveInOut_Id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="ContainerMove_Out_DateTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ContainerMove_Out_User_PersonPost_Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ContainerMove_Out_User_Point_Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ContainerMove_TransportWaybill_Id" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ContainerMove" nillable="true" type="tns:ContainerMove" />
+      <xs:complexType name="ArrayOfOperationSetting">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="OperationSetting" nillable="true" type="tns:OperationSetting" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfOperationSetting" nillable="true" type="tns:ArrayOfOperationSetting" />
+      <xs:complexType name="OperationSetting">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="OperationSetting_Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OperationSetting_Key" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OperationSetting_Value" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="OperationSetting" nillable="true" type="tns:OperationSetting" />
+      <xs:complexType name="ArrayOfProductPack">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductPack" nillable="true" type="tns:ProductPack" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfProductPack" nillable="true" type="tns:ArrayOfProductPack" />
+      <xs:complexType name="ProductPack">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ProductPack_Container_BarCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductPack_Id" type="xs:long" />
+          <xs:element minOccurs="0" name="ProductPack_In_DateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ProductPack_In_ProductPackInOut_Id" type="ser:guid" />
+          <xs:element minOccurs="0" name="ProductPack_In_User_PersonPost_Id" type="xs:long" />
+          <xs:element minOccurs="0" name="ProductPack_Out_DateTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ProductPack_Out_ProductPackInOut_Id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="ProductPack_Out_User_PersonPost_Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ProductPack_Product_Id" type="ser:guid" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ProductPack" nillable="true" type="tns:ProductPack" />
+      <xs:complexType name="ArrayOfHarvesterRowDistribution">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="HarvesterRowDistribution" nillable="true" type="tns:HarvesterRowDistribution" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfHarvesterRowDistribution" nillable="true" type="tns:ArrayOfHarvesterRowDistribution" />
+      <xs:complexType name="HarvesterRowDistribution">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="HarvesterRowDistribution_Harvester_PersonPost_Id" type="xs:long" />
+          <xs:element minOccurs="0" name="HarvesterRowDistribution_Id" type="xs:long" />
+          <xs:element minOccurs="0" name="HarvesterRowDistribution_In_DateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="HarvesterRowDistribution_In_HarvesterRowDistributionInOut_Id" type="ser:guid" />
+          <xs:element minOccurs="0" name="HarvesterRowDistribution_In_User_PersonPost_Id" type="xs:long" />
+          <xs:element minOccurs="0" name="HarvesterRowDistribution_Out_DateTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="HarvesterRowDistribution_Out_HarvesterRowDistributionInOut_Id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="HarvesterRowDistribution_Out_User_PersonPost_Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="HarvesterRowDistribution_Row_Id" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="HarvesterRowDistribution" nillable="true" type="tns:HarvesterRowDistribution" />
+      <xs:complexType name="ArrayOfContainerLocation">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="ContainerLocation" nillable="true" type="tns:ContainerLocation" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfContainerLocation" nillable="true" type="tns:ArrayOfContainerLocation" />
+      <xs:complexType name="ContainerLocation">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ContainerLocation_Container_BarCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContainerLocation_Id" type="xs:long" />
+          <xs:element minOccurs="0" name="ContainerLocation_In_DateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ContainerLocation_In_Id" type="ser:guid" />
+          <xs:element minOccurs="0" name="ContainerLocation_In_User_PersonPost_Id" type="xs:long" />
+          <xs:element minOccurs="0" name="ContainerLocation_Out_ContainerMoveInOut_Id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="ContainerLocation_Out_DateTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ContainerLocation_Out_User_PersonPost_Id" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ContainerLocation_Point_Id" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ContainerLocation" nillable="true" type="tns:ContainerLocation" />
+    </xs:schema>
+    <xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Operation.XClasses.Pallete" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Operation.XClasses.Pallete" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xs:complexType name="ArrayOfContainerModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="ContainerModel" nillable="true" type="tns:ContainerModel" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfContainerModel" nillable="true" type="tns:ArrayOfContainerModel" />
+      <xs:complexType name="ContainerModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BreedName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContainerPack_Container_BarCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContainerPack_DateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ContainerPack_GrossWeight" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ContainerPack_Id" type="ser:guid" />
+          <xs:element minOccurs="0" name="ContainerPack_IsComplite" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ContainerPack_NetWeight" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ContainerPack_Parent_ContainerLocation_In_Id" type="ser:guid" />
+          <xs:element minOccurs="0" name="ContainerPack_Parent_Container_BarCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContainerPack_User_PersonPost_Id" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ContainerModel" nillable="true" type="tns:ContainerModel" />
+      <xs:complexType name="ArrayOfPalleteModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="PalleteModel" nillable="true" type="tns:PalleteModel" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfPalleteModel" nillable="true" type="tns:ArrayOfPalleteModel" />
+      <xs:complexType name="PalleteModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ContainerWeight_Container_BarCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContainerWeight_DateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ContainerWeight_End_DateTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ContainerWeight_Gross" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ContainerWeight_Id" type="ser:guid" />
+          <xs:element minOccurs="0" name="ContainerWeight_Net" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ContainerWeight_Start_DateTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ContainerWeight_User_PersonPost_Id" type="xs:long" />
+          <xs:element minOccurs="0" name="Container_Count" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="PalleteModel" nillable="true" type="tns:PalleteModel" />
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.microsoft.com/Message" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/Message" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:simpleType name="StreamBody">
+        <xs:restriction base="xs:base64Binary" />
+      </xs:simpleType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="IBM_Operation_Service_FixTakeRowInOut_InputMessage">
+    <wsdl:part name="parameters" element="tns:FixTakeRowInOut" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_FixTakeRowInOut_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FixTakeRowInOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_FixProductReceive_InputMessage">
+    <wsdl:part name="parameters" element="tns:FixProductReceive" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_FixProductReceive_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FixProductReceiveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_FixContainerPack_InputMessage">
+    <wsdl:part name="parameters" element="tns:FixContainerPack" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_FixContainerPack_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FixContainerPackResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_FixSaleContainer_InputMessage">
+    <wsdl:part name="parameters" element="tns:FixSaleContainer" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_FixSaleContainer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FixSaleContainerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_FixProductQuality_InputMessage">
+    <wsdl:part name="parameters" element="tns:FixProductQuality" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_FixProductQuality_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FixProductQualityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_FixContainerSendBack_InputMessage">
+    <wsdl:part name="parameters" element="tns:FixContainerSendBack" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_FixContainerSendBack_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FixContainerSendBackResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetTakeRowsByBrigadeId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTakeRowsByBrigadeId" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetTakeRowsByBrigadeId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTakeRowsByBrigadeIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_FixHarvesterRowDistributionInOut_InputMessage">
+    <wsdl:part name="parameters" element="tns:FixHarvesterRowDistributionInOut" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_FixHarvesterRowDistributionInOut_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FixHarvesterRowDistributionInOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_FixContainerMove_InputMessage">
+    <wsdl:part name="parameters" element="tns:FixContainerMove" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_FixContainerMove_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FixContainerMoveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_FixHarvesterContainerDistribution_InputMessage">
+    <wsdl:part name="parameters" element="tns:FixHarvesterContainerDistribution" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_FixHarvesterContainerDistribution_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FixHarvesterContainerDistributionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_FixPunishment_InputMessage">
+    <wsdl:part name="parameters" element="tns:FixPunishment" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_FixPunishment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FixPunishmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetHarvesterRowDistributionInOuts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHarvesterRowDistributionInOuts" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetHarvesterRowDistributionInOuts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHarvesterRowDistributionInOutsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_FixProductRepackAndWeight_InputMessage">
+    <wsdl:part name="parameters" element="tns:FixProductRepackAndWeight" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_FixProductRepackAndWeight_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FixProductRepackAndWeightResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetContainerPackModel_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainerPackModel" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetContainerPackModel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainerPackModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_CreateTransportWaybill_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateTransportWaybill" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_CreateTransportWaybill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateTransportWaybillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_CloseTransportWaybill_InputMessage">
+    <wsdl:part name="parameters" element="tns:CloseTransportWaybill" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_CloseTransportWaybill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CloseTransportWaybillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_InsertContainerPack_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertContainerPack" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_InsertContainerPack_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertContainerPackResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_CorrectWaybill_InputMessage">
+    <wsdl:part name="parameters" element="tns:CorrectWaybill" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_CorrectWaybill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CorrectWaybillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetOperationSettings_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperationSettings" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetOperationSettings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperationSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetCountForContainerMove_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountForContainerMove" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetCountForContainerMove_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountForContainerMoveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetContainerModelByPalette_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainerModelByPalette" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetContainerModelByPalette_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainerModelByPaletteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetContainerPackByPalette_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainerPackByPalette" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetContainerPackByPalette_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainerPackByPaletteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetContainerPackCountByCarId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainerPackCountByCarId" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetContainerPackCountByCarId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainerPackCountByCarIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetContainerForQuality_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainerForQuality" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetContainerForQuality_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainerForQualityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetContainerMoveInOut_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainerMoveInOut" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetContainerMoveInOut_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainerMoveInOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetHarvesterRowDistribution_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHarvesterRowDistribution" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetHarvesterRowDistribution_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHarvesterRowDistributionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_CheckHarvesterInRowPersonPost_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckHarvesterInRowPersonPost" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_CheckHarvesterInRowPersonPost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckHarvesterInRowPersonPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_CheckTakeRows_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckTakeRows" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_CheckTakeRows_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckTakeRowsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetTakeRowsModel_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTakeRowsModel" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetTakeRowsModel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTakeRowsModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetTakeRowsModelByBrigadeId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTakeRowsModelByBrigadeId" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetTakeRowsModelByBrigadeId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTakeRowsModelByBrigadeIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetRowsWithBrigade_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRowsWithBrigade" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetRowsWithBrigade_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRowsWithBrigadeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetClosedTakeRowsModel_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClosedTakeRowsModel" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetClosedTakeRowsModel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClosedTakeRowsModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetTakeRows_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTakeRows" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetTakeRows_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTakeRowsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetTakeRowsOutByPersonPostID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTakeRowsOutByPersonPostID" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetTakeRowsOutByPersonPostID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTakeRowsOutByPersonPostIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetTakeRowsInByPersonPostID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTakeRowsInByPersonPostID" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetTakeRowsInByPersonPostID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTakeRowsInByPersonPostIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetHarvesterRowDistributionOut_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHarvesterRowDistributionOut" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetHarvesterRowDistributionOut_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHarvesterRowDistributionOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetHarvesterRowDistributionIn_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHarvesterRowDistributionIn" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetHarvesterRowDistributionIn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHarvesterRowDistributionInResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetHarvRowDistribByPersonPostId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHarvRowDistribByPersonPostId" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetHarvRowDistribByPersonPostId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHarvRowDistribByPersonPostIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_CheckContainerLocationForPackaging_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckContainerLocationForPackaging" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_CheckContainerLocationForPackaging_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckContainerLocationForPackagingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetWeightsForReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWeightsForReport" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetWeightsForReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWeightsForReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetTakeRows_Harvesters_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTakeRows_Harvesters" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetTakeRows_Harvesters_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTakeRows_HarvestersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetContainersLocationss_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainersLocationss" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetContainersLocationss_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainersLocationssResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_UpdateOperationSetting_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOperationSetting" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_UpdateOperationSetting_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOperationSettingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetCountForContainerPack_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountForContainerPack" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetCountForContainerPack_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountForContainerPackResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetLatestVersion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLatestVersion" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetLatestVersion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLatestVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_UpdateTakeRowWith_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTakeRowWith" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_UpdateTakeRowWith_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTakeRowWithResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_UpdateTakeRow_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTakeRow" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_UpdateTakeRow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTakeRowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_InsertContainerMove_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertContainerMove" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_InsertContainerMove_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertContainerMoveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_DownloadNewVersion_InputMessage">
+    <wsdl:part name="parameters" element="tns:DownloadNewVersion" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_DownloadNewVersion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DownloadNewVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetContainerWeightsByChars_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainerWeightsByChars" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetContainerWeightsByChars_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainerWeightsByCharsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IBM_Operation_Service">
+    <wsdl:operation name="FixTakeRowInOut">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixTakeRowInOut" message="tns:IBM_Operation_Service_FixTakeRowInOut_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixTakeRowInOutResponse" message="tns:IBM_Operation_Service_FixTakeRowInOut_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FixProductReceive">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixProductReceive" message="tns:IBM_Operation_Service_FixProductReceive_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixProductReceiveResponse" message="tns:IBM_Operation_Service_FixProductReceive_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FixContainerPack">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixContainerPack" message="tns:IBM_Operation_Service_FixContainerPack_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixContainerPackResponse" message="tns:IBM_Operation_Service_FixContainerPack_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FixSaleContainer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixSaleContainer" message="tns:IBM_Operation_Service_FixSaleContainer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixSaleContainerResponse" message="tns:IBM_Operation_Service_FixSaleContainer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FixProductQuality">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixProductQuality" message="tns:IBM_Operation_Service_FixProductQuality_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixProductQualityResponse" message="tns:IBM_Operation_Service_FixProductQuality_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FixContainerSendBack">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixContainerSendBack" message="tns:IBM_Operation_Service_FixContainerSendBack_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixContainerSendBackResponse" message="tns:IBM_Operation_Service_FixContainerSendBack_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTakeRowsByBrigadeId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetTakeRowsByBrigadeId" message="tns:IBM_Operation_Service_GetTakeRowsByBrigadeId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetTakeRowsByBrigadeIdResponse" message="tns:IBM_Operation_Service_GetTakeRowsByBrigadeId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FixHarvesterRowDistributionInOut">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixHarvesterRowDistributionInOut" message="tns:IBM_Operation_Service_FixHarvesterRowDistributionInOut_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixHarvesterRowDistributionInOutResponse" message="tns:IBM_Operation_Service_FixHarvesterRowDistributionInOut_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FixContainerMove">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixContainerMove" message="tns:IBM_Operation_Service_FixContainerMove_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixContainerMoveResponse" message="tns:IBM_Operation_Service_FixContainerMove_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FixHarvesterContainerDistribution">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixHarvesterContainerDistribution" message="tns:IBM_Operation_Service_FixHarvesterContainerDistribution_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixHarvesterContainerDistributionResponse" message="tns:IBM_Operation_Service_FixHarvesterContainerDistribution_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FixPunishment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixPunishment" message="tns:IBM_Operation_Service_FixPunishment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixPunishmentResponse" message="tns:IBM_Operation_Service_FixPunishment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHarvesterRowDistributionInOuts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetHarvesterRowDistributionInOuts" message="tns:IBM_Operation_Service_GetHarvesterRowDistributionInOuts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetHarvesterRowDistributionInOutsResponse" message="tns:IBM_Operation_Service_GetHarvesterRowDistributionInOuts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FixProductRepackAndWeight">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixProductRepackAndWeight" message="tns:IBM_Operation_Service_FixProductRepackAndWeight_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixProductRepackAndWeightResponse" message="tns:IBM_Operation_Service_FixProductRepackAndWeight_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContainerPackModel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetContainerPackModel" message="tns:IBM_Operation_Service_GetContainerPackModel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetContainerPackModelResponse" message="tns:IBM_Operation_Service_GetContainerPackModel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateTransportWaybill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/CreateTransportWaybill" message="tns:IBM_Operation_Service_CreateTransportWaybill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/CreateTransportWaybillResponse" message="tns:IBM_Operation_Service_CreateTransportWaybill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CloseTransportWaybill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/CloseTransportWaybill" message="tns:IBM_Operation_Service_CloseTransportWaybill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/CloseTransportWaybillResponse" message="tns:IBM_Operation_Service_CloseTransportWaybill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertContainerPack">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/InsertContainerPack" message="tns:IBM_Operation_Service_InsertContainerPack_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/InsertContainerPackResponse" message="tns:IBM_Operation_Service_InsertContainerPack_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CorrectWaybill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/CorrectWaybill" message="tns:IBM_Operation_Service_CorrectWaybill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/CorrectWaybillResponse" message="tns:IBM_Operation_Service_CorrectWaybill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOperationSettings">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetOperationSettings" message="tns:IBM_Operation_Service_GetOperationSettings_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetOperationSettingsResponse" message="tns:IBM_Operation_Service_GetOperationSettings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountForContainerMove">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetCountForContainerMove" message="tns:IBM_Operation_Service_GetCountForContainerMove_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetCountForContainerMoveResponse" message="tns:IBM_Operation_Service_GetCountForContainerMove_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContainerModelByPalette">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetContainerModelByPalette" message="tns:IBM_Operation_Service_GetContainerModelByPalette_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetContainerModelByPaletteResponse" message="tns:IBM_Operation_Service_GetContainerModelByPalette_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContainerPackByPalette">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetContainerPackByPalette" message="tns:IBM_Operation_Service_GetContainerPackByPalette_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetContainerPackByPaletteResponse" message="tns:IBM_Operation_Service_GetContainerPackByPalette_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContainerPackCountByCarId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetContainerPackCountByCarId" message="tns:IBM_Operation_Service_GetContainerPackCountByCarId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetContainerPackCountByCarIdResponse" message="tns:IBM_Operation_Service_GetContainerPackCountByCarId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContainerForQuality">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetContainerForQuality" message="tns:IBM_Operation_Service_GetContainerForQuality_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetContainerForQualityResponse" message="tns:IBM_Operation_Service_GetContainerForQuality_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContainerMoveInOut">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetContainerMoveInOut" message="tns:IBM_Operation_Service_GetContainerMoveInOut_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetContainerMoveInOutResponse" message="tns:IBM_Operation_Service_GetContainerMoveInOut_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHarvesterRowDistribution">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetHarvesterRowDistribution" message="tns:IBM_Operation_Service_GetHarvesterRowDistribution_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetHarvesterRowDistributionResponse" message="tns:IBM_Operation_Service_GetHarvesterRowDistribution_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckHarvesterInRowPersonPost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/CheckHarvesterInRowPersonPost" message="tns:IBM_Operation_Service_CheckHarvesterInRowPersonPost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/CheckHarvesterInRowPersonPostResponse" message="tns:IBM_Operation_Service_CheckHarvesterInRowPersonPost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckTakeRows">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/CheckTakeRows" message="tns:IBM_Operation_Service_CheckTakeRows_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/CheckTakeRowsResponse" message="tns:IBM_Operation_Service_CheckTakeRows_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTakeRowsModel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetTakeRowsModel" message="tns:IBM_Operation_Service_GetTakeRowsModel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetTakeRowsModelResponse" message="tns:IBM_Operation_Service_GetTakeRowsModel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTakeRowsModelByBrigadeId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetTakeRowsModelByBrigadeId" message="tns:IBM_Operation_Service_GetTakeRowsModelByBrigadeId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetTakeRowsModelByBrigadeIdResponse" message="tns:IBM_Operation_Service_GetTakeRowsModelByBrigadeId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRowsWithBrigade">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetRowsWithBrigade" message="tns:IBM_Operation_Service_GetRowsWithBrigade_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetRowsWithBrigadeResponse" message="tns:IBM_Operation_Service_GetRowsWithBrigade_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClosedTakeRowsModel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetClosedTakeRowsModel" message="tns:IBM_Operation_Service_GetClosedTakeRowsModel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetClosedTakeRowsModelResponse" message="tns:IBM_Operation_Service_GetClosedTakeRowsModel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTakeRows">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetTakeRows" message="tns:IBM_Operation_Service_GetTakeRows_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetTakeRowsResponse" message="tns:IBM_Operation_Service_GetTakeRows_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTakeRowsOutByPersonPostID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetTakeRowsOutByPersonPostID" message="tns:IBM_Operation_Service_GetTakeRowsOutByPersonPostID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetTakeRowsOutByPersonPostIDResponse" message="tns:IBM_Operation_Service_GetTakeRowsOutByPersonPostID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTakeRowsInByPersonPostID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetTakeRowsInByPersonPostID" message="tns:IBM_Operation_Service_GetTakeRowsInByPersonPostID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetTakeRowsInByPersonPostIDResponse" message="tns:IBM_Operation_Service_GetTakeRowsInByPersonPostID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHarvesterRowDistributionOut">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetHarvesterRowDistributionOut" message="tns:IBM_Operation_Service_GetHarvesterRowDistributionOut_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetHarvesterRowDistributionOutResponse" message="tns:IBM_Operation_Service_GetHarvesterRowDistributionOut_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHarvesterRowDistributionIn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetHarvesterRowDistributionIn" message="tns:IBM_Operation_Service_GetHarvesterRowDistributionIn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetHarvesterRowDistributionInResponse" message="tns:IBM_Operation_Service_GetHarvesterRowDistributionIn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHarvRowDistribByPersonPostId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetHarvRowDistribByPersonPostId" message="tns:IBM_Operation_Service_GetHarvRowDistribByPersonPostId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetHarvRowDistribByPersonPostIdResponse" message="tns:IBM_Operation_Service_GetHarvRowDistribByPersonPostId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckContainerLocationForPackaging">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/CheckContainerLocationForPackaging" message="tns:IBM_Operation_Service_CheckContainerLocationForPackaging_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/CheckContainerLocationForPackagingResponse" message="tns:IBM_Operation_Service_CheckContainerLocationForPackaging_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWeightsForReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetWeightsForReport" message="tns:IBM_Operation_Service_GetWeightsForReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetWeightsForReportResponse" message="tns:IBM_Operation_Service_GetWeightsForReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTakeRows_Harvesters">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetTakeRows_Harvesters" message="tns:IBM_Operation_Service_GetTakeRows_Harvesters_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetTakeRows_HarvestersResponse" message="tns:IBM_Operation_Service_GetTakeRows_Harvesters_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContainersLocationss">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetContainersLocationss" message="tns:IBM_Operation_Service_GetContainersLocationss_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetContainersLocationssResponse" message="tns:IBM_Operation_Service_GetContainersLocationss_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOperationSetting">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/UpdateOperationSetting" message="tns:IBM_Operation_Service_UpdateOperationSetting_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/UpdateOperationSettingResponse" message="tns:IBM_Operation_Service_UpdateOperationSetting_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountForContainerPack">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetCountForContainerPack" message="tns:IBM_Operation_Service_GetCountForContainerPack_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetCountForContainerPackResponse" message="tns:IBM_Operation_Service_GetCountForContainerPack_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestVersion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetLatestVersion" message="tns:IBM_Operation_Service_GetLatestVersion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetLatestVersionResponse" message="tns:IBM_Operation_Service_GetLatestVersion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTakeRowWith">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/UpdateTakeRowWith" message="tns:IBM_Operation_Service_UpdateTakeRowWith_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/UpdateTakeRowWithResponse" message="tns:IBM_Operation_Service_UpdateTakeRowWith_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTakeRow">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/UpdateTakeRow" message="tns:IBM_Operation_Service_UpdateTakeRow_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/UpdateTakeRowResponse" message="tns:IBM_Operation_Service_UpdateTakeRow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertContainerMove">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/InsertContainerMove" message="tns:IBM_Operation_Service_InsertContainerMove_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/InsertContainerMoveResponse" message="tns:IBM_Operation_Service_InsertContainerMove_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadNewVersion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/DownloadNewVersion" message="tns:IBM_Operation_Service_DownloadNewVersion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/DownloadNewVersionResponse" message="tns:IBM_Operation_Service_DownloadNewVersion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContainerWeightsByChars">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetContainerWeightsByChars" message="tns:IBM_Operation_Service_GetContainerWeightsByChars_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetContainerWeightsByCharsResponse" message="tns:IBM_Operation_Service_GetContainerWeightsByChars_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IBM_Operation_Service" type="tns:IBM_Operation_Service">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FixTakeRowInOut">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/FixTakeRowInOut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FixProductReceive">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/FixProductReceive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FixContainerPack">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/FixContainerPack" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FixSaleContainer">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/FixSaleContainer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FixProductQuality">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/FixProductQuality" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FixContainerSendBack">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/FixContainerSendBack" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTakeRowsByBrigadeId">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetTakeRowsByBrigadeId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FixHarvesterRowDistributionInOut">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/FixHarvesterRowDistributionInOut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FixContainerMove">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/FixContainerMove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FixHarvesterContainerDistribution">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/FixHarvesterContainerDistribution" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FixPunishment">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/FixPunishment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHarvesterRowDistributionInOuts">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetHarvesterRowDistributionInOuts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FixProductRepackAndWeight">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/FixProductRepackAndWeight" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContainerPackModel">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetContainerPackModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTransportWaybill">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/CreateTransportWaybill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CloseTransportWaybill">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/CloseTransportWaybill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertContainerPack">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/InsertContainerPack" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CorrectWaybill">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/CorrectWaybill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOperationSettings">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetOperationSettings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountForContainerMove">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetCountForContainerMove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContainerModelByPalette">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetContainerModelByPalette" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContainerPackByPalette">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetContainerPackByPalette" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContainerPackCountByCarId">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetContainerPackCountByCarId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContainerForQuality">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetContainerForQuality" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContainerMoveInOut">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetContainerMoveInOut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHarvesterRowDistribution">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetHarvesterRowDistribution" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckHarvesterInRowPersonPost">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/CheckHarvesterInRowPersonPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckTakeRows">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/CheckTakeRows" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTakeRowsModel">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetTakeRowsModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTakeRowsModelByBrigadeId">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetTakeRowsModelByBrigadeId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRowsWithBrigade">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetRowsWithBrigade" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClosedTakeRowsModel">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetClosedTakeRowsModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTakeRows">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetTakeRows" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTakeRowsOutByPersonPostID">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetTakeRowsOutByPersonPostID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTakeRowsInByPersonPostID">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetTakeRowsInByPersonPostID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHarvesterRowDistributionOut">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetHarvesterRowDistributionOut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHarvesterRowDistributionIn">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetHarvesterRowDistributionIn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHarvRowDistribByPersonPostId">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetHarvRowDistribByPersonPostId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckContainerLocationForPackaging">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/CheckContainerLocationForPackaging" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWeightsForReport">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetWeightsForReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTakeRows_Harvesters">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetTakeRows_Harvesters" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContainersLocationss">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetContainersLocationss" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOperationSetting">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/UpdateOperationSetting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountForContainerPack">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetCountForContainerPack" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestVersion">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetLatestVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTakeRowWith">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/UpdateTakeRowWith" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTakeRow">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/UpdateTakeRow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertContainerMove">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/InsertContainerMove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadNewVersion">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/DownloadNewVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContainerWeightsByChars">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetContainerWeightsByChars" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BM_Operation_Service">
+    <wsdl:port name="BasicHttpBinding_IBM_Operation_Service" binding="tns:BasicHttpBinding_IBM_Operation_Service">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Operation_Service/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

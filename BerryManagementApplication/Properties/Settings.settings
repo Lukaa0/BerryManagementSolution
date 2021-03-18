@@ -1,0 +1,38 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="BerryManagementApplication.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="RowLabelTemplate" Type="System.String" Scope="User">
+      <Value Profile="(Default)">^XA
+^FT 225,60,0^A0N,40,50
+^FDBarcode^FS
+^FX Third section with barcode.
+^BY 2,260,180,
+^FO 215,80^BC
+^FDBarcode^FS
+^XZ</Value>
+    </Setting>
+    <Setting Name="ContainerLabelTemplate" Type="System.String" Scope="User">
+      <Value Profile="(Default)">^XA
+^FT 225,60,0^A0N,40,50
+^FDBarcode^FS
+^FX Third section with barcode.
+^BY 2,260,180,
+^FO 215,80^BC
+^FDBarcode^FS
+^XZ</Value>
+    </Setting>
+    <Setting Name="CarLabelTemplate" Type="System.String" Scope="User">
+      <Value Profile="(Default)">^XA
+^FT 225,60,0^A0N,40,50
+^FDPholder1^FS
+^FT 225,100,0^A0N,40,50
+^FDBarcode^FS
+^FX Third section with barcode.
+^BY 2,260,150,
+^FO 215,110^BC
+^FDBarcode^FS
+^XZ</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

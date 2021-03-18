@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BM_Library_Service" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Library_Service/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Library_Service/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Library_Service/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.RS.XClasses" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Library_Service/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Library.XClass" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Library_Service/?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Library_Service/?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IBM_Library_Service_GetRS_ProductModelByContainers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRS_ProductModelByContainers" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_GetRS_ProductModelByContainers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRS_ProductModelByContainersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_GetPallete_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPallete" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_GetPallete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPalleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_GetPalleteWeight_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPalleteWeight" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_GetPalleteWeight_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPalleteWeightResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_SelectBanks_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectBanks" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_SelectBanks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectBanksResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_CreateContainers_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateContainers" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_CreateContainers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateContainersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_GetContainersByProductPack_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainersByProductPack" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_GetContainersByProductPack_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainersByProductPackResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_CreateContainer_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateContainer" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_CreateContainer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateContainerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_SelectContainers_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectContainers" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_SelectContainers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectContainersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_GetNationalities_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNationalities" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_GetNationalities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNationalitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_GetCitizenships_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCitizenships" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_GetCitizenships_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCitizenshipsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_GetContainerForQuality_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainerForQuality" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_GetContainerForQuality_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainerForQualityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_GetDocumentTyped_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentTyped" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_GetDocumentTyped_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentTypedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_GetPunishmentTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPunishmentTypes" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_GetPunishmentTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPunishmentTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_GetLegalForms_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLegalForms" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_GetLegalForms_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLegalFormsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_GetGenderTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGenderTypes" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_GetGenderTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGenderTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_GetEmployeeTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeTypes" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_GetEmployeeTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_GetBalanceSheetTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBalanceSheetTypes" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_GetBalanceSheetTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBalanceSheetTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_GetMaritalStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaritalStatus" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_GetMaritalStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaritalStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_GetBreeds_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBreeds" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_GetBreeds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBreedsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_GetContainerTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainerTypes" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_GetContainerTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainerTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_GetLegalStatuseTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLegalStatuseTypes" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_GetLegalStatuseTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLegalStatuseTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_GetPointTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPointTypes" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_GetPointTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPointTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_GetProductQualityes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductQualityes" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_GetProductQualityes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductQualityesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_GetSalaryTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalaryTypes" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_GetSalaryTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalaryTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_GetSideTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSideTypes" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_GetSideTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSideTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_GetAllPoints_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPoints" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_GetAllPoints_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPointsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_InsertBank_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertBank" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_InsertBank_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertBankResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_InsertNationality_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertNationality" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_InsertNationality_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertNationalityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_InsertCitizenship_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCitizenship" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_InsertCitizenship_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCitizenshipResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_InsertDocumentType_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDocumentType" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_InsertDocumentType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDocumentTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_InsertLegalForm_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertLegalForm" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_InsertLegalForm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertLegalFormResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_InsertBreed_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertBreed" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_InsertBreed_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertBreedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_UpdateBank_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBank" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_UpdateBank_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBankResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_UpdateNationality_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNationality" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_UpdateNationality_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNationalityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_UpdateCitizenship_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCitizenship" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_UpdateCitizenship_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCitizenshipResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_UpdateDocumentType_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDocumentType" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_UpdateDocumentType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDocumentTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_UpdateLegalForm_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLegalForm" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_UpdateLegalForm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLegalFormResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_UpdateBreed_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBreed" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Library_Service_UpdateBreed_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBreedResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IBM_Library_Service">
+    <wsdl:operation name="GetRS_ProductModelByContainers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Library_Service/GetRS_ProductModelByContainers" message="tns:IBM_Library_Service_GetRS_ProductModelByContainers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Library_Service/GetRS_ProductModelByContainersResponse" message="tns:IBM_Library_Service_GetRS_ProductModelByContainers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPallete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Library_Service/GetPallete" message="tns:IBM_Library_Service_GetPallete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Library_Service/GetPalleteResponse" message="tns:IBM_Library_Service_GetPallete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPalleteWeight">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Library_Service/GetPalleteWeight" message="tns:IBM_Library_Service_GetPalleteWeight_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Library_Service/GetPalleteWeightResponse" message="tns:IBM_Library_Service_GetPalleteWeight_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectBanks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Library_Service/SelectBanks" message="tns:IBM_Library_Service_SelectBanks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Library_Service/SelectBanksResponse" message="tns:IBM_Library_Service_SelectBanks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateContainers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Library_Service/CreateContainers" message="tns:IBM_Library_Service_CreateContainers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Library_Service/CreateContainersResponse" message="tns:IBM_Library_Service_CreateContainers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContainersByProductPack">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Library_Service/GetContainersByProductPack" message="tns:IBM_Library_Service_GetContainersByProductPack_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Library_Service/GetContainersByProductPackResponse" message="tns:IBM_Library_Service_GetContainersByProductPack_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateContainer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Library_Service/CreateContainer" message="tns:IBM_Library_Service_CreateContainer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Library_Service/CreateContainerResponse" message="tns:IBM_Library_Service_CreateContainer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectContainers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Library_Service/SelectContainers" message="tns:IBM_Library_Service_SelectContainers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Library_Service/SelectContainersResponse" message="tns:IBM_Library_Service_SelectContainers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNationalities">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Library_Service/GetNationalities" message="tns:IBM_Library_Service_GetNationalities_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Library_Service/GetNationalitiesResponse" message="tns:IBM_Library_Service_GetNationalities_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCitizenships">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Library_Service/GetCitizenships" message="tns:IBM_Library_Service_GetCitizenships_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Library_Service/GetCitizenshipsResponse" message="tns:IBM_Library_Service_GetCitizenships_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContainerForQuality">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Library_Service/GetContainerForQuality" message="tns:IBM_Library_Service_GetContainerForQuality_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Library_Service/GetContainerForQualityResponse" message="tns:IBM_Library_Service_GetContainerForQuality_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentTyped">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Library_Service/GetDocumentTyped" message="tns:IBM_Library_Service_GetDocumentTyped_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Library_Service/GetDocumentTypedResponse" message="tns:IBM_Library_Service_GetDocumentTyped_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPunishmentTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Library_Service/GetPunishmentTypes" message="tns:IBM_Library_Service_GetPunishmentTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Library_Service/GetPunishmentTypesResponse" message="tns:IBM_Library_Service_GetPunishmentTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegalForms">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Library_Service/GetLegalForms" message="tns:IBM_Library_Service_GetLegalForms_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Library_Service/GetLegalFormsResponse" message="tns:IBM_Library_Service_GetLegalForms_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGenderTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Library_Service/GetGenderTypes" message="tns:IBM_Library_Service_GetGenderTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Library_Service/GetGenderTypesResponse" message="tns:IBM_Library_Service_GetGenderTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Library_Service/GetEmployeeTypes" message="tns:IBM_Library_Service_GetEmployeeTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Library_Service/GetEmployeeTypesResponse" message="tns:IBM_Library_Service_GetEmployeeTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBalanceSheetTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Library_Service/GetBalanceSheetTypes" message="tns:IBM_Library_Service_GetBalanceSheetTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Library_Service/GetBalanceSheetTypesResponse" message="tns:IBM_Library_Service_GetBalanceSheetTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMaritalStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Library_Service/GetMaritalStatus" message="tns:IBM_Library_Service_GetMaritalStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Library_Service/GetMaritalStatusResponse" message="tns:IBM_Library_Service_GetMaritalStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBreeds">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Library_Service/GetBreeds" message="tns:IBM_Library_Service_GetBreeds_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Library_Service/GetBreedsResponse" message="tns:IBM_Library_Service_GetBreeds_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContainerTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Library_Service/GetContainerTypes" message="tns:IBM_Library_Service_GetContainerTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Library_Service/GetContainerTypesResponse" message="tns:IBM_Library_Service_GetContainerTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegalStatuseTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Library_Service/GetLegalStatuseTypes" message="tns:IBM_Library_Service_GetLegalStatuseTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Library_Service/GetLegalStatuseTypesResponse" message="tns:IBM_Library_Service_GetLegalStatuseTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPointTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Library_Service/GetPointTypes" message="tns:IBM_Library_Service_GetPointTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Library_Service/GetPointTypesResponse" message="tns:IBM_Library_Service_GetPointTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductQualityes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Library_Service/GetProductQualityes" message="tns:IBM_Library_Service_GetProductQualityes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Library_Service/GetProductQualityesResponse" message="tns:IBM_Library_Service_GetProductQualityes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSalaryTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Library_Service/GetSalaryTypes" message="tns:IBM_Library_Service_GetSalaryTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Library_Service/GetSalaryTypesResponse" message="tns:IBM_Library_Service_GetSalaryTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSideTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Library_Service/GetSideTypes" message="tns:IBM_Library_Service_GetSideTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Library_Service/GetSideTypesResponse" message="tns:IBM_Library_Service_GetSideTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPoints">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Library_Service/GetAllPoints" message="tns:IBM_Library_Service_GetAllPoints_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Library_Service/GetAllPointsResponse" message="tns:IBM_Library_Service_GetAllPoints_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertBank">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Library_Service/InsertBank" message="tns:IBM_Library_Service_InsertBank_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Library_Service/InsertBankResponse" message="tns:IBM_Library_Service_InsertBank_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertNationality">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Library_Service/InsertNationality" message="tns:IBM_Library_Service_InsertNationality_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Library_Service/InsertNationalityResponse" message="tns:IBM_Library_Service_InsertNationality_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCitizenship">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Library_Service/InsertCitizenship" message="tns:IBM_Library_Service_InsertCitizenship_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Library_Service/InsertCitizenshipResponse" message="tns:IBM_Library_Service_InsertCitizenship_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDocumentType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Library_Service/InsertDocumentType" message="tns:IBM_Library_Service_InsertDocumentType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Library_Service/InsertDocumentTypeResponse" message="tns:IBM_Library_Service_InsertDocumentType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertLegalForm">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Library_Service/InsertLegalForm" message="tns:IBM_Library_Service_InsertLegalForm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Library_Service/InsertLegalFormResponse" message="tns:IBM_Library_Service_InsertLegalForm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertBreed">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Library_Service/InsertBreed" message="tns:IBM_Library_Service_InsertBreed_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Library_Service/InsertBreedResponse" message="tns:IBM_Library_Service_InsertBreed_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBank">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Library_Service/UpdateBank" message="tns:IBM_Library_Service_UpdateBank_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Library_Service/UpdateBankResponse" message="tns:IBM_Library_Service_UpdateBank_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNationality">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Library_Service/UpdateNationality" message="tns:IBM_Library_Service_UpdateNationality_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Library_Service/UpdateNationalityResponse" message="tns:IBM_Library_Service_UpdateNationality_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCitizenship">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Library_Service/UpdateCitizenship" message="tns:IBM_Library_Service_UpdateCitizenship_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Library_Service/UpdateCitizenshipResponse" message="tns:IBM_Library_Service_UpdateCitizenship_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDocumentType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Library_Service/UpdateDocumentType" message="tns:IBM_Library_Service_UpdateDocumentType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Library_Service/UpdateDocumentTypeResponse" message="tns:IBM_Library_Service_UpdateDocumentType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLegalForm">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Library_Service/UpdateLegalForm" message="tns:IBM_Library_Service_UpdateLegalForm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Library_Service/UpdateLegalFormResponse" message="tns:IBM_Library_Service_UpdateLegalForm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBreed">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Library_Service/UpdateBreed" message="tns:IBM_Library_Service_UpdateBreed_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Library_Service/UpdateBreedResponse" message="tns:IBM_Library_Service_UpdateBreed_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IBM_Library_Service" type="tns:IBM_Library_Service">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetRS_ProductModelByContainers">
+      <soap:operation soapAction="http://tempuri.org/IBM_Library_Service/GetRS_ProductModelByContainers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPallete">
+      <soap:operation soapAction="http://tempuri.org/IBM_Library_Service/GetPallete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPalleteWeight">
+      <soap:operation soapAction="http://tempuri.org/IBM_Library_Service/GetPalleteWeight" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectBanks">
+      <soap:operation soapAction="http://tempuri.org/IBM_Library_Service/SelectBanks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateContainers">
+      <soap:operation soapAction="http://tempuri.org/IBM_Library_Service/CreateContainers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContainersByProductPack">
+      <soap:operation soapAction="http://tempuri.org/IBM_Library_Service/GetContainersByProductPack" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateContainer">
+      <soap:operation soapAction="http://tempuri.org/IBM_Library_Service/CreateContainer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectContainers">
+      <soap:operation soapAction="http://tempuri.org/IBM_Library_Service/SelectContainers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNationalities">
+      <soap:operation soapAction="http://tempuri.org/IBM_Library_Service/GetNationalities" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCitizenships">
+      <soap:operation soapAction="http://tempuri.org/IBM_Library_Service/GetCitizenships" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContainerForQuality">
+      <soap:operation soapAction="http://tempuri.org/IBM_Library_Service/GetContainerForQuality" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentTyped">
+      <soap:operation soapAction="http://tempuri.org/IBM_Library_Service/GetDocumentTyped" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPunishmentTypes">
+      <soap:operation soapAction="http://tempuri.org/IBM_Library_Service/GetPunishmentTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegalForms">
+      <soap:operation soapAction="http://tempuri.org/IBM_Library_Service/GetLegalForms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGenderTypes">
+      <soap:operation soapAction="http://tempuri.org/IBM_Library_Service/GetGenderTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeTypes">
+      <soap:operation soapAction="http://tempuri.org/IBM_Library_Service/GetEmployeeTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBalanceSheetTypes">
+      <soap:operation soapAction="http://tempuri.org/IBM_Library_Service/GetBalanceSheetTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaritalStatus">
+      <soap:operation soapAction="http://tempuri.org/IBM_Library_Service/GetMaritalStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBreeds">
+      <soap:operation soapAction="http://tempuri.org/IBM_Library_Service/GetBreeds" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContainerTypes">
+      <soap:operation soapAction="http://tempuri.org/IBM_Library_Service/GetContainerTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegalStatuseTypes">
+      <soap:operation soapAction="http://tempuri.org/IBM_Library_Service/GetLegalStatuseTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPointTypes">
+      <soap:operation soapAction="http://tempuri.org/IBM_Library_Service/GetPointTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductQualityes">
+      <soap:operation soapAction="http://tempuri.org/IBM_Library_Service/GetProductQualityes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalaryTypes">
+      <soap:operation soapAction="http://tempuri.org/IBM_Library_Service/GetSalaryTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSideTypes">
+      <soap:operation soapAction="http://tempuri.org/IBM_Library_Service/GetSideTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPoints">
+      <soap:operation soapAction="http://tempuri.org/IBM_Library_Service/GetAllPoints" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertBank">
+      <soap:operation soapAction="http://tempuri.org/IBM_Library_Service/InsertBank" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertNationality">
+      <soap:operation soapAction="http://tempuri.org/IBM_Library_Service/InsertNationality" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCitizenship">
+      <soap:operation soapAction="http://tempuri.org/IBM_Library_Service/InsertCitizenship" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDocumentType">
+      <soap:operation soapAction="http://tempuri.org/IBM_Library_Service/InsertDocumentType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertLegalForm">
+      <soap:operation soapAction="http://tempuri.org/IBM_Library_Service/InsertLegalForm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertBreed">
+      <soap:operation soapAction="http://tempuri.org/IBM_Library_Service/InsertBreed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBank">
+      <soap:operation soapAction="http://tempuri.org/IBM_Library_Service/UpdateBank" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNationality">
+      <soap:operation soapAction="http://tempuri.org/IBM_Library_Service/UpdateNationality" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCitizenship">
+      <soap:operation soapAction="http://tempuri.org/IBM_Library_Service/UpdateCitizenship" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDocumentType">
+      <soap:operation soapAction="http://tempuri.org/IBM_Library_Service/UpdateDocumentType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLegalForm">
+      <soap:operation soapAction="http://tempuri.org/IBM_Library_Service/UpdateLegalForm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBreed">
+      <soap:operation soapAction="http://tempuri.org/IBM_Library_Service/UpdateBreed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BM_Library_Service">
+    <wsdl:port name="BasicHttpBinding_IBM_Library_Service" binding="tns:BasicHttpBinding_IBM_Library_Service">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Library_Service/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

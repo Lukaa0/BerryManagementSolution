@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Employees.XClasses.ReportModel" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Employees.XClasses.ReportModel" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfRecPunishmentCountModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RecPunishmentCountModel" nillable="true" type="tns:RecPunishmentCountModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRecPunishmentCountModel" nillable="true" type="tns:ArrayOfRecPunishmentCountModel" />
+  <xs:complexType name="RecPunishmentCountModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Recomendator_PersonPost_Id" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="Recomendator_Punishment_Count" type="xs:long" />
+      <xs:element minOccurs="0" name="Recomendator_Punishment_Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RecPunishmentCountModel" nillable="true" type="tns:RecPunishmentCountModel" />
+  <xs:complexType name="ArrayOfPunishmentCountModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PunishmentCountModel" nillable="true" type="tns:PunishmentCountModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPunishmentCountModel" nillable="true" type="tns:ArrayOfPunishmentCountModel" />
+  <xs:complexType name="PunishmentCountModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PersonPost_Id" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="Punishment_Count" type="xs:long" />
+      <xs:element minOccurs="0" name="Punishment_Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PunishmentCountModel" nillable="true" type="tns:PunishmentCountModel" />
+  <xs:complexType name="ArrayOfWeightsModelcs">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WeightsModelcs" nillable="true" type="tns:WeightsModelcs" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWeightsModelcs" nillable="true" type="tns:ArrayOfWeightsModelcs" />
+  <xs:complexType name="WeightsModelcs">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GrossWeight" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Harvester_PersonPost_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="NetWeight" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Reciever_PersonPost_Id" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WeightsModelcs" nillable="true" type="tns:WeightsModelcs" />
+  <xs:complexType name="ArrayOfGeneralReportModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GeneralReportModel" nillable="true" type="tns:GeneralReportModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGeneralReportModel" nillable="true" type="tns:ArrayOfGeneralReportModel" />
+  <xs:complexType name="GeneralReportModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BreedName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Sum" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GeneralReportModel" nillable="true" type="tns:GeneralReportModel" />
+  <xs:complexType name="ArrayOfReportModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReportModel" nillable="true" type="tns:ReportModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfReportModel" nillable="true" type="tns:ArrayOfReportModel" />
+  <xs:complexType name="ReportModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="GrossWeight" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NetWeight" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PersonPost_Brigade_Id" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="PersonPost_Brigade_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PersonPost_EmployeeBarCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PersonPost_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="PersonPost_Person_FullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PersonPost_Post_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="PersonPost_Post_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Punishment_Count" type="xs:long" />
+      <xs:element minOccurs="0" name="Punishment_Given_First" type="xs:int" />
+      <xs:element minOccurs="0" name="Punishment_Given_Second" type="xs:int" />
+      <xs:element minOccurs="0" name="Punishment_Name_First" type="xs:int" />
+      <xs:element minOccurs="0" name="Punishment_Name_Second" type="xs:int" />
+      <xs:element minOccurs="0" name="Recomendator_PersonPost_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="Recomendator_Punishment_Count" type="xs:long" />
+      <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReportModel" nillable="true" type="tns:ReportModel" />
+</xs:schema>

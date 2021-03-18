@@ -1,0 +1,877 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BM_Operation_Service" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Operation_Service/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Operation_Service/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Operation_Service/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Operation.XClasses" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Operation_Service/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Operation_Service/?xsd=xsd4" namespace="http://schemas.microsoft.com/Message" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IBM_Operation_Service_FixTakeRowInOut_InputMessage">
+    <wsdl:part name="parameters" element="tns:FixTakeRowInOut" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_FixTakeRowInOut_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FixTakeRowInOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_FixProductReceive_InputMessage">
+    <wsdl:part name="parameters" element="tns:FixProductReceive" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_FixProductReceive_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FixProductReceiveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_FixContainerPack_InputMessage">
+    <wsdl:part name="parameters" element="tns:FixContainerPack" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_FixContainerPack_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FixContainerPackResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_FixSaleContainer_InputMessage">
+    <wsdl:part name="parameters" element="tns:FixSaleContainer" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_FixSaleContainer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FixSaleContainerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_FixProductQuality_InputMessage">
+    <wsdl:part name="parameters" element="tns:FixProductQuality" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_FixProductQuality_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FixProductQualityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_FixContainerSendBack_InputMessage">
+    <wsdl:part name="parameters" element="tns:FixContainerSendBack" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_FixContainerSendBack_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FixContainerSendBackResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetTakeRowsByBrigadeId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTakeRowsByBrigadeId" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetTakeRowsByBrigadeId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTakeRowsByBrigadeIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_FixHarvesterRowDistributionInOut_InputMessage">
+    <wsdl:part name="parameters" element="tns:FixHarvesterRowDistributionInOut" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_FixHarvesterRowDistributionInOut_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FixHarvesterRowDistributionInOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_FixContainerMove_InputMessage">
+    <wsdl:part name="parameters" element="tns:FixContainerMove" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_FixContainerMove_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FixContainerMoveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_FixHarvesterContainerDistribution_InputMessage">
+    <wsdl:part name="parameters" element="tns:FixHarvesterContainerDistribution" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_FixHarvesterContainerDistribution_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FixHarvesterContainerDistributionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_FixPunishment_InputMessage">
+    <wsdl:part name="parameters" element="tns:FixPunishment" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_FixPunishment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FixPunishmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetHarvesterRowDistributionInOuts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHarvesterRowDistributionInOuts" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetHarvesterRowDistributionInOuts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHarvesterRowDistributionInOutsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_FixProductRepackAndWeight_InputMessage">
+    <wsdl:part name="parameters" element="tns:FixProductRepackAndWeight" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_FixProductRepackAndWeight_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FixProductRepackAndWeightResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetContainerPackModel_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainerPackModel" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetContainerPackModel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainerPackModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_CreateTransportWaybill_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateTransportWaybill" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_CreateTransportWaybill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateTransportWaybillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_CloseTransportWaybill_InputMessage">
+    <wsdl:part name="parameters" element="tns:CloseTransportWaybill" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_CloseTransportWaybill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CloseTransportWaybillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_InsertContainerPack_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertContainerPack" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_InsertContainerPack_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertContainerPackResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetOperationSettings_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperationSettings" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetOperationSettings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperationSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetCountForContainerMove_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountForContainerMove" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetCountForContainerMove_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountForContainerMoveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetContainerForQuality_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainerForQuality" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetContainerForQuality_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainerForQualityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetSaleContainer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSaleContainer" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetSaleContainer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSaleContainerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetContainerMoveInOut_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainerMoveInOut" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetContainerMoveInOut_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainerMoveInOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetHarvesterRowDistribution_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHarvesterRowDistribution" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetHarvesterRowDistribution_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHarvesterRowDistributionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_CheckHarvesterInRowPersonPost_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckHarvesterInRowPersonPost" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_CheckHarvesterInRowPersonPost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckHarvesterInRowPersonPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_CheckTakeRows_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckTakeRows" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_CheckTakeRows_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckTakeRowsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetTakeRowsModel_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTakeRowsModel" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetTakeRowsModel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTakeRowsModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetTakeRowsModelByBrigadeId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTakeRowsModelByBrigadeId" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetTakeRowsModelByBrigadeId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTakeRowsModelByBrigadeIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetRowsWithBrigade_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRowsWithBrigade" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetRowsWithBrigade_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRowsWithBrigadeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetClosedTakeRowsModel_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClosedTakeRowsModel" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetClosedTakeRowsModel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClosedTakeRowsModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetTakeRows_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTakeRows" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetTakeRows_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTakeRowsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetTakeRowsOutByPersonPostID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTakeRowsOutByPersonPostID" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetTakeRowsOutByPersonPostID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTakeRowsOutByPersonPostIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetTakeRowsInByPersonPostID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTakeRowsInByPersonPostID" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetTakeRowsInByPersonPostID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTakeRowsInByPersonPostIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetHarvesterRowDistributionOut_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHarvesterRowDistributionOut" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetHarvesterRowDistributionOut_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHarvesterRowDistributionOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetHarvesterRowDistributionIn_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHarvesterRowDistributionIn" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetHarvesterRowDistributionIn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHarvesterRowDistributionInResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetHarvRowDistribByPersonPostId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHarvRowDistribByPersonPostId" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetHarvRowDistribByPersonPostId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHarvRowDistribByPersonPostIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_CheckContainerLocationForPackaging_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckContainerLocationForPackaging" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_CheckContainerLocationForPackaging_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckContainerLocationForPackagingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetWeightsForReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWeightsForReport" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetWeightsForReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWeightsForReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_UpdateOperationSetting_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOperationSetting" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_UpdateOperationSetting_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOperationSettingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetCountForContainerPack_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountForContainerPack" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetCountForContainerPack_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountForContainerPackResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetLatestVersion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLatestVersion" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetLatestVersion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLatestVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_UpdateTakeRowWith_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTakeRowWith" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_UpdateTakeRowWith_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTakeRowWithResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_UpdateTakeRow_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTakeRow" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_UpdateTakeRow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTakeRowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_InsertContainerMove_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertContainerMove" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_InsertContainerMove_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertContainerMoveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_DownloadNewVersion_InputMessage">
+    <wsdl:part name="parameters" element="tns:DownloadNewVersion" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_DownloadNewVersion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DownloadNewVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetContainerWeightsByChars_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainerWeightsByChars" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Operation_Service_GetContainerWeightsByChars_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainerWeightsByCharsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IBM_Operation_Service">
+    <wsdl:operation name="FixTakeRowInOut">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixTakeRowInOut" message="tns:IBM_Operation_Service_FixTakeRowInOut_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixTakeRowInOutResponse" message="tns:IBM_Operation_Service_FixTakeRowInOut_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FixProductReceive">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixProductReceive" message="tns:IBM_Operation_Service_FixProductReceive_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixProductReceiveResponse" message="tns:IBM_Operation_Service_FixProductReceive_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FixContainerPack">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixContainerPack" message="tns:IBM_Operation_Service_FixContainerPack_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixContainerPackResponse" message="tns:IBM_Operation_Service_FixContainerPack_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FixSaleContainer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixSaleContainer" message="tns:IBM_Operation_Service_FixSaleContainer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixSaleContainerResponse" message="tns:IBM_Operation_Service_FixSaleContainer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FixProductQuality">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixProductQuality" message="tns:IBM_Operation_Service_FixProductQuality_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixProductQualityResponse" message="tns:IBM_Operation_Service_FixProductQuality_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FixContainerSendBack">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixContainerSendBack" message="tns:IBM_Operation_Service_FixContainerSendBack_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixContainerSendBackResponse" message="tns:IBM_Operation_Service_FixContainerSendBack_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTakeRowsByBrigadeId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetTakeRowsByBrigadeId" message="tns:IBM_Operation_Service_GetTakeRowsByBrigadeId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetTakeRowsByBrigadeIdResponse" message="tns:IBM_Operation_Service_GetTakeRowsByBrigadeId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FixHarvesterRowDistributionInOut">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixHarvesterRowDistributionInOut" message="tns:IBM_Operation_Service_FixHarvesterRowDistributionInOut_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixHarvesterRowDistributionInOutResponse" message="tns:IBM_Operation_Service_FixHarvesterRowDistributionInOut_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FixContainerMove">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixContainerMove" message="tns:IBM_Operation_Service_FixContainerMove_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixContainerMoveResponse" message="tns:IBM_Operation_Service_FixContainerMove_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FixHarvesterContainerDistribution">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixHarvesterContainerDistribution" message="tns:IBM_Operation_Service_FixHarvesterContainerDistribution_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixHarvesterContainerDistributionResponse" message="tns:IBM_Operation_Service_FixHarvesterContainerDistribution_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FixPunishment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixPunishment" message="tns:IBM_Operation_Service_FixPunishment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixPunishmentResponse" message="tns:IBM_Operation_Service_FixPunishment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHarvesterRowDistributionInOuts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetHarvesterRowDistributionInOuts" message="tns:IBM_Operation_Service_GetHarvesterRowDistributionInOuts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetHarvesterRowDistributionInOutsResponse" message="tns:IBM_Operation_Service_GetHarvesterRowDistributionInOuts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FixProductRepackAndWeight">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixProductRepackAndWeight" message="tns:IBM_Operation_Service_FixProductRepackAndWeight_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/FixProductRepackAndWeightResponse" message="tns:IBM_Operation_Service_FixProductRepackAndWeight_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContainerPackModel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetContainerPackModel" message="tns:IBM_Operation_Service_GetContainerPackModel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetContainerPackModelResponse" message="tns:IBM_Operation_Service_GetContainerPackModel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateTransportWaybill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/CreateTransportWaybill" message="tns:IBM_Operation_Service_CreateTransportWaybill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/CreateTransportWaybillResponse" message="tns:IBM_Operation_Service_CreateTransportWaybill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CloseTransportWaybill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/CloseTransportWaybill" message="tns:IBM_Operation_Service_CloseTransportWaybill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/CloseTransportWaybillResponse" message="tns:IBM_Operation_Service_CloseTransportWaybill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertContainerPack">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/InsertContainerPack" message="tns:IBM_Operation_Service_InsertContainerPack_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/InsertContainerPackResponse" message="tns:IBM_Operation_Service_InsertContainerPack_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOperationSettings">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetOperationSettings" message="tns:IBM_Operation_Service_GetOperationSettings_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetOperationSettingsResponse" message="tns:IBM_Operation_Service_GetOperationSettings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountForContainerMove">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetCountForContainerMove" message="tns:IBM_Operation_Service_GetCountForContainerMove_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetCountForContainerMoveResponse" message="tns:IBM_Operation_Service_GetCountForContainerMove_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContainerForQuality">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetContainerForQuality" message="tns:IBM_Operation_Service_GetContainerForQuality_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetContainerForQualityResponse" message="tns:IBM_Operation_Service_GetContainerForQuality_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSaleContainer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetSaleContainer" message="tns:IBM_Operation_Service_GetSaleContainer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetSaleContainerResponse" message="tns:IBM_Operation_Service_GetSaleContainer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContainerMoveInOut">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetContainerMoveInOut" message="tns:IBM_Operation_Service_GetContainerMoveInOut_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetContainerMoveInOutResponse" message="tns:IBM_Operation_Service_GetContainerMoveInOut_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHarvesterRowDistribution">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetHarvesterRowDistribution" message="tns:IBM_Operation_Service_GetHarvesterRowDistribution_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetHarvesterRowDistributionResponse" message="tns:IBM_Operation_Service_GetHarvesterRowDistribution_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckHarvesterInRowPersonPost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/CheckHarvesterInRowPersonPost" message="tns:IBM_Operation_Service_CheckHarvesterInRowPersonPost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/CheckHarvesterInRowPersonPostResponse" message="tns:IBM_Operation_Service_CheckHarvesterInRowPersonPost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckTakeRows">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/CheckTakeRows" message="tns:IBM_Operation_Service_CheckTakeRows_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/CheckTakeRowsResponse" message="tns:IBM_Operation_Service_CheckTakeRows_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTakeRowsModel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetTakeRowsModel" message="tns:IBM_Operation_Service_GetTakeRowsModel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetTakeRowsModelResponse" message="tns:IBM_Operation_Service_GetTakeRowsModel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTakeRowsModelByBrigadeId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetTakeRowsModelByBrigadeId" message="tns:IBM_Operation_Service_GetTakeRowsModelByBrigadeId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetTakeRowsModelByBrigadeIdResponse" message="tns:IBM_Operation_Service_GetTakeRowsModelByBrigadeId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRowsWithBrigade">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetRowsWithBrigade" message="tns:IBM_Operation_Service_GetRowsWithBrigade_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetRowsWithBrigadeResponse" message="tns:IBM_Operation_Service_GetRowsWithBrigade_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClosedTakeRowsModel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetClosedTakeRowsModel" message="tns:IBM_Operation_Service_GetClosedTakeRowsModel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetClosedTakeRowsModelResponse" message="tns:IBM_Operation_Service_GetClosedTakeRowsModel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTakeRows">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetTakeRows" message="tns:IBM_Operation_Service_GetTakeRows_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetTakeRowsResponse" message="tns:IBM_Operation_Service_GetTakeRows_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTakeRowsOutByPersonPostID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetTakeRowsOutByPersonPostID" message="tns:IBM_Operation_Service_GetTakeRowsOutByPersonPostID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetTakeRowsOutByPersonPostIDResponse" message="tns:IBM_Operation_Service_GetTakeRowsOutByPersonPostID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTakeRowsInByPersonPostID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetTakeRowsInByPersonPostID" message="tns:IBM_Operation_Service_GetTakeRowsInByPersonPostID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetTakeRowsInByPersonPostIDResponse" message="tns:IBM_Operation_Service_GetTakeRowsInByPersonPostID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHarvesterRowDistributionOut">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetHarvesterRowDistributionOut" message="tns:IBM_Operation_Service_GetHarvesterRowDistributionOut_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetHarvesterRowDistributionOutResponse" message="tns:IBM_Operation_Service_GetHarvesterRowDistributionOut_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHarvesterRowDistributionIn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetHarvesterRowDistributionIn" message="tns:IBM_Operation_Service_GetHarvesterRowDistributionIn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetHarvesterRowDistributionInResponse" message="tns:IBM_Operation_Service_GetHarvesterRowDistributionIn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHarvRowDistribByPersonPostId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetHarvRowDistribByPersonPostId" message="tns:IBM_Operation_Service_GetHarvRowDistribByPersonPostId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetHarvRowDistribByPersonPostIdResponse" message="tns:IBM_Operation_Service_GetHarvRowDistribByPersonPostId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckContainerLocationForPackaging">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/CheckContainerLocationForPackaging" message="tns:IBM_Operation_Service_CheckContainerLocationForPackaging_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/CheckContainerLocationForPackagingResponse" message="tns:IBM_Operation_Service_CheckContainerLocationForPackaging_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWeightsForReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetWeightsForReport" message="tns:IBM_Operation_Service_GetWeightsForReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetWeightsForReportResponse" message="tns:IBM_Operation_Service_GetWeightsForReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOperationSetting">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/UpdateOperationSetting" message="tns:IBM_Operation_Service_UpdateOperationSetting_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/UpdateOperationSettingResponse" message="tns:IBM_Operation_Service_UpdateOperationSetting_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountForContainerPack">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetCountForContainerPack" message="tns:IBM_Operation_Service_GetCountForContainerPack_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetCountForContainerPackResponse" message="tns:IBM_Operation_Service_GetCountForContainerPack_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestVersion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetLatestVersion" message="tns:IBM_Operation_Service_GetLatestVersion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetLatestVersionResponse" message="tns:IBM_Operation_Service_GetLatestVersion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTakeRowWith">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/UpdateTakeRowWith" message="tns:IBM_Operation_Service_UpdateTakeRowWith_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/UpdateTakeRowWithResponse" message="tns:IBM_Operation_Service_UpdateTakeRowWith_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTakeRow">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/UpdateTakeRow" message="tns:IBM_Operation_Service_UpdateTakeRow_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/UpdateTakeRowResponse" message="tns:IBM_Operation_Service_UpdateTakeRow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertContainerMove">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/InsertContainerMove" message="tns:IBM_Operation_Service_InsertContainerMove_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/InsertContainerMoveResponse" message="tns:IBM_Operation_Service_InsertContainerMove_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadNewVersion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/DownloadNewVersion" message="tns:IBM_Operation_Service_DownloadNewVersion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/DownloadNewVersionResponse" message="tns:IBM_Operation_Service_DownloadNewVersion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContainerWeightsByChars">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetContainerWeightsByChars" message="tns:IBM_Operation_Service_GetContainerWeightsByChars_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Operation_Service/GetContainerWeightsByCharsResponse" message="tns:IBM_Operation_Service_GetContainerWeightsByChars_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IBM_Operation_Service" type="tns:IBM_Operation_Service">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FixTakeRowInOut">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/FixTakeRowInOut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FixProductReceive">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/FixProductReceive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FixContainerPack">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/FixContainerPack" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FixSaleContainer">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/FixSaleContainer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FixProductQuality">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/FixProductQuality" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FixContainerSendBack">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/FixContainerSendBack" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTakeRowsByBrigadeId">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetTakeRowsByBrigadeId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FixHarvesterRowDistributionInOut">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/FixHarvesterRowDistributionInOut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FixContainerMove">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/FixContainerMove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FixHarvesterContainerDistribution">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/FixHarvesterContainerDistribution" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FixPunishment">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/FixPunishment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHarvesterRowDistributionInOuts">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetHarvesterRowDistributionInOuts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FixProductRepackAndWeight">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/FixProductRepackAndWeight" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContainerPackModel">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetContainerPackModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTransportWaybill">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/CreateTransportWaybill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CloseTransportWaybill">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/CloseTransportWaybill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertContainerPack">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/InsertContainerPack" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOperationSettings">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetOperationSettings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountForContainerMove">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetCountForContainerMove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContainerForQuality">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetContainerForQuality" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSaleContainer">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetSaleContainer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContainerMoveInOut">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetContainerMoveInOut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHarvesterRowDistribution">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetHarvesterRowDistribution" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckHarvesterInRowPersonPost">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/CheckHarvesterInRowPersonPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckTakeRows">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/CheckTakeRows" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTakeRowsModel">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetTakeRowsModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTakeRowsModelByBrigadeId">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetTakeRowsModelByBrigadeId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRowsWithBrigade">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetRowsWithBrigade" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClosedTakeRowsModel">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetClosedTakeRowsModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTakeRows">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetTakeRows" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTakeRowsOutByPersonPostID">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetTakeRowsOutByPersonPostID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTakeRowsInByPersonPostID">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetTakeRowsInByPersonPostID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHarvesterRowDistributionOut">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetHarvesterRowDistributionOut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHarvesterRowDistributionIn">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetHarvesterRowDistributionIn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHarvRowDistribByPersonPostId">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetHarvRowDistribByPersonPostId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckContainerLocationForPackaging">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/CheckContainerLocationForPackaging" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWeightsForReport">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetWeightsForReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOperationSetting">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/UpdateOperationSetting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountForContainerPack">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetCountForContainerPack" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestVersion">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetLatestVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTakeRowWith">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/UpdateTakeRowWith" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTakeRow">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/UpdateTakeRow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertContainerMove">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/InsertContainerMove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadNewVersion">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/DownloadNewVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContainerWeightsByChars">
+      <soap:operation soapAction="http://tempuri.org/IBM_Operation_Service/GetContainerWeightsByChars" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BM_Operation_Service">
+    <wsdl:port name="BasicHttpBinding_IBM_Operation_Service" binding="tns:BasicHttpBinding_IBM_Operation_Service">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Operation_Service/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

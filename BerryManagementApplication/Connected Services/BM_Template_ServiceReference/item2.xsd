@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfDocumentTemplateTitle">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocumentTemplateTitle" nillable="true" type="tns:DocumentTemplateTitle" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocumentTemplateTitle" nillable="true" type="tns:ArrayOfDocumentTemplateTitle" />
+  <xs:complexType name="DocumentTemplateTitle">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DocumentTemplateTitleDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocumentTemplateTitleDocumentTemplateId" type="xs:long" />
+      <xs:element minOccurs="0" name="DocumentTemplateTitleExtension" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentTemplateTitle" nillable="true" type="tns:DocumentTemplateTitle" />
+  <xs:complexType name="DocumentTemplate">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DocumentTemplateData" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="DocumentTemplateId" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentTemplate" nillable="true" type="tns:DocumentTemplate" />
+</xs:schema>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Library.XClass" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Library.XClass" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfContainerModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ContainerModel" nillable="true" type="tns:ContainerModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContainerModel" nillable="true" type="tns:ArrayOfContainerModel" />
+  <xs:complexType name="ContainerModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Container_BarCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Container_ContainerType_Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Container_Harvester_FullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Container_IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Container_PersonPost_Id" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContainerModel" nillable="true" type="tns:ContainerModel" />
+</xs:schema>

@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfBank">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Bank" nillable="true" type="tns:Bank" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBank" nillable="true" type="tns:ArrayOfBank" />
+  <xs:complexType name="Bank">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Bank_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="Bank_Kode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Bank_Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Bank" nillable="true" type="tns:Bank" />
+  <xs:complexType name="ArrayOfContainer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Container" nillable="true" type="tns:Container" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContainer" nillable="true" type="tns:ArrayOfContainer" />
+  <xs:complexType name="Container">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Container_BarCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Container_ContainerType_Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Container_IsActive" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Container" nillable="true" type="tns:Container" />
+  <xs:complexType name="ArrayOfNationality">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Nationality" nillable="true" type="tns:Nationality" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNationality" nillable="true" type="tns:ArrayOfNationality" />
+  <xs:complexType name="Nationality">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Nationality_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="Nationality_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nationality_NameEn" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Nationality" nillable="true" type="tns:Nationality" />
+  <xs:complexType name="ArrayOfCitizenship">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Citizenship" nillable="true" type="tns:Citizenship" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCitizenship" nillable="true" type="tns:ArrayOfCitizenship" />
+  <xs:complexType name="Citizenship">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Citizenship_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="Citizenship_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Citizenship_NameEn" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Citizenship" nillable="true" type="tns:Citizenship" />
+  <xs:complexType name="ArrayOfDocumentType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocumentType" nillable="true" type="tns:DocumentType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocumentType" nillable="true" type="tns:ArrayOfDocumentType" />
+  <xs:complexType name="DocumentType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DocumentType_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="DocumentType_Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentType" nillable="true" type="tns:DocumentType" />
+  <xs:complexType name="ArrayOftf_PunishmentTypes_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tf_PunishmentTypes_Result" nillable="true" type="tns:tf_PunishmentTypes_Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftf_PunishmentTypes_Result" nillable="true" type="tns:ArrayOftf_PunishmentTypes_Result" />
+  <xs:complexType name="tf_PunishmentTypes_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PunishmentType_Id" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="PunishmentType_Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tf_PunishmentTypes_Result" nillable="true" type="tns:tf_PunishmentTypes_Result" />
+  <xs:complexType name="ArrayOfLegalForm">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LegalForm" nillable="true" type="tns:LegalForm" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLegalForm" nillable="true" type="tns:ArrayOfLegalForm" />
+  <xs:complexType name="LegalForm">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LegalForm_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="LegalForm_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LegalForm_NameEn" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LegalForm" nillable="true" type="tns:LegalForm" />
+  <xs:complexType name="ArrayOftf_GenderTypes_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tf_GenderTypes_Result" nillable="true" type="tns:tf_GenderTypes_Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftf_GenderTypes_Result" nillable="true" type="tns:ArrayOftf_GenderTypes_Result" />
+  <xs:complexType name="tf_GenderTypes_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GenderType_Id" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="GenderType_Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tf_GenderTypes_Result" nillable="true" type="tns:tf_GenderTypes_Result" />
+  <xs:complexType name="ArrayOftf_EmployeeTypes_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tf_EmployeeTypes_Result" nillable="true" type="tns:tf_EmployeeTypes_Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftf_EmployeeTypes_Result" nillable="true" type="tns:ArrayOftf_EmployeeTypes_Result" />
+  <xs:complexType name="tf_EmployeeTypes_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EmployeeType_Id" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="EmployeeType_Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tf_EmployeeTypes_Result" nillable="true" type="tns:tf_EmployeeTypes_Result" />
+  <xs:complexType name="ArrayOftf_GetBalanceSheetTypes_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tf_GetBalanceSheetTypes_Result" nillable="true" type="tns:tf_GetBalanceSheetTypes_Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftf_GetBalanceSheetTypes_Result" nillable="true" type="tns:ArrayOftf_GetBalanceSheetTypes_Result" />
+  <xs:complexType name="tf_GetBalanceSheetTypes_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BalanceSheetType_Id" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="BalanceSheetType_Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tf_GetBalanceSheetTypes_Result" nillable="true" type="tns:tf_GetBalanceSheetTypes_Result" />
+  <xs:complexType name="ArrayOftf_MaritalStatus_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tf_MaritalStatus_Result" nillable="true" type="tns:tf_MaritalStatus_Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftf_MaritalStatus_Result" nillable="true" type="tns:ArrayOftf_MaritalStatus_Result" />
+  <xs:complexType name="tf_MaritalStatus_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MaritalStatus_Id" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="MaritalStatus_Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tf_MaritalStatus_Result" nillable="true" type="tns:tf_MaritalStatus_Result" />
+  <xs:complexType name="ArrayOfBreed">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Breed" nillable="true" type="tns:Breed" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBreed" nillable="true" type="tns:ArrayOfBreed" />
+  <xs:complexType name="Breed">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Breed_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="Breed_Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Breed" nillable="true" type="tns:Breed" />
+  <xs:complexType name="ArrayOftf_ContainerTypes_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tf_ContainerTypes_Result" nillable="true" type="tns:tf_ContainerTypes_Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftf_ContainerTypes_Result" nillable="true" type="tns:ArrayOftf_ContainerTypes_Result" />
+  <xs:complexType name="tf_ContainerTypes_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContainerType_Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContainerType_IsActive" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ContainerType_Level" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ContainerType_Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tf_ContainerTypes_Result" nillable="true" type="tns:tf_ContainerTypes_Result" />
+  <xs:complexType name="ArrayOftf_LegalStatuseTypes_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tf_LegalStatuseTypes_Result" nillable="true" type="tns:tf_LegalStatuseTypes_Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftf_LegalStatuseTypes_Result" nillable="true" type="tns:ArrayOftf_LegalStatuseTypes_Result" />
+  <xs:complexType name="tf_LegalStatuseTypes_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LegalStatuseType_Id" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="LegalStatuseType_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LegalStatuseType_NameEn" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tf_LegalStatuseTypes_Result" nillable="true" type="tns:tf_LegalStatuseTypes_Result" />
+  <xs:complexType name="ArrayOftf_PointTypes_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tf_PointTypes_Result" nillable="true" type="tns:tf_PointTypes_Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftf_PointTypes_Result" nillable="true" type="tns:ArrayOftf_PointTypes_Result" />
+  <xs:complexType name="tf_PointTypes_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PointType_Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PointType_IsActive" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PointType_Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tf_PointTypes_Result" nillable="true" type="tns:tf_PointTypes_Result" />
+  <xs:complexType name="ArrayOftf_ProductQualityes_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tf_ProductQualityes_Result" nillable="true" type="tns:tf_ProductQualityes_Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftf_ProductQualityes_Result" nillable="true" type="tns:ArrayOftf_ProductQualityes_Result" />
+  <xs:complexType name="tf_ProductQualityes_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ProductQuality_Id" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="ProductQuality_Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tf_ProductQualityes_Result" nillable="true" type="tns:tf_ProductQualityes_Result" />
+  <xs:complexType name="ArrayOftf_SalaryTypes_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tf_SalaryTypes_Result" nillable="true" type="tns:tf_SalaryTypes_Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftf_SalaryTypes_Result" nillable="true" type="tns:ArrayOftf_SalaryTypes_Result" />
+  <xs:complexType name="tf_SalaryTypes_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SalaryType_Id" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="SalaryType_Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tf_SalaryTypes_Result" nillable="true" type="tns:tf_SalaryTypes_Result" />
+  <xs:complexType name="ArrayOftf_SideTypes_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tf_SideTypes_Result" nillable="true" type="tns:tf_SideTypes_Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftf_SideTypes_Result" nillable="true" type="tns:ArrayOftf_SideTypes_Result" />
+  <xs:complexType name="tf_SideTypes_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SideType_Id" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="SideType_Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tf_SideTypes_Result" nillable="true" type="tns:tf_SideTypes_Result" />
+  <xs:complexType name="ArrayOfPoint">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Point" nillable="true" type="tns:Point" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPoint" nillable="true" type="tns:ArrayOfPoint" />
+  <xs:complexType name="Point">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Point_Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Point_BarCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Point_Car_Id" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="Point_Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Point_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="Point_IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Point_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Point_PointType_Id" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Point" nillable="true" type="tns:Point" />
+</xs:schema>

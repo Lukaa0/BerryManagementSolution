@@ -1,0 +1,81 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28922.388
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BerryPackagingApplication", "BerryPackagingApplication\BerryPackagingApplication.csproj", "{DAE43872-6199-4B75-BA4B-040EE84EF79A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BerryManagementApplication", "BerryManagementApplication\BerryManagementApplication.csproj", "{D7874469-067D-4FC5-8E64-EC9C7F672C33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BerryManagementAndroidApplication", "BerryManagementAndroidApplication\BerryManagementAndroidApplication.csproj", "{07272096-7498-4F50-B9FC-AA5202BDA99D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceTest", "ServiceTest\ServiceTest.csproj", "{1071C006-5D88-45C1-B246-7AB4094939B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rstest", "rstest\rstest.csproj", "{519E1C6E-9242-4E80-B1A5-BDE66F62238B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BerryManagementWindowsService", "BerryManagementWindowsService\BerryManagementWindowsService.csproj", "{B27C3E75-104E-41E8-80B3-9BC0430D3ECD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DAE43872-6199-4B75-BA4B-040EE84EF79A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAE43872-6199-4B75-BA4B-040EE84EF79A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAE43872-6199-4B75-BA4B-040EE84EF79A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAE43872-6199-4B75-BA4B-040EE84EF79A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7874469-067D-4FC5-8E64-EC9C7F672C33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7874469-067D-4FC5-8E64-EC9C7F672C33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7874469-067D-4FC5-8E64-EC9C7F672C33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7874469-067D-4FC5-8E64-EC9C7F672C33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07272096-7498-4F50-B9FC-AA5202BDA99D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07272096-7498-4F50-B9FC-AA5202BDA99D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07272096-7498-4F50-B9FC-AA5202BDA99D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{07272096-7498-4F50-B9FC-AA5202BDA99D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07272096-7498-4F50-B9FC-AA5202BDA99D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07272096-7498-4F50-B9FC-AA5202BDA99D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{1071C006-5D88-45C1-B246-7AB4094939B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1071C006-5D88-45C1-B246-7AB4094939B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1071C006-5D88-45C1-B246-7AB4094939B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1071C006-5D88-45C1-B246-7AB4094939B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{519E1C6E-9242-4E80-B1A5-BDE66F62238B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{519E1C6E-9242-4E80-B1A5-BDE66F62238B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{519E1C6E-9242-4E80-B1A5-BDE66F62238B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{519E1C6E-9242-4E80-B1A5-BDE66F62238B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B27C3E75-104E-41E8-80B3-9BC0430D3ECD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B27C3E75-104E-41E8-80B3-9BC0430D3ECD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B27C3E75-104E-41E8-80B3-9BC0430D3ECD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B27C3E75-104E-41E8-80B3-9BC0430D3ECD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FD80B45B-CA10-4A38-B9BC-E12FCE8F4403}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/merabkoberidze
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = BerryManagementAndroidApplication\\BerryManagementAndroidApplication.csproj
+		SccProjectName1 = BerryManagementAndroidApplication
+		SccLocalPath1 = BerryManagementAndroidApplication
+		SccProjectUniqueName2 = BerryManagementApplication\\BerryManagementApplication.csproj
+		SccProjectName2 = BerryManagementApplication
+		SccLocalPath2 = BerryManagementApplication
+		SccProjectUniqueName3 = BerryPackagingApplication\\BerryPackagingApplication.csproj
+		SccProjectName3 = BerryPackagingApplication
+		SccLocalPath3 = BerryPackagingApplication
+		SccProjectUniqueName4 = ServiceTest\\ServiceTest.csproj
+		SccProjectName4 = ServiceTest
+		SccLocalPath4 = ServiceTest
+		SccProjectUniqueName5 = rstest\\rstest.csproj
+		SccProjectName5 = rstest
+		SccLocalPath5 = rstest
+		SccProjectUniqueName6 = BerryManagementWindowsService\\BerryManagementWindowsService.csproj
+		SccProjectName6 = BerryManagementWindowsService
+		SccLocalPath6 = BerryManagementWindowsService
+	EndGlobalSection
+EndGlobal

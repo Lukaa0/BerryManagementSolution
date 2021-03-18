@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfTransportWaybill">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TransportWaybill" nillable="true" type="tns:TransportWaybill" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTransportWaybill" nillable="true" type="tns:ArrayOfTransportWaybill" />
+  <xs:complexType name="TransportWaybill">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TransportWaybill_Car_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="TransportWaybill_Car_Point_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="TransportWaybill_Company_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="TransportWaybill_Destination_Point_Id" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="TransportWaybill_End_DateTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TransportWaybill_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="TransportWaybill_RS_Id" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="TransportWaybill_RS_Number" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransportWaybill_Start_DateTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TransportWaybill_Start_Point_Id" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="TransportWaybill_Type_Id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TransportWaybill" nillable="true" type="tns:TransportWaybill" />
+  <xs:complexType name="TransportWaybillDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TransportWaybillDetail_Error" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransportWaybillDetail_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="TransportWaybillDetail_Result" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransportWaybillDetail_ResultStatus" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TransportWaybillDetail_TransportWaybill_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="TransportWaybillDetail_Waybill" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransportWaybillDetail_WaybillStatus" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TransportWaybillDetail__DateTime" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TransportWaybillDetail" nillable="true" type="tns:TransportWaybillDetail" />
+  <xs:complexType name="NonTransportWaybill">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="NonTransportWaybill_CompanyBuyer_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="NonTransportWaybill_CompanySeler_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="NonTransportWaybill_End_DateTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="NonTransportWaybill_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="NonTransportWaybill_RS_Id" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="NonTransportWaybill_RS_Number" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NonTransportWaybill_Start_DateTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="NonTransportWaybill_TransportWaybill_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="NonTransportWaybill_Type_Id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NonTransportWaybill" nillable="true" type="tns:NonTransportWaybill" />
+  <xs:complexType name="NonTransportWaybillDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="NonTransportWaybillDetail_Error" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NonTransportWaybillDetail_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="NonTransportWaybillDetail_NonTransportWaybill_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="NonTransportWaybillDetail_Result" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NonTransportWaybillDetail_ResultStatus" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="NonTransportWaybillDetail_Waybill" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NonTransportWaybillDetail_WaybillStatus" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="NonTransportWaybillDetail__DateTime" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NonTransportWaybillDetail" nillable="true" type="tns:NonTransportWaybillDetail" />
+</xs:schema>

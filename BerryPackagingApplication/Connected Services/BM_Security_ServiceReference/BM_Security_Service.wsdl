@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BM_Security_Service" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Security_Service/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Security_Service/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Security_Service/?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Security_Service/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Security_Service/?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Security.DataClasses" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IBM_Security_Service_GetPermissions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPermissions" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_GetPermissions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPermissionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_GetUserPermissions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserPermissions" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_GetUserPermissions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserPermissionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_AutorizeUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AutorizeUser" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_AutorizeUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AutorizeUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_GetRoles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoles" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_GetRoles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_GetRolePermissions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRolePermissions" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_GetRolePermissions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRolePermissionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_GetPermissionsForRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPermissionsForRole" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_GetPermissionsForRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPermissionsForRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_GetUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsers" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_GetUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_GetUsersModel_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersModel" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_GetUsersModel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_GetPost_Post_Id_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPost_Post_Id" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_GetPost_Post_Id_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPost_Post_IdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_GetPostRoles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPostRoles" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_GetPostRoles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPostRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_GetAllRoles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllRoles" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_GetAllRoles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_GetAllPost_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPost" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_GetAllPost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_InsertRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRole" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_InsertRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_InsertRolesPermissionsList_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRolesPermissionsList" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_InsertRolesPermissionsList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRolesPermissionsListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_InsertPostRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPostRole" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_InsertPostRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPostRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_InsertUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUser" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_InsertUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_CheckUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckUser" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_CheckUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_CheckPostRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckPostRole" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_CheckPostRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckPostRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_UpdateRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRole" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_UpdateRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_UpdateRolePost_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRolePost" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_UpdateRolePost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRolePostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_UpdatePostRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePostRole" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_UpdatePostRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePostRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_UpdateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUser" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_UpdateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_DeleteRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRole" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_DeleteRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_DeleteRolesPermissionByRoleId_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRolesPermissionByRoleId" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_DeleteRolesPermissionByRoleId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRolesPermissionByRoleIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_DeletePostRoleById_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePostRoleById" />
+  </wsdl:message>
+  <wsdl:message name="IBM_Security_Service_DeletePostRoleById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePostRoleByIdResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IBM_Security_Service">
+    <wsdl:operation name="GetPermissions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Security_Service/GetPermissions" message="tns:IBM_Security_Service_GetPermissions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Security_Service/GetPermissionsResponse" message="tns:IBM_Security_Service_GetPermissions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserPermissions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Security_Service/GetUserPermissions" message="tns:IBM_Security_Service_GetUserPermissions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Security_Service/GetUserPermissionsResponse" message="tns:IBM_Security_Service_GetUserPermissions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AutorizeUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Security_Service/AutorizeUser" message="tns:IBM_Security_Service_AutorizeUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Security_Service/AutorizeUserResponse" message="tns:IBM_Security_Service_AutorizeUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Security_Service/GetRoles" message="tns:IBM_Security_Service_GetRoles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Security_Service/GetRolesResponse" message="tns:IBM_Security_Service_GetRoles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRolePermissions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Security_Service/GetRolePermissions" message="tns:IBM_Security_Service_GetRolePermissions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Security_Service/GetRolePermissionsResponse" message="tns:IBM_Security_Service_GetRolePermissions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPermissionsForRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Security_Service/GetPermissionsForRole" message="tns:IBM_Security_Service_GetPermissionsForRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Security_Service/GetPermissionsForRoleResponse" message="tns:IBM_Security_Service_GetPermissionsForRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Security_Service/GetUsers" message="tns:IBM_Security_Service_GetUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Security_Service/GetUsersResponse" message="tns:IBM_Security_Service_GetUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersModel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Security_Service/GetUsersModel" message="tns:IBM_Security_Service_GetUsersModel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Security_Service/GetUsersModelResponse" message="tns:IBM_Security_Service_GetUsersModel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPost_Post_Id">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Security_Service/GetPost_Post_Id" message="tns:IBM_Security_Service_GetPost_Post_Id_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Security_Service/GetPost_Post_IdResponse" message="tns:IBM_Security_Service_GetPost_Post_Id_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPostRoles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Security_Service/GetPostRoles" message="tns:IBM_Security_Service_GetPostRoles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Security_Service/GetPostRolesResponse" message="tns:IBM_Security_Service_GetPostRoles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRoles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Security_Service/GetAllRoles" message="tns:IBM_Security_Service_GetAllRoles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Security_Service/GetAllRolesResponse" message="tns:IBM_Security_Service_GetAllRoles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Security_Service/GetAllPost" message="tns:IBM_Security_Service_GetAllPost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Security_Service/GetAllPostResponse" message="tns:IBM_Security_Service_GetAllPost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Security_Service/InsertRole" message="tns:IBM_Security_Service_InsertRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Security_Service/InsertRoleResponse" message="tns:IBM_Security_Service_InsertRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertRolesPermissionsList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Security_Service/InsertRolesPermissionsList" message="tns:IBM_Security_Service_InsertRolesPermissionsList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Security_Service/InsertRolesPermissionsListResponse" message="tns:IBM_Security_Service_InsertRolesPermissionsList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertPostRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Security_Service/InsertPostRole" message="tns:IBM_Security_Service_InsertPostRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Security_Service/InsertPostRoleResponse" message="tns:IBM_Security_Service_InsertPostRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Security_Service/InsertUser" message="tns:IBM_Security_Service_InsertUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Security_Service/InsertUserResponse" message="tns:IBM_Security_Service_InsertUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Security_Service/CheckUser" message="tns:IBM_Security_Service_CheckUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Security_Service/CheckUserResponse" message="tns:IBM_Security_Service_CheckUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckPostRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Security_Service/CheckPostRole" message="tns:IBM_Security_Service_CheckPostRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Security_Service/CheckPostRoleResponse" message="tns:IBM_Security_Service_CheckPostRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Security_Service/UpdateRole" message="tns:IBM_Security_Service_UpdateRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Security_Service/UpdateRoleResponse" message="tns:IBM_Security_Service_UpdateRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRolePost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Security_Service/UpdateRolePost" message="tns:IBM_Security_Service_UpdateRolePost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Security_Service/UpdateRolePostResponse" message="tns:IBM_Security_Service_UpdateRolePost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePostRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Security_Service/UpdatePostRole" message="tns:IBM_Security_Service_UpdatePostRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Security_Service/UpdatePostRoleResponse" message="tns:IBM_Security_Service_UpdatePostRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Security_Service/UpdateUser" message="tns:IBM_Security_Service_UpdateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Security_Service/UpdateUserResponse" message="tns:IBM_Security_Service_UpdateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Security_Service/DeleteRole" message="tns:IBM_Security_Service_DeleteRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Security_Service/DeleteRoleResponse" message="tns:IBM_Security_Service_DeleteRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRolesPermissionByRoleId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Security_Service/DeleteRolesPermissionByRoleId" message="tns:IBM_Security_Service_DeleteRolesPermissionByRoleId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Security_Service/DeleteRolesPermissionByRoleIdResponse" message="tns:IBM_Security_Service_DeleteRolesPermissionByRoleId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePostRoleById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBM_Security_Service/DeletePostRoleById" message="tns:IBM_Security_Service_DeletePostRoleById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBM_Security_Service/DeletePostRoleByIdResponse" message="tns:IBM_Security_Service_DeletePostRoleById_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IBM_Security_Service" type="tns:IBM_Security_Service">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPermissions">
+      <soap:operation soapAction="http://tempuri.org/IBM_Security_Service/GetPermissions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserPermissions">
+      <soap:operation soapAction="http://tempuri.org/IBM_Security_Service/GetUserPermissions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutorizeUser">
+      <soap:operation soapAction="http://tempuri.org/IBM_Security_Service/AutorizeUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoles">
+      <soap:operation soapAction="http://tempuri.org/IBM_Security_Service/GetRoles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRolePermissions">
+      <soap:operation soapAction="http://tempuri.org/IBM_Security_Service/GetRolePermissions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPermissionsForRole">
+      <soap:operation soapAction="http://tempuri.org/IBM_Security_Service/GetPermissionsForRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <soap:operation soapAction="http://tempuri.org/IBM_Security_Service/GetUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersModel">
+      <soap:operation soapAction="http://tempuri.org/IBM_Security_Service/GetUsersModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPost_Post_Id">
+      <soap:operation soapAction="http://tempuri.org/IBM_Security_Service/GetPost_Post_Id" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPostRoles">
+      <soap:operation soapAction="http://tempuri.org/IBM_Security_Service/GetPostRoles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRoles">
+      <soap:operation soapAction="http://tempuri.org/IBM_Security_Service/GetAllRoles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPost">
+      <soap:operation soapAction="http://tempuri.org/IBM_Security_Service/GetAllPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertRole">
+      <soap:operation soapAction="http://tempuri.org/IBM_Security_Service/InsertRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertRolesPermissionsList">
+      <soap:operation soapAction="http://tempuri.org/IBM_Security_Service/InsertRolesPermissionsList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPostRole">
+      <soap:operation soapAction="http://tempuri.org/IBM_Security_Service/InsertPostRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUser">
+      <soap:operation soapAction="http://tempuri.org/IBM_Security_Service/InsertUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckUser">
+      <soap:operation soapAction="http://tempuri.org/IBM_Security_Service/CheckUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckPostRole">
+      <soap:operation soapAction="http://tempuri.org/IBM_Security_Service/CheckPostRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRole">
+      <soap:operation soapAction="http://tempuri.org/IBM_Security_Service/UpdateRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRolePost">
+      <soap:operation soapAction="http://tempuri.org/IBM_Security_Service/UpdateRolePost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePostRole">
+      <soap:operation soapAction="http://tempuri.org/IBM_Security_Service/UpdatePostRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <soap:operation soapAction="http://tempuri.org/IBM_Security_Service/UpdateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRole">
+      <soap:operation soapAction="http://tempuri.org/IBM_Security_Service/DeleteRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRolesPermissionByRoleId">
+      <soap:operation soapAction="http://tempuri.org/IBM_Security_Service/DeleteRolesPermissionByRoleId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePostRoleById">
+      <soap:operation soapAction="http://tempuri.org/IBM_Security_Service/DeletePostRoleById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BM_Security_Service">
+    <wsdl:port name="BasicHttpBinding_IBM_Security_Service" binding="tns:BasicHttpBinding_IBM_Security_Service">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Security_Service/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

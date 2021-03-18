@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+      <item 
+        android:id="@+id/nt_rows"
+        android:title="რიგები">
+        <menu>
+          <item
+            android:id="@+id/nav_dividing"
+            android:title="რიგის გახსნა" />
+          <item
+            android:id="@+id/nav_takeRowOut"
+            android:title="რიგის დახურვა" />
+        </menu>
+      </item>
+      <item 
+        android:id="@+id/nt_harvesters"
+        android:title="მკრეფავები">
+        <menu>
+          <item
+            android:id="@+id/nav_rowDistribution"
+            android:title="რიგებში გადანაწილება" />
+          <item
+            android:id="@+id/nav_rowDistributionOut"
+            android:title="რიგიდან მოხსნა" />
+          <item
+            android:id="@+id/nav_receiving"
+            android:title="მიღება" />
+          <!--<item
+            android:id="@+id/nav_containerDistribution"
+            android:title="კონტეინერის მიღება" />
+
+          <item
+            android:id="@+id/nav_containerDistributionOut"
+            android:title="კონტეინერის გაცემა" />-->
+        </menu>
+      </item>
+      <item 
+        android:id="@+id/nt_containers"
+        android:title="ტრანსპორტირება">
+        <menu>
+          <item
+            android:id="@+id/container_movein"
+            android:title="ყუთების დატვირთვა" />
+          <item
+           android:id="@+id/car_movein"
+           android:title="ზედნადების ატვირთვა" />
+          <item
+            android:id="@+id/container_moveout"
+            android:title="ყუთების ჩამოტვირთვა" />
+          <item
+           android:id="@+id/container_sendBack"
+           android:title="ყუთების დაბრუნება" />
+         <!-- <item
+           android:id="@+id/car_moveout"
+           android:title="ტრანს. დასრულება" />-->
+         
+         
+        </menu>
+      </item>
+      
+       <item 
+        android:id="@+id/nt_sale"
+        android:title="გაყიდვა">
+        <menu>
+           <item
+            android:id="@+id/nav_create_palet"
+            android:title="დაკომპლექტება პალეტის " />
+          <item
+           android:id="@+id/nav_close_palet"
+           android:title="პალეტის დაშლა" />
+           <item
+            android:id="@+id/nav_sale_container"
+            android:title="ყუთებით გაყიდვა" />
+          <item
+            android:id="@+id/nav_sale_palet"
+            android:title="პალეტებით გაყიდვა" />
+        </menu>
+      </item>
+      
+      <item 
+        android:id="@+id/nt_punishments"
+        android:title="საყვედური">
+        <menu>
+          <item
+            android:id="@+id/nav_punishment_harvester"
+            android:title="მკრეფავის" />
+          <item
+            android:id="@+id/nav_punishment_container"
+            android:title="ყუთის" />
+        <item
+            android:id="@+id/nav_punishment_container_person"
+            android:title="ყუთის რეკომენდატორი" />
+         <item
+            android:id="@+id/nav_container_quality"
+            android:title="ხარისხი" />
+        </menu>
+      </item>
+
+     <!-- <item 
+        android:id="@+id/sale"
+        android:title="გაყიდვა">
+        <menu>
+        </menu>
+      </item>
+      <item
+        android:id="@+id/nav_rows_and_harvesters"
+        android:title="რიგები და მკრეფავები" />-->
+    </group>
+
+    <item android:title="პარამეტრები">
+        <menu>
+          <item
+            android:id="@+id/nav_loc_change"
+            android:title="ლოკაციის შეცვლა" />
+          <item
+            android:id="@+id/nav_update"
+            android:title="განახლება" />
+           <item
+                android:id="@+id/nav_help"
+                android:title="დახმარება" />
+          <item
+                android:id="@+id/nav_logout"
+                android:title="გასვლა" />
+        </menu>
+    </item>
+
+</menu>

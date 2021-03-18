@@ -1,0 +1,10 @@
+D:\BerryManagementSolution\BerryManagementSolution.v1.0\rstest\bin\Debug\rstest.exe.config
+D:\BerryManagementSolution\BerryManagementSolution.v1.0\rstest\bin\Debug\rstest.exe
+D:\BerryManagementSolution\BerryManagementSolution.v1.0\rstest\bin\Debug\rstest.pdb
+D:\BerryManagementSolution\BerryManagementSolution.v1.0\rstest\obj\Debug\rstest.csprojAssemblyReference.cache
+D:\BerryManagementSolution\BerryManagementSolution.v1.0\rstest\obj\Debug\rstest.Form1.resources
+D:\BerryManagementSolution\BerryManagementSolution.v1.0\rstest\obj\Debug\rstest.Properties.Resources.resources
+D:\BerryManagementSolution\BerryManagementSolution.v1.0\rstest\obj\Debug\rstest.csproj.GenerateResource.cache
+D:\BerryManagementSolution\BerryManagementSolution.v1.0\rstest\obj\Debug\rstest.csproj.CoreCompileInputs.cache
+D:\BerryManagementSolution\BerryManagementSolution.v1.0\rstest\obj\Debug\rstest.exe
+D:\BerryManagementSolution\BerryManagementSolution.v1.0\rstest\obj\Debug\rstest.pdb

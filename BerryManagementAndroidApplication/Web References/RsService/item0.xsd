@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_RS_Service/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data" />
+  <xs:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_RS_Service/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.RS.XClasses" />
+  <xs:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_RS_Service/?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.RS.Model" />
+  <xs:element name="GetTransportWaybillGoods">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data" minOccurs="0" name="transportWaybill" nillable="true" type="q1:TransportWaybill" />
+        <xs:element minOccurs="0" name="personPostId" type="xs:long" />
+        <xs:element minOccurs="0" name="productOwnerStatus" type="xs:int" />
+        <xs:element minOccurs="0" name="isCheck" type="xs:boolean" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTransportWaybillGoodsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.RS.XClasses" minOccurs="0" name="GetTransportWaybillGoodsResult" nillable="true" type="q2:ArrayOfWaybillContainer.WAYBILL.GOODS" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTransportWaybills">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:long" />
+        <xs:element minOccurs="0" name="typeId" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="carPointId" nillable="true" type="xs:long" />
+        <xs:element minOccurs="0" name="carId" nillable="true" type="xs:long" />
+        <xs:element minOccurs="0" name="companyId" nillable="true" type="xs:long" />
+        <xs:element minOccurs="0" name="startPointId" nillable="true" type="xs:long" />
+        <xs:element minOccurs="0" name="startPointIdFiltered" type="xs:boolean" />
+        <xs:element minOccurs="0" name="destinationPointId" nillable="true" type="xs:long" />
+        <xs:element minOccurs="0" name="destinationPointIdFiltered" type="xs:boolean" />
+        <xs:element minOccurs="0" name="rSId" nillable="true" type="xs:long" />
+        <xs:element minOccurs="0" name="rSIdFiltered" type="xs:boolean" />
+        <xs:element minOccurs="0" name="rSNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="rSNumberFiltered" type="xs:boolean" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTransportWaybillsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data" minOccurs="0" name="GetTransportWaybillsResult" nillable="true" type="q3:ArrayOfTransportWaybill" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTransportWaybillModel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StartDay" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="EndDay" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTransportWaybillModelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.RS.Model" minOccurs="0" name="GetTransportWaybillModelResult" nillable="true" type="q4:ArrayOfTransportWaybillModel" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNonTransportWaybillModel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="transportWaibylId" nillable="true" type="xs:long" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNonTransportWaybillModelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.RS.Model" minOccurs="0" name="GetNonTransportWaybillModelResult" nillable="true" type="q5:ArrayOfNonTransportWaybillModel" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTransportWaybillWeight">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CompanyId" type="xs:long" />
+        <xs:element minOccurs="0" name="productOwnerStatus" type="xs:int" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTransportWaybillWeightResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.RS.XClasses" minOccurs="0" name="GetTransportWaybillWeightResult" nillable="true" type="q6:ArrayOfRS_ProductModel" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTransportWaybillDetailsProduct">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="transportWaybillId" nillable="true" type="xs:long" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTransportWaybillDetailsProductResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.RS.XClasses" minOccurs="0" name="GetTransportWaybillDetailsProductResult" nillable="true" type="q7:ArrayOfWaybillContainer.WAYBILL.GOODS" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNonTransportWaybillDetailsProduct">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NonTransportWaybillId" nillable="true" type="xs:long" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNonTransportWaybillDetailsProductResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.RS.XClasses" minOccurs="0" name="GetNonTransportWaybillDetailsProductResult" nillable="true" type="q8:ArrayOfWaybillContainer.WAYBILL.GOODS" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertTransportWaybill">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data" minOccurs="0" name="transportWaybill" nillable="true" type="q9:TransportWaybill" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertTransportWaybillResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertTransportWaybillResult" type="xs:long" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertTransportWaybillDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data" minOccurs="0" name="transportWaybillDetail" nillable="true" type="q10:TransportWaybillDetail" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertTransportWaybillDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertTransportWaybillDetailResult" type="xs:long" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertNonTransportWaybill">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data" minOccurs="0" name="nonTransportWaybill" nillable="true" type="q11:NonTransportWaybill" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertNonTransportWaybillResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertNonTransportWaybillResult" type="xs:long" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertNonTransportWaybillDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data" minOccurs="0" name="nonTransportWaybillDetail" nillable="true" type="q12:NonTransportWaybillDetail" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertNonTransportWaybillDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertNonTransportWaybillDetailResult" type="xs:long" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertTransportWaybillCompanyMove">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="barCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="direction" type="xs:boolean" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertTransportWaybillCompanyMoveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data" minOccurs="0" name="InsertTransportWaybillCompanyMoveResult" nillable="true" type="q13:TransportWaybill" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

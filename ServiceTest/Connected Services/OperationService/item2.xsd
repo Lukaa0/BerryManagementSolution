@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Operation.XClasses" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Operation.XClasses" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Operation_Service/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="TakeRowInOut">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BrigadeId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="Direction" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Error" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="IsComplete" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PersonPostId" type="xs:long" />
+      <xs:element minOccurs="0" name="RowBarCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RowId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="Time" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TakeRowInOut" nillable="true" type="tns:TakeRowInOut" />
+  <xs:complexType name="ArrayOfSaleContainer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SaleContainer" nillable="true" type="tns:SaleContainer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSaleContainer" nillable="true" type="tns:ArrayOfSaleContainer" />
+  <xs:complexType name="SaleContainer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContainerBarCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Direction" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Error" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="IsComplete" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Parent_ContainerBarCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PersonPostId" type="xs:long" />
+      <xs:element minOccurs="0" name="PointBarcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Point_Car_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="Point_Id" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="Sale_Car_Model" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sale_Car_Number" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sale_User_FullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Time" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SaleContainer" nillable="true" type="tns:SaleContainer" />
+  <xs:complexType name="HarvesterRowDistributionInOut">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Direction" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Error" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HarvesterBarCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HarvesterName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HarvesterPersonPostId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="IsComplete" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RowBarCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RowId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="Time" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserPersonPostId" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HarvesterRowDistributionInOut" nillable="true" type="tns:HarvesterRowDistributionInOut" />
+  <xs:complexType name="HarvesterContainerDistributionInOut">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CarId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="ContaierBarcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Direction" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HarvesterBarCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HarvesterName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HarvesterPersonPostId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="IsComplite" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PointId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="Time" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UserPersonPostId" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HarvesterContainerDistributionInOut" nillable="true" type="tns:HarvesterContainerDistributionInOut" />
+  <xs:complexType name="PunishmentIn">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContainerBarcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HardvesterBarcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HardvesterPostId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="IsComplite" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PunishmentTypeId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="PunishmentTypeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QualityTypeId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="QualityTypeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Time" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UserPersonPostId" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PunishmentIn" nillable="true" type="tns:PunishmentIn" />
+  <xs:complexType name="ArrayOfHarvesterRowDistributionInOut">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HarvesterRowDistributionInOut" nillable="true" type="tns:HarvesterRowDistributionInOut" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHarvesterRowDistributionInOut" nillable="true" type="tns:ArrayOfHarvesterRowDistributionInOut" />
+  <xs:complexType name="ProductRepackAndWeight">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BreedName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContainerBarCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Gross" type="xs:decimal" />
+      <xs:element minOccurs="0" name="HarvestDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="IsComplite" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Net" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="OldContainerBarCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductId" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Time" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UserPersonPostId" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProductRepackAndWeight" nillable="true" type="tns:ProductRepackAndWeight" />
+  <xs:complexType name="ArrayOfContainerPackModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ContainerPackModel" nillable="true" type="tns:ContainerPackModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContainerPackModel" nillable="true" type="tns:ArrayOfContainerPackModel" />
+  <xs:complexType name="ContainerPackModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContainerBarCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Direction" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Error" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="IsComplete" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Pack_User_FullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Parent_ContainerBarCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PersonPostId" type="xs:long" />
+      <xs:element minOccurs="0" name="Time" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UnpackIsComplete" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContainerPackModel" nillable="true" type="tns:ContainerPackModel" />
+  <xs:complexType name="ArrayOfContainerMoveInOut">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ContainerMoveInOut" nillable="true" type="tns:ContainerMoveInOut" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContainerMoveInOut" nillable="true" type="tns:ArrayOfContainerMoveInOut" />
+  <xs:complexType name="ContainerMoveInOut">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContainerBarCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContainerMoveInOut_Car_Model" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContainerMoveInOut_Car_Number" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContainerMoveInOut_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="ContainerMoveInOut_TransportWaybill_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="ContainerMoveInOut_User_FullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContainerMoveInOut_User_Point_BarCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContainerMoveInOut_User_Point_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Direction" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Error" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="IsComplete" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PersonPostId" type="xs:long" />
+      <xs:element minOccurs="0" name="PointBarcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Point_Car_Id" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="Point_Id" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="Time" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContainerMoveInOut" nillable="true" type="tns:ContainerMoveInOut" />
+  <xs:complexType name="ArrayOfTakeRowModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TakeRowModel" nillable="true" type="tns:TakeRowModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTakeRowModel" nillable="true" type="tns:ArrayOfTakeRowModel" />
+  <xs:complexType name="TakeRowModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Brigade_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Row_Barcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TakeRow_Brigade_Id" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="TakeRow_Id" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="TakeRow_In_DateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TakeRow_In_TUser_PersonPost_Id" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="TakeRow_In_TakeRowInOut_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="TakeRow_Out_DateTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TakeRow_Out_TakeRowInOut_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="TakeRow_Out_User_PersonPost_Id" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="TakeRow_Row_Id" nillable="true" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TakeRowModel" nillable="true" type="tns:TakeRowModel" />
+  <xs:complexType name="ArrayOfTakeRowInOut">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TakeRowInOut" nillable="true" type="tns:TakeRowInOut" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTakeRowInOut" nillable="true" type="tns:ArrayOfTakeRowInOut" />
+  <xs:complexType name="ArrayOfContainerWeightModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ContainerWeightModel" nillable="true" type="tns:ContainerWeightModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContainerWeightModel" nillable="true" type="tns:ArrayOfContainerWeightModel" />
+  <xs:complexType name="ContainerWeightModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContainerWeight_Container_BarCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContainerWeight_DateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ContainerWeight_Gross" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ContainerWeight_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="ContainerWeight_Net" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ContainerWeight_User_PersonPost_Id" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContainerWeightModel" nillable="true" type="tns:ContainerWeightModel" />
+</xs:schema>

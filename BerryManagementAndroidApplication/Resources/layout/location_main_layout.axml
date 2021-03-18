@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<TextView
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:textStyle="normal"
+		android:layout_marginTop="25dp"
+		android:layout_centerHorizontal="true"
+		android:fontFamily="@string/abc_font_family_display_4_material"
+		android:includeFontPadding="true"
+		android:textSize="25sp"
+		android:id="@+id/location_title"
+		android:text="@string/choose_loc"/>
+
+		<android.support.v7.widget.RecyclerView
+			android:layout_height="wrap_content"
+			android:layout_below="@id/location_title"
+			android:layout_width="match_parent"
+			android:layout_centerInParent="true"
+			android:id="@+id/location_recycler_view"
+			/>
+</RelativeLayout>

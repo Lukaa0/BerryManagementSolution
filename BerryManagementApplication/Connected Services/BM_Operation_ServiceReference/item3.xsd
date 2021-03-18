@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Operation.XClasses.Pallete" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BerryManagementWindowsService.Data.Operation.XClasses.Pallete" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BerryManagementWindowsService.WCF/BM_Operation_Service/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfContainerModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ContainerModel" nillable="true" type="tns:ContainerModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContainerModel" nillable="true" type="tns:ArrayOfContainerModel" />
+  <xs:complexType name="ContainerModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BreedName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContainerPack_Container_BarCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContainerPack_DateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ContainerPack_GrossWeight" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ContainerPack_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="ContainerPack_IsComplite" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ContainerPack_NetWeight" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ContainerPack_Parent_ContainerLocation_In_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="ContainerPack_Parent_Container_BarCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContainerPack_User_PersonPost_Id" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContainerModel" nillable="true" type="tns:ContainerModel" />
+  <xs:complexType name="ArrayOfPalleteModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PalleteModel" nillable="true" type="tns:PalleteModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPalleteModel" nillable="true" type="tns:ArrayOfPalleteModel" />
+  <xs:complexType name="PalleteModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContainerWeight_Container_BarCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContainerWeight_DateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ContainerWeight_End_DateTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ContainerWeight_Gross" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ContainerWeight_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="ContainerWeight_Net" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ContainerWeight_Start_DateTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ContainerWeight_User_PersonPost_Id" type="xs:long" />
+      <xs:element minOccurs="0" name="Container_Count" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PalleteModel" nillable="true" type="tns:PalleteModel" />
+</xs:schema>

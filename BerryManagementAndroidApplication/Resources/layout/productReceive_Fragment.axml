@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation = "vertical" 
+	>
+	<Button
+		android:layout_width="fill_parent"
+		android:layout_height = "wrap_content"
+		android:id="@+id/ScannContainerORHarvesterReceivingButton"
+		android:text="კოდის სკანირება"/>
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/PointName"
+		android:layout_columnWeight="1"
+		android:layout_gravity="fill_horizontal"
+		android:gravity="center"/>
+	<Button
+		android:text="გაუქმება"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/RemovePointbutton"
+		android:layout_columnWeight="1"
+		android:gravity="center"/>
+	<EditText	
+		android:text=""
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/ReceiverEditText"
+		android:layout_columnWeight="1"
+		android:layout_gravity="fill_horizontal"
+		android:gravity="center"/>
+	<TextView		
+		android:text="ყუთი - "
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/ContainerReceivingTextView"
+		android:layout_columnWeight="1"
+		android:layout_gravity="fill_horizontal"
+		android:gravity="center"/>
+	<TextView
+		android:text="მკრეფავი - "
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/HarvesterReceivingTextView"
+		android:layout_columnWeight="1"
+		android:layout_gravity="fill_horizontal"
+		android:gravity="center"/>
+	<Spinner
+		android:id="@+id/QualitySpinner"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"/>
+	<Button
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/SaveProductReceiveInButton"
+		android:text="შენახვა"/>
+
+	<ListView
+		android:id="@+id/ProductReceiveListView"
+		android:layout_gravity="center"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+	</ListView>
+</LinearLayout>
